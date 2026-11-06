@@ -7,7 +7,7 @@
 | `yolov8n_home` | 首轮实测完成。严格数值门槛失败，性能属于诊断结果。 | [SOP](yolov8n_home/README.md)、[实测简报](yolov8n_home/首轮实测简报.md) |
 | `yolov8n_general` | 通用轮开发验证完成。完整数据准备、独立验收和性能轮尚未完成。 | [当前状态](yolov8n_general/README.md)、[预注册协议](yolov8n_general/quality_protocol.json) |
 | `fixtures` | 首轮真实报告和图的回归夹具。 | [来源与哈希](fixtures/README.md) |
-| `presentation` | 11 页离线汇报，含真实模块依赖和可展开节点图。 | [展示与复建](presentation/README.md) |
+| `presentation` | 13 页离线汇报，含选型依据、真实模块依赖和可展开节点图。 | [展示与复建](presentation/README.md) |
 
 ## 本机测试
 

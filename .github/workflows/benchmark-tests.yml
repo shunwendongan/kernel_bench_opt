@@ -1,6 +1,9 @@
 name: 基准代码测试
 
 on:
+  push:
+    branches:
+      - yolov8n-COCO
   pull_request:
   workflow_dispatch:
 

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "url": "https://docs.ultralytics.com/models/yolov8",
+    "title": "Ultralytics YOLOv8：任务与预训练模型",
+    "accessed": "2026-11-06"
+  },
+  {
+    "id": 2,
+    "url": "https://raw.githubusercontent.com/airockchip/rknn_model_zoo/837db8e992815ff8647eadb709f07067f4bc3a71/examples/yolov8/README.md",
+    "title": "Rockchip YOLOv8 部署说明（固定提交）",
+    "accessed": "2026-11-06"
+  },
+  {
+    "id": 3,
+    "url": "https://arxiv.org/abs/1405.0312",
+    "title": "Microsoft COCO：数据集原论文",
+    "accessed": "2026-11-06"
+  },
+  {
+    "id": 4,
+    "url": "https://docs.ultralytics.com/datasets/detect/coco",
+    "title": "COCO 检测数据集：80 类与 val2017 划分",
+    "accessed": "2026-11-06"
+  },
+  {
+    "id": 5,
+    "url": "https://raw.githubusercontent.com/airockchip/ultralytics_yolov8/main/README.md",
+    "title": "Rockchip 导出仓库：公开 YOLOv8 COCO 模型规格",
+    "accessed": "2026-11-06"
+  }
+]

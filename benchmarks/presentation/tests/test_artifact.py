@@ -41,7 +41,7 @@ def test_offline_report_preserves_data_identity_and_failed_quality():
     parser = Artifact()
     html = REPORT.read_text(encoding="utf-8")
     parser.feed(html)
-    assert parser.slide_count == 11
+    assert parser.slide_count == 13
     assert len(parser.assets) == 2
     assert all(asset.startswith("data:image/") for asset in parser.assets)
     assert "__REPORT_JSON__" not in html and "__INPUT_IMAGE__" not in html

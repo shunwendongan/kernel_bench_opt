@@ -1,0 +1,149 @@
+{
+  "snapshot_type": "迁移前状态，非目标仓库重新执行结果",
+  "recorded_at": "2026-11-06T07:50:24.830939+00:00",
+  "source_repository": "yousizaitianqiong/kernel-operator-optimization",
+  "source_url": "https://github.com/yousizaitianqiong/kernel-operator-optimization",
+  "source_default_branch": "main",
+  "branches": [
+    {
+      "name": "feat/rk3588-yolo-quality-baseline",
+      "commit": "8f8c967abad85ea3ef232ea9e0ba44af791bd6ab"
+    },
+    {
+      "name": "main",
+      "commit": "4daa36ec508734998333bfc071adf1415bcee6d7"
+    }
+  ],
+  "tag_count": 0,
+  "release_count": 0,
+  "issues_excluding_pulls": [],
+  "pull_requests": [
+    {
+      "number": 1,
+      "title": "feat(benchmarks): 添加 RK3588 YOLOv8n 基准与交互汇报",
+      "body": "本变更建立 RK3588 YOLOv8n 目标检测基准，并提供可直接打开的 11 页离线汇报。汇报覆盖模型与数据选型、真实预处理、分段延迟、热点类型，以及可展开的模块和节点依赖图。\n\n## 变更\n\n- 保存首轮诊断摘要、真实报告回归夹具及采集/分析代码。原始编译图包含 108 个节点、257 个张量和 138 条依赖边。\n- 添加通用轮数据准备、CPU 分类 Sigmoid 模型适配与预注册验收工具。验收核对实际模型路径、冻结开发/验收划分、输入哈希和完整记录覆盖；异常不会继续保留有效的旧通过结论。\n- 修复更换目录后的冻结数据恢复、旧缓存缺失后的同 ID 下载，以及初始化异常时的 RKNN session 清理。\n- 添加离线汇报构建器、来源哈希、历史采集源码快照及 CI。当前代码修复不改写旧实测来源。\n\n## 验证\n\n| 范围 | 本机完整资源 | 干净暂存快照 |\n| --- | --- | --- |\n| 首轮通用测试 | 223 passed | 222 passed、1 skipped |\n| 通用轮测试 | 272 passed、1 skipped | 269 passed、4 skipped |\n| 汇报测试 | 6 passed | 4 passed、2 skipped |\n\n干净检出的跳过项依赖未入库的模型、完整 COCO 标注或原始运行归档。新增抽样、身份绑定和异常回归仍执行。Windows 上按 CI 约定排除 `test_bridge.py`；既有板端桥接测试结果不冒充本次重新实测。\n\n已检查 11 页浏览器布局、25 个模块的真实连边、节点选择与放大图、离线内嵌资源和 11 页打印输出。重新构建后，所有实测延迟、节点统计及质量结论与原报告一致。`git diff --check` 与 `pip check` 通过。\n\n## 状态边界\n\n这是草稿 PR。首轮严格张量数值门槛失败，性能仅用于诊断。通用轮仅完成旧 40 图开发检查；全部数据回读、正式 runner 集成、独立 4960 图验收及 80 图性能采集尚未完成。节点耗时之和不是独立子图墙钟时间，未采集的内部边界值不支持子图重放。\n\n模型、图片、输入张量、虚拟环境及大体积原始运行产物保留本地归档。仓库仅包含代码、协议、冻结 ID、少量证据及离线展示。\n",
+      "url": "https://github.com/yousizaitianqiong/kernel-operator-optimization/pull/1",
+      "state": "open",
+      "draft": true,
+      "head": "8f8c967abad85ea3ef232ea9e0ba44af791bd6ab",
+      "base": "4daa36ec508734998333bfc071adf1415bcee6d7"
+    }
+  ],
+  "pull_details": [
+    {
+      "number": 1,
+      "comments": [],
+      "reviews": [],
+      "review_comments": []
+    }
+  ],
+  "workflow_runs": [
+    {
+      "id": 42177242120,
+      "name": "基准代码测试",
+      "head_sha": "8f8c967abad85ea3ef232ea9e0ba44af791bd6ab",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/yousizaitianqiong/kernel-operator-optimization/actions/runs/42177242120",
+      "created_at": "2026-11-06T06:52:53Z"
+    }
+  ],
+  "workflow_jobs": [
+    {
+      "total_count": 1,
+      "jobs": [
+        {
+          "id": 127758409250,
+          "name": "unit-tests",
+          "head_sha": "8f8c967abad85ea3ef232ea9e0ba44af791bd6ab",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/yousizaitianqiong/kernel-operator-optimization/actions/runs/42177242120/job/127758409250",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1,
+              "started_at": "2026-11-06T06:52:58Z",
+              "completed_at": "2026-11-06T06:52:59Z"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2,
+              "started_at": "2026-11-06T06:52:59Z",
+              "completed_at": "2026-11-06T06:53:00Z"
+            },
+            {
+              "name": "Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3,
+              "started_at": "2026-11-06T06:53:00Z",
+              "completed_at": "2026-11-06T06:53:01Z"
+            },
+            {
+              "name": "安装固定测试依赖",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4,
+              "started_at": "2026-11-06T06:53:01Z",
+              "completed_at": "2026-11-06T06:53:18Z"
+            },
+            {
+              "name": "首轮通用测试",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5,
+              "started_at": "2026-11-06T06:53:18Z",
+              "completed_at": "2026-11-06T06:53:20Z"
+            },
+            {
+              "name": "通用场景测试",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6,
+              "started_at": "2026-11-06T06:53:20Z",
+              "completed_at": "2026-11-06T06:53:29Z"
+            },
+            {
+              "name": "离线汇报与图关系检查",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7,
+              "started_at": "2026-11-06T06:53:29Z",
+              "completed_at": "2026-11-06T06:53:29Z"
+            },
+            {
+              "name": "Post Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 13,
+              "started_at": "2026-11-06T06:53:29Z",
+              "completed_at": "2026-11-06T06:53:31Z"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 14,
+              "started_at": "2026-11-06T06:53:31Z",
+              "completed_at": "2026-11-06T06:53:32Z"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 15,
+              "started_at": "2026-11-06T06:53:32Z",
+              "completed_at": "2026-11-06T06:53:32Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

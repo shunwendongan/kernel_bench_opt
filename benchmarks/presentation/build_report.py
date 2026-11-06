@@ -43,6 +43,8 @@ def build(output: Path) -> dict:
     payload["datasets"]["general"]["profile_category_count"] = general["profile_subset"]["actual_category_count"]
     payload["meta"]["model_sha256"] = data["meta"]["model"]["rknn_sha256"]
     payload["meta"]["validated_reports"] = data["validation"]["strictly_mapped_reports"]
+    selection_sources = HERE / "selection_sources.json"
+    payload["meta"]["selection_sources"] = json.loads(selection_sources.read_text(encoding="utf-8"))
     payload["meta"]["sources"] = [{"path": path, **record} for path, record in data["meta"]["sources"].items()]
     manifest = json.loads((ROOT / "benchmarks/yolov8n_home/dataset/samples.json").read_text(encoding="utf-8"))
     example = next(s for s in manifest["samples"] if s["id"] == 312192)
@@ -66,6 +68,7 @@ def build(output: Path) -> dict:
         "data_sha256": sha256(source.read_bytes()),
         "builder_sha256": sha256(Path(__file__).read_bytes()),
         "template_sha256": sha256((HERE / "yolo_report.template.html").read_bytes()),
+        "selection_sources_sha256": sha256(selection_sources.read_bytes()),
         "image_id": example["id"],
         "original_sha256": sha256(original),
         "input_sha256": sha256(rgb),
