@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+<title id="title">任务沙箱：共享只读输入，隔离候选与运行记录</title><desc id="desc">目标组织方式。三个独立任务空间各有候选代码与独立run输出，共享只读模型与数据；共享设备需排队，自动调度尚待接入。</desc>
+<defs>
+ <marker id="arrow" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M1 1 L8 4 L1 7" fill="none" stroke="#34414B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+ <pattern id="hatch" patternUnits="userSpaceOnUse" width="9" height="9" patternTransform="rotate(22)"><path d="M0 0 V9" stroke="#34414B" stroke-width="0.8" opacity="0.11"/></pattern>
+</defs>
+<style>text{font-family:'Kaiti SC','STKaiti','KaiTi','Noto Sans CJK SC','PingFang SC',sans-serif;fill:#34414B;font-size:26px}.small{font-size:22px}.large{font-size:32px;font-weight:600}.label{font-size:28px;font-weight:500}path,line,polyline,ellipse,rect{stroke-linecap:round;stroke-linejoin:round}.ink{stroke:#34414B;stroke-width:2;fill:none}.faint{stroke:#34414B;stroke-width:1;fill:none;opacity:.22}.arrow{stroke:#34414B;stroke-width:2;fill:none;marker-end:url(#arrow)}</style>
+<path d="M0 0H1280V720H0Z" fill="#FCFBF7"/>
+<path d="M44 73 Q60.64 71 76.0 74 T108 72" stroke="#5AA7D8" fill="none" stroke-width="8" opacity=".23"/>
+<text x="75" y="70" text-anchor="middle" class="large">02</text>
+<text x="133" y="70" text-anchor="start" class="large">让每个任务，都有自己的实验空间</text>
+<text x="1203" y="69" text-anchor="end" class="small">目标组织方式</text>
+<path d="M379 127 Q636 123 900 129 L897 205 Q636 209 381 203 Z" stroke="#34414B" fill="#E5F1FA" stroke-width="2" />
+<path d="M384 130 Q642 127 896 132" class="faint" stroke="#34414B" fill="none" stroke-width="2" />
+<path d="M404 141 L435 140 L446 153 L445 189 L402 188 Z" stroke="#34414B" fill="#E5F1FA" stroke-width="2" />
+<path d="M435 141 L435 153 L445 153" stroke="#34414B" fill="none" stroke-width="1.2" />
+<path d="M414 166 L433 165 M414 176 L430 177 M414 187 L434 186" stroke="#34414B" fill="none" stroke-width="1.4" />
+<path d="M469 154 C469 144 504 143 506 154 V182 C506 191 471 191 469 182 Z" stroke="#34414B" fill="#E5F2EA" stroke-width="2" />
+<path d="M470 154 C479 163 498 162 505 154 M469 168 C479 176 498 176 505 168" stroke="#34414B" fill="none" stroke-width="1.2" />
+<text x="697" y="160" text-anchor="middle" class="label">共享资产库</text>
+<text x="697" y="190" text-anchor="middle" class="small">模型 / 数据 · 只读输入</text>
+<path d="M850 160 V151 C850 134 875 135 875 151 V160" stroke="#34414B" fill="none" stroke-width="2" />
+<path d="M846 159 L879 159 L880 183 L846 184 Z" stroke="#34414B" fill="#E5F1FA" stroke-width="2" />
+<path d="M863 166 V175" stroke="#34414B" fill="none" stroke-width="2" />
+<path d="M640 212 Q231 219 231 247" class="arrow" stroke="#34414B" fill="none" stroke-width="2" />
+<path d="M640 212 Q640 219 640 247" class="arrow" stroke="#34414B" fill="none" stroke-width="2" />
+<path d="M640 212 Q1049 219 1049 247" class="arrow" stroke="#34414B" fill="none" stroke-width="2" />
+<path d="M67 275 Q58 257 84 255 L379 257 Q405 256 400 279 L402 501 Q400 518 379 519 L84 521 Q58 519 60 501 Z" stroke="#5AA7D8" fill="none" stroke-width="1.7" stroke-dasharray="7 8"/>
+<path d="M169 294 Q201.24 292 231.0 295 T293 293" stroke="#5AA7D8" fill="none" stroke-width="8" opacity=".23"/>
+<text x="231" y="286" text-anchor="middle" class="label">Task A</text>
+<text x="231" y="318" text-anchor="middle" class="small">代码 / 配置</text>
+<path d="M108 338 L135 337 L146 350 L145 386 L106 385 Z" stroke="#34414B" fill="#E5F1FA" stroke-width="2" />
+<path d="M135 338 L135 350 L145 350" stroke="#34414B" fill="none" stroke-width="1.2" />
+<path d="M118 363 L133 362 M118 373 L130 374 M118 384 L134 383" stroke="#34414B" fill="none" stroke-width="1.4" />
+<text x="257" y="367" text-anchor="middle" class="">candidate-01</text>
+<path d="M231 390 L231 402 M144 405 Q231 401 318 405 M144 405 L144 418 M318 405 L318 418" stroke="#34414B" fill="none" stroke-width="1.6" />
+<path d="M100 424 L124 423 L131 430 L188 429 L185 458 L101 459 Z" stroke="#34414B" fill="#E5F1FA" stroke-width="2" />
+<path d="M101 437 Q144.0 435 187 437" stroke="#34414B" fill="none" stroke-width="1.3" />
+<path d="M274 424 L298 423 L305 430 L362 429 L359 458 L275 459 Z" stroke="#34414B" fill="#E5F1FA" stroke-width="2" />
+<path d="M275 437 Q318.0 435 361 437" stroke="#34414B" fill="none" stroke-width="1.3" />
+<text x="144" y="482" text-anchor="middle" class="small">run-001</text>
+<text x="318" y="482" text-anchor="middle" class="small">run-002</text>
+<text x="231" y="510" text-anchor="middle" class="small" style="fill:#5AA7D8">独立输出</text>
+<path d="M476 275 Q467 257 493 255 L788 257 Q814 256 809 279 L811 501 Q809 518 788 519 L493 521 Q467 519 469 501 Z" stroke="#58A483" fill="none" stroke-width="1.7" stroke-dasharray="7 8"/>
+<path d="M578 294 Q610.24 292 640.0 295 T702 293" stroke="#58A483" fill="none" stroke-width="8" opacity=".23"/>
+<text x="640" y="286" text-anchor="middle" class="label">Task B</text>
+<text x="640" y="318" text-anchor="middle" class="small">代码 / 配置</text>
+<path d="M517 338 L544 337 L555 350 L554 386 L515 385 Z" stroke="#34414B" fill="#E5F2EA" stroke-width="2" />
+<path d="M544 338 L544 350 L554 350" stroke="#34414B" fill="none" stroke-width="1.2" />
+<path d="M527 363 L542 362 M527 373 L539 374 M527 384 L543 383" stroke="#34414B" fill="none" stroke-width="1.4" />
+<text x="666" y="367" text-anchor="middle" class="">candidate-02</text>
+<path d="M640 390 L640 402 M553 405 Q640 401 727 405 M553 405 L553 418 M727 405 L727 418" stroke="#34414B" fill="none" stroke-width="1.6" />
+<path d="M509 424 L533 423 L540 430 L597 429 L594 458 L510 459 Z" stroke="#34414B" fill="#E5F2EA" stroke-width="2" />
+<path d="M510 437 Q553.0 435 596 437" stroke="#34414B" fill="none" stroke-width="1.3" />
+<path d="M683 424 L707 423 L714 430 L771 429 L768 458 L684 459 Z" stroke="#34414B" fill="#E5F2EA" stroke-width="2" />
+<path d="M684 437 Q727.0 435 770 437" stroke="#34414B" fill="none" stroke-width="1.3" />
+<text x="553" y="482" text-anchor="middle" class="small">run-001</text>
+<text x="727" y="482" text-anchor="middle" class="small">run-002</text>
+<text x="640" y="510" text-anchor="middle" class="small" style="fill:#58A483">独立输出</text>
+<path d="M885 275 Q876 257 902 255 L1197 257 Q1223 256 1218 279 L1220 501 Q1218 518 1197 519 L902 521 Q876 519 878 501 Z" stroke="#E78C75" fill="none" stroke-width="1.7" stroke-dasharray="7 8"/>
+<path d="M987 294 Q1019.24 292 1049.0 295 T1111 293" stroke="#E78C75" fill="none" stroke-width="8" opacity=".23"/>
+<text x="1049" y="286" text-anchor="middle" class="label">Task C</text>
+<text x="1049" y="318" text-anchor="middle" class="small">代码 / 配置</text>
+<path d="M926 338 L953 337 L964 350 L963 386 L924 385 Z" stroke="#34414B" fill="#FCECE5" stroke-width="2" />
+<path d="M953 338 L953 350 L963 350" stroke="#34414B" fill="none" stroke-width="1.2" />
+<path d="M936 363 L951 362 M936 373 L948 374 M936 384 L952 383" stroke="#34414B" fill="none" stroke-width="1.4" />
+<text x="1075" y="367" text-anchor="middle" class="">candidate-03</text>
+<path d="M1049 390 L1049 402 M962 405 Q1049 401 1136 405 M962 405 L962 418 M1136 405 L1136 418" stroke="#34414B" fill="none" stroke-width="1.6" />
+<path d="M918 424 L942 423 L949 430 L1006 429 L1003 458 L919 459 Z" stroke="#34414B" fill="#FCECE5" stroke-width="2" />
+<path d="M919 437 Q962.0 435 1005 437" stroke="#34414B" fill="none" stroke-width="1.3" />
+<path d="M1092 424 L1116 423 L1123 430 L1180 429 L1177 458 L1093 459 Z" stroke="#34414B" fill="#FCECE5" stroke-width="2" />
+<path d="M1093 437 Q1136.0 435 1179 437" stroke="#34414B" fill="none" stroke-width="1.3" />
+<text x="962" y="482" text-anchor="middle" class="small">run-001</text>
+<text x="1136" y="482" text-anchor="middle" class="small">run-002</text>
+<text x="1049" y="510" text-anchor="middle" class="small" style="fill:#E78C75">独立输出</text>
+<text x="52" y="572" text-anchor="start" class="small">任务隔离</text>
+<path d="M231 536 L231 565 Q640 570 1049 565 L1049 536 M640 536 L640 579" class="ink" stroke="#34414B" fill="none" stroke-width="2" />
+<path d="M640 579 L640 600" class="arrow" stroke="#34414B" fill="none" stroke-width="2" />
+<path d="M476 611 L501 609 L503 638 L477 640 Z" stroke="#34414B" fill="#E5F1FA" stroke-width="2" />
+<path d="M514 611 L539 609 L541 638 L515 640 Z" stroke="#34414B" fill="#E5F2EA" stroke-width="2" />
+<path d="M552 611 L577 609 L579 638 L553 640 Z" stroke="#34414B" fill="#FCECE5" stroke-width="2" />
+<path d="M599 604 L599 646 M610 604 L610 646" stroke="#34414B" fill="none" stroke-width="2" />
+<path d="M625 625 Q680 623 729 625" class="arrow" stroke="#34414B" fill="none" stroke-width="2" />
+<path d="M756 599 L908 601 L910 650 L756 649 Z" stroke="#34414B" fill="#E5F2EA" stroke-width="2" />
+<path d="M777 614 H802 V637 H777 Z" stroke="#34414B" fill="#FCFBF7" stroke-width="1.5" />
+<path d="M781 610 V614 M789 610 V614 M797 610 V614 M781 637 V642 M789 637 V642 M797 637 V642" stroke="#34414B" fill="none" stroke-width="1" />
+<path d="M819 614 H844 V637 H819 Z" stroke="#34414B" fill="#FCFBF7" stroke-width="1.5" />
+<path d="M823 610 V614 M831 610 V614 M839 610 V614 M823 637 V642 M831 637 V642 M839 637 V642" stroke="#34414B" fill="none" stroke-width="1" />
+<path d="M861 614 H886 V637 H861 Z" stroke="#34414B" fill="#FCFBF7" stroke-width="1.5" />
+<path d="M865 610 V614 M873 610 V614 M881 610 V614 M865 637 V642 M873 637 V642 M881 637 V642" stroke="#34414B" fill="none" stroke-width="1" />
+<text x="988" y="632" text-anchor="middle" class="label">共享设备</text>
+<text x="575" y="686" text-anchor="middle" class="label">设备排队 · 待接入</text>
+<text x="1047" y="686" text-anchor="middle" class="small">独立目录 ≠ 硬件独占</text>
+</svg>
