@@ -1,0 +1,33 @@
+name: Publish pinned model assets
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Existing draft Release tag
+        required: true
+        default: qwen2.5-omni-3b-vcb-bench-assets-20261106
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RELEASE_TAG: ${{ inputs.release_tag }}
+      REPOSITORY: ${{ github.repository }}
+    steps:
+      - name: Check out the requested code revision
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Verify and upload model assets
+        run: >-
+          python3 scripts/publish_model_assets.py
+          --source-manifest assets/model-source.json
+          --repository "$REPOSITORY"
+          --release-tag "$RELEASE_TAG"

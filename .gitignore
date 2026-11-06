@@ -1,5 +1,6 @@
 # Local models, datasets, captures, build outputs and machine settings.
-/assets/
+/assets/local/
+/assets/.downloads/
 /data/
 /models/
 /captures/

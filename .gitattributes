@@ -1,2 +1,4 @@
 # Unified diff context lines contain a required single-space prefix.
 *.patch -whitespace
+# Preserve third-party license texts verbatim, including upstream line endings.
+licenses/** -text -whitespace
