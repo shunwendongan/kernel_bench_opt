@@ -1,0 +1,34 @@
+# 本地环境、下载缓存和临时产物
+.build/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.chart-data-*/
+.codex-remote-attachments/
+
+# 凭据保留在本地
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# 基准的大体积数据与实测产物单独归档
+benchmarks/*.zip
+benchmarks/**/dataset/images/
+benchmarks/**/dataset/inputs/
+benchmarks/**/dataset/instances_*.json
+benchmarks/**/dataset/*samples.json
+benchmarks/**/dataset/image_input_hashes.json
+benchmarks/**/dataset/download_progress.jsonl*
+benchmarks/**/models/*.onnx
+benchmarks/**/models/*.rknn
+benchmarks/**/models/candidates/
+benchmarks/**/runs/
+benchmarks/**/graphs/
+benchmarks/**/evidence/
+benchmarks/**/*.npz
+benchmarks/**/*.so
+benchmarks/**/*.tar.gz
