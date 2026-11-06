@@ -23,6 +23,12 @@ RK3588 上 Qwen2.5-Omni-3B 的异构部署、BigVGAN ConvTranspose 优化与新�
 
 ## 下载复现资产
 
+### 公共附录：Mac / Windows 性能分析工具包
+
+性能分析工具包、使用说明、Codex Skill 说明及随包分析产物已提供为独立的 [公共附录 Release](https://github.com/shunwendongan/kernel_bench_opt/releases/tag/performance-analysis-toolkit-20261106)。Mac 包约 517.51 MiB，Windows 包约 510.08 MiB；下载入口、安装起点、适用范围和 SHA-256 校验见 [附录说明](appendices/performance-analysis-toolkit/README.md)。两个 ZIP 保留原始内容，`git clone` 不会自动下载；跨机器使用需按包内说明重建环境。
+
+### RK3588 实验复现资产
+
 ```bash
 python3 scripts/fetch_assets.py --list
 python3 scripts/fetch_assets.py --output /data/kernel-bench-assets

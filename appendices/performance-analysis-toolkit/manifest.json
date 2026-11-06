@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "title": "性能分析工具包公共附录（Mac / Windows）",
+  "snapshot_date": "2026-11-06",
+  "repository": "https://github.com/shunwendongan/kernel_bench_opt",
+  "source_branch": "Qwen2.5-Omni-3B_VCB-Bench",
+  "release_tag": "performance-analysis-toolkit-20261106",
+  "release_url": "https://github.com/shunwendongan/kernel_bench_opt/releases/tag/performance-analysis-toolkit-20261106",
+  "distribution": "GitHub Release assets; full ZIP snapshots, renamed only",
+  "assets": [
+    {
+      "platform": "macos",
+      "original_filename": "性能分析工具包_使用说明与Codex_Skill_MAC.zip",
+      "asset_name": "performance-analysis-toolkit-macos-20261106.zip",
+      "bytes": 542649594,
+      "sha256": "3ff1160e66f4199c988ba0cc528e4347a639b7543e30a97a3f159735f015b34e",
+      "zip_entries": 40238,
+      "uncompressed_bytes": 2043975545,
+      "download_url": "https://github.com/shunwendongan/kernel_bench_opt/releases/download/performance-analysis-toolkit-20261106/performance-analysis-toolkit-macos-20261106.zip",
+      "content_changed": false
+    },
+    {
+      "platform": "windows",
+      "original_filename": "性能分析工具包_使用说明与Codex_Sklll_WIN.zip",
+      "asset_name": "performance-analysis-toolkit-windows-20261106.zip",
+      "bytes": 534862613,
+      "sha256": "2b42795355ea0cf3140f6ef2e9d7c75f198aa61bc1bcffbc5c16b5d5704de736",
+      "zip_entries": 20833,
+      "uncompressed_bytes": 2033444482,
+      "download_url": "https://github.com/shunwendongan/kernel_bench_opt/releases/download/performance-analysis-toolkit-20261106/performance-analysis-toolkit-windows-20261106.zip",
+      "content_changed": false
+    }
+  ]
+}
