@@ -1,0 +1,17 @@
+{
+  "all_equality_checks_passed": false,
+  "capture_enabled": false,
+  "config": "${BOARD_PROJECT}/experiments/convtranspose_opt_20261105/config.capture.json",
+  "distinct_executor_objects": true,
+  "manifest": "${BOARD_PROJECT}/experiments/vcb_random50_20261105/bundle/manifest.jsonl",
+  "measured_pairs_completed": 0,
+  "order": "warmup old,new; pair0 old,new; pair1 new,old; alternating thereafter",
+  "pairs": 3,
+  "profile_enabled": false,
+  "resident_instances": 2,
+  "row": 14,
+  "seed": "20261105",
+  "state": "failed_or_nonidentical_workload",
+  "tile": 4,
+  "warmup_per_instance": 1
+}

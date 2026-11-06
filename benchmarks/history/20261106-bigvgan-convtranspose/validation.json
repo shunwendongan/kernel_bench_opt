@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "scope": "local archive copy and raw-record statistical/protocol audit",
+  "inference_executed": false,
+  "board_contacted": false,
+  "container_executed": false,
+  "waveform_bytes_rechecked_in_this_archive": false,
+  "operator_cases_audit_passed": true,
+  "operator_formal_cases": 6,
+  "sync_e2e_audit_passed": true,
+  "async_e2e_audit_passed": false,
+  "async_failure_expected": true,
+  "async_audit_errors": [
+    "Actual request order/count differs from two warmups plus three alternating pairs",
+    "Missing/extra measured pair IDs",
+    "run.json does not confirm three completed pairs",
+    "run.json equality checks not passed",
+    "Missing/failed correctness check pair=-1, comparison=paired",
+    "Missing/duplicate/extra E2E comparisons"
+  ],
+  "analyzer_path": "tools/analysis/analyze_results.py",
+  "analyzer_sha256": "6a352517b75f7478510355e168d8306aa1b44d28d115346ac64efbba2c49843d"
+}

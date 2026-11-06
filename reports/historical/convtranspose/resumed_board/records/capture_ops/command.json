@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "bin/bigvgan_replay",
+    "${BOARD_PROJECT}/models/Qwen2.5-Omni-3B-MNN/bigvgan.mnn",
+    "capture/native",
+    "capture/operators",
+    "capture"
+  ],
+  "environment": {
+    "LD_LIBRARY_PATH": "${BOARD_PROJECT}/gpu/lib:/lib",
+    "DECONV_CAPTURE_DIR": "${BOARD_PROJECT}/experiments/convtranspose_opt_20261105/capture/operators"
+  },
+  "cwd": "${BOARD_PROJECT}/experiments/convtranspose_opt_20261105",
+  "utc": "2026-11-05T10:10:37.398492+00:00"
+}

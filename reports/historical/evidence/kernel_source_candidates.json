@@ -1,0 +1,94 @@
+{
+  "sources": [
+    {
+      "module": "GPU BigVGAN deconvolution",
+      "status": "source_candidate",
+      "source_file": "${DEPLOYMENT_TASK_ROOT}/work/upstreams/MNN-3.6.2/source/backend/opencl/execution/buffer/DeconvBufExecution.cpp",
+      "line": 141,
+      "symbol_or_expression": "DeconvBufExecution::onEncode -> buildKernel(\"deconv_2d\", \"deconv_2d\")",
+      "commit": "7e3c6fb5225d3ccf22807ee641332669df34650d",
+      "limits": "CPU/OpenCL source/dispatch candidate or configuration evidence; not captured per-device kernel program execution"
+    },
+    {
+      "module": "GPU deconvolution registry",
+      "status": "source_candidate",
+      "source_file": "${DEPLOYMENT_TASK_ROOT}/work/upstreams/MNN-3.6.2/source/backend/opencl/execution/buffer/DeconvBufExecution.cpp",
+      "line": 198,
+      "symbol_or_expression": "REGISTER_OPENCL_OP_CREATOR(DeconvolutionBufCreator, OpType_Deconvolution, BUFFER)",
+      "commit": "7e3c6fb5225d3ccf22807ee641332669df34650d",
+      "limits": "CPU/OpenCL source/dispatch candidate or configuration evidence; not captured per-device kernel program execution"
+    },
+    {
+      "module": "GPU deconvolution OpenCL source",
+      "status": "source_candidate",
+      "source_file": "${DEPLOYMENT_TASK_ROOT}/work/upstreams/MNN-3.6.2/source/backend/opencl/execution/cl/deconv_2d.cl",
+      "line": 13,
+      "symbol_or_expression": "__kernel void deconv_2d",
+      "commit": "7e3c6fb5225d3ccf22807ee641332669df34650d",
+      "limits": "CPU/OpenCL source/dispatch candidate or configuration evidence; not captured per-device kernel program execution"
+    },
+    {
+      "module": "GPU quantized convolution dispatch",
+      "status": "source_candidate",
+      "source_file": "${DEPLOYMENT_TASK_ROOT}/work/upstreams/MNN-3.6.2/source/backend/opencl/execution/buffer/ConvBufExecution.cpp",
+      "line": 1031,
+      "symbol_or_expression": "Memory_Low and supported quanParameter -> ConvBufLowMemoryExecution",
+      "commit": "7e3c6fb5225d3ccf22807ee641332669df34650d",
+      "limits": "CPU/OpenCL source/dispatch candidate or configuration evidence; not captured per-device kernel program execution"
+    },
+    {
+      "module": "DiT precision selection",
+      "status": "verified_configuration",
+      "source_file": "${DEPLOYMENT_TASK_ROOT}/work/upstreams/MNN-3.6.2/transformers/llm/engine/src/omni.cpp",
+      "line": 3113,
+      "symbol_or_expression": "ditBackendConfig.precision = BackendConfig::Precision_High",
+      "commit": "7e3c6fb5225d3ccf22807ee641332669df34650d",
+      "limits": "CPU/OpenCL source/dispatch candidate or configuration evidence; not captured per-device kernel program execution"
+    },
+    {
+      "module": "OpenCL FP32 build options",
+      "status": "verified_configuration",
+      "source_file": "${DEPLOYMENT_TASK_ROOT}/work/upstreams/MNN-3.6.2/source/backend/opencl/core/runtime/OpenCLRuntime.cpp",
+      "line": 817,
+      "symbol_or_expression": "Fp32 Memory and fp32 compute; FLOAT=float; COMPUTE_FLOAT=float",
+      "commit": "7e3c6fb5225d3ccf22807ee641332669df34650d",
+      "limits": "CPU/OpenCL source/dispatch candidate or configuration evidence; not captured per-device kernel program execution"
+    },
+    {
+      "module": "NPU tiled prefix",
+      "status": "confirmed_host_adapter",
+      "source_file": "${DEPLOYMENT_TASK_ROOT}/work/upstreams/MNN-3.6.2/transformers/llm/engine/src/omni_rknn_prefix.hpp",
+      "line": 43,
+      "symbol_or_expression": "OmniRknnPrefix::forward; actual rknn inputs/run/output calls",
+      "commit": "7e3c6fb5225d3ccf22807ee641332669df34650d",
+      "limits": "CPU/OpenCL source/dispatch candidate or configuration evidence; not captured per-device kernel program execution"
+    },
+    {
+      "module": "CPU remaining audio encoder",
+      "status": "confirmed_host_route",
+      "source_file": "${DEPLOYMENT_TASK_ROOT}/work/upstreams/MNN-3.6.2/transformers/llm/engine/src/omni.cpp",
+      "line": 684,
+      "symbol_or_expression": "tailBackend + tailSchedule CPU RuntimeManager",
+      "commit": "7e3c6fb5225d3ccf22807ee641332669df34650d",
+      "limits": "CPU/OpenCL source/dispatch candidate or configuration evidence; not captured per-device kernel program execution"
+    },
+    {
+      "module": "GPU synchronous speech",
+      "status": "confirmed_host_route",
+      "source_file": "${DEPLOYMENT_TASK_ROOT}/work/upstreams/MNN-3.6.2/transformers/llm/engine/src/omni.cpp",
+      "line": 3146,
+      "symbol_or_expression": "mAsyncToken2Wav=false for GPU processor",
+      "commit": "7e3c6fb5225d3ccf22807ee641332669df34650d",
+      "limits": "CPU/OpenCL source/dispatch candidate or configuration evidence; not captured per-device kernel program execution"
+    }
+  ],
+  "not_exposed": [
+    "RKNN internal device kernel source"
+  ],
+  "backend_enum": {
+    "0": "MNN_FORWARD_CPU",
+    "3": "MNN_FORWARD_OPENCL",
+    "13": "MNN_FORWARD_CPU_EXTENSION"
+  },
+  "source_enum": "${DEPLOYMENT_TASK_ROOT}/work/upstreams/MNN-3.6.2/include/MNN/MNNForwardType.h"
+}

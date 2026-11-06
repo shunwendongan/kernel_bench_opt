@@ -1,0 +1,13 @@
+{"kind": "manifest", "device": "Mali-G610 r0p0", "driver": "3.0", "T": 136, "axis": "h", "tile": 4, "warmup": 3, "reps": 5, "profiling_queue": true, "old_lws": [0, 0, 0], "new_lws": [8, 4, 1], "old_gws": [192, 1, 680], "new_gws": [192, 34, 5], "old_build_ms": 48.937968, "candidate_build_ms": 43.612029, "build_options": "-DFLOAT=half -DFLOAT4=half4 -DMNN_SUPPORT_FP16 -DUSE_BUFFER -DBIAS -cl-mad-enable -w -DBIGVGAN_TILE=4", "timing_scope": "Resident buffers; device event and synchronized enqueue-to-finish host; no validation/readback/packing"}
+{"kind": "correctness", "elements": 522240, "bit_mismatches": 0, "numeric_failures": 0, "nonfinite": 0, "max_abs": 0, "rmse": 0, "atol": 0, "rtol": 0, "passed": true}
+{"kind": "baseline_vs_mnn_capture", "numeric_mismatches": 0, "max_abs": 0, "passed": true}
+{"kind": "sample", "backend": "old", "T": 136, "rep": 0, "order": 0, "host_us": 975145.22, "kernel_us": 974710.503}
+{"kind": "sample", "backend": "candidate", "T": 136, "rep": 0, "order": 1, "host_us": 71417.161, "kernel_us": 71027.459}
+{"kind": "sample", "backend": "candidate", "T": 136, "rep": 1, "order": 0, "host_us": 72271.469, "kernel_us": 71582.04}
+{"kind": "sample", "backend": "old", "T": 136, "rep": 1, "order": 1, "host_us": 976194.943, "kernel_us": 975745.717}
+{"kind": "sample", "backend": "old", "T": 136, "rep": 2, "order": 0, "host_us": 987709.791, "kernel_us": 986928.747}
+{"kind": "sample", "backend": "candidate", "T": 136, "rep": 2, "order": 1, "host_us": 74514.138, "kernel_us": 73704.007}
+{"kind": "sample", "backend": "candidate", "T": 136, "rep": 3, "order": 0, "host_us": 73900.459, "kernel_us": 73165.796}
+{"kind": "sample", "backend": "old", "T": 136, "rep": 3, "order": 1, "host_us": 981560.54, "kernel_us": 980612.074}
+{"kind": "sample", "backend": "old", "T": 136, "rep": 4, "order": 0, "host_us": 962719.206, "kernel_us": 961936.351}
+{"kind": "sample", "backend": "candidate", "T": 136, "rep": 4, "order": 1, "host_us": 72514.139, "kernel_us": 71823.042}

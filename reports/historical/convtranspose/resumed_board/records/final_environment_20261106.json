@@ -1,0 +1,66 @@
+{
+  "uname": [
+    "Linux",
+    "rk3588-aibox",
+    "6.1.118",
+    "#234 SMP Thu Oct  8 19:26:53 CST 2026",
+    "aarch64",
+    ""
+  ],
+  "compiler": "c++ (Debian 12.2.0-14+deb12u1) 12.2.0",
+  "mnn_commit": null,
+  "mnn_commit_note": "No .git metadata in deployed source tree",
+  "files": [
+    {
+      "path": "${BOARD_PROJECT}/experiments/convtranspose_opt_20261105/bin/omni_ab",
+      "bytes": 10411880,
+      "sha256": "2234053fc8186e8503aa67696f4c833a4b4b08e4edb7cde650776e453034c15c"
+    },
+    {
+      "path": "${BOARD_PROJECT}/experiments/convtranspose_opt_20261105/bin/omni_ab_sync",
+      "bytes": 10411888,
+      "sha256": "aa1724e5deb91e962aa19edc433456d4f4bdc5e8d954f8511da079cc0e10f3e7"
+    },
+    {
+      "path": "${BOARD_PROJECT}/experiments/convtranspose_opt_20261105/bin/libMNN_candidate.a",
+      "bytes": 28209928,
+      "sha256": "13abfd4507cffe422eb5b09971cd625614ad4824ee5060d6b221d06fa96dd1f1"
+    },
+    {
+      "path": "${BOARD_PROJECT}/experiments/convtranspose_opt_20261105/bin/libMNN_sync_probe.a",
+      "bytes": 28210072,
+      "sha256": "c0b406c44b1b970644fe55fd51d22b99ee4cf08f79e162eb1017d3e9756d2dee"
+    },
+    {
+      "path": "${BOARD_PROJECT}/experiments/convtranspose_opt_20261105/src/omni.sync_probe.cpp",
+      "bytes": 174595,
+      "sha256": "fa6d4419f6916859d0a7d6ca5ad93d99fb82b693efc067ddb35cf20e95679ec3"
+    },
+    {
+      "path": "${BOARD_PROJECT}/experiments/convtranspose_opt_20261105/src/omni_ab.cpp",
+      "bytes": 16276,
+      "sha256": "15c52960c20870a01eb1601e2d8bce71e867c8c67df2ca4e3ea9d7900e24e35d"
+    },
+    {
+      "path": "${BOARD_PROJECT}/experiments/convtranspose_opt_20261105/src/DeconvBufExecution.candidate.cpp",
+      "bytes": 14602,
+      "sha256": "ffe7dc5c5f52be6ae92618c17dadc43d26c7ecff2dd70e22bc401255929dabfa"
+    },
+    {
+      "path": "${BOARD_PROJECT}/experiments/convtranspose_opt_20261105/src/bigvgan_deconv_source.hpp",
+      "bytes": 4085,
+      "sha256": "29b0595684ac5a827f29c84d4b26e697f24dcc04b4a3290f199071a4b97d4e6f"
+    },
+    {
+      "path": "${BOARD_PROJECT}/models/Qwen2.5-Omni-3B-MNN/bigvgan.mnn",
+      "bytes": 534624,
+      "sha256": "f47227fdd290c752749b773cc777bc4838edcb02ced3d26231a0401edab1e48d"
+    },
+    {
+      "path": "${BOARD_PROJECT}/models/Qwen2.5-Omni-3B-MNN/bigvgan.mnn.weight",
+      "bytes": 116571020,
+      "sha256": "9434b8ec498fc79f0b97b66b945f6655f60eb44685450e76b7bb7cbb8ec897fd"
+    }
+  ],
+  "model_hashes_match_pre_optimization": true
+}

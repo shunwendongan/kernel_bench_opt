@@ -1,112 +1,80 @@
-# kernel_bench_opt
+# kernel_bench_opt · 端侧算子优化与评测
 
-RK3588 上 Qwen2.5-Omni-3B 的异构部署、BigVGAN ConvTranspose 优化与新旧实现对比实验代码。用于在另一台 RK3588 上重新构建、采集真实输入、验证正确性并继续优化。
+把一次优化沉淀为 **候选代码 + 多级 benchmark + profile/映射证据 + 可复用经验**。本分支 `Qwen2.5-Omni-3B_VCB-Bench` 以 RK3588 上的 BigVGAN ConvTranspose 为首个案例，目标是逐步接通 agent 驱动的评测与优化循环。
 
-**当前状态：三种真实 shape 的算子与 BigVGAN 集成验证通过；默认异步版本完整 A/B 波形失败，另存的可选 PreDiT 同步版本已通过同一真实样本3对 A/B，完整请求中位延迟降低约3.20%。候选默认关闭。** 见 [实验状态](docs/STATUS.md) 和 [同步版本](docs/SYNC_VARIANT.md)。
+**GitHub 管代码与知识，本地主机管大资产，端侧容器执行真实测试。** 模型、全量数据集和大张量通过端侧可见的本地目录挂载；Git 保存资产身份、必要的小型记录和结论。
 
-代码、配置和依赖说明保存在此分支；**模型权重、VCB随机50样本、真实采集张量、原始对比证据、可选运行库和缓存已补充到同仓库 [Release](https://github.com/shunwendongan/kernel_bench_opt/releases/tag/qwen2.5-omni-3b-vcb-bench-assets-20261106)**。仓库工具不连接旧板，不管理其他人的测试进程。
+## 工作流程
 
-## 目录
-
-| 路径 | 内容 |
-|---|---|
-| `kernels/` | 同精度 tile4 OpenCL kernel、内嵌源码和新旧单算子微基准 |
-| `src/mnn/` | MNN 执行器候选、原实现回退、Omni capture/profile、RKNN prefix 适配 |
-| `src/apps/` | `bigvgan_replay`、`vcb_eval`、完整端到端 `omni_ab` |
-| `scripts/` | 固定版本 MNN 的源码准备、全新构建、配置生成 |
-| `tools/benchmark/` | 串行微基准和本次启动进程的环境记录 |
-| `tools/analysis/` | FP32 参考诊断、bitwise 比较、原始 A/B 日志统计 |
-| `tools/data/` | VCB 全类别不放回随机抽样与输入准备；不含数据 |
-| `tools/profiling/`、`tools/mapping/` | profile 标准化、参考 ONNX 导出与结构候选匹配 |
-| `tools/npu/` | 音频 Conv1→GELU→Conv2→GELU 的历史导出、转换和验证源码 |
-| `dependencies/` | 外部依赖身份、可选 Python 依赖、MNN 许可 |
-
-## 下载复现资产
-
-### 公共附录：Mac / Windows 性能分析工具包
-
-性能分析工具包、使用说明、Codex Skill 说明及随包分析产物已提供为独立的 [公共附录 Release](https://github.com/shunwendongan/kernel_bench_opt/releases/tag/performance-analysis-toolkit-20261106)。Mac 包约 517.51 MiB，Windows 包约 510.08 MiB；下载入口、安装起点、适用范围和 SHA-256 校验见 [附录说明](appendices/performance-analysis-toolkit/README.md)。两个 ZIP 保留原始内容，`git clone` 不会自动下载；跨机器使用需按包内说明重建环境。
-
-### RK3588 实验复现资产
-
-```bash
-python3 scripts/fetch_assets.py --list
-python3 scripts/fetch_assets.py --output /data/kernel-bench-assets
+```mermaid
+flowchart LR
+    G["GitHub 模型_数据集分支<br/>候选代码 · Dockerfile · 历史证据"]
+    D["本地主机<br/>模型 · 数据集 · 真实张量"]
+    C["端侧 Docker 容器<br/>RK3588 CPU / GPU / NPU"]
+    P["端侧采集 profile<br/>保存已完成请求 / 稳定文件"]
+    H["主机分析工具包<br/>热点 → ONNX候选 → 实现入口"]
+    A["Agent<br/>设计假设 → 修改候选"]
+    B["多级 benchmark<br/>L1 算子 → L2 子图 → L3 E2E"]
+    K["归档成功与失败<br/>指标 · 设计 · 经验 · 数据身份"]
+    G -->|固定commit构建| C
+    D -->|同步或共享挂载| C
+    C --> P -->|回传| H --> A
+    A -->|独立构建| C
+    C --> B -->|正确性门与可比性审查| K --> G
 ```
 
-默认下载完整部署MNN模型、NPU前缀、此次50条样本及真实capture/测试证据，逐片校验SHA-256。参考ONNX、运行库、缓存可单独选择；详见 [ASSETS.md](docs/ASSETS.md)。`git clone` 本身不会自动下载Release附件。
+这张图是目标 SOP。已有采集器、离线分析、候选实现和分级评测入口；**连续流式profile、跨机器自动调度、agent自动迭代和自动回传提交尚未接通**。Docker配方已加入，本次未在新板构建或运行。操作细节见 [SOP](docs/SOP.md)。
 
-## 在新 RK3588 上开始
+## 已沉淀的第一个候选
 
-需要 Linux/aarch64、C++17 编译器、CMake、Git、Python 3.10+、可用的 Mali OpenCL 驱动，以及 RKNN Runtime 2.3.2 和对应 `rknn_api.h`。优先复用板上已有 SDK 和 Python 环境。完整依赖和外部资产清单见 [DEPENDENCIES.md](docs/DEPENDENCIES.md)。
+**BigVGAN 第一个 ConvTranspose：tile4 复用同stride相位的权重载入，保持部署权重与FP16累加次序。** DiT独立保持FP32；未匹配的节点/shape继续走原kernel。
+
+| 层级 | 已有证据 | 历史结果 |
+|---|---|---|
+| L1 · 单算子 | 真实T52/120/136；各15对A/B；位级一致 | 旧/新中位数 **12.11× / 13.20× / 13.38×**，仅驻留buffer算子区间 |
+| L2 · BigVGAN集成 | 同mel的输入、目标输出、完整波形，共9项比较 | 全部位级一致；未声称独立干净子图总延迟 |
+| L3 · 完整请求 | 独立PreDiT同步构建；同一样本3对A/B | **94.061 → 91.055秒，降低3.20%**；8次暖机/测量波形一致 |
+
+这些是原板裸机历史结果，不能替代新板/容器验收。默认异步构建曾在波形门失败，0正式对；同步成功属于另一个构建，旧/新两侧均使用同步设置。小样本不报告稳定p95或统计显著性。
+
+[候选源码](kernels/bigvgan_deconv_s5_tiled.cl) · [设计与下一步](experiments/bigvgan-convtranspose-tile4/design.md) · [候选身份](experiments/bigvgan-convtranspose-tile4/candidate.json) · [热点分析与profile片段](reports/20261106-bigvgan-convtranspose/README.md) · [原始评测证据](benchmarks/history/20261106-bigvgan-convtranspose/README.md) · [完整状态](docs/STATUS.md)
+
+另已整理 [历史profile、ONNX映射与VCB逐请求数据](reports/historical/README.md)。VCB原计划随机50条，按停止指令实际完成29条；历史HTML报告与独立优化SOP由外部保存，不随本分支上传。
+
+## 从哪里开始
 
 ```bash
-git clone --branch Qwen2.5-Omni-3B_VCB-Bench https://github.com/shunwendongan/kernel_bench_opt.git
+git clone --branch Qwen2.5-Omni-3B_VCB-Bench \
+  https://github.com/shunwendongan/kernel_bench_opt.git
 cd kernel_bench_opt
-python3 scripts/fetch_assets.py --output /data/kernel-bench-assets
 
-# 使用专属于本实验的 MNN checkout，构建脚本会修改其中的任务文件。
-mkdir -p vendor
-git clone https://github.com/alibaba/MNN.git vendor/MNN
-git -C vendor/MNN checkout 7e3c6fb5225d3ccf22807ee641332669df34650d
-
-# 将 SDK/库路径替换为新板已有的实际位置。
-python3 scripts/build_rk3588.py \
-  --mnn-source "$PWD/vendor/MNN" \
-  --build-dir "$PWD/build/rk3588" \
-  --rknn-include /path/to/rknn/include \
-  --rknn-lib /path/to/librknnrt.so \
-  --opencl-lib /path/to/libOpenCL.so.1 \
-  --jobs 4
-
-export LD_LIBRARY_PATH="$PWD/build/rk3588/runtime-lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
-
-python3 scripts/make_config.py \
-  --model-dir /data/kernel-bench-assets/models/Qwen2.5-Omni-3B-MNN \
-  --cache-dir "$PWD/runs/cache" \
-  --output "$PWD/runs/config.json"
+# 仅复算已经入库的历史统计，不运行模型，也不下载大文件。
+python3 tools/analysis/analyze_results.py \
+  --bench-root benchmarks/history/20261106-bigvgan-convtranspose/bench \
+  --e2e benchmarks/history/20261106-bigvgan-convtranspose/e2e/paired_sync_20261106 \
+  --out runs/history-reanalysis
 ```
 
-构建产物在 `build/rk3588/bin/`。`runtime-lib/` 中的 `libOpenCL.so` 是指向显式指定库的本地别名，供 MNN 动态加载；不会改动系统库。
+准备在新板测试时，先按 [容器指南](docs/CONTAINERS.md) 构建Linux/arm64环境，挂载资产和匹配固件的GPU/NPU依赖，再按 [多级复现](docs/REPRODUCE.md) 逐级验收。也保留 [原生构建](docs/BUILD.md) 路径。容器不自带板载内核驱动；台式机资产必须先变成端侧可见的目录。
 
-源码准备可先单独检查：
+## 每轮留下什么
 
-```bash
-python3 scripts/prepare_mnn.py --mnn-source "$PWD/vendor/MNN" --dry-run
-```
+| 位置 | 内容 |
+|---|---|
+| `kernels/`、`src/mnn/` | 候选实现、注册/dispatch入口、基线回退 |
+| `experiments/<candidate-id>/` | 父候选、设计假设、源文件身份、不变量、优化方向 |
+| `benchmarks/history/<run-id>/` | 原始小型JSONL/CSV、正确性记录、分层指标、失败案例、manifest |
+| `reports/<run-id>/` | 主机分析报告、热点profile片段、来源映射与源码证据 |
+| `experiments/templates/` | 后续run与设计模板，便于检索和构造训练数据 |
+| `docker/`、`tools/` | 环境配方、端侧启动器、采集/评测/分析脚本 |
+| 本地主机 / 端侧资产目录 | 大型模型、全量数据集、大张量、完整trace与缓存；Git只引用身份 |
 
-新脚本已经通过源码准备、Python 静态检查和应用 C++ 语法检查；**本次代码迁移没有执行新板 CMake 配置、ARM 编译链接或推理**。历史板端验证使用的是旧板隔离构建，不能代替新板验收。
+每个结果绑定 **代码commit、镜像/引擎/驱动、模型与输入哈希、shape/精度、计时域、正确性门和原始记录**。失败与未运行如实保留；同一请求的重复测量、同一capture的变体应按来源分组，不能拆成独立训练/测试样本。规范见 [SOP与数据沉淀](docs/SOP.md)。
 
-## 测试顺序
+## 工具与既有资产
 
-1. 下载并复用已有模型、数据和真实 capture；需要新输入时，再按 [复现步骤](docs/REPRODUCE.md) 采集真实 mel、算子输入和部署权重。
-2. 运行单算子 `bench_deconv`，先检查正确性，再比较关闭 profiling 的计时。
-3. 用同一份真实 mel 回放完整 BigVGAN，核对输入、目标算子输出和波形。
-4. 运行完整 `omni_ab`。所有暖机与测量请求必须通过 text token、speech token 和 float 波形一致性检查；失败会停止正式比较。
+- [Mac / Windows 性能分析工具包公共附录](appendices/performance-analysis-toolkit/README.md)：下载、使用说明和Codex Skill说明。
+- [此前发布的模型/数据/capture资产](docs/ASSETS.md)：历史Release保留；今后的默认流程从本地资产挂载，本次没有新增大文件上传。
+- [算子与ONNX来源合同](docs/OPERATOR.md) · [同步候选](docs/SYNC_VARIANT.md) · [依赖](docs/DEPENDENCIES.md)。
 
-```bash
-# 此步骤会在执行命令的板子上进行推理；只在准备好的新板执行。
-export OMNI_RKNN_AUDIO=/data/kernel-bench-assets/models/rknn/audio_conv_prefix_mnn4bit_fp16.rknn
-export OMNI_TEST_SEED=20261105
-build/rk3588/bin/omni_ab \
-  runs/config.json \
-  /data/kernel-bench-assets/data/vcb_random50/bundle/manifest.jsonl \
-  /data/kernel-bench-assets/data/vcb_random50/bundle \
-  runs/e2e-trial-001 14 3 4
-```
-
-`14` 是当前 bundle 中的 `original_row_number`，必须确认它对应语音输出样本；更换 bundle 后不能假定相同行号还是相同内容。程序使用两个常驻模型实例，需留足内存。上述命令使用默认异步源码，其历史完整 E2E 波形失败。要复现后续通过的独立同步构建，请按 [SYNC_VARIANT.md](docs/SYNC_VARIANT.md) 应用可选补丁并设置开关。
-
-## 替换机制与继续优化
-
-沿用 MNN `Deconvolution` 注册，在 `DeconvBufExecution::onEncode` 中按明确条件选择候选 kernel。这里是源码集成并重新编译 MNN，不是通用动态插件注册。
-
-- `OMNI_BIGVGAN_DECONV_TILE=4`：仅目标节点、匹配结构、precision0、`T∈{52,120,136}` 时启用候选。
-- 未设置或设为 `0`：使用原 kernel；不匹配条件的节点/shape 同样回退。
-- FP16 存储和累加顺序、packed 权重及偏置保持不变。DiT 单独保持 FP32。
-
-修改 `kernels/bigvgan_deconv_s5_tiled.cl` 后运行 `python3 tools/embed_kernel.py`，再从新的独立 MNN checkout 构建。准备脚本会拒绝覆盖未知的本地改动。验收合同见 [OPERATOR.md](docs/OPERATOR.md)。
-
-## 许可与来源
-
-保留仓库原有 [Apache-2.0 LICENSE](LICENSE)。MNN 衍生文件保留原版权声明与 [MNN 许可副本](dependencies/MNN_LICENSE.txt)，修改清单见 [THIRD_PARTY.md](docs/THIRD_PARTY.md)。模型与VCB数据、可选GPU运行库各自保留原许可，不适用仓库代码许可替换。RKNN SDK文件从官方固定版本获取，未在本仓库再分发。
+代码遵循 [Apache-2.0](LICENSE)；模型、数据、MNN与厂商运行库保留各自许可，见 [第三方来源](docs/THIRD_PARTY.md)。

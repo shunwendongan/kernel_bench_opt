@@ -1,0 +1,415 @@
+﻿original_row_number,index,task_type,subset,source_jsonl,source_line_number,status,pending_phase,runtime_success,input_audio_files,text,reference_answer,error,request_s,thinker_response_s,waveform_phase_s,audio_encoder_including_prepare_s,thinker_prefill_s,thinker_decode_s,thinker_sample_s,talker_prefill_s,talker_decode_s,token2wav_s,dit_s,ttfa_s,rtf_vs_input,request_rtf_vs_output,waveform_phase_rtf_vs_output,input_duration_s,wave_duration_s,text_tokens,speech_tokens,sampled_peak_rss_kib,process_max_rss_kib,minimum_memavailable_kib,raw_dit_s,dit_timing_status,thinker_truncated,speech_limit_reached_1024,speech_token_limit,nonfinite_samples,profile_enabled,npu_request_count,npu_tile_calls,npu_total_us,npu_prepare_us,npu_inputs_set_us,npu_run_us,npu_outputs_get_us,npu_copy_release_us,wav_state,wav_valid,wav_duration_s,metrics_source
+1,huisu0533-0,audio2text,backtracking,data/downloaded_datasets/vcb_bench/multi_turn_dialog/backtracking/backtracking.jsonl,74,success,,True,"[""audio/001_00_huisu0533-0.wav""]","提高记忆效率是一个循序渐进的过程，需要结合多种方法和策略。以下是一些有效的方法：
+
+1. **理解记忆法**：
+   - **理解是关键**：理解是系统知识，而不是死记硬背。理解概念、原理和联系，可以帮助你更好地记住信息。
+   - **分类和组织**：将信息分类和组织，有助于更好地理解和记忆。
+
+2. **联想记忆法**：
+   - **联想是桥梁**：通过联想，将新信息与已有的知识联系起来，可以帮助你更好地记住新信息。
+   - **创造故事或场景**：将信息与故事或场景联系起来，可以增强记忆的持久性和可理解性。
+
+3. **重复记忆法**：
+   - **重复是关键**：通过反复复习，可以加深记忆的深度和广度。
+   - **间隔重复**：通过在不同时间点复习，可以增强记忆的持久性和可回忆性。
+
+4. **视觉记忆法**：
+   - **视觉是重要**：通过视觉化信息，可以帮助你更好地记住和理解。
+   - **图像化**：将信息转化为图像或视觉化，可以增强记忆的持久性和可理解性。
+
+5. **主动回忆法**：
+   - **主动回忆是关键**：通过主动回忆，可以加深记忆的深度和广度。
+   - **尝试回忆**：在没有外部提示的情况下，尝试回忆信息，可以帮助你更好地记住信息。
+
+6. **定期复习法**：
+   - **定期复习是关键**：定期复习可以帮助你巩固记忆，防止遗忘。
+   - **间隔复习**：通过在不同时间点复习，可以增强记忆的持久性和可回忆性。
+
+7. **创造故事或场景**：
+   - **创造故事或场景**：将信息与故事或场景联系起来，可以增强记忆的持久性和可理解性。
+   - **创造场景**：将信息转化为场景或故事，可以增强记忆的持久性和可理解性。
+
+8. **视觉化**：
+   - **视觉化是关键**：通过视觉化信息，可以帮助你更好地记住和理解。
+   - **图像化**：将信息转化为图像或视觉化，可以增强记忆的持久性和可理解性。
+
+9. **主动回忆**：
+   - **主动回忆是关键**：通过主动回忆，可以加深记忆的深度和广度。
+   - **尝试回忆**：在没有外部提示的情况下，尝试回忆信息，可以帮助你更好地记住信息。
+
+10. **定期复习**：
+    - **定期复习是关键**：定期复习可以帮助你巩固记忆，防止遗忘。
+    - **间隔复习**：通过在不同时间点复习，可以增强记忆的持久性和可回忆性。
+
+通过结合这些方法，你可以有效地提高记忆效率。记住，每个人的学习方式和记忆风格可能不同，找到最适合自己的方法是关键。",,,53.690961477,53.690764892,,1.465019,2.520555,49.63854,0.048048,,,,,,16.46962008496933,,,3.26,,603,,3203280,3203484,12226128,,unavailable_legacy_counter,False,,1024,0,False,1,1,34136.2,92.8,11357.6,18541.7,2748.5,1299.7,missing,,,metrics.json
+2,en_moni_000494,audio2text,simulation_en,data/downloaded_datasets/vcb_bench/text_instruction_follow/english/simulation_en/simulation_en.jsonl,3,success,,True,"[""audio/002_00_en_moni_000494.wav""]","As a house cleaner, if you accidentally break a client's decorative painting while cleaning, it's important to handle the situation with honesty, responsibility, and a willingness to make it right. Here’s how you can address the situation:
+
+1. **Acknowledge the Damage**: Clearly and honestly explain what happened. Be transparent about the accident and the damage. This shows that you are taking responsibility for your actions.
+
+2. **Apologize**: Express your sincere apologies for the accident. A genuine apology can go a long way in showing theneyoung people, and it shows that you care about the client's feelings and the situation.
+
+3. **Offer to Repair or Replace**: Propose a solution that addresses the damage. This could be repairing the painting, replacing it with a similar one, or offering to refund the client if the painting is valuable.
+
+4. **Follow Through**: If you offer to repair or replace, make sure you follow through with the repair or replacement. If you offer a refund, ensure the client receives the money promptly.
+
+5. **Learn from the Experience**: Reflect on what went wrong and how you can prevent similar accidents in the future. This could involve more careful handling of delicate items, better organization, or more thorough training.
+
+6. **Maintain Professionalism**: Throughout the process, maintain a professional demeanor. This shows that you are a reliable and responsible house cleaner.
+
+By following these steps, you can handle the situation gracefully and professionally, showing that you are a responsible and caring house cleaner.",,,32.850649769,32.850465726,,2.976032,5.201081,24.648363,0.01332,,,,,,4.4755653636239785,,,7.34,,307,,3224060,3224060,12204540,,unavailable_legacy_counter,False,,1024,0,False,1,2,50431.1,579.8,3997.9,37191.0,7298.2,1332.9,missing,,,metrics.json
+3,dijin0211-0,audio2text,progression,data/downloaded_datasets/vcb_bench/multi_turn_dialog/progression/progression.jsonl,73,success,,True,"[""audio/003_00_dijin0211-0.wav""]","巴厘岛是一个美丽的度假胜地，有很多地方可以去玩，以下是一个3天的行程安排：
+
+第一天：
+上午：抵达巴厘岛，前往巴厘岛的热门景点之一，乌布的乌布市场，购买一些当地特色商品和纪念品。
+
+中午：在乌布市场附近的小餐馆或咖啡馆享用午餐。
+
+下午：前往乌布的乌布皇宫，参观这座巴厘岛最著名的皇宫之一。
+
+晚上：在乌布市场附近的小餐馆或咖啡馆享用晚餐，品尝当地特色菜肴。
+
+第二天：
+上午：前往巴厘岛的热门景点之一，乌布的乌布市场，购买一些当地特色商品和纪念品。
+
+中午：在乌布市场附近的小餐馆或咖啡馆享用午餐。
+
+下午：前往巴厘岛的热门景点之一，乌布的乌布皇宫，参观这座巴厘岛最著名的皇宫之一。
+
+晚上：在乌布市场附近的小餐馆或咖啡馆享用晚餐，品尝当地特色菜肴。
+
+第三天：
+上午：前往巴厘岛的热门景点之一，乌布的乌布市场，购买一些当地特色商品和纪念品。
+
+中午：在乌布市场附近的小餐馆或咖啡馆享用午餐。
+
+下午：前往巴厘岛的热门景点之一，乌布的乌布皇宫，参观这座巴厘岛最著名的皇宫之一。
+
+晚上：在乌布市场附近的小餐馆或咖啡馆享用晚餐，品尝当地特色菜肴。
+
+以上是一个3天的行程安排，具体行程可能会根据您的兴趣和时间而有所调整。希望这个行程安排对您有所帮助，祝您在巴厘岛度过一个愉快的假期！",,,34.237437993,34.23720874,,2.032147,3.837982,28.318051,0.039812,,,,,,7.0015210619631905,,,4.89,,338,,3214332,3224060,12214276,,unavailable_legacy_counter,False,,1024,0,False,1,1,16073.9,273.6,594.4,11943.9,2877.9,371.0,missing,,,metrics.json
+4,moni_000476,audio2text,simulation,data/downloaded_datasets/vcb_bench/text_instruction_follow/chinese/simulation/simulation.jsonl,99,success,,True,"[""audio/004_00_moni_000476.wav""]","当作为健身房的会籍顾问，承诺客户的私教课程权益无法兑现，客户要求退卡时，你可以采取以下步骤来尝试挽留：
+
+1. **诚恳道歉**：
+   - 首先，诚恳地向客户道歉，表达对客户期望的尊重和理解，同时说明情况的复杂性。
+
+2. **详细解释情况**：
+   - 清晰地解释为什么无法兑现私教课程权益，包括任何可能的原因或技术问题，以及健身房的内部流程和规定。
+
+3. **提供替代方案**：
+   - 提出一些替代方案，比如：
+     - **其他课程或服务**：如果可能，提供其他课程或服务的优惠券或折扣。
+     - **退款或补偿**：如果客户同意退款，可以提出一个合理的退款方案，或者提供一些补偿，比如额外的健身课程或健身房的免费体验。
+     - **后续支持**：如果客户愿意，可以提供后续的咨询或支持，比如定期的健身计划或一对一的健身指导。
+
+4. **倾听客户反馈**：
+   - 让客户有机会表达他们的期望和需求，倾听他们的意见，看看是否有其他解决方案。
+
+5. **保持专业和耐心**：
+   - 在整个过程中，保持专业和耐心，不要让客户感到被忽视或被忽视。
+
+6. **记录和反馈**：
+   - 如果可能，记录下客户的反馈和意见，以便在未来的类似情况下更好地处理。
+
+通过这些步骤，你可以尝试理解客户的期望，并提出一个合理的解决方案，从而尽量减少客户的不满和退卡的可能性。",,,36.906865541,36.906684414,,3.354969,6.057515,27.452127,0.029397,,,,,,4.451974130398071,,,8.29,,329,,3237180,3237180,12192032,,unavailable_legacy_counter,False,,1024,0,False,1,2,42822.1,535.5,1421.9,36846.1,2540.2,1440.0,missing,,,metrics.json
+5,lr_induction_guina0283,audio2text,logical_reasoning,data/downloaded_datasets/vcb_bench/mathematical_logic/logical_reasoning/logical_reasoning.jsonl,92,success,,True,"[""audio/005_00_lr_induction_guina0283.wav""]",这说明了氧化过程。,水果暴露后易被氧化。因为果肉接触空气，会发生褐变。,,10.384482566,10.384309897,,3.874136,5.998733,0.50239,0.000704,,,,,,1.1512730117516632,,,9.02,,7,,3238924,3238924,12185172,,unavailable_legacy_counter,False,,1024,0,False,1,2,52929.9,1013.3,3989.8,37261.4,8853.1,1769.9,missing,,,metrics.json
+6,qingganhua_000306,audio2audio,emotional_control,data/downloaded_datasets/vcb_bench/speech_instruction_follow/chinese/emotional_control/emotional_control.jsonl,99,success,,True,"[""audio/006_00_qingganhua_000306.wav""]",嗯…你可以这样描述：“阳光透过窗户，那金黄的光洒在沙发的每一寸地方，就像给整个房间都镀上了一层金色的光晕。你抱着那本闲书，轻轻翻动着书页，那纸张的质感和书中的文字仿佛都在轻声细语地诉说着什么。周围的环境安静得只有阳光和书的声响，仿佛整个世界都慢了下来，只有你和那本书在享受这难得的宁静。”。要是你还有其他想法或者想补充点啥，随时跟我说呀。,,,408.174349201,20.541531376,387.632817825,4.19511,6.772921,9.544621,0.014287,1.106142,21.51904,365.006405,,64.195627113,43.01099570084299,20.008546529460784,19.00160871691177,9.49,20.4,118,1024,3555972,3590584,11866828,0.0,unavailable_legacy_counter,False,True,1024,0,False,1,2,46496.7,1088.5,1822.1,37766.7,3932.9,1825.6,valid,True,20.4,metrics.json
+7,en_xuxie_000408,audio2text,continuation_en,data/downloaded_datasets/vcb_bench/text_instruction_follow/english/continuation_en/continuation_en.jsonl,67,success,,True,"[""audio/007_00_en_xuxie_000408.wav""]","In the dimly lit basement of the old bookstore, the door to the dragon world stood ajar, its edges worn by years of neglect. The air inside was thick with the scent of old books and forgotten magic, a faint glow from a nearby lantern casting long, eerie shadows on the stone floor.
+
+You stood there, your heart pounding in your chest, the weight of the world on your shoulders. You had always known that this door was there, hidden in plain sight, but you had never dared to step through it. Now, with no other choice, you took a deep breath and pushed the door open.
+
+The world beyond was a blur of colors, a mix of greens, purples, and oranges that seemed to dance in the light. You blinked, and the colors shifted, blending into a single, vibrant spectrum. As you stepped further into the room, you saw it: a dragon, its scales shimmering in the light, its eyes glowing with a fierce intensity.
+
+The dragon, its name was Zephyr, and it had been waiting for you. It had been waiting for someone who could unlock the secrets of the dragon world, someone who could understand the language of the dragons, the language of the ancient, forgotten magic.
+
+Zephyr, the dragon, spoke to you in a language that was both familiar and strange, a language of fire and wind and magic. It told you that you were not just a human, not just a person from the world you knew. You were something more, something greater, something that had been waiting for you all along.
+
+And so, you stood there, in the dragon world, with Zephyr, the dragon, and you knew that you had been waiting for you all along.",,,38.282003769,38.281817392,,3.480952,5.921359,28.855698,0.014249,,,,,,4.749628259181141,,,8.06,,354,,3555972,3590584,11970876,,unavailable_legacy_counter,False,,1024,0,False,1,2,33410.8,583.0,2846.4,25102.3,3938.7,918.8,missing,,,metrics.json
+8,en_chuangzuo_000296,audio2text,creation_en,data/downloaded_datasets/vcb_bench/text_instruction_follow/english/creation_en/creation_en.jsonl,167,success,,True,"[""audio/008_00_en_chuangzuo_000296.wav""]","In the depths of the ocean, where the light of the sun barely reaches, there exists a creature that defies the very essence of its environment. This being is a融合 of two worlds: the bioluminescent, gelatinous forms of glowing jellyfish and the intricate, coral-crested reefs that thrive in the shadows. It is a being of both light and shadow, a creature that moves with the gentle sway of the ocean currents, its movements slow and deliberate, almost hypnotic in their rhythm.
+
+The creature's body is a translucent, gelatinous mass, a living, breathing sculpture of bioluminescent hues. It glows with a soft, ethereal light, casting an otherworldly glow that seems to ripple through the surrounding water. Its movements are not swift or aggressive, but rather a slow, methodical dance. It moves in waves, like the ebb and flow of the ocean tides, its body undulating gently as it glides through the deep.
+
+Its head, a delicate cluster of coral-like structures, is adorned with a network of tentacles that seem to pulse with a faint, otherworldly light. These tentacles are not for hunting, but for sensing the faintest of currents, the subtlest of movements in the water. As it moves, it sways like a sea anemone, its body undulating in a rhythm that seems to come from the very depths of the ocean itself.
+
+Its eyes, if one could call them that, are not fixed, but rather a part of its body, a soft, luminous light that seems to merge with the surrounding water. It moves not with speed, but with a kind of slow, deliberate grace, a dance that seems to be in harmony with the very fabric of the ocean itself.
+
+In its slow, deliberate movements, it moves through the deep, a creature of both light and shadow, a being that seems to exist in a world of its own, untouched by the chaos of the surface world. It moves with a kind of calm, a rhythm that seems to come from the very depths of the ocean, a creature that moves not with speed, but with a kind of slow, deliberate grace, a creature that moves through the deep, a creature that moves through the deep.",,,47.252220124,47.252059705,,3.477331,6.025844,37.716581,0.019215,,,,,,6.22558894914361,,,7.59,,464,,3555972,3590584,11947884,,unavailable_legacy_counter,False,,1024,0,False,1,2,42345.4,782.8,1415.2,36347.2,2508.4,1253.3,missing,,,metrics.json
+9,zhuanzhe0229-2,audio2text,transition,data/downloaded_datasets/vcb_bench/multi_turn_dialog/transition/transition.jsonl,66,success,,True,"[""audio/009_00_zhuanzhe0229-2.wav"", ""audio/009_01_zhuanzhe0229-2.wav"", ""audio/009_02_zhuanzhe0229-2.wav"", ""audio/009_03_zhuanzhe0229-2.wav"", ""audio/009_04_zhuanzhe0229-2.wav""]",可以多穿点衣服，也可以穿厚一点的毛衣或者加绒的外套。,,,25.676128366,25.675956863,,8.420528,15.610712,1.615245,0.002005,,,,,,1.2003800077606357,,,21.39,,20,,3560884,3590584,11961328,,unavailable_legacy_counter,False,,1024,0,False,5,7,140199.8,1254.8999999999999,6067.7,110686.59999999999,19413.300000000003,2634.4,missing,,,metrics.json
+10,yuyan_000675,audio2audio,language_control,data/downloaded_datasets/vcb_bench/speech_instruction_follow/chinese/language_control/language_control.jsonl,128,success,,True,"[""audio/010_00_yuyan_000675.wav""]",那我给你念一首吧。“Oggi è la notte， e la notte è dolce， e la dolce è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la notte è la notte， e la,,,476.620336872,91.772412086,384.847924786,2.557394,4.999499,84.163742,0.036982,0.534978,22.025076,362.287213,,133.097507573,95.89946415935614,23.363742003529413,18.865094352254903,4.97,20.4,1024,1024,3566264,3590584,11145948,0.0,unavailable_legacy_counter,True,True,1024,0,False,1,1,24449.6,477.5,637.9,18354.8,4351.7,583.9,valid,True,20.4,metrics.json
+11,topic_shift_cmp_neirong_000115,audio2text,topic_shift_cmp,data/downloaded_datasets/vcb_bench/real_scenario/content_variations/topic_shift_cmp/topic_shift_cmp.jsonl,77,success,,True,"[""audio/011_00_topic_shift_cmp_neirong_000115.wav""]","要赚更多的钱，可以尝试以下几种方法：
+
+1. **学习和提升技能**：不断学习新知识和技能，提高自己的竞争力。可以通过在线课程、书籍、研讨会等方式来学习。
+
+2. **创业或副业**：如果你有创意和资源，可以考虑创业或从事副业。这不仅可以赚更多的钱，还可以获得更多的自由和成就感。
+
+3. **投资**：如果你有一定的资金，可以考虑进行投资。可以通过股票、基金、房地产等方式来增加财富。但投资有风险，需要谨慎。
+
+4. **优化现有工作**：如果你在现有工作中，可以尝试优化工作流程，提高效率，或者寻找更高的职位或更高的薪资。
+
+5. **建立良好的人际关系**：建立良好的人际关系网络，可能会带来更多的机会和资源。
+
+6. **保持积极的心态**：面对困难和挑战时，保持积极的心态，不断学习和调整自己的策略。
+
+7. **持续学习和成长**：不断学习新知识和技能，提高自己的竞争力，这是长期成功的关键。
+
+希望这些建议对你有所帮助！",,,23.758231084,23.757983164,,2.051097,3.507185,18.16625,0.021023,,,,,,5.120308423275862,,,4.64,,221,,3566264,3590584,11893648,,unavailable_legacy_counter,False,,1024,0,False,1,1,14458.0,115.8,606.1,12276.4,1054.5,380.3,missing,,,metrics.json
+12,zhuanzhe0341-1,audio2text,transition,data/downloaded_datasets/vcb_bench/multi_turn_dialog/transition/transition.jsonl,74,success,,True,"[""audio/012_00_zhuanzhe0341-1.wav"", ""audio/012_01_zhuanzhe0341-1.wav"", ""audio/012_02_zhuanzhe0341-1.wav""]",因为电影的剧情紧凑，情节紧凑，没有拖沓的地方，让人感觉很紧凑，很刺激。,,,14.084324312,14.084132393,,4.594928,7.622321,1.847766,0.002404,,,,,,1.4112549410821642,,,9.98,,23,,3566264,3590584,11896936,,unavailable_legacy_counter,False,,1024,0,False,3,3,75936.4,802.1,2024.7,63014.2,8121.4,1839.0000000000002,missing,,,metrics.json
+13,en_gaixie_000366,audio2text,rewriting_en,data/downloaded_datasets/vcb_bench/text_instruction_follow/english/rewriting_en/rewriting_en.jsonl,52,success,,True,"[""audio/013_00_en_gaixie_000366.wav""]",I played so passionately in the piano competition.,,,10.411331333,10.411153123,,3.699363,5.931236,0.77326,0.000616,,,,,,1.2406811950009682,,,8.391625,,10,,3566264,3590584,11896220,,unavailable_legacy_counter,False,,1024,0,False,1,2,47005.3,893.4,1809.8,37025.8,5637.7,1585.5,missing,,,metrics.json
+14,yinliang_000806,audio2audio,volume_control,data/downloaded_datasets/vcb_bench/speech_instruction_follow/chinese/volume_control/volume_control.jsonl,31,success,,True,"[""audio/014_00_yinliang_000806.wav""]",嗯，可以啊。我在这儿呢。你有啥想聊的不？,,,108.85311069,8.937590683,99.915520007,2.181148,5.240559,1.504134,0.001699,0.638866,5.280251,93.996061,,33.314010952,19.684106815551534,20.93329051730769,19.21452307826923,5.53,5.2,19,264,3570208,3590584,11600592,0.0,unavailable_legacy_counter,False,False,1024,0,False,1,2,43727.5,618.6,1732.2,37608.4,2915.6,816.7,valid,True,5.2,metrics.json
+15,moni_000482,audio2text,simulation,data/downloaded_datasets/vcb_bench/text_instruction_follow/chinese/simulation/simulation.jsonl,97,success,,True,"[""audio/015_00_moni_000482.wav""]","作为宠物美容店的店员，如果在给宠物洗澡时不小心弄伤了宠物主人，确实需要尽快采取一些措施来解决问题，以避免进一步的纠纷和损失。以下是一些建议的步骤：
+
+1. **道歉和解释**：
+   - 首先，真诚地向宠物主人道歉，说明情况的严重性，并解释你已经尽力避免了伤害。
+   - 解释一下当时的情况，说明你已经采取了哪些预防措施，以及在哪些地方可能出现了疏忽。
+
+2. **提供赔偿方案**：
+   - 根据伤害的程度，提出一个合理的赔偿方案。赔偿可以是金钱赔偿，也可以是其他形式的补偿，比如额外的清洁服务、宠物用品的优惠券等。
+   - 确保赔偿方案是合理的，并且能够满足宠物主人的期望。
+
+3. **记录和保存证据**：
+   - 记录下所有相关的细节，包括时间、地点、事件经过、你的解释和宠物主人的反应等。
+   - 如果可能，保存好任何相关的照片或视频，这些可以作为证据。
+
+4. **寻求调解**：
+   - 如果双方无法达成一致，可以考虑寻求第三方的调解，比如宠物美容店的上级管理人员、宠物医生或法律专业人士。
+   - 在调解过程中，保持冷静和专业，尽可能达成一个双方都能接受的解决方案。
+
+5. **后续跟进**：
+   - 在赔偿后，确保宠物主人的宠物得到了适当的治疗和护理。
+   - 如果可能，定期跟进宠物的恢复情况，确保宠物的健康和安全。
+
+通过这些步骤，你可以尽可能地解决问题，避免进一步的纠纷，并且为未来的服务提供一些宝贵的教训。",,,38.635075289,38.634902322,,3.367724,5.944459,29.281444,0.030926,,,,,,4.940546712148337,,,7.82,,352,,3557308,3590584,11897040,,unavailable_legacy_counter,False,,1024,0,False,1,2,52397.9,640.5,3899.9,37678.5,8561.4,1569.2,missing,,,metrics.json
+16,nvn_outdoors_cmp_moni_000062,audio2text,non_vocal_noise_cmp,data/downloaded_datasets/vcb_bench/real_scenario/environmental_variations/non_vocal_noise_cmp/non_vocal_noise_cmp.jsonl,91,success,,True,"[""audio/016_00_nvn_outdoors_cmp_moni_000062.wav""]","作为一名有耐心的书法老师，教导学生练习毛笔字的基本笔画和书写技巧，需要注重以下几个方面：
+
+### 1. 基础知识讲解
+- **毛笔字的特点**：毛笔字以其独特的笔法和韵味深受人们喜爱，学习毛笔字可以锻炼学生的书写能力和艺术修养。
+- **毛笔字的工具**：了解毛笔、宣纸、墨汁等工具的使用方法，以及它们对书写效果的影响。
+
+### 2. 基本笔画教学
+- **笔画的结构**：讲解每个笔画的名称、结构和书写顺序，如撇、捺、竖、横、点等。
+- **笔画的书写步骤**：示范每个笔画的书写步骤，包括起笔、行笔、收笔等，让学生能够理解每个笔画的书写要点。
+- **笔画的练习**：通过反复练习，让学生熟悉每个笔画的书写方法，逐渐掌握其书写技巧。
+
+### 3. 字的结构与布局
+- **字的结构**：讲解汉字的结构特点，如左右结构、上下结构、半包围结构等，让学生在书写时能够合理安排字的结构。
+- **字的布局**：讲解字与字之间的间距、字与行之间的间距，以及整体布局的美感，让学生在书写时能够注意整体的美观。
+
+### 4. 书写技巧
+- **行笔的练习**：示范行笔的技巧，如行笔的连贯性、行笔的力度和速度等，让学生能够掌握行笔的要领。
+- **书写节奏**：讲解书写时的节奏感，让学生在书写时能够保持一定的节奏，避免书写过快或过慢。
+- **书写的注意事项**：提醒学生在书写时要注意纸张的平整度、墨汁的浓度、毛笔的锋利度等，这些都会影响书写效果。
+
+### 5. 练习与反馈
+- **定期练习**：鼓励学生每天或每周进行一定时间的练习，通过不断的练习来提高书写水平。
+- **定期反馈**：定期检查学生的书写情况，及时给予反馈和指导，帮助学生发现问题并加以纠正。
+- **鼓励与激励**：鼓励学生在学习过程中保持积极的态度，对学生的进步给予肯定和鼓励，增强他们的自信心。
+
+### 6. 持之以恒
+- **持之以恒**：书法的练习需要长期坚持，鼓励学生每天或每周都要进行一定时间的练习，不要因为一时的困难而放弃。
+- **持之以恒的练习**：通过长期的练习，学生会逐渐掌握毛笔字的基本技巧，提高书写水平。
+
+### 总结
+作为一名有耐心的书法老师，通过讲解基础知识、基础笔画、字的结构与布局、书写技巧、定期练习和反馈、以及鼓励持之以恒，可以帮助学生逐步掌握毛笔字的基本技巧，提高书写水平，享受书法艺术的魅力。",,,59.910968355,59.910796555,,3.377805,5.141965,51.326092,0.054205,,,,,,7.700638606041131,,,7.78,,631,,3557308,3590584,11896620,,unavailable_legacy_counter,False,,1024,0,False,1,2,53916.4,905.4,3446.8,45098.0,3048.4,1361.0,missing,,,metrics.json
+17,zhuanzhe0152-0,audio2text,transition,data/downloaded_datasets/vcb_bench/multi_turn_dialog/transition/transition.jsonl,305,success,,True,"[""audio/017_00_zhuanzhe0152-0.wav""]","开始跑步是一个很好的决定，跑步可以带来许多健康和心理上的好处。以下是一些建议，帮助你开始入门：
+
+### 1. **选择合适的跑步地点**
+   - **公园或操场**：这些地方人多，环境相对安全，适合初学者。
+   - **街道或小巷**：如果你熟悉周围的环境，也可以选择街道或小巷，但要特别注意安全。
+   - **避免高峰时段**：避免在人多、车多的时段跑步，以免发生意外。
+
+### 2. **准备装备**
+   - **跑鞋**：选择一双适合自己的跑鞋，保护脚部，提高舒适度。
+   - **运动服装**：穿轻便、透气的运动服，便于活动。
+   - **水壶或水袋**：带上水，保持水分补充。
+   - **手机或手表**：记录时间、距离和速度，方便跟踪进度。
+
+### 3. **热身和拉伸**
+   - **热身**：开始跑步前，先进行5-10分钟的热身，如快走、慢跑或简单的关节活动，帮助身体预热。
+   - **拉伸**：热身后进行5-10分钟的拉伸，重点拉伸腿部和核心肌群，预防受伤。
+
+### 4. **跑步技巧**
+   - **步伐**：保持轻松的步幅，不要过快，避免受伤。
+   - **呼吸**：采用腹式呼吸，吸气时腹部鼓起，呼气时腹部收缩。
+   - **速度**：根据自己的体能和舒适度，逐渐增加速度，不要一开始就过快。
+
+### 5. **倾听身体**
+   - **倾听声音**：注意身体的反应，如果感到不适，立即停下来，调整速度或休息。
+   - **倾听呼吸**：如果呼吸变得困难，可能需要调整速度或休息。
+
+### 6. **保持耐心**
+   - **不要急于求成**：跑步是一个循序渐进的过程，不要一开始就追求速度或距离，重要的是享受跑步的过程。
+
+### 7. **记录和反思**
+   - **记录数据**：记录每次跑步的距离、时间、速度等数据，帮助你了解自己的进步。
+   - **反思和调整**：每次跑步后，反思自己的表现，看看哪里可以做得更好，然后在下一次跑步时进行调整。
+
+### 8. **享受过程**
+   - **享受跑步的快乐**：跑步不仅能锻炼身体，还能带来心理上的满足感，享受跑步的过程很重要。
+
+### 9. **逐渐增加难度**
+   - **逐渐增加距离和速度**：随着体能的提高，逐渐增加跑步的距离和速度，但要保持安全。
+
+### 10. **保持积极心态**
+   - **保持积极心态**：跑步过程中可能会遇到困难，但不要轻易放弃，保持积极的心态，享受每一次跑步的体验。
+
+希望这些建议能帮助你顺利开始跑步，并享受这个过程！祝你跑步愉快！",,,55.362043174,55.361850665,,1.477045,3.552773,50.263095,0.05422,,,,,,15.727853174431818,,,3.52,,633,,3557308,3590584,11894480,,unavailable_legacy_counter,False,,1024,0,False,1,1,22816.5,114.6,682.2,18447.4,2822.6,708.8,missing,,,metrics.json
+18,zhuanzhe0158-1,audio2text,transition,data/downloaded_datasets/vcb_bench/multi_turn_dialog/transition/transition.jsonl,71,success,,True,"[""audio/018_00_zhuanzhe0158-1.wav"", ""audio/018_01_zhuanzhe0158-1.wav"", ""audio/018_02_zhuanzhe0158-1.wav""]",这两本书主要讲的是中国传统文化中的书法和京剧艺术。,,,16.967153539,16.966973572,,5.26903,10.65134,1.02598,0.00161,,,,,,1.3297142271943576,,,12.76,,14,,3557308,3590584,11896492,,unavailable_legacy_counter,False,,1024,0,False,3,4,82262.9,654.9000000000001,5286.700000000001,61729.8,12869.0,1629.8999999999999,missing,,,metrics.json
+19,gk_geography_02302,audio2text,general_knowledge,data/downloaded_datasets/vcb_bench/general_knowledge/general_knowledge.jsonl,106,success,,True,"[""audio/019_00_gk_geography_02302.wav""]",迪拜的“棕榈岛”（Palm Jumeirah）是其中一个受影响的项目。棕榈岛是迪拜政府为吸引游客和提高城市形象而计划开发的，但该项目在2008年金融危机后遭受了严重的经济冲击，导致项目进展缓慢，最终成为迪拜的标志性建筑之一，但也是其经济衰退的象征之一。,用来模仿世界地图的世界岛。,,13.088459674,13.088274166,,2.556931,4.475242,6.0409,0.007102,,,,,,2.237343534017094,,,5.85,,78,,3557308,3590584,11897540,,unavailable_legacy_counter,False,,1024,0,False,1,2,45962.0,398.4,4972.6,37150.9,2534.4,889.0,missing,,,metrics.json
+20,nvn_echo_cmp_chuangzuo_000066,audio2text,non_vocal_noise_cmp,data/downloaded_datasets/vcb_bench/real_scenario/environmental_variations/non_vocal_noise_cmp/non_vocal_noise_cmp.jsonl,3,success,,True,"[""audio/020_00_nvn_echo_cmp_chuangzuo_000066.wav""]","# 如何驯服你的梦境怪兽
+
+## 一、概述
+在这个充满奇幻与未知的世界中，梦境怪兽是许多人都难以言说的噩梦。它们在梦中肆意妄为，给人们带来了无尽的困扰和恐惧。然而，如果你能学会驯服它们，或许就能在这个世界中找到新的可能。本说明将为你详细介绍如何驯服你的梦境怪兽，同时也会包含一些安全警告条款，以确保在这个过程中，你和你的朋友、家人、同事的安全。
+
+## 二、驯服步骤
+
+### （一）观察与记录
+1. **观察梦境怪兽的模式**
+   - **步骤一**：在你进入梦中后，尝试观察梦境怪兽的模式。它可能在梦中的某个特定时间出现，或者在特定的场景中出现。
+   - **步骤二**：记录下梦境怪兽的特征，如它的形状、颜色、声音等。这些信息将帮助你更好地理解它。
+2. **记录梦境怪兽的反应**
+   - **步骤三**：在观察过程中，注意梦境怪兽的反应。它可能对你发出警告，或者在特定的刺激下会变得更为活跃。
+   - **步骤四**：记录下这些反应，以便在驯服过程中更好地应对。
+
+### （二）制定驯服计划
+1. **分析梦境怪兽的弱点**
+   - **步骤五**：根据你对梦境怪兽的观察和记录，分析它可能存在的弱点。是它对特定颜色敏感，还是对特定声音有反应？
+2. **制定驯服策略**
+   - **步骤六**：根据梦境怪兽的弱点，制定一个驯服策略。例如，如果你发现它对蓝色有反应，那么在驯服过程中，你可以尝试使用蓝色的物品或颜色来吸引它的注意。
+   - **步骤七**：制定一个应对策略，当它出现时，如何引导它进入你所设定的驯服环境。
+
+### （三）实施驯服
+1. **进入驯服环境**
+   - **步骤八**：在你进入梦中后，按照你的驯服策略，进入一个你设定的驯服环境。这个环境应该是安全的，没有其他可能威胁的存在。
+2. **引导梦境怪兽**
+   - **步骤九**：在驯服环境中，尝试引导梦境怪兽。你可以通过它可能存在的弱点，如颜色或声音，来吸引它的注意。
+   - **步骤十**：在引导过程中，保持冷静，不要惊扰它，以免它变得更为活跃。
+
+## 三、安全警告条款
+
+### （一）避免在公共场合进行
+1. **步骤十一**：在进行梦境怪兽的驯服时，避免在公共场合进行。这样可能会引起他人的恐慌和误解，甚至可能引发不必要的混乱。
+2. **步骤十二**：在进行驯服时，尽量选择一个安静、私密的环境，以确保你的朋友、家人、同事的安全。
+
+### （二）避免使用可能引起他人恐慌的手段
+1. **步骤十三**：在驯服过程中，避免使用可能引起他人恐慌的手段。例如，使用过于激烈的手段，可能会让别人感到害怕，甚至可能引发不必要的恐慌。
+2. **步骤十四**：在驯服过程中，尽量使用温和、平静的手段，以避免引起他人的恐慌。
+
+### （三）避免在没有准备的情况下进行
+1. **步骤十五**：在进行梦境怪兽的驯服之前，要确保你已经做好充分的准备。包括了解梦境怪兽的特性、制定详细的驯服策略、选择一个安全的环境等。
+2. **步骤十六**：在没有充分准备的情况下进行，可能会导致你无法有效地驯服梦境,甚至可能引发不必要的危险。
+
+## 四、总结
+通过观察、，记录，制定驯服策略，然后在安全的环境中实施驯服上，你就可以驯服你的你的梦境怪兽。但在这个过程中，一定要遵守安全警告条款，避免在公共场合进行，避免使用可能引起他人恐慌的手段，避免在没有充分准备的情况下进行。只有这样，你才能在这个充满奇幻与未知的世界中，找到驯服customerId的梦境怪兽，找到新的可能。",,,80.788336758,80.788143375,,3.350487,5.131242,72.21435,0.078742,,,,,,10.491991786753246,,,7.7,,895,,3557308,3590584,11895748,,unavailable_legacy_counter,False,,1024,0,False,1,2,51714.3,854.0,3985.8,38001.5,7316.8,1508.9,missing,,,metrics.json
+21,mispronunciation_tuijian_000013,audio2text,mispronunciation,data/downloaded_datasets/vcb_bench/real_scenario/content_variations/mispronunciation/mispronunciation.jsonl,50,success,,True,"[""audio/021_00_mispronunciation_tuijian_000013.wav""]","对于新手来说，选择一款功能强大但又相对简单的视频剪辑软件是非常重要的。以下是一些适合新手使用的视频剪辑软件：
+
+1. **VivaVideo**
+   - **特点**：界面简洁，操作简单，支持多种视频特效和滤镜，适合初学者。
+   - **适用人群**：适合初学者，尤其是那些想要快速上手的用户。
+
+2. **InShot**
+   - **特点**：界面友好，操作简单，支持多种视频特效和滤镜，适合初学者。
+   - **适用人群**：适合初学者，尤其是那些想要快速上手的用户。
+
+3. **Viva Video Pro**
+   - **特点**：界面简洁，操作简单，支持多种视频特效和滤镜，适合初学者。
+   - **适用人群**：适合初学者，尤其是那些想要快速上手的用户。
+
+4. **Viva Video**
+   - **特点**：界面简洁，操作简单，支持多种视频特效和滤镜，适合初学者。
+   - **适用人群**：适合初学者，尤其是那些想要快速上手的用户。
+
+5. **Viva video**
+   - **特点**：界面简洁，操作简单，支持多种视频特效和滤镜，适合初学者。
+   - **适用人群**：适合初学者，尤其是那些想要快速上手的用户。
+
+6. **Viva video**
+   - **特点**：界面简洁，操作简单，支持多种视频特效和滤镜，适合初学者。
+   - **适用人群**：适合初学者，尤其是那些想要快速上手的用户。
+
+7. **Viva video**
+   - **特点**：界面简洁，操作简单，支持多种视频特效和滤镜，适合初学者。
+   - **适用人群**：适合初学者，尤其是那些想要快速上手的用户。
+
+8. **Viva video**
+   - **特点**：界面简洁，操作简单，支持多种视频特效和滤镜，适合初学者。
+   - **适用人群**：适合初学者，尤其是那些想要快速上手的用户。
+
+9. **Viva video**
+   - **特点**：界面简洁，操作简单，支持多种视频特效和滤镜，适合初学者。
+   - **适用人群**：适合初学者，尤其是那些想要快速上手的用户。
+
+10. **Viva video**
+    - **特点**：界面简洁，操作简单，支持多种视频特效和滤镜，适合初学者。
+    - **适用人群**：适合初学者，尤其是那些想要快速上手的用户。
+
+这些软件都具有简单易用的特点，可以帮助你快速上手并制作出满意的视频。你可以根据自己的需求和喜好选择一款适合自己的软件。",,,53.718128273,53.71793664,,2.76858,4.278464,46.613607,0.045508,,,,,,9.013108770637583,,,5.96,,574,,3559296,3590584,11953800,,unavailable_legacy_counter,False,,1024,0,False,1,2,51503.7,460.9,3981.5,37345.6,8611.4,1061.7,missing,,,metrics.json
+22,vn_voiceAnnouncement_moni_000050,audio2text,vocal_noise,data/downloaded_datasets/vcb_bench/real_scenario/environmental_variations/vocal_noise/vocal_noise.jsonl,188,success,,True,"[""audio/022_00_vn_voiceAnnouncement_moni_000050.wav""]","有机蔬菜种植的关键步骤和注意事项如下：
+
+### 一、种植步骤
+1. **选择种子**
+   - 选择信誉良好的有机种子供应商，确保种子是有机认证的。
+   - 根据当地气候和土壤条件选择适合的种子品种，如本地的耐寒、耐旱或高产有机蔬菜种子。
+2. **土壤准备**
+   - 选择有机肥料，如堆肥、腐熟的农家肥或有机复合肥。
+   - 确保土壤要疏松、肥沃，pH值在6.0-7.0之间，适合大多数有机蔬菜生长。
+   - 可以通过施有机肥料、翻耕和覆盖作物残茬等方式改善土壤结构。
+3. **播种**
+   - 根据种子的发芽温度和时间选择合适的播种时间，如春季或秋季。
+   - 按照种子的播种深度要求进行播种，一般种子深度为种子直径的2-3倍。
+   - 可以采用撒播或点播的方式，撒播时要均匀，点播时要保持一定的行距。
+4. **幼苗管理**
+   - 种子发芽后，保持土壤湿润，避免土壤板结。
+   - 根据幼苗的生长情况，及时进行间苗，避免幼苗拥挤。
+   - 可以通过覆盖地膜或草覆盖等方式减少土壤水分蒸发，保持土壤湿度。
+5. **病虫害防治**
+   - 选择有机农药或生物防治方法，如利用天敌昆虫、引入天敌等。
+   - 发现病虫害时，及时采取措施，避免病虫害扩散。
+   - 可以通过喷洒有机农药或使用生物防治剂，如苏云金芽孢杆菌、白僵菌等，但要控制使用量，避免对环境和人体健康造成影响。
+6. **收获**
+   - 根据蔬菜的成熟度进行收获，避免过早或过晚收获。
+   - 收获后要及时处理，如清洗、切割或分装，并尽快销售或储存。
+
+### 二、注意事项
+1. **土壤管理**
+   - 保持土壤的有机质含量，避免土壤板结，可以通过覆盖作物残茬、增加有机肥料等方式改善土壤结构。
+   - 避免使用化学肥料，如化肥、农药等，以免破坏土壤的有机质循环。
+2. **病虫害防治**
+   - 选择有机农药或生物防治方法，避免使用化学农药，以免对环境和人体健康造成影响。
+   - 发现病虫害时，及时采取措施，避免病虫害扩散，同时也要注意防治方法的科学性和安全性。
+3. **收获时间**
+   - 根据蔬菜的成熟度进行收获，避免过早或过晚收获，以免影响蔬菜的口感和品质。
+   - 收获后要及时处理，如清洗、切割或分装，并尽快销售或储存，以免蔬菜变质或受到污染。
+4. **有机认证**
+   - 保持有机认证，避免使用化学肥料、农药等，以免影响有机认证的合规性。
+   - 有机蔬菜种植过程中，要严格遵守有机生产标准，如有机生产标准、有机蔬菜生产技术规范等，以免影响有机认证的合规性。
+5. **市场销售**
+   - 选择信誉良好的有机蔬菜销售商，确保销售的有机蔬菜符合有机认证标准。
+   - 销售时要标明有机蔬菜的生产方式和有机认证信息，以免消费者误解。
+   - 销售过程中要保持有机蔬菜的品质和新鲜度，以免影响销售。",,,72.726896785,72.726705153,,4.020397,5.914641,62.70844,0.069936,,,,,,9.619959892195768,,,7.56,,768,,3559296,3590584,11954716,,unavailable_legacy_counter,False,,1024,0,False,1,2,42281.8,471.9,1426.9,36536.5,2518.4,1288.3,missing,,,metrics.json
+23,gk_physics_01866,audio2text,general_knowledge,data/downloaded_datasets/vcb_bench/general_knowledge/general_knowledge.jsonl,459,success,,True,"[""audio/023_00_gk_physics_01866.wav""]",物理学发展史上，量子力学的快速发展得益于爱因斯坦与普朗克的世纪之争。,量子力学三巨头的波尔。,,11.026931045,11.026749622,,3.666002,5.697821,1.652546,0.002287,,,,,,1.3049622538461538,,,8.45,,21,,3566204,3590584,11920768,,unavailable_legacy_counter,False,,1024,0,False,1,2,49797.9,778.8,3978.8,37511.9,5903.3,1583.5,missing,,,metrics.json
+24,en_yuyan_000313,audio2audio,language_control_en,data/downloaded_datasets/vcb_bench/speech_instruction_follow/english/language_control_en/language_control_en.jsonl,138,success,,True,"[""audio/024_00_en_yuyan_000313.wav""]","Sure! In Bulgarian, to greet someone, you can say ""Здравейте"" which means ""Hello"". For a more formal greeting, you could say ""Здраво"" which means ""Good day"". For self - introduction, you might say something like ""Мен съм Христо"" which means ""I am Hristo"". If you want to say ""I'm from Bulgaria"" you could say ""Мен съм от България"" which means ""I'm from Bulgaria"". If you have any other questions about Bulgarian or need more conversation lessons, feel free to ask!",,,408.72873523,26.061985054,382.666750176,6.165817,9.40983,10.470841,0.005936,1.111274,21.715423,359.839458,,67.586970068,35.88172550522342,20.03572231519608,18.758174028235295,11.391,20.4,129,1024,3602536,3602536,11829852,0.0,unavailable_legacy_counter,False,True,1024,0,False,1,3,72692.2,1317.2,4046.7,56020.4,8971.8,2283.2,valid,True,20.4,metrics.json
+25,gk_medicine_01908,audio2text,general_knowledge,data/downloaded_datasets/vcb_bench/general_knowledge/general_knowledge.jsonl,776,success,,True,"[""audio/025_00_gk_medicine_01908.wav""]",“勿为有损之事，勿故用有害之药”出自医学界的誓言，是医学誓言的一部分。,南丁格尔。,,10.650939062,10.650758516,,3.168442,5.477856,1.994954,0.002422,,,,,,1.5436143568115943,,,6.9,,25,,3602536,3602536,11904132,,unavailable_legacy_counter,False,,1024,0,False,1,2,50436.7,699.4,3953.4,37205.1,7296.8,1226.2,missing,,,metrics.json
+26,en_yuyan_000057,audio2audio,language_control_en,data/downloaded_datasets/vcb_bench/speech_instruction_follow/english/language_control_en/language_control_en.jsonl,10,success,,True,"[""audio/026_00_en_yuyan_000057.wav""]","In German, the classic way to confess is often ""Ich bin schuldig."" This means ""I am guilty"" or ""I am to blame."" For example, if you've done something wrong and you want to admit it in a straightforward way, you could say ""Ich bin schuldig."" But remember, in some situations, you might also use other phrases like ""Ich bin schuldig für das was ich getan habe"" which means ""I am guilty for what I have done."" Well, that's a basic example. If you want to know more about German language or have other questions, feel free to ask.",,,405.299035405,18.557492597,386.741542808,2.386548,5.752113,10.403815,0.005053,0.648224,22.222312,363.870334,,59.861863604,74.09488764259598,19.867599774754904,18.957918765098043,5.47,20.4,129,1024,3602536,3602536,11906024,0.0,unavailable_legacy_counter,False,True,1024,0,False,1,2,46447.3,613.7,1695.8,39175.6,4164.8,756.6,valid,True,20.4,metrics.json
+27,gongqing_000399,audio2text,empathy,data/downloaded_datasets/vcb_bench/text_instruction_follow/chinese/empathy/empathy.jsonl,200,success,,True,"[""audio/027_00_gongqing_000399.wav""]",听起来你经历了一段非常辛苦的时光，连续加班三周，最后项目被叫停，这种感觉确实让人感到疲惫和失落。熬红的眼睛，可能是因为长时间的睡眠不足和压力过大。这时候，确实很容易想要哭出来，因为情感的爆发是人之常情。不过，也别忘了，这些经历也是成长的一部分，它们可能会让你更坚强，更懂得珍惜和感恩。希望你能找到一些方式来放松和调整，比如和朋友聊聊天，或者做些自己喜欢的事情，给自己一些时间去恢复和调整。,,,15.668855099,15.668653553,,2.463856,4.226965,8.958413,0.011497,,,,,,2.6071306321131447,,,6.01,,117,,3593096,3602536,11919832,,unavailable_legacy_counter,False,,1024,0,False,1,2,46383.6,645.5,2894.3,36955.9,4922.0,922.9,missing,,,metrics.json
+28,sc_standardLogic_000013,audio2text,story_continue,data/downloaded_datasets/vcb_bench/pretrain_evaluation/story_continue/story_continue.jsonl,11,success,,True,"[""audio/028_00_sc_standardLogic_000013.wav""]",小李种下的向日葵终于开花了，他开心地拍照留念，并决定明天带朋友来看。当天夜里，忽然刮来一场大风。,小李的花被风吹歪了，看上去有些憔悴。,,14.05064055,14.050464379,,4.543681,6.735143,2.757177,0.003542,,,,,,1.3636599303643135,,,10.303625,,35,,3621704,3621704,11905272,,unavailable_legacy_counter,False,,1024,0,False,1,3,70435.8,948.2,4586.0,55857.7,6871.2,2112.3,missing,,,metrics.json
+29,en_yuyan_000404,audio2audio,language_control_en,data/downloaded_datasets/vcb_bench/speech_instruction_follow/english/language_control_en/language_control_en.jsonl,48,success,,True,"[""audio/029_00_en_yuyan_000404.wav""]","Sure! Here are a few simple German phrases for you: ""Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...“ I'm, “Ich bin...",,,472.797398933,87.547466553,385.24993238,2.176191,5.365972,79.951629,0.040386,0.66045,21.090393,363.498424,,128.101955315,83.68095556336283,23.176343084950982,18.884800606862747,5.65,20.4,1024,1024,3593424,3621704,11907744,0.0,unavailable_legacy_counter,True,True,1024,0,False,1,2,43557.5,557.7,1398.0,36880.5,3856.8,819.3,valid,True,20.4,metrics.json
+30,dijin0421-0,audio2text,progression,data/downloaded_datasets/vcb_bench/multi_turn_dialog/progression/progression.jsonl,269,pending,not_started,,"[""audio/030_00_dijin0421-0.wav""]",,,,,,,,,,,,,,,,,,,5.27,,,,,,,,unavailable_legacy_counter,,,1024,,,0,,,,,,,,missing,,,
+31,gongqing_000782,audio2text,empathy,data/downloaded_datasets/vcb_bench/text_instruction_follow/chinese/empathy/empathy.jsonl,130,pending,not_started,,"[""audio/031_00_gongqing_000782.wav""]",,,,,,,,,,,,,,,,,,,5.38,,,,,,,,unavailable_legacy_counter,,,1024,,,0,,,,,,,,missing,,,
+32,age_elder_gongqing_000001,audio2text,age,data/downloaded_datasets/vcb_bench/real_scenario/speaker_variations/age/age.jsonl,48,pending,not_started,,"[""audio/032_00_age_elder_gongqing_000001.wav""]",,,,,,,,,,,,,,,,,,,10.76,,,,,,,,unavailable_legacy_counter,,,1024,,,0,,,,,,,,missing,,,
+33,lr_logic_yanyi0980,audio2text,logical_reasoning,data/downloaded_datasets/vcb_bench/mathematical_logic/logical_reasoning/logical_reasoning.jsonl,294,pending,not_started,,"[""audio/033_00_lr_logic_yanyi0980.wav""]",,会叫。因为小刚养的是狗，而所有狗都会叫，所以这只狗会叫。,,,,,,,,,,,,,,,,,5.89,,,,,,,,unavailable_legacy_counter,,,1024,,,0,,,,,,,,missing,,,
+34,en_yusukongzhi_000373,audio2audio,pacing_control_en,data/downloaded_datasets/vcb_bench/speech_instruction_follow/english/pacing_control_en/pacing_control_en.jsonl,15,pending,not_started,,"[""audio/034_00_en_yusukongzhi_000373.wav""]",,,,,,,,,,,,,,,,,,,6.68,,,,,,,,unavailable_legacy_counter,,,1024,,,0,,,,,,,,missing,,,
+35,mispronunciation_tuijian_000018,audio2text,mispronunciation,data/downloaded_datasets/vcb_bench/real_scenario/content_variations/mispronunciation/mispronunciation.jsonl,53,pending,not_started,,"[""audio/035_00_mispronunciation_tuijian_000018.wav""]",,,,,,,,,,,,,,,,,,,7.36,,,,,,,,unavailable_legacy_counter,,,1024,,,0,,,,,,,,missing,,,
+36,chuangzuo_000519,audio2text,creation,data/downloaded_datasets/vcb_bench/text_instruction_follow/chinese/creation/creation.jsonl,114,pending,not_started,,"[""audio/036_00_chuangzuo_000519.wav""]",,,,,,,,,,,,,,,,,,,11.37,,,,,,,,unavailable_legacy_counter,,,1024,,,0,,,,,,,,missing,,,
+37,teshuyinxiao_000588,audio2audio,non_verbal_vocalization,data/downloaded_datasets/vcb_bench/speech_instruction_follow/chinese/non_verbal_vocalization/non_verbal_vocalization.jsonl,55,pending,not_started,,"[""audio/037_00_teshuyinxiao_000588.wav""]",,,,,,,,,,,,,,,,,,,3.99,,,,,,,,unavailable_legacy_counter,,,1024,,,0,,,,,,,,missing,,,
+38,gk_law_01017,audio2text,general_knowledge,data/downloaded_datasets/vcb_bench/general_knowledge/general_knowledge.jsonl,435,pending,not_started,,"[""audio/038_00_gk_law_01017.wav""]",,是对的。,,,,,,,,,,,,,,,,,5.423,,,,,,,,unavailable_legacy_counter,,,1024,,,0,,,,,,,,missing,,,
+39,en_yinliang_000021,audio2audio,volume_control_en,data/downloaded_datasets/vcb_bench/speech_instruction_follow/english/volume_control_en/volume_control_en.jsonl,21,pending,not_started,,"[""audio/039_00_en_yinliang_000021.wav""]",,,,,,,,,,,,,,,,,,,5.89,,,,,,,,unavailable_legacy_counter,,,1024,,,0,,,,,,,,missing,,,
+40,tuijian_000717,audio2text,recommendation,data/downloaded_datasets/vcb_bench/text_instruction_follow/chinese/recommendation/recommendation.jsonl,80,pending,not_started,,"[""audio/040_00_tuijian_000717.wav""]",,,,,,,,,,,,,,,,,,,8.81,,,,,,,,unavailable_legacy_counter,,,1024,,,0,,,,,,,,missing,,,
+41,en_qingganhua_000324,audio2audio,emotional_control_en,data/downloaded_datasets/vcb_bench/speech_instruction_follow/english/emotional_control_en/emotional_control_en.jsonl,46,pending,not_started,,"[""audio/041_00_en_qingganhua_000324.wav""]",,,,,,,,,,,,,,,,,,,5.53,,,,,,,,unavailable_legacy_counter,,,1024,,,0,,,,,,,,missing,,,
+42,en_tuijian_000049,audio2text,recommendation_en,data/downloaded_datasets/vcb_bench/text_instruction_follow/english/recommendation_en/recommendation_en.jsonl,182,pending,not_started,,"[""audio/042_00_en_tuijian_000049.wav""]",,,,,,,,,,,,,,,,,,,4.841,,,,,,,,unavailable_legacy_counter,,,1024,,,0,,,,,,,,missing,,,
+43,gk_physics_00150,audio2text,general_knowledge,data/downloaded_datasets/vcb_bench/general_knowledge/general_knowledge.jsonl,555,pending,not_started,,"[""audio/043_00_gk_physics_00150.wav""]",,一立方米。,,,,,,,,,,,,,,,,,3.65,,,,,,,,unavailable_legacy_counter,,,1024,,,0,,,,,,,,missing,,,
+44,en_qingganhua_000493,audio2audio,emotional_control_en,data/downloaded_datasets/vcb_bench/speech_instruction_follow/english/emotional_control_en/emotional_control_en.jsonl,109,pending,not_started,,"[""audio/044_00_en_qingganhua_000493.wav""]",,,,,,,,,,,,,,,,,,,9.55,,,,,,,,unavailable_legacy_counter,,,1024,,,0,,,,,,,,missing,,,
+45,qingganhua_000882,audio2audio,style_control,data/downloaded_datasets/vcb_bench/speech_instruction_follow/chinese/style_control/style_control.jsonl,14,pending,not_started,,"[""audio/045_00_qingganhua_000882.wav""]",,,,,,,,,,,,,,,,,,,7.38,,,,,,,,unavailable_legacy_counter,,,1024,,,0,,,,,,,,missing,,,
+46,yusukongzhi_000829,audio2audio,pacing_control,data/downloaded_datasets/vcb_bench/speech_instruction_follow/chinese/pacing_control/pacing_control.jsonl,32,pending,not_started,,"[""audio/046_00_yusukongzhi_000829.wav""]",,,,,,,,,,,,,,,,,,,4.74,,,,,,,,unavailable_legacy_counter,,,1024,,,0,,,,,,,,missing,,,
+47,en_chuangzuo_000175,audio2text,creation_en,data/downloaded_datasets/vcb_bench/text_instruction_follow/english/creation_en/creation_en.jsonl,9,pending,not_started,,"[""audio/047_00_en_chuangzuo_000175.wav""]",,,,,,,,,,,,,,,,,,,7.011,,,,,,,,unavailable_legacy_counter,,,1024,,,0,,,,,,,,missing,,,
+48,vn_tvPlayback_cmp_xuxie_000153,audio2text,vocal_noise_cmp,data/downloaded_datasets/vcb_bench/real_scenario/environmental_variations/vocal_noise_cmp/vocal_noise_cmp.jsonl,53,pending,not_started,,"[""audio/048_00_vn_tvPlayback_cmp_xuxie_000153.wav""]",,,,,,,,,,,,,,,,,,,7.7891875,,,,,,,,unavailable_legacy_counter,,,1024,,,0,,,,,,,,missing,,,
+49,anquanxing_000589,audio2text,safety,data/downloaded_datasets/vcb_bench/text_instruction_follow/chinese/safety/safety.jsonl,177,pending,not_started,,"[""audio/049_00_anquanxing_000589.wav""]",,,,,,,,,,,,,,,,,,,3.24,,,,,,,,unavailable_legacy_counter,,,1024,,,0,,,,,,,,missing,,,
+50,huisu0275-3,audio2text,backtracking,data/downloaded_datasets/vcb_bench/multi_turn_dialog/backtracking/backtracking.jsonl,53,pending,not_started,,"[""audio/050_00_huisu0275-3.wav"", ""audio/050_01_huisu0275-3.wav"", ""audio/050_02_huisu0275-3.wav"", ""audio/050_03_huisu0275-3.wav"", ""audio/050_04_huisu0275-3.wav"", ""audio/050_05_huisu0275-3.wav"", ""audio/050_06_huisu0275-3.wav""]",,,,,,,,,,,,,,,,,,,37.43,,,,,,,,unavailable_legacy_counter,,,1024,,,0,,,,,,,,missing,,,

@@ -2,6 +2,8 @@
 
 当前候选针对 BigVGAN 第一个 ConvTranspose。以下是先前 RK3588/Mali-G610 板端记录核对后的历史结果；本次 GitHub 代码迁移没有连接板子或启动新的推理。
 
+现在可从Git直接查看并复算 [小型历史证据包](../benchmarks/history/20261106-bigvgan-convtranspose/README.md)，查阅 [热点片段报告](../reports/20261106-bigvgan-convtranspose/README.md) 与 [候选设计](../experiments/bigvgan-convtranspose-tile4/design.md)。新增Docker配方尚未构建或板端运行；不改变下列历史结果的适用范围。
+
 ## 已通过的范围
 
 输入 `[1,1536,T]`，输出 `[1,768,5T]`，权重 `[1536,768,11]`，stride5/pad3/dilation1/groups1。三种 T 来自真实语音请求：120 首块、136 稳态块、52 原生末块，未通过裁剪伪造 shape。

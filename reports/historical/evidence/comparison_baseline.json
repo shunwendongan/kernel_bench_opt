@@ -1,0 +1,1232 @@
+{
+  "scope": "Observed engineering baseline only; no optimization speedup or official quality score is asserted",
+  "selection_seed": 20261105,
+  "population_count": 11362,
+  "selected_count": 50,
+  "executed_ordinals": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "stop_policy": {
+    "state": "stopped_by_user",
+    "reason": "用户要求当前样本完成后结束整体任务",
+    "last_completed_row": 29,
+    "completed_count": 29,
+    "not_run_count": 21,
+    "not_run_ordinals": [
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50
+    ],
+    "no_subsequent_sample_started": true,
+    "stop_evidence": "board_records/stop_request.json",
+    "completed_record_recovered_from_atomic_metrics": true
+  },
+  "contract": {
+    "run_id": "vcb_random50_20261105",
+    "sample_count": 50,
+    "dataset": "tencent/VCB-Bench",
+    "dataset_revision": "c0a083c335363046032c1e382b05546ad5ef0692",
+    "sample_seed": 20261105,
+    "model": "taobao-mnn/Qwen2.5-Omni-3B-MNN",
+    "model_revision": "00dc2e9131a4bb325b43a47f4210dd6450116687",
+    "mnn_commit": "7e3c6fb5225d3ccf22807ee641332669df34650d",
+    "cpu_threads": 4,
+    "speech_token_limit": 1024,
+    "thinker_token_limit": 1024,
+    "context_token_limit": 8192,
+    "thinker_sampling": "greedy",
+    "talker_sampling": "native MNN mixed sampler; random_device seed, not fixed",
+    "formal_repetitions": 1,
+    "formal_warmup_requests_in_same_process": 0,
+    "profiling_separate_process": true,
+    "formal_timing": "host monotonic request through final waveform callback; includes preprocess, transfers and synchronization; excludes model load",
+    "sha256": {
+      "${BOARD_PROJECT}/experiments/vcb_random50_20261105/bin/vcb_eval": "6f6fcb72a50fb368d3b989e8530d804749e1d0baa2409b32e3bc808aa82944b6",
+      "${BOARD_PROJECT}/experiments/vcb_random50_20261105/bundle/manifest.jsonl": "35db935b69e7ca6ffedecc3bfe58b31a671f1b9ea0112b8ced782938490663fa",
+      "${BOARD_PROJECT}/models/Qwen2.5-Omni-3B-MNN/config.vcb_random50_20261105.json": "3b7b0cb0e9d66a53ece5069b3e738a06086dc20ed337cba9bf154315568e0c36",
+      "${BOARD_PROJECT}/models/rknn/audio_conv_prefix_mnn4bit.onnx": "e6c2adeabe4dbe5722981577f13fea3a94b5f79358502c1ca5e8f32561dc937c",
+      "${BOARD_PROJECT}/models/rknn/audio_conv_prefix_mnn4bit_fp16.rknn": "babb232111b8bdef1817c109336568634d701a7bc16f0c324eca77d6a7c9244a"
+    }
+  },
+  "metrics": {
+    "all": {
+      "counts": {
+        "planned": 50,
+        "completed": 29,
+        "succeeded": 29,
+        "failed": 0,
+        "pending": 21,
+        "started_pending": 0,
+        "unknown_terminal_success": 0
+      },
+      "statistics_completed": {
+        "request_s": {
+          "n": 29,
+          "mean": 105.19317345751723,
+          "min": 10.384482566,
+          "max": 476.620336872,
+          "p50": 38.282003769,
+          "p90": 408.2852264068
+        },
+        "thinker_response_s": {
+          "n": 29,
+          "mean": 35.29459390262069,
+          "min": 8.937590683,
+          "max": 91.772412086,
+          "p50": 26.061985054,
+          "p90": 74.3389927974
+        },
+        "waveform_phase_s": {
+          "n": 6,
+          "mean": 337.84241466366666,
+          "min": 99.915520007,
+          "max": 387.632817825,
+          "p50": 385.048928583,
+          "p90": 387.1871803165
+        },
+        "audio_encoder_including_prepare_s": {
+          "n": 29,
+          "mean": 3.4178858620689656,
+          "min": 1.465019,
+          "max": 8.420528,
+          "p50": 3.354969,
+          "p90": 4.7297484
+        },
+        "thinker_prefill_s": {
+          "n": 29,
+          "mean": 5.965632,
+          "min": 2.520555,
+          "max": 15.610712,
+          "p50": 5.697821,
+          "p90": 7.979822799999999
+        },
+        "thinker_decode_s": {
+          "n": 29,
+          "mean": 25.876208655172412,
+          "min": 0.50239,
+          "max": 84.163742,
+          "p50": 18.16625,
+          "p90": 64.609622
+        },
+        "thinker_sample_s": {
+          "n": 29,
+          "mean": 0.022659758620689655,
+          "min": 0.000616,
+          "max": 0.078742,
+          "p50": 0.014249,
+          "p90": 0.054208
+        },
+        "talker_prefill_s": {
+          "n": 6,
+          "mean": 0.7833223333333333,
+          "min": 0.534978,
+          "max": 1.111274,
+          "p50": 0.654337,
+          "p90": 1.108708
+        },
+        "talker_decode_s": {
+          "n": 6,
+          "mean": 18.975415833333333,
+          "min": 5.280251,
+          "max": 22.222312,
+          "p50": 21.617231500000003,
+          "p90": 22.123694
+        },
+        "token2wav_s": {
+          "n": 6,
+          "mean": 318.0829825,
+          "min": 93.996061,
+          "max": 365.006405,
+          "p50": 362.8928185,
+          "p90": 364.4383695
+        },
+        "dit_s": {
+          "n": 0,
+          "mean": null,
+          "min": null,
+          "max": null,
+          "p50": null,
+          "p90": null
+        },
+        "ttfa_s": {
+          "n": 6,
+          "mean": 81.0263224375,
+          "min": 33.314010952,
+          "max": 133.097507573,
+          "p50": 65.8912985905,
+          "p90": 130.59973144399999
+        },
+        "rtf_vs_input": {
+          "n": 29,
+          "mean": 16.332084644539243,
+          "min": 1.1512730117516632,
+          "max": 95.89946415935614,
+          "p50": 5.120308423275862,
+          "p90": 49.22777408919357
+        },
+        "request_rtf_vs_output": {
+          "n": 6,
+          "mean": 21.230874037533308,
+          "min": 19.867599774754904,
+          "max": 23.363742003529413,
+          "p50": 20.484506416251882,
+          "p90": 23.270042544240198
+        },
+        "waveform_phase_rtf_vs_output": {
+          "n": 6,
+          "mean": 18.947019924605332,
+          "min": 18.758174028235295,
+          "max": 19.21452307826923,
+          "p50": 18.921359685980395,
+          "p90": 19.1080658975905
+        },
+        "input_duration_s": {
+          "n": 29,
+          "mean": 7.791939655172414,
+          "min": 3.26,
+          "max": 21.39,
+          "p50": 7.59,
+          "p90": 10.521099999999999
+        },
+        "wave_duration_s": {
+          "n": 6,
+          "mean": 17.866666666666664,
+          "min": 5.2,
+          "max": 20.4,
+          "p50": 20.4,
+          "p90": 20.4
+        },
+        "text_tokens": {
+          "n": 29,
+          "mean": 319.37931034482756,
+          "min": 7,
+          "max": 1024,
+          "p50": 221.0,
+          "p90": 793.3999999999999
+        },
+        "speech_tokens": {
+          "n": 6,
+          "mean": 897.3333333333334,
+          "min": 264,
+          "max": 1024,
+          "p50": 1024.0,
+          "p90": 1024.0
+        },
+        "sampled_peak_rss_kib": {
+          "n": 29,
+          "mean": 3511252.275862069,
+          "min": 3203280,
+          "max": 3621704,
+          "p50": 3559296.0,
+          "p90": 3602536.0
+        },
+        "process_max_rss_kib": {
+          "n": 29,
+          "mean": 3531440.4137931033,
+          "min": 3203484,
+          "max": 3621704,
+          "p50": 3590584.0,
+          "p90": 3602536.0
+        },
+        "minimum_memavailable_kib": {
+          "n": 29,
+          "mean": 11923533.379310345,
+          "min": 11145948,
+          "max": 12226128,
+          "p50": 11905272.0,
+          "p90": 12194533.6
+        }
+      },
+      "statistics_succeeded": {
+        "request_s": {
+          "n": 29,
+          "mean": 105.19317345751723,
+          "min": 10.384482566,
+          "max": 476.620336872,
+          "p50": 38.282003769,
+          "p90": 408.2852264068
+        },
+        "thinker_response_s": {
+          "n": 29,
+          "mean": 35.29459390262069,
+          "min": 8.937590683,
+          "max": 91.772412086,
+          "p50": 26.061985054,
+          "p90": 74.3389927974
+        },
+        "waveform_phase_s": {
+          "n": 6,
+          "mean": 337.84241466366666,
+          "min": 99.915520007,
+          "max": 387.632817825,
+          "p50": 385.048928583,
+          "p90": 387.1871803165
+        },
+        "audio_encoder_including_prepare_s": {
+          "n": 29,
+          "mean": 3.4178858620689656,
+          "min": 1.465019,
+          "max": 8.420528,
+          "p50": 3.354969,
+          "p90": 4.7297484
+        },
+        "thinker_prefill_s": {
+          "n": 29,
+          "mean": 5.965632,
+          "min": 2.520555,
+          "max": 15.610712,
+          "p50": 5.697821,
+          "p90": 7.979822799999999
+        },
+        "thinker_decode_s": {
+          "n": 29,
+          "mean": 25.876208655172412,
+          "min": 0.50239,
+          "max": 84.163742,
+          "p50": 18.16625,
+          "p90": 64.609622
+        },
+        "thinker_sample_s": {
+          "n": 29,
+          "mean": 0.022659758620689655,
+          "min": 0.000616,
+          "max": 0.078742,
+          "p50": 0.014249,
+          "p90": 0.054208
+        },
+        "talker_prefill_s": {
+          "n": 6,
+          "mean": 0.7833223333333333,
+          "min": 0.534978,
+          "max": 1.111274,
+          "p50": 0.654337,
+          "p90": 1.108708
+        },
+        "talker_decode_s": {
+          "n": 6,
+          "mean": 18.975415833333333,
+          "min": 5.280251,
+          "max": 22.222312,
+          "p50": 21.617231500000003,
+          "p90": 22.123694
+        },
+        "token2wav_s": {
+          "n": 6,
+          "mean": 318.0829825,
+          "min": 93.996061,
+          "max": 365.006405,
+          "p50": 362.8928185,
+          "p90": 364.4383695
+        },
+        "dit_s": {
+          "n": 0,
+          "mean": null,
+          "min": null,
+          "max": null,
+          "p50": null,
+          "p90": null
+        },
+        "ttfa_s": {
+          "n": 6,
+          "mean": 81.0263224375,
+          "min": 33.314010952,
+          "max": 133.097507573,
+          "p50": 65.8912985905,
+          "p90": 130.59973144399999
+        },
+        "rtf_vs_input": {
+          "n": 29,
+          "mean": 16.332084644539243,
+          "min": 1.1512730117516632,
+          "max": 95.89946415935614,
+          "p50": 5.120308423275862,
+          "p90": 49.22777408919357
+        },
+        "request_rtf_vs_output": {
+          "n": 6,
+          "mean": 21.230874037533308,
+          "min": 19.867599774754904,
+          "max": 23.363742003529413,
+          "p50": 20.484506416251882,
+          "p90": 23.270042544240198
+        },
+        "waveform_phase_rtf_vs_output": {
+          "n": 6,
+          "mean": 18.947019924605332,
+          "min": 18.758174028235295,
+          "max": 19.21452307826923,
+          "p50": 18.921359685980395,
+          "p90": 19.1080658975905
+        },
+        "input_duration_s": {
+          "n": 29,
+          "mean": 7.791939655172414,
+          "min": 3.26,
+          "max": 21.39,
+          "p50": 7.59,
+          "p90": 10.521099999999999
+        },
+        "wave_duration_s": {
+          "n": 6,
+          "mean": 17.866666666666664,
+          "min": 5.2,
+          "max": 20.4,
+          "p50": 20.4,
+          "p90": 20.4
+        },
+        "text_tokens": {
+          "n": 29,
+          "mean": 319.37931034482756,
+          "min": 7,
+          "max": 1024,
+          "p50": 221.0,
+          "p90": 793.3999999999999
+        },
+        "speech_tokens": {
+          "n": 6,
+          "mean": 897.3333333333334,
+          "min": 264,
+          "max": 1024,
+          "p50": 1024.0,
+          "p90": 1024.0
+        },
+        "sampled_peak_rss_kib": {
+          "n": 29,
+          "mean": 3511252.275862069,
+          "min": 3203280,
+          "max": 3621704,
+          "p50": 3559296.0,
+          "p90": 3602536.0
+        },
+        "process_max_rss_kib": {
+          "n": 29,
+          "mean": 3531440.4137931033,
+          "min": 3203484,
+          "max": 3621704,
+          "p50": 3590584.0,
+          "p90": 3602536.0
+        },
+        "minimum_memavailable_kib": {
+          "n": 29,
+          "mean": 11923533.379310345,
+          "min": 11145948,
+          "max": 12226128,
+          "p50": 11905272.0,
+          "p90": 12194533.6
+        }
+      },
+      "text_truncations": 2,
+      "speech_limit_1024_reached": 5,
+      "runtime_nonfinite_waveform_records": 0,
+      "invalid_output_wavs": 0,
+      "missing_output_wavs_after_runtime_success": 0
+    },
+    "audio2text": {
+      "counts": {
+        "planned": 37,
+        "completed": 23,
+        "succeeded": 23,
+        "failed": 0,
+        "pending": 14,
+        "started_pending": 0,
+        "unknown_terminal_success": 0
+      },
+      "statistics_completed": {
+        "request_s": {
+          "n": 23,
+          "mean": 33.48387234508696,
+          "min": 10.384482566,
+          "max": 80.788336758,
+          "p50": 32.850649769,
+          "p90": 59.0011833188
+        },
+        "thinker_response_s": {
+          "n": 23,
+          "mean": 33.48368455769565,
+          "min": 10.384309897,
+          "max": 80.788143375,
+          "p50": 32.850465726,
+          "p90": 59.001007377
+        },
+        "waveform_phase_s": {
+          "n": 0,
+          "mean": null,
+          "min": null,
+          "max": null,
+          "p50": null,
+          "p90": null
+        },
+        "audio_encoder_including_prepare_s": {
+          "n": 23,
+          "mean": 3.454629652173913,
+          "min": 1.465019,
+          "max": 8.420528,
+          "p50": 3.367724,
+          "p90": 4.5846786
+        },
+        "thinker_prefill_s": {
+          "n": 23,
+          "mean": 5.889671043478261,
+          "min": 2.520555,
+          "max": 15.610712,
+          "p50": 5.697821,
+          "p90": 7.4448854
+        },
+        "thinker_decode_s": {
+          "n": 23,
+          "mean": 24.103098652173912,
+          "min": 0.50239,
+          "max": 72.21435,
+          "p50": 24.648363,
+          "p90": 51.1134926
+        },
+        "thinker_sample_s": {
+          "n": 23,
+          "mean": 0.024034347826086957,
+          "min": 0.000616,
+          "max": 0.078742,
+          "p50": 0.014249,
+          "p90": 0.054217
+        },
+        "talker_prefill_s": {
+          "n": 0,
+          "mean": null,
+          "min": null,
+          "max": null,
+          "p50": null,
+          "p90": null
+        },
+        "talker_decode_s": {
+          "n": 0,
+          "mean": null,
+          "min": null,
+          "max": null,
+          "p50": null,
+          "p90": null
+        },
+        "token2wav_s": {
+          "n": 0,
+          "mean": null,
+          "min": null,
+          "max": null,
+          "p50": null,
+          "p90": null
+        },
+        "dit_s": {
+          "n": 0,
+          "mean": null,
+          "min": null,
+          "max": null,
+          "p50": null,
+          "p90": null
+        },
+        "ttfa_s": {
+          "n": 0,
+          "mean": null,
+          "min": null,
+          "max": null,
+          "p50": null,
+          "p90": null
+        },
+        "rtf_vs_input": {
+          "n": 23,
+          "mean": 5.277318230639355,
+          "min": 1.1512730117516632,
+          "max": 16.46962008496933,
+          "p50": 4.4755653636239785,
+          "p90": 10.31758540784175
+        },
+        "request_rtf_vs_output": {
+          "n": 0,
+          "mean": null,
+          "min": null,
+          "max": null,
+          "p50": null,
+          "p90": null
+        },
+        "waveform_phase_rtf_vs_output": {
+          "n": 0,
+          "mean": null,
+          "min": null,
+          "max": null,
+          "p50": null,
+          "p90": null
+        },
+        "input_duration_s": {
+          "n": 23,
+          "mean": 7.97675,
+          "min": 3.26,
+          "max": 21.39,
+          "p50": 7.7,
+          "p90": 10.238900000000001
+        },
+        "wave_duration_s": {
+          "n": 0,
+          "mean": null,
+          "min": null,
+          "max": null,
+          "p50": null,
+          "p90": null
+        },
+        "text_tokens": {
+          "n": 23,
+          "mean": 296.4782608695652,
+          "min": 7,
+          "max": 895,
+          "p50": 307.0,
+          "p90": 632.6
+        },
+        "speech_tokens": {
+          "n": 0,
+          "mean": null,
+          "min": null,
+          "max": null,
+          "p50": null,
+          "p90": null
+        },
+        "sampled_peak_rss_kib": {
+          "n": 23,
+          "mean": 3492842.434782609,
+          "min": 3203280,
+          "max": 3621704,
+          "p50": 3557308.0,
+          "p90": 3587729.6
+        },
+        "process_max_rss_kib": {
+          "n": 23,
+          "mean": 3513619.304347826,
+          "min": 3203484,
+          "max": 3621704,
+          "p50": 3590584.0,
+          "p90": 3600145.6
+        },
+        "minimum_memavailable_kib": {
+          "n": 23,
+          "mean": 11979368.695652174,
+          "min": 11893648,
+          "max": 12226128,
+          "p50": 11919832.0,
+          "p90": 12202038.4
+        }
+      },
+      "statistics_succeeded": {
+        "request_s": {
+          "n": 23,
+          "mean": 33.48387234508696,
+          "min": 10.384482566,
+          "max": 80.788336758,
+          "p50": 32.850649769,
+          "p90": 59.0011833188
+        },
+        "thinker_response_s": {
+          "n": 23,
+          "mean": 33.48368455769565,
+          "min": 10.384309897,
+          "max": 80.788143375,
+          "p50": 32.850465726,
+          "p90": 59.001007377
+        },
+        "waveform_phase_s": {
+          "n": 0,
+          "mean": null,
+          "min": null,
+          "max": null,
+          "p50": null,
+          "p90": null
+        },
+        "audio_encoder_including_prepare_s": {
+          "n": 23,
+          "mean": 3.454629652173913,
+          "min": 1.465019,
+          "max": 8.420528,
+          "p50": 3.367724,
+          "p90": 4.5846786
+        },
+        "thinker_prefill_s": {
+          "n": 23,
+          "mean": 5.889671043478261,
+          "min": 2.520555,
+          "max": 15.610712,
+          "p50": 5.697821,
+          "p90": 7.4448854
+        },
+        "thinker_decode_s": {
+          "n": 23,
+          "mean": 24.103098652173912,
+          "min": 0.50239,
+          "max": 72.21435,
+          "p50": 24.648363,
+          "p90": 51.1134926
+        },
+        "thinker_sample_s": {
+          "n": 23,
+          "mean": 0.024034347826086957,
+          "min": 0.000616,
+          "max": 0.078742,
+          "p50": 0.014249,
+          "p90": 0.054217
+        },
+        "talker_prefill_s": {
+          "n": 0,
+          "mean": null,
+          "min": null,
+          "max": null,
+          "p50": null,
+          "p90": null
+        },
+        "talker_decode_s": {
+          "n": 0,
+          "mean": null,
+          "min": null,
+          "max": null,
+          "p50": null,
+          "p90": null
+        },
+        "token2wav_s": {
+          "n": 0,
+          "mean": null,
+          "min": null,
+          "max": null,
+          "p50": null,
+          "p90": null
+        },
+        "dit_s": {
+          "n": 0,
+          "mean": null,
+          "min": null,
+          "max": null,
+          "p50": null,
+          "p90": null
+        },
+        "ttfa_s": {
+          "n": 0,
+          "mean": null,
+          "min": null,
+          "max": null,
+          "p50": null,
+          "p90": null
+        },
+        "rtf_vs_input": {
+          "n": 23,
+          "mean": 5.277318230639355,
+          "min": 1.1512730117516632,
+          "max": 16.46962008496933,
+          "p50": 4.4755653636239785,
+          "p90": 10.31758540784175
+        },
+        "request_rtf_vs_output": {
+          "n": 0,
+          "mean": null,
+          "min": null,
+          "max": null,
+          "p50": null,
+          "p90": null
+        },
+        "waveform_phase_rtf_vs_output": {
+          "n": 0,
+          "mean": null,
+          "min": null,
+          "max": null,
+          "p50": null,
+          "p90": null
+        },
+        "input_duration_s": {
+          "n": 23,
+          "mean": 7.97675,
+          "min": 3.26,
+          "max": 21.39,
+          "p50": 7.7,
+          "p90": 10.238900000000001
+        },
+        "wave_duration_s": {
+          "n": 0,
+          "mean": null,
+          "min": null,
+          "max": null,
+          "p50": null,
+          "p90": null
+        },
+        "text_tokens": {
+          "n": 23,
+          "mean": 296.4782608695652,
+          "min": 7,
+          "max": 895,
+          "p50": 307.0,
+          "p90": 632.6
+        },
+        "speech_tokens": {
+          "n": 0,
+          "mean": null,
+          "min": null,
+          "max": null,
+          "p50": null,
+          "p90": null
+        },
+        "sampled_peak_rss_kib": {
+          "n": 23,
+          "mean": 3492842.434782609,
+          "min": 3203280,
+          "max": 3621704,
+          "p50": 3557308.0,
+          "p90": 3587729.6
+        },
+        "process_max_rss_kib": {
+          "n": 23,
+          "mean": 3513619.304347826,
+          "min": 3203484,
+          "max": 3621704,
+          "p50": 3590584.0,
+          "p90": 3600145.6
+        },
+        "minimum_memavailable_kib": {
+          "n": 23,
+          "mean": 11979368.695652174,
+          "min": 11893648,
+          "max": 12226128,
+          "p50": 11919832.0,
+          "p90": 12202038.4
+        }
+      },
+      "text_truncations": 0,
+      "speech_limit_1024_reached": 0,
+      "runtime_nonfinite_waveform_records": 0,
+      "invalid_output_wavs": 0,
+      "missing_output_wavs_after_runtime_success": 0
+    },
+    "audio2audio": {
+      "counts": {
+        "planned": 13,
+        "completed": 6,
+        "succeeded": 6,
+        "failed": 0,
+        "pending": 7,
+        "started_pending": 0,
+        "unknown_terminal_success": 0
+      },
+      "statistics_completed": {
+        "request_s": {
+          "n": 6,
+          "mean": 380.0788277218333,
+          "min": 108.85311069,
+          "max": 476.620336872,
+          "p50": 408.4515422155,
+          "p90": 474.7088679025
+        },
+        "thinker_response_s": {
+          "n": 6,
+          "mean": 42.23641305816667,
+          "min": 8.937590683,
+          "max": 91.772412086,
+          "p50": 23.301758215,
+          "p90": 89.65993931950001
+        },
+        "waveform_phase_s": {
+          "n": 6,
+          "mean": 337.84241466366666,
+          "min": 99.915520007,
+          "max": 387.632817825,
+          "p50": 385.048928583,
+          "p90": 387.1871803165
+        },
+        "audio_encoder_including_prepare_s": {
+          "n": 6,
+          "mean": 3.2770346666666668,
+          "min": 2.176191,
+          "max": 6.165817,
+          "p50": 2.471971,
+          "p90": 5.1804635
+        },
+        "thinker_prefill_s": {
+          "n": 6,
+          "mean": 6.256815666666667,
+          "min": 4.999499,
+          "max": 9.40983,
+          "p50": 5.5590425,
+          "p90": 8.0913755
+        },
+        "thinker_decode_s": {
+          "n": 6,
+          "mean": 32.67313033333333,
+          "min": 1.504134,
+          "max": 84.163742,
+          "p50": 10.437328,
+          "p90": 82.05768549999999
+        },
+        "thinker_sample_s": {
+          "n": 6,
+          "mean": 0.0173905,
+          "min": 0.001699,
+          "max": 0.040386,
+          "p50": 0.010111499999999999,
+          "p90": 0.038683999999999996
+        },
+        "talker_prefill_s": {
+          "n": 6,
+          "mean": 0.7833223333333333,
+          "min": 0.534978,
+          "max": 1.111274,
+          "p50": 0.654337,
+          "p90": 1.108708
+        },
+        "talker_decode_s": {
+          "n": 6,
+          "mean": 18.975415833333333,
+          "min": 5.280251,
+          "max": 22.222312,
+          "p50": 21.617231500000003,
+          "p90": 22.123694
+        },
+        "token2wav_s": {
+          "n": 6,
+          "mean": 318.0829825,
+          "min": 93.996061,
+          "max": 365.006405,
+          "p50": 362.8928185,
+          "p90": 364.4383695
+        },
+        "dit_s": {
+          "n": 0,
+          "mean": null,
+          "min": null,
+          "max": null,
+          "p50": null,
+          "p90": null
+        },
+        "ttfa_s": {
+          "n": 6,
+          "mean": 81.0263224375,
+          "min": 33.314010952,
+          "max": 133.097507573,
+          "p50": 65.8912985905,
+          "p90": 130.59973144399999
+        },
+        "rtf_vs_input": {
+          "n": 6,
+          "mean": 58.70868923115548,
+          "min": 19.684106815551534,
+          "max": 95.89946415935614,
+          "p50": 58.55294167171948,
+          "p90": 89.79020986135949
+        },
+        "request_rtf_vs_output": {
+          "n": 6,
+          "mean": 21.230874037533308,
+          "min": 19.867599774754904,
+          "max": 23.363742003529413,
+          "p50": 20.484506416251882,
+          "p90": 23.270042544240198
+        },
+        "waveform_phase_rtf_vs_output": {
+          "n": 6,
+          "mean": 18.947019924605332,
+          "min": 18.758174028235295,
+          "max": 19.21452307826923,
+          "p50": 18.921359685980395,
+          "p90": 19.1080658975905
+        },
+        "input_duration_s": {
+          "n": 6,
+          "mean": 7.0835,
+          "min": 4.97,
+          "max": 11.391,
+          "p50": 5.59,
+          "p90": 10.4405
+        },
+        "wave_duration_s": {
+          "n": 6,
+          "mean": 17.866666666666664,
+          "min": 5.2,
+          "max": 20.4,
+          "p50": 20.4,
+          "p90": 20.4
+        },
+        "text_tokens": {
+          "n": 6,
+          "mean": 407.1666666666667,
+          "min": 19,
+          "max": 1024,
+          "p50": 129.0,
+          "p90": 1024.0
+        },
+        "speech_tokens": {
+          "n": 6,
+          "mean": 897.3333333333334,
+          "min": 264,
+          "max": 1024,
+          "p50": 1024.0,
+          "p90": 1024.0
+        },
+        "sampled_peak_rss_kib": {
+          "n": 6,
+          "mean": 3581823.3333333335,
+          "min": 3555972,
+          "max": 3602536,
+          "p50": 3581816.0,
+          "p90": 3602536.0
+        },
+        "process_max_rss_kib": {
+          "n": 6,
+          "mean": 3599754.6666666665,
+          "min": 3590584,
+          "max": 3621704,
+          "p50": 3596560.0,
+          "p90": 3612120.0
+        },
+        "minimum_memavailable_kib": {
+          "n": 6,
+          "mean": 11709498.0,
+          "min": 11145948,
+          "max": 11907744,
+          "p50": 11848340.0,
+          "p90": 11906884.0
+        }
+      },
+      "statistics_succeeded": {
+        "request_s": {
+          "n": 6,
+          "mean": 380.0788277218333,
+          "min": 108.85311069,
+          "max": 476.620336872,
+          "p50": 408.4515422155,
+          "p90": 474.7088679025
+        },
+        "thinker_response_s": {
+          "n": 6,
+          "mean": 42.23641305816667,
+          "min": 8.937590683,
+          "max": 91.772412086,
+          "p50": 23.301758215,
+          "p90": 89.65993931950001
+        },
+        "waveform_phase_s": {
+          "n": 6,
+          "mean": 337.84241466366666,
+          "min": 99.915520007,
+          "max": 387.632817825,
+          "p50": 385.048928583,
+          "p90": 387.1871803165
+        },
+        "audio_encoder_including_prepare_s": {
+          "n": 6,
+          "mean": 3.2770346666666668,
+          "min": 2.176191,
+          "max": 6.165817,
+          "p50": 2.471971,
+          "p90": 5.1804635
+        },
+        "thinker_prefill_s": {
+          "n": 6,
+          "mean": 6.256815666666667,
+          "min": 4.999499,
+          "max": 9.40983,
+          "p50": 5.5590425,
+          "p90": 8.0913755
+        },
+        "thinker_decode_s": {
+          "n": 6,
+          "mean": 32.67313033333333,
+          "min": 1.504134,
+          "max": 84.163742,
+          "p50": 10.437328,
+          "p90": 82.05768549999999
+        },
+        "thinker_sample_s": {
+          "n": 6,
+          "mean": 0.0173905,
+          "min": 0.001699,
+          "max": 0.040386,
+          "p50": 0.010111499999999999,
+          "p90": 0.038683999999999996
+        },
+        "talker_prefill_s": {
+          "n": 6,
+          "mean": 0.7833223333333333,
+          "min": 0.534978,
+          "max": 1.111274,
+          "p50": 0.654337,
+          "p90": 1.108708
+        },
+        "talker_decode_s": {
+          "n": 6,
+          "mean": 18.975415833333333,
+          "min": 5.280251,
+          "max": 22.222312,
+          "p50": 21.617231500000003,
+          "p90": 22.123694
+        },
+        "token2wav_s": {
+          "n": 6,
+          "mean": 318.0829825,
+          "min": 93.996061,
+          "max": 365.006405,
+          "p50": 362.8928185,
+          "p90": 364.4383695
+        },
+        "dit_s": {
+          "n": 0,
+          "mean": null,
+          "min": null,
+          "max": null,
+          "p50": null,
+          "p90": null
+        },
+        "ttfa_s": {
+          "n": 6,
+          "mean": 81.0263224375,
+          "min": 33.314010952,
+          "max": 133.097507573,
+          "p50": 65.8912985905,
+          "p90": 130.59973144399999
+        },
+        "rtf_vs_input": {
+          "n": 6,
+          "mean": 58.70868923115548,
+          "min": 19.684106815551534,
+          "max": 95.89946415935614,
+          "p50": 58.55294167171948,
+          "p90": 89.79020986135949
+        },
+        "request_rtf_vs_output": {
+          "n": 6,
+          "mean": 21.230874037533308,
+          "min": 19.867599774754904,
+          "max": 23.363742003529413,
+          "p50": 20.484506416251882,
+          "p90": 23.270042544240198
+        },
+        "waveform_phase_rtf_vs_output": {
+          "n": 6,
+          "mean": 18.947019924605332,
+          "min": 18.758174028235295,
+          "max": 19.21452307826923,
+          "p50": 18.921359685980395,
+          "p90": 19.1080658975905
+        },
+        "input_duration_s": {
+          "n": 6,
+          "mean": 7.0835,
+          "min": 4.97,
+          "max": 11.391,
+          "p50": 5.59,
+          "p90": 10.4405
+        },
+        "wave_duration_s": {
+          "n": 6,
+          "mean": 17.866666666666664,
+          "min": 5.2,
+          "max": 20.4,
+          "p50": 20.4,
+          "p90": 20.4
+        },
+        "text_tokens": {
+          "n": 6,
+          "mean": 407.1666666666667,
+          "min": 19,
+          "max": 1024,
+          "p50": 129.0,
+          "p90": 1024.0
+        },
+        "speech_tokens": {
+          "n": 6,
+          "mean": 897.3333333333334,
+          "min": 264,
+          "max": 1024,
+          "p50": 1024.0,
+          "p90": 1024.0
+        },
+        "sampled_peak_rss_kib": {
+          "n": 6,
+          "mean": 3581823.3333333335,
+          "min": 3555972,
+          "max": 3602536,
+          "p50": 3581816.0,
+          "p90": 3602536.0
+        },
+        "process_max_rss_kib": {
+          "n": 6,
+          "mean": 3599754.6666666665,
+          "min": 3590584,
+          "max": 3621704,
+          "p50": 3596560.0,
+          "p90": 3612120.0
+        },
+        "minimum_memavailable_kib": {
+          "n": 6,
+          "mean": 11709498.0,
+          "min": 11145948,
+          "max": 11907744,
+          "p50": 11848340.0,
+          "p90": 11906884.0
+        }
+      },
+      "text_truncations": 2,
+      "speech_limit_1024_reached": 5,
+      "runtime_nonfinite_waveform_records": 0,
+      "invalid_output_wavs": 0,
+      "missing_output_wavs_after_runtime_success": 0
+    }
+  },
+  "comparison_keys": [
+    "sample ID and content hashes",
+    "model revision and quantization including DiT W8",
+    "precision of computation",
+    "CPU threads and GPU/NPU runtime",
+    "same token limits and decoding policy",
+    "same warmup and repetition policy",
+    "profiling disabled",
+    "frequency and thermal regime",
+    "request timing includes final waveform but excludes load and host resampling"
+  ],
+  "future_comparison": {
+    "status": "not_run",
+    "paired_on_same_executed_samples_required": true,
+    "speech_requires_fixed_seed_or_repetitions": true,
+    "clean_latency_must_not_compare_to_diagnostic_callbacks": true
+  }
+}

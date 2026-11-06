@@ -1,0 +1,616 @@
+{
+  "schema_version": 1,
+  "archive_date": "2026-11-06",
+  "kind": "historical_document_publication_not_new_measurement",
+  "preservation": "Source originals remain untouched; this manifest binds original and normalized publication bytes",
+  "historical_validation_note": "Any embedded validation/audit fields describe the historical run or original report, not a fresh verification of this publication",
+  "path_roots": [
+    "TASK_ROOT",
+    "DEPLOYMENT_TASK_ROOT",
+    "TOOLKIT_ROOT",
+    "BOARD_PROJECT",
+    "DESKTOP_ROOT",
+    "HOST_HOME",
+    "BOARD_HOME"
+  ],
+  "file_count": 52,
+  "published_total_bytes": 5789101,
+  "files": [
+    {
+      "path": "reports/historical/convtranspose/resumed_board/records/e2e_paired_sync_20261106/command.json",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/resumed_board/records/e2e_paired_sync_20261106/command.json",
+      "source_size_bytes": 665,
+      "source_sha256": "c93e15ddad45335e13631a6ee1182e90a1c2454101c0e8a3f98a01dfec5436b6",
+      "published_size_bytes": 620,
+      "published_sha256": "9704b812e19c4fb3306cded3b8f7758c56c1176fe7a29a01d352c29f605c7cf0",
+      "transformations": [
+        "Normalize machine-specific paths to symbolic roots"
+      ],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/evidence/subgraphs/bigvgan_ups_0_0_reference.contract.json",
+      "source_id": "workspace/outputs/evidence/subgraphs/bigvgan_ups_0_0_reference.contract.json",
+      "source_size_bytes": 2747,
+      "source_sha256": "c085afb175acad359307db96c037e6d1d4ab9932c6f2db3d355cc1b93884c219",
+      "published_size_bytes": 2633,
+      "published_sha256": "19d06a26d69c418e44027dbed73892bd34d2a09e86131cd7da7b8ce15888f1e0",
+      "transformations": [
+        "Normalize machine-specific paths to symbolic roots"
+      ],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/convtranspose/analysis/microbenchmark_summary.json",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/analysis/microbenchmark_summary.json",
+      "source_size_bytes": 67995,
+      "source_sha256": "d02c990dcd00af32588e2ef364dc0b81bf3396d2d9948a1177e46473442398ce",
+      "published_size_bytes": 67767,
+      "published_sha256": "cd85a34f9a3d18f21893c550feb310a6937a647139831a70ca8794798bb593fa",
+      "transformations": [
+        "Normalize machine-specific paths to symbolic roots"
+      ],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/convtranspose/resumed_board/records/integrated_correctness_20261106.json",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/resumed_board/records/integrated_correctness_20261106.json",
+      "source_size_bytes": 1213,
+      "source_sha256": "06c9f1d920b0d448e2f2736681296ede442d75e022e78a1e13d33c5a03779736",
+      "published_size_bytes": 1213,
+      "published_sha256": "06c9f1d920b0d448e2f2736681296ede442d75e022e78a1e13d33c5a03779736",
+      "transformations": [],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/convtranspose/analysis/e2e_summary.json",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/analysis/e2e_summary.json",
+      "source_size_bytes": 42660,
+      "source_sha256": "923b014590f81efd1d28f8a46507c99d056a743ea5b543f6b0c899644667c923",
+      "published_size_bytes": 42206,
+      "published_sha256": "9740aa0ea98a2f4e9876c8592348be172226d9cc4ef49eb87c4b554df78b4994",
+      "transformations": [
+        "Omit unrelated workload housekeeping fields/sentences; preserve experiment metrics",
+        "Normalize machine-specific paths to symbolic roots"
+      ],
+      "omissions": [
+        "$.report_notes[6]"
+      ]
+    },
+    {
+      "path": "reports/historical/convtranspose/analysis/e2e_file_integrity.json",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/analysis/e2e_file_integrity.json",
+      "source_size_bytes": 3588,
+      "source_sha256": "8e8fc07a16d2766a8521572e55fd6a1147777863199845fb1cb776e4707ab4c0",
+      "published_size_bytes": 3588,
+      "published_sha256": "8e8fc07a16d2766a8521572e55fd6a1147777863199845fb1cb776e4707ab4c0",
+      "transformations": [],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/convtranspose/analysis/telemetry_summary.json",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/analysis/telemetry_summary.json",
+      "source_size_bytes": 2341,
+      "source_sha256": "af14635b552e539d035f02be121dac40732927c6aa3d504ebd248b766d03dc7a",
+      "published_size_bytes": 2341,
+      "published_sha256": "af14635b552e539d035f02be121dac40732927c6aa3d504ebd248b766d03dc7a",
+      "transformations": [],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/convtranspose/resumed_board/records/final_environment_20261106.json",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/resumed_board/records/final_environment_20261106.json",
+      "source_size_bytes": 3150,
+      "source_sha256": "e784812af1e460fb40bcf50e15ccbd32d4ddeaf642469f2b8a12f2114da5a56e",
+      "published_size_bytes": 2459,
+      "published_sha256": "d13f235674a6aeee3de16a7f87b0c23403f79613e08a3b8248a98ff58f0edc48",
+      "transformations": [
+        "Omit unrelated workload housekeeping fields/sentences; preserve experiment metrics",
+        "Normalize machine-specific paths to symbolic roots"
+      ],
+      "omissions": [
+        "$.vision_progress",
+        "$.vision_committed_units",
+        "$.vision_processes"
+      ]
+    },
+    {
+      "path": "reports/historical/convtranspose/code/src/omni.sync_probe.cpp",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/code/src/omni.sync_probe.cpp",
+      "source_size_bytes": 174595,
+      "source_sha256": "fa6d4419f6916859d0a7d6ca5ad93d99fb82b693efc067ddb35cf20e95679ec3",
+      "published_size_bytes": 174595,
+      "published_sha256": "fa6d4419f6916859d0a7d6ca5ad93d99fb82b693efc067ddb35cf20e95679ec3",
+      "transformations": [],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/convtranspose/code/src/DeconvBufExecution.candidate.cpp",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/code/src/DeconvBufExecution.candidate.cpp",
+      "source_size_bytes": 14602,
+      "source_sha256": "ffe7dc5c5f52be6ae92618c17dadc43d26c7ecff2dd70e22bc401255929dabfa",
+      "published_size_bytes": 14602,
+      "published_sha256": "ffe7dc5c5f52be6ae92618c17dadc43d26c7ecff2dd70e22bc401255929dabfa",
+      "transformations": [],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/convtranspose/summary.json",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/summary.json",
+      "source_size_bytes": 51818,
+      "source_sha256": "f3901c81a3b4da492871f62bcdfa3d6a707b7b8390c4c65fabfd2759760253dd",
+      "published_size_bytes": 51353,
+      "published_sha256": "f36da6cf21ad6040864302573956c55f296dcf5a892b44ba654265e9f8b2e3f8",
+      "transformations": [
+        "Omit unrelated workload housekeeping fields/sentences; preserve experiment metrics",
+        "Normalize machine-specific paths to symbolic roots"
+      ],
+      "omissions": [
+        "$.full_model_e2e.report_notes[6]"
+      ]
+    },
+    {
+      "path": "reports/historical/convtranspose/microbenchmark_summary.csv",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/microbenchmark_summary.csv",
+      "source_size_bytes": 1506,
+      "source_sha256": "af475b116982add47009d5040bbbbed62a9d2725410fe8e9e807293f76c9dd8b",
+      "published_size_bytes": 1506,
+      "published_sha256": "af475b116982add47009d5040bbbbed62a9d2725410fe8e9e807293f76c9dd8b",
+      "transformations": [],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/convtranspose/capture_manifest.json",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/capture_manifest.json",
+      "source_size_bytes": 12207,
+      "source_sha256": "151e68ce0937a5b4cee2779ca30b80b414bcdd11ae2b2f4f7394522f50ca01f3",
+      "published_size_bytes": 12207,
+      "published_sha256": "151e68ce0937a5b4cee2779ca30b80b414bcdd11ae2b2f4f7394522f50ca01f3",
+      "transformations": [],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/convtranspose/records/correctness_reference.json",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/records/correctness_reference.json",
+      "source_size_bytes": 11394,
+      "source_sha256": "b3d3b57c6753b036ffb8f5c415f5e984442a84ecec3249ec1a7cb3a05e86b626",
+      "published_size_bytes": 11394,
+      "published_sha256": "b3d3b57c6753b036ffb8f5c415f5e984442a84ecec3249ec1a7cb3a05e86b626",
+      "transformations": [],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/convtranspose/code/kernel/bigvgan_deconv_s5_tiled.cl",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/code/kernel/bigvgan_deconv_s5_tiled.cl",
+      "source_size_bytes": 3926,
+      "source_sha256": "8f52e6f5a900b9047bf0b0062dac4b79229db8ae1371199550e0b00632e1dcf8",
+      "published_size_bytes": 3926,
+      "published_sha256": "8f52e6f5a900b9047bf0b0062dac4b79229db8ae1371199550e0b00632e1dcf8",
+      "transformations": [],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/convtranspose/code/kernel/bench_deconv.cpp",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/code/kernel/bench_deconv.cpp",
+      "source_size_bytes": 14323,
+      "source_sha256": "5e19d1947c62868e3c9bb81392dee9db883156974a37c7ef58a2d9a9e3d121b3",
+      "published_size_bytes": 14323,
+      "published_sha256": "5e19d1947c62868e3c9bb81392dee9db883156974a37c7ef58a2d9a9e3d121b3",
+      "transformations": [],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/convtranspose/code/capture/omni_ab.cpp",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/code/capture/omni_ab.cpp",
+      "source_size_bytes": 16276,
+      "source_sha256": "15c52960c20870a01eb1601e2d8bce71e867c8c67df2ca4e3ea9d7900e24e35d",
+      "published_size_bytes": 16276,
+      "published_sha256": "15c52960c20870a01eb1601e2d8bce71e867c8c67df2ca4e3ea9d7900e24e35d",
+      "transformations": [],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/evidence/mapping_audit.json",
+      "source_id": "workspace/outputs/evidence/mapping_audit.json",
+      "source_size_bytes": 41129,
+      "source_sha256": "76f1cf8371e609c8539a49995cde8235dd858da5d17e0671fc9b6c6baffbc03d",
+      "published_size_bytes": 40113,
+      "published_sha256": "072a95ddd0f4e6c4dbf8ad010f75b9a8405f4ac7db61383ca54226a5a32212c8",
+      "transformations": [
+        "Normalize machine-specific paths to symbolic roots"
+      ],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/evidence/manifest.jsonl",
+      "source_id": "workspace/outputs/evidence/manifest.jsonl",
+      "source_size_bytes": 39122,
+      "source_sha256": "35db935b69e7ca6ffedecc3bfe58b31a671f1b9ea0112b8ced782938490663fa",
+      "published_size_bytes": 39122,
+      "published_sha256": "35db935b69e7ca6ffedecc3bfe58b31a671f1b9ea0112b8ced782938490663fa",
+      "transformations": [],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/evidence/references.jsonl",
+      "source_id": "workspace/outputs/evidence/references.jsonl",
+      "source_size_bytes": 30056,
+      "source_sha256": "65cd4329c65106a539dfb8515d696306c51f9697bd1000843faa4198fb6b4799",
+      "published_size_bytes": 30056,
+      "published_sha256": "65cd4329c65106a539dfb8515d696306c51f9697bd1000843faa4198fb6b4799",
+      "transformations": [],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/evidence/summary.json",
+      "source_id": "workspace/outputs/evidence/summary.json",
+      "source_size_bytes": 448064,
+      "source_sha256": "d919ebf0849cd79b9473f33f4635d4200d0abc2fec0b733d0808ff25c4d1b861",
+      "published_size_bytes": 447932,
+      "published_sha256": "05f6ee3a64680cb4c7ba683dfcaf640b910cb7cfc0a8cbef07875120bac5b587",
+      "transformations": [
+        "Normalize machine-specific paths to symbolic roots"
+      ],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/evidence/results.csv",
+      "source_id": "workspace/outputs/evidence/results.csv",
+      "source_size_bytes": 59642,
+      "source_sha256": "56d7bf9bf254e8c9cead7e699164303f8d5625d0fe1e5d292a1ae9e976f05d28",
+      "published_size_bytes": 59642,
+      "published_sha256": "56d7bf9bf254e8c9cead7e699164303f8d5625d0fe1e5d292a1ae9e976f05d28",
+      "transformations": [],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/evidence/board_records/contract.json",
+      "source_id": "workspace/outputs/evidence/board_records/contract.json",
+      "source_size_bytes": 1622,
+      "source_sha256": "52f40bdcd2481e5469a30623b403bb41f57992004cf3a181bb9a0d5c4aba03f8",
+      "published_size_bytes": 1577,
+      "published_sha256": "5317dc7bf2d6a61fc5e1491f041311d9fbfd2ba707e47d0c745f3dd4e45d4df4",
+      "transformations": [
+        "Normalize machine-specific paths to symbolic roots"
+      ],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/evidence/formal50/effective_config.json",
+      "source_id": "workspace/outputs/evidence/formal50/effective_config.json",
+      "source_size_bytes": 2670,
+      "source_sha256": "c97e533f338e898b65a17ce0aaa9bc6e2613c81cd9388dc9f88589560a6b82b0",
+      "published_size_bytes": 2670,
+      "published_sha256": "c97e533f338e898b65a17ce0aaa9bc6e2613c81cd9388dc9f88589560a6b82b0",
+      "transformations": [],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/evidence/diagnostic_speech/44_en_qingganhua_000493/metrics.json",
+      "source_id": "workspace/outputs/evidence/diagnostic_speech/44_en_qingganhua_000493/metrics.json",
+      "source_size_bytes": 2026,
+      "source_sha256": "2560bc1bd166f7c7d819d19354cb50990662eac6af8065791d76f3ada5d459df",
+      "published_size_bytes": 2026,
+      "published_sha256": "2560bc1bd166f7c7d819d19354cb50990662eac6af8065791d76f3ada5d459df",
+      "transformations": [],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/evidence/diagnostic_speech/process.txt",
+      "source_id": "workspace/outputs/evidence/diagnostic_speech/process.log",
+      "source_size_bytes": 1346,
+      "source_sha256": "7818e460596a3534ab134c98c913af6b62e535b20d7f58e932ce0e80727063b0",
+      "published_size_bytes": 1346,
+      "published_sha256": "7818e460596a3534ab134c98c913af6b62e535b20d7f58e932ce0e80727063b0",
+      "transformations": [
+        "Rename .log to .txt for explicitly selected text archive"
+      ],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/evidence/mnn_toolkit_analysis.json",
+      "source_id": "workspace/outputs/evidence/mnn_toolkit_analysis.json",
+      "source_size_bytes": 2090491,
+      "source_sha256": "4fc94b2645f38fa5be7ba737dd4816d9883844d6903aeeba33befba4ea15502e",
+      "published_size_bytes": 2086746,
+      "published_sha256": "76d95fde7d6550485e529e9131084f646e30d21673e53e524e4c8c72aa520532",
+      "transformations": [
+        "Normalize machine-specific paths to symbolic roots"
+      ],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/evidence/source_map.json",
+      "source_id": "workspace/outputs/evidence/source_map.json",
+      "source_size_bytes": 27682,
+      "source_sha256": "6fc494b889ea58ab14ed32dbc0e029c6cb14abc16b920a4a498fb947415616d4",
+      "published_size_bytes": 26818,
+      "published_sha256": "cee76e106308ea990f76257206d08deff19e69bfe95ce20be1e58eac727f2565",
+      "transformations": [
+        "Normalize machine-specific paths to symbolic roots"
+      ],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/evidence/npu_tile0.profile.json",
+      "source_id": "workspace/outputs/evidence/npu_tile0.profile.json",
+      "source_size_bytes": 9383,
+      "source_sha256": "94607c26880c0fcbe98dbe8ec7a4b2111ef520cc3f8ef52d59cb385dea85d046",
+      "published_size_bytes": 9348,
+      "published_sha256": "24595a7f57e5d53f670ada4993b5b62c3b679bb10e2e779e2ad6e8b9e2763054",
+      "transformations": [
+        "Normalize machine-specific paths to symbolic roots"
+      ],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/evidence/npu_tile0.mapping.json",
+      "source_id": "workspace/outputs/evidence/npu_tile0.mapping.json",
+      "source_size_bytes": 32956,
+      "source_sha256": "853eaafa9c5804227ad87444d05f72f306cbbdd2abc93d54b26c4bfe4ae2ec47",
+      "published_size_bytes": 32767,
+      "published_sha256": "4d947ce4ac21e4ea5447573ced4d311954c709b97331ff385bc15f78fb1b8293",
+      "transformations": [
+        "Normalize machine-specific paths to symbolic roots"
+      ],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/evidence/subgraphs/conv2_gelu.contract.json",
+      "source_id": "workspace/outputs/evidence/subgraphs/conv2_gelu.contract.json",
+      "source_size_bytes": 7880,
+      "source_sha256": "330d40873fc2fbd3cb21cd35743e97dada54520781d1359703bfe298d63b289c",
+      "published_size_bytes": 7803,
+      "published_sha256": "f7feb681a5d5de697a4ad2117eb7e0324a770abc69384758092641493374c749",
+      "transformations": [
+        "Normalize machine-specific paths to symbolic roots"
+      ],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/evidence/validation/conv2_extraction_numeric.json",
+      "source_id": "workspace/outputs/evidence/validation/conv2_extraction_numeric.json",
+      "source_size_bytes": 989,
+      "source_sha256": "2a8b87f95f0cd4fd00f70b6f5e6f0eff40d2aea6a975449715af9e1bae0506ee",
+      "published_size_bytes": 989,
+      "published_sha256": "2a8b87f95f0cd4fd00f70b6f5e6f0eff40d2aea6a975449715af9e1bae0506ee",
+      "transformations": [],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/evidence/current44_reference_candidates.json",
+      "source_id": "workspace/outputs/evidence/current44_reference_candidates.json",
+      "source_size_bytes": 1398568,
+      "source_sha256": "ac5e967699415184f2d91f9dd35814930cc5990885161a7fe71413127bf9ef18",
+      "published_size_bytes": 1398495,
+      "published_sha256": "b56634857e1b1a70e31f1a43ccf80229121e9a72892246c74efe0ab7f65cf6b4",
+      "transformations": [
+        "Normalize machine-specific paths to symbolic roots"
+      ],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/evidence/subgraphs/reference_origin.json",
+      "source_id": "workspace/outputs/evidence/subgraphs/reference_origin.json",
+      "source_size_bytes": 11759,
+      "source_sha256": "88929c4b670aa0634ea2c72b321f06063f0e571be455baa2d0d0ccbbea27dea2",
+      "published_size_bytes": 11154,
+      "published_sha256": "dc637a8b1984a58c86f3dfef9189d3aa40e2fdeb8a3e56f42fde4a231ee2c43c",
+      "transformations": [
+        "Normalize machine-specific paths to symbolic roots"
+      ],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/evidence/subgraphs/observed_runtime_shapes.json",
+      "source_id": "workspace/outputs/evidence/subgraphs/observed_runtime_shapes.json",
+      "source_size_bytes": 945,
+      "source_sha256": "5f4bff7c2c2542e69dbfe1f2d9da8a3c8e3abb19b3b6e49cd15f288107d49c75",
+      "published_size_bytes": 945,
+      "published_sha256": "5f4bff7c2c2542e69dbfe1f2d9da8a3c8e3abb19b3b6e49cd15f288107d49c75",
+      "transformations": [],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/evidence/validation/reference_ort_validation.json",
+      "source_id": "workspace/outputs/evidence/validation/reference_ort_validation.json",
+      "source_size_bytes": 508,
+      "source_sha256": "f76185bbe7c5f8975331fa9465686e32a64ac5b58c9731c5a421b0f7a3384c75",
+      "published_size_bytes": 508,
+      "published_sha256": "f76185bbe7c5f8975331fa9465686e32a64ac5b58c9731c5a421b0f7a3384c75",
+      "transformations": [],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/evidence/formal50/process.txt",
+      "source_id": "workspace/outputs/evidence/formal50/process.log",
+      "source_size_bytes": 83775,
+      "source_sha256": "e7b007871b18fe1e4984bf5b33daf5a66fe20f3a5a6a08dfbb7f07ac2ddef7fa",
+      "published_size_bytes": 83775,
+      "published_sha256": "e7b007871b18fe1e4984bf5b33daf5a66fe20f3a5a6a08dfbb7f07ac2ddef7fa",
+      "transformations": [
+        "Rename .log to .txt for explicitly selected text archive"
+      ],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/evidence/kernel_source_candidates.json",
+      "source_id": "workspace/outputs/evidence/kernel_source_candidates.json",
+      "source_size_bytes": 5560,
+      "source_sha256": "5bdf097519575ce862163286637e65d3d1330fac8546cb88df2d5f4fe72760a7",
+      "published_size_bytes": 4990,
+      "published_sha256": "6ec5aee5a2f8478f9175e7f15bd27c41908cba679d6312be1c5daf2fec295cfa",
+      "transformations": [
+        "Normalize machine-specific paths to symbolic roots"
+      ],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/evidence/reference_summary.json",
+      "source_id": "workspace/outputs/evidence/reference_summary.json",
+      "source_size_bytes": 42681,
+      "source_sha256": "dff26aa8ed6662af5027f063859a5dcaca8eebdeb35c6f4545d4dfda1fea5e78",
+      "published_size_bytes": 42608,
+      "published_sha256": "a79193a1b1caceb184bb7a22216e84cc55e11f48f968151001dcba98ea46052f",
+      "transformations": [
+        "Normalize machine-specific paths to symbolic roots"
+      ],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/evidence/comparison_baseline.json",
+      "source_id": "workspace/outputs/evidence/comparison_baseline.json",
+      "source_size_bytes": 31988,
+      "source_sha256": "8b6ada9b94d5bbe9aff944ae750c1ab3547d6c5d867f1f74bb095348ca3190a3",
+      "published_size_bytes": 31943,
+      "published_sha256": "eec92f36c9bf8eecb071564fd3f579774fc10edecbc312674a5e783fe2ccdfd3",
+      "transformations": [
+        "Normalize machine-specific paths to symbolic roots"
+      ],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/evidence/telemetry_summary.json",
+      "source_id": "workspace/outputs/evidence/telemetry_summary.json",
+      "source_size_bytes": 4643,
+      "source_sha256": "b545f482a0c1b28d42ff142292bd4813d27a7741779f6e8eeee0d8d0afeb6a28",
+      "published_size_bytes": 4643,
+      "published_sha256": "b545f482a0c1b28d42ff142292bd4813d27a7741779f6e8eeee0d8d0afeb6a28",
+      "transformations": [],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/convtranspose/records/correctness_complete_20261106.json",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/records/correctness_complete_20261106.json",
+      "source_size_bytes": 17317,
+      "source_sha256": "b22497f08ce6e37f35ae9252b82f8399398ec439a6a848e699ef91a89350ed97",
+      "published_size_bytes": 17317,
+      "published_sha256": "b22497f08ce6e37f35ae9252b82f8399398ec439a6a848e699ef91a89350ed97",
+      "transformations": [],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/convtranspose/analysis/failed_e2e_audit/e2e_summary.json",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/analysis/failed_e2e_audit/e2e_summary.json",
+      "source_size_bytes": 7797,
+      "source_sha256": "4f02ca8d6fe7cba399145c7a17d9bee5e68331494b9a511442ca141bb3de6a69",
+      "published_size_bytes": 7495,
+      "published_sha256": "1edbeb310ae112d548a44cf6a72d903a9d9946bacbdde9006aeaa708377b58cc",
+      "transformations": [
+        "Normalize machine-specific paths to symbolic roots"
+      ],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/convtranspose/resumed_board/records/T120_profile0/command.json",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/resumed_board/records/T120_profile0/command.json",
+      "source_size_bytes": 954,
+      "source_sha256": "7a4808f5da9e0ae54b8a1fb1e12a05fbd3bb27029db9f99cc5b15cf513415ba0",
+      "published_size_bytes": 918,
+      "published_sha256": "006f01bbf7f160e4dcb47d4853b650de4100408ebd1777eb3ddbe5bc820ee0dd",
+      "transformations": [
+        "Normalize machine-specific paths to symbolic roots"
+      ],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/convtranspose/records/contract.json",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/records/contract.json",
+      "source_size_bytes": 1125,
+      "source_sha256": "6be71429cc2175635884176e9f970656f92424bc1a96ee3b0ef271cd117156bd",
+      "published_size_bytes": 1125,
+      "published_sha256": "6be71429cc2175635884176e9f970656f92424bc1a96ee3b0ef271cd117156bd",
+      "transformations": [],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/convtranspose/records/native_vs_replay.json",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/records/native_vs_replay.json",
+      "source_size_bytes": 309,
+      "source_sha256": "d67fe449c5fdc83413589d775cf3d62b13878b926419bec3788227dac970566f",
+      "published_size_bytes": 309,
+      "published_sha256": "d67fe449c5fdc83413589d775cf3d62b13878b926419bec3788227dac970566f",
+      "transformations": [],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/convtranspose/resumed_board/records/capture_full/command.json",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/resumed_board/records/capture_full/command.json",
+      "source_size_bytes": 727,
+      "source_sha256": "b2325bb9aca96fc0c050e4271def8419c8a3fdf392df4e90f32ab29615e556d6",
+      "published_size_bytes": 673,
+      "published_sha256": "2ced558a2339dfca44a6fe13c6ac83a8e4578e454f38b5e54cc840ad13510268",
+      "transformations": [
+        "Normalize machine-specific paths to symbolic roots"
+      ],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/convtranspose/resumed_board/records/capture_ops/command.json",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/resumed_board/records/capture_ops/command.json",
+      "source_size_bytes": 500,
+      "source_sha256": "1e8bdd71770b65bb6286b88795779f22fcbb557da556d415f65046616465671d",
+      "published_size_bytes": 464,
+      "published_sha256": "08d1fbc97b33ee3045a162699628b6067c23251ea59fde1fa2f0bddad3b7160a",
+      "transformations": [
+        "Normalize machine-specific paths to symbolic roots"
+      ],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/convtranspose/code/build_sync_probe.py",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/code/build_sync_probe.py",
+      "source_size_bytes": 982,
+      "source_sha256": "f0cc1086b5bc120519828e8fe76219c586cd98bd8d2752ae9ec72d62bc0ed522",
+      "published_size_bytes": 973,
+      "published_sha256": "3f5fe907dc4ef9ebb4b3be96a6cbf7be6828423ef656fcc734a94f3b3af1a1ce",
+      "transformations": [
+        "Normalize machine-specific paths to symbolic roots"
+      ],
+      "omissions": []
+    },
+    {
+      "path": "reports/historical/convtranspose/records/final_delivery_validation.json",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/records/final_delivery_validation.json",
+      "source_size_bytes": 637,
+      "source_sha256": "3efd5c63ddb214df0b0fc944e7bfc68a54fb336a08f4ae2a2dc8571ad00bd435",
+      "published_size_bytes": 599,
+      "published_sha256": "c87a170761de0f931e5f34ebc52e5064f215f02176dbfa7d341e42385c7c9a40",
+      "transformations": [
+        "Omit unrelated workload housekeeping fields/sentences; preserve experiment metrics"
+      ],
+      "omissions": [
+        "$.vision_resumed_and_advanced"
+      ]
+    },
+    {
+      "path": "reports/historical/convtranspose/resumed_board/records/e2e_paired_sync_20261106_workflow.json",
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/resumed_board/records/e2e_paired_sync_20261106_workflow.json",
+      "source_size_bytes": 488,
+      "source_sha256": "6110603b0f13d1f6f45e789d5560302c0a2c2668b12e63ae007b2ccf5df88d69",
+      "published_size_bytes": 439,
+      "published_sha256": "63428109e83fa6e1e26181553c0b649c82df7e785eff204b20bb8fce0af81027",
+      "transformations": [
+        "Omit unrelated workload housekeeping fields/sentences; preserve experiment metrics",
+        "Normalize machine-specific paths to symbolic roots"
+      ],
+      "omissions": [
+        "$.vision_resume_pid"
+      ]
+    },
+    {
+      "path": "reports/historical/evidence/mnn_operator_rankings.csv",
+      "source_id": "workspace/outputs/evidence/mnn_operator_rankings.csv",
+      "source_size_bytes": 967764,
+      "source_sha256": "0ff158e50db658bd138dc4bedcb8b44c5cbe80f01e28e1d31cf8f1efbdf9bfdb",
+      "published_size_bytes": 967764,
+      "published_sha256": "0ff158e50db658bd138dc4bedcb8b44c5cbe80f01e28e1d31cf8f1efbdf9bfdb",
+      "transformations": [],
+      "omissions": []
+    }
+  ],
+  "excluded_by_user": [
+    "Existing HTML reports",
+    "Existing standalone optimization SOP documents"
+  ]
+}

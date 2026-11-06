@@ -1,0 +1,33 @@
+{"kind": "manifest", "device": "Mali-G610 r0p0", "driver": "3.0", "T": 136, "axis": "h", "tile": 4, "warmup": 3, "reps": 15, "profiling_queue": true, "old_lws": [0, 0, 0], "new_lws": [8, 4, 1], "old_gws": [192, 1, 680], "new_gws": [192, 34, 5], "old_build_ms": 56.877266, "candidate_build_ms": 44.778407, "build_options": "-DFLOAT=half -DFLOAT4=half4 -DMNN_SUPPORT_FP16 -DUSE_BUFFER -DBIAS -cl-mad-enable -w -DBIGVGAN_TILE=4", "timing_scope": "Resident buffers; device event and synchronized enqueue-to-finish host; no validation/readback/packing"}
+{"kind": "correctness", "elements": 522240, "bit_mismatches": 0, "numeric_failures": 0, "nonfinite": 0, "max_abs": 0, "rmse": 0, "atol": 0, "rtol": 0, "passed": true}
+{"kind": "baseline_vs_mnn_capture", "numeric_mismatches": 0, "max_abs": 0, "passed": true}
+{"kind": "sample", "backend": "old", "T": 136, "rep": 0, "order": 0, "host_us": 965522.266, "kernel_us": 964759.159}
+{"kind": "sample", "backend": "candidate", "T": 136, "rep": 0, "order": 1, "host_us": 73931.052, "kernel_us": 73279.962}
+{"kind": "sample", "backend": "candidate", "T": 136, "rep": 1, "order": 0, "host_us": 73776.758, "kernel_us": 73092.037}
+{"kind": "sample", "backend": "old", "T": 136, "rep": 1, "order": 1, "host_us": 961736.065, "kernel_us": 961011.533}
+{"kind": "sample", "backend": "old", "T": 136, "rep": 2, "order": 0, "host_us": 959555.061, "kernel_us": 958945.738}
+{"kind": "sample", "backend": "candidate", "T": 136, "rep": 2, "order": 1, "host_us": 73506.377, "kernel_us": 72912.377}
+{"kind": "sample", "backend": "candidate", "T": 136, "rep": 3, "order": 0, "host_us": 73213.288, "kernel_us": 72586.959}
+{"kind": "sample", "backend": "old", "T": 136, "rep": 3, "order": 1, "host_us": 955722.44, "kernel_us": 955085.781}
+{"kind": "sample", "backend": "old", "T": 136, "rep": 4, "order": 0, "host_us": 960522.447, "kernel_us": 959919.385}
+{"kind": "sample", "backend": "candidate", "T": 136, "rep": 4, "order": 1, "host_us": 73470.126, "kernel_us": 72942.546}
+{"kind": "sample", "backend": "candidate", "T": 136, "rep": 5, "order": 0, "host_us": 71981.055, "kernel_us": 71365.417}
+{"kind": "sample", "backend": "old", "T": 136, "rep": 5, "order": 1, "host_us": 972030.832, "kernel_us": 971365.5}
+{"kind": "sample", "backend": "old", "T": 136, "rep": 6, "order": 0, "host_us": 960773.736, "kernel_us": 960358.955}
+{"kind": "sample", "backend": "candidate", "T": 136, "rep": 6, "order": 1, "host_us": 72089.723, "kernel_us": 71562.836}
+{"kind": "sample", "backend": "candidate", "T": 136, "rep": 7, "order": 0, "host_us": 73172.994, "kernel_us": 72621.21}
+{"kind": "sample", "backend": "old", "T": 136, "rep": 7, "order": 1, "host_us": 968132.124, "kernel_us": 967509.949}
+{"kind": "sample", "backend": "old", "T": 136, "rep": 8, "order": 0, "host_us": 966647.051, "kernel_us": 966032.486}
+{"kind": "sample", "backend": "candidate", "T": 136, "rep": 8, "order": 1, "host_us": 72433.979, "kernel_us": 71853.872}
+{"kind": "sample", "backend": "candidate", "T": 136, "rep": 9, "order": 0, "host_us": 72766.694, "kernel_us": 72110.959}
+{"kind": "sample", "backend": "old", "T": 136, "rep": 9, "order": 1, "host_us": 952252.186, "kernel_us": 951793.78}
+{"kind": "sample", "backend": "old", "T": 136, "rep": 10, "order": 0, "host_us": 965561.856, "kernel_us": 965116.552}
+{"kind": "sample", "backend": "candidate", "T": 136, "rep": 10, "order": 1, "host_us": 73207.619, "kernel_us": 72626.334}
+{"kind": "sample", "backend": "candidate", "T": 136, "rep": 11, "order": 0, "host_us": 72213.683, "kernel_us": 71630.336}
+{"kind": "sample", "backend": "old", "T": 136, "rep": 11, "order": 1, "host_us": 964694.626, "kernel_us": 964020.014}
+{"kind": "sample", "backend": "old", "T": 136, "rep": 12, "order": 0, "host_us": 982865.39, "kernel_us": 982207.036}
+{"kind": "sample", "backend": "candidate", "T": 136, "rep": 12, "order": 1, "host_us": 74324.514, "kernel_us": 73734.794}
+{"kind": "sample", "backend": "candidate", "T": 136, "rep": 13, "order": 0, "host_us": 73479.248, "kernel_us": 72913.753}
+{"kind": "sample", "backend": "old", "T": 136, "rep": 13, "order": 1, "host_us": 971298.205, "kernel_us": 970720.877}
+{"kind": "sample", "backend": "old", "T": 136, "rep": 14, "order": 0, "host_us": 968473.731, "kernel_us": 967882.839}
+{"kind": "sample", "backend": "candidate", "T": 136, "rep": 14, "order": 1, "host_us": 74001.05, "kernel_us": 73479.291}

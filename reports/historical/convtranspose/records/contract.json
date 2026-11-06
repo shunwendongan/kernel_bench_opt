@@ -1,0 +1,28 @@
+{
+  "operation": "BigVGAN /ups.0.0/ConvTranspose_output_0",
+  "math": {
+    "ci": 1536,
+    "co": 768,
+    "kernel": 11,
+    "stride": 5,
+    "pad": 3,
+    "dilation": 1,
+    "groups": 1,
+    "batch": 1
+  },
+  "precision": "current MNN normal: half storage and half4 accumulation; confirm runtime capture",
+  "weights": "decoded deployed MNN weights and exact packed device weights; original files untouched",
+  "inputs": "three distinct native BigVGAN invocation shapes from a new real VCB sample",
+  "correctness_gate": {
+    "candidate_vs_old": "bitwise identical preferred; any nonzero difference investigated before integration",
+    "cpu_fp32_reference": "diagnostic of inherited FP16 accumulation error; not license to change precision"
+  },
+  "microbenchmark": {
+    "warmup": 3,
+    "alternating_pairs": 15,
+    "timing": "OpenCL event and synchronized host call"
+  },
+  "e2e": "same sample, configuration, RNG seed and verified codec/noise identity; unprofiled paired measurements",
+  "fallback": "original kernel for all unguarded shapes and candidate-disabled runtime",
+  "no_precision_or_weight_changes": true
+}

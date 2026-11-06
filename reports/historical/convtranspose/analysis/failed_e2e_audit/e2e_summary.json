@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "path": "${TASK_ROOT}/work/convtranspose_opt/resume_20261106/board/e2e/paired_20261106/results.jsonl",
+      "sha256": "326f8ec5165429bcbb5e681e58702d4f719b3af7d5eb4bf3ab02abea733a726c"
+    },
+    {
+      "path": "${TASK_ROOT}/work/convtranspose_opt/resume_20261106/board/e2e/paired_20261106/run.json",
+      "sha256": "e830795937fccfcf8e04faafb9da2237ca186f010b9ee7f48c9301988581899e"
+    },
+    {
+      "path": "${TASK_ROOT}/work/convtranspose_opt/resume_20261106/board/e2e/paired_20261106/comparisons.json",
+      "sha256": "039b00703effc32b804211a39a90653097a7466c5c322e147ad70b8959867fb7"
+    },
+    {
+      "path": "${TASK_ROOT}/work/convtranspose_opt/resume_20261106/board/e2e/paired_20261106/effective_config_old.json",
+      "sha256": "42dd70dc8d57079bfe8505edfe8bbf7e60f90322dbf981df8ce8802946966c87"
+    },
+    {
+      "path": "${TASK_ROOT}/work/convtranspose_opt/resume_20261106/board/e2e/paired_20261106/effective_config_new.json",
+      "sha256": "bacd440c0c1bf161f0fbc5d1ec37c4cbcc9ae0594b19b9083ce0174ddb495fcc"
+    },
+    {
+      "path": "${TASK_ROOT}/work/convtranspose_opt/resume_20261106/board/e2e/paired_20261106/warmup_old/dispatch.jsonl",
+      "sha256": "7c27f593bcdccab26a855b6a429ec836c671354fef433d092820fa80328a7889"
+    },
+    {
+      "path": "${TASK_ROOT}/work/convtranspose_opt/resume_20261106/board/e2e/paired_20261106/warmup_new/dispatch.jsonl",
+      "sha256": "2f7f0414786f98f9ff75ffab0ea96564723b89e85dc0f693813bffd5a3cc2a94"
+    }
+  ],
+  "timing_units": "seconds",
+  "std_definition": "sample standard deviation, ddof=1",
+  "tail_statistic_policy": "No E2E p95 reported: n=3 pairs is too small for stable tail-latency estimation",
+  "inference_policy": "Descriptive paired changes only; no significance claim or confidence claim",
+  "counter_policy": "Request/TTFA are wall-time metrics; native runtime stage counters are not added as an E2E decomposition",
+  "warmup_excluded_from_timing": true,
+  "warmup_requests": 2,
+  "measured_requests": 0,
+  "run": {
+    "all_equality_checks_passed": false,
+    "capture_enabled": false,
+    "config": "${BOARD_PROJECT}/experiments/convtranspose_opt_20261105/config.capture.json",
+    "distinct_executor_objects": true,
+    "manifest": "${BOARD_PROJECT}/experiments/vcb_random50_20261105/bundle/manifest.jsonl",
+    "measured_pairs_completed": 0,
+    "order": "warmup old,new; pair0 old,new; pair1 new,old; alternating thereafter",
+    "pairs": 3,
+    "profile_enabled": false,
+    "resident_instances": 2,
+    "row": 14,
+    "seed": "20261105",
+    "state": "failed_or_nonidentical_workload",
+    "tile": 4,
+    "warmup_per_instance": 1
+  },
+  "audit_passed": false,
+  "gain_eligible": false,
+  "audit_errors": [
+    "Actual request order/count differs from two warmups plus three alternating pairs",
+    "Missing/extra measured pair IDs",
+    "run.json does not confirm three completed pairs",
+    "run.json equality checks not passed",
+    "Missing/failed correctness check pair=-1, comparison=paired",
+    "Missing/duplicate/extra E2E comparisons"
+  ],
+  "fairness": {
+    "config_differences": [
+      {
+        "key": "tmp_path",
+        "old": "${BOARD_PROJECT}/experiments/convtranspose_opt_20261105/e2e/paired_20261106/cache_old",
+        "new": "${BOARD_PROJECT}/experiments/convtranspose_opt_20261105/e2e/paired_20261106/cache_new",
+        "allowed": true
+      }
+    ],
+    "allowed_config_difference": "tmp_path only",
+    "observed_order": [
+      [
+        -1,
+        "old"
+      ],
+      [
+        -1,
+        "new"
+      ]
+    ],
+    "expected_order": [
+      [
+        -1,
+        "old"
+      ],
+      [
+        -1,
+        "new"
+      ],
+      [
+        0,
+        "old"
+      ],
+      [
+        0,
+        "new"
+      ],
+      [
+        1,
+        "new"
+      ],
+      [
+        1,
+        "old"
+      ],
+      [
+        2,
+        "old"
+      ],
+      [
+        2,
+        "new"
+      ]
+    ],
+    "request_scopes": [
+      "response_start_through_completed_waveform_callback_and_generateWavform_return"
+    ],
+    "dispatch": {
+      "old": [
+        {
+          "T": 120,
+          "candidate": false,
+          "precision": 0,
+          "tile": 0
+        },
+        {
+          "T": 136,
+          "candidate": false,
+          "precision": 0,
+          "tile": 0
+        },
+        {
+          "T": 108,
+          "candidate": false,
+          "precision": 0,
+          "tile": 0
+        }
+      ],
+      "new": [
+        {
+          "T": 120,
+          "candidate": true,
+          "precision": 0,
+          "tile": 4
+        },
+        {
+          "T": 136,
+          "candidate": true,
+          "precision": 0,
+          "tile": 4
+        },
+        {
+          "T": 108,
+          "candidate": false,
+          "precision": 0,
+          "tile": 4
+        }
+      ]
+    },
+    "dispatch_scope": "Warmup onEncode evidence; not a count of every timed invocation",
+    "guarded_shapes": [
+      52,
+      120,
+      136
+    ],
+    "isolation_evidence_limit": "Distinct executor pointer flag does not prove global runtime-state isolation"
+  },
+  "correctness": [
+    {
+      "pair": -1,
+      "warmup": true,
+      "comparison": "paired",
+      "verified_passed": false,
+      "raw": {
+        "passed": false,
+        "speech_tokens_equal": true,
+        "text_tokens_equal": true,
+        "wave_bitwise_equal": false,
+        "wave_max_abs": 0.6606618762016296,
+        "wave_relative_rmse": 0.3390519365445221,
+        "wave_rmse": 0.01701233928652992,
+        "wave_size_equal": true
+      }
+    }
+  ],
+  "request_statuses": [
+    {
+      "variant": "old",
+      "pair": -1,
+      "warmup": true,
+      "row": 14,
+      "id": "yinliang_000806",
+      "success": true,
+      "profile_enabled": false,
+      "capture_enabled": false,
+      "prompt_tokens": 188,
+      "text_tokens": 19,
+      "speech_tokens": 226,
+      "wave_samples": 106560,
+      "wave_chunks": 4,
+      "wave_duration_s": 4.44,
+      "thinker_truncated": false,
+      "thinker_status": 1,
+      "talker_status": 0,
+      "nonfinite_samples": 0,
+      "files_ok": true,
+      "resident_instances": 2,
+      "process_rss_before_kib": 6179252,
+      "process_rss_after_kib": 6486104,
+      "memavailable_before_kib": 9394896,
+      "memavailable_after_kib": 9054172,
+      "process_max_rss_kib": 6550608,
+      "request_scope": "response_start_through_completed_waveform_callback_and_generateWavform_return",
+      "dit_timing_note": "not separately instrumented in this Qwen2.5 path"
+    },
+    {
+      "variant": "new",
+      "pair": -1,
+      "warmup": true,
+      "row": 14,
+      "id": "yinliang_000806",
+      "success": true,
+      "profile_enabled": false,
+      "capture_enabled": false,
+      "prompt_tokens": 188,
+      "text_tokens": 19,
+      "speech_tokens": 226,
+      "wave_samples": 106560,
+      "wave_chunks": 4,
+      "wave_duration_s": 4.44,
+      "thinker_truncated": false,
+      "thinker_status": 1,
+      "talker_status": 0,
+      "nonfinite_samples": 0,
+      "files_ok": true,
+      "resident_instances": 2,
+      "process_rss_before_kib": 6486104,
+      "process_rss_after_kib": 6765432,
+      "memavailable_before_kib": 9053936,
+      "memavailable_after_kib": 8780952,
+      "process_max_rss_kib": 6820692,
+      "request_scope": "response_start_through_completed_waveform_callback_and_generateWavform_return",
+      "dit_timing_note": "not separately instrumented in this Qwen2.5 path"
+    }
+  ],
+  "pairs_s": [],
+  "summaries_s": {}
+}

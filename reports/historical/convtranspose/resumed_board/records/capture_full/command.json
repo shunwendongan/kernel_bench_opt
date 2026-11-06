@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "bin/vcb_eval",
+    "config.capture.json",
+    "${BOARD_PROJECT}/experiments/vcb_random50_20261105/bundle/manifest.jsonl",
+    "${BOARD_PROJECT}/experiments/vcb_random50_20261105/bundle",
+    "capture/full",
+    "44",
+    "1",
+    "0"
+  ],
+  "environment": {
+    "LD_LIBRARY_PATH": "${BOARD_PROJECT}/gpu/lib:/lib",
+    "OMNI_TEST_SEED": "20261105",
+    "OMNI_RKNN_AUDIO": "${BOARD_PROJECT}/models/rknn/audio_conv_prefix_mnn4bit_fp16.rknn",
+    "OMNI_CAPTURE_DIR": "${BOARD_PROJECT}/experiments/convtranspose_opt_20261105/capture/native"
+  },
+  "cwd": "${BOARD_PROJECT}/experiments/convtranspose_opt_20261105",
+  "utc": "2026-11-05T10:03:16.598277+00:00"
+}

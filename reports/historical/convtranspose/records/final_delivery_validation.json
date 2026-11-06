@@ -1,0 +1,15 @@
+{
+  "html_local_links_valid": true,
+  "html_links_checked": 19,
+  "missing": [],
+  "summary_completed": true,
+  "e2e_audit_passed": true,
+  "binary_matches_tested_board_binary": true,
+  "sync_source_matches_tested_board_source": true,
+  "runner_source_matches_tested_board_source": true,
+  "deconv_source_matches_tested_board_source": true,
+  "model_hashes_unchanged": true,
+  "visual_render": "passed; no visual problems; checked desktop/mobile and figure sheets",
+  "report_sha256": "3e9a2568ee3868b706b471047e09a185d8072dffe0c1802a2d50f17e4ccb241d",
+  "utc": "2026-11-06T02:05:28.542898+00:00"
+}

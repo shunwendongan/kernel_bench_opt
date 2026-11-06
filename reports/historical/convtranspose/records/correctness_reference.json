@@ -1,0 +1,384 @@
+{
+  "contract": {
+    "input_channels": 1536,
+    "output_channels": 768,
+    "kernel": 11,
+    "stride": 5,
+    "padding": [
+      3,
+      3
+    ],
+    "groups": 1,
+    "dilation": 1,
+    "weight_source": "current_deployed_MNN_getConvParameters_and_uploaded_OpenCL_buffer",
+    "cpu_reference": "FP32 NumPy GEMM with current uploaded FP16 values cast to FP32; diagnostic only",
+    "second_reference": "FP32 NumPy GEMM with current decoded FP32 weights; diagnostic only",
+    "deployed_accumulation": "FP16; original loop icblock -> descending valid taps -> four input channels",
+    "candidate_gate": "finite and bitwise identical to deployed old output, with no changed weights/dtype"
+  },
+  "files": {
+    "deployed_weight_iohw.f32": {
+      "bytes": 51904512,
+      "sha256": "ae1c76b2afa1545e61ba9283acb5608a5263c4d29bbc5d1ab0351d920bbac349"
+    },
+    "packed_weight.bin": {
+      "bytes": 25952256,
+      "sha256": "9385ce6de49b045f0f8b62ae81db8b7962152347e6c227fb2085c15c33b5f7bf"
+    },
+    "deployed_bias.f32": {
+      "bytes": 3072,
+      "sha256": "d2991af5fefb1c5574da59fcca93ce9d5dd0e63dc689b1fad09119e6c34d2992"
+    },
+    "packed_bias.bin": {
+      "bytes": 1536,
+      "sha256": "3cb8233a3e933467086bc4e06bb60020a88a264ea0cb2ec171977134e1ceecd0"
+    }
+  },
+  "weight_conversion": {
+    "expected_conversion": "NumPy float32_to_float16 round_to_nearest_ties_to_even",
+    "rne": {
+      "elements": 12976128,
+      "finite": true,
+      "reference_nonfinite": 0,
+      "candidate_nonfinite": 0,
+      "bitwise_equal": true,
+      "bitwise_different_elements": 0,
+      "value_equal": true,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "rmse": 0.0,
+      "relative_rmse": 0.0,
+      "cosine": 1.0000000000000007,
+      "snr_db": null
+    },
+    "rtz_diagnostic": {
+      "elements": 12976128,
+      "finite": true,
+      "reference_nonfinite": 0,
+      "candidate_nonfinite": 0,
+      "bitwise_equal": false,
+      "bitwise_different_elements": 6424299,
+      "value_equal": false,
+      "max_abs": 3.0517578125e-05,
+      "mean_abs": 1.5397611862525339e-06,
+      "rmse": 2.96219623873192e-06,
+      "relative_rmse": 0.000500333126261726,
+      "cosine": 0.9999999333813314,
+      "snr_db": 66.01481484433431
+    },
+    "observed_conversion_match": "RNE"
+  },
+  "bias_conversion": {
+    "expected_conversion": "NumPy float32_to_float16 round_to_nearest_ties_to_even",
+    "rne": {
+      "elements": 768,
+      "finite": true,
+      "reference_nonfinite": 0,
+      "candidate_nonfinite": 0,
+      "bitwise_equal": true,
+      "bitwise_different_elements": 0,
+      "value_equal": true,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "rmse": 0.0,
+      "relative_rmse": 0.0,
+      "cosine": 1.0,
+      "snr_db": null
+    },
+    "rtz_diagnostic": {
+      "elements": 768,
+      "finite": true,
+      "reference_nonfinite": 0,
+      "candidate_nonfinite": 0,
+      "bitwise_equal": true,
+      "bitwise_different_elements": 0,
+      "value_equal": true,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "rmse": 0.0,
+      "relative_rmse": 0.0,
+      "cosine": 1.0,
+      "snr_db": null
+    },
+    "observed_conversion_match": "RNE"
+  },
+  "cases": [
+    {
+      "T": 52,
+      "input_metadata": {
+        "dtype": "float32",
+        "elements": 79872,
+        "layout": "NCHW",
+        "representation": "canonical_host_values_from_current_backend",
+        "shape": [
+          1,
+          1536,
+          52
+        ]
+      },
+      "output_metadata": {
+        "dtype": "float32",
+        "elements": 199680,
+        "layout": "NCHW",
+        "representation": "canonical_host_values_from_current_backend",
+        "shape": [
+          1,
+          768,
+          260
+        ]
+      },
+      "input_half_representability": {
+        "elements": 79872,
+        "finite": true,
+        "reference_nonfinite": 0,
+        "candidate_nonfinite": 0,
+        "bitwise_equal": true,
+        "bitwise_different_elements": 0,
+        "value_equal": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "rmse": 0.0,
+        "relative_rmse": 0.0,
+        "cosine": 1.0,
+        "snr_db": null,
+        "every_value_representable_as_fp16": true
+      },
+      "old_output_half_representability": {
+        "elements": 199680,
+        "finite": true,
+        "reference_nonfinite": 0,
+        "candidate_nonfinite": 0,
+        "bitwise_equal": true,
+        "bitwise_different_elements": 0,
+        "value_equal": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "rmse": 0.0,
+        "relative_rmse": 0.0,
+        "cosine": 1.0,
+        "snr_db": null,
+        "every_value_representable_as_fp16": true
+      },
+      "old_vs_effective_weight_fp32_reference_diagnostic": {
+        "elements": 199680,
+        "finite": true,
+        "reference_nonfinite": 0,
+        "candidate_nonfinite": 0,
+        "bitwise_equal": false,
+        "bitwise_different_elements": 199679,
+        "value_equal": false,
+        "max_abs": 0.06333029270172119,
+        "mean_abs": 0.0005002791285027669,
+        "rmse": 0.0017234886019488317,
+        "relative_rmse": 0.012420881758451739,
+        "cosine": 0.9999402113735257,
+        "snr_db": 38.11695144995675
+      },
+      "old_vs_decoded_weight_fp32_reference_diagnostic": {
+        "elements": 199680,
+        "finite": true,
+        "reference_nonfinite": 0,
+        "candidate_nonfinite": 0,
+        "bitwise_equal": false,
+        "bitwise_different_elements": 199680,
+        "value_equal": false,
+        "max_abs": 0.0633535385131836,
+        "mean_abs": 0.0005002718762881387,
+        "rmse": 0.001723281364397893,
+        "relative_rmse": 0.012419401776940737,
+        "cosine": 0.9999402234415051,
+        "snr_db": 38.11798645876153
+      }
+    },
+    {
+      "T": 120,
+      "input_metadata": {
+        "dtype": "float32",
+        "elements": 184320,
+        "layout": "NCHW",
+        "representation": "canonical_host_values_from_current_backend",
+        "shape": [
+          1,
+          1536,
+          120
+        ]
+      },
+      "output_metadata": {
+        "dtype": "float32",
+        "elements": 460800,
+        "layout": "NCHW",
+        "representation": "canonical_host_values_from_current_backend",
+        "shape": [
+          1,
+          768,
+          600
+        ]
+      },
+      "input_half_representability": {
+        "elements": 184320,
+        "finite": true,
+        "reference_nonfinite": 0,
+        "candidate_nonfinite": 0,
+        "bitwise_equal": true,
+        "bitwise_different_elements": 0,
+        "value_equal": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "rmse": 0.0,
+        "relative_rmse": 0.0,
+        "cosine": 1.0,
+        "snr_db": null,
+        "every_value_representable_as_fp16": true
+      },
+      "old_output_half_representability": {
+        "elements": 460800,
+        "finite": true,
+        "reference_nonfinite": 0,
+        "candidate_nonfinite": 0,
+        "bitwise_equal": true,
+        "bitwise_different_elements": 0,
+        "value_equal": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "rmse": 0.0,
+        "relative_rmse": 0.0,
+        "cosine": 1.0,
+        "snr_db": null,
+        "every_value_representable_as_fp16": true
+      },
+      "old_vs_effective_weight_fp32_reference_diagnostic": {
+        "elements": 460800,
+        "finite": true,
+        "reference_nonfinite": 0,
+        "candidate_nonfinite": 0,
+        "bitwise_equal": false,
+        "bitwise_different_elements": 460799,
+        "value_equal": false,
+        "max_abs": 0.02710592746734619,
+        "mean_abs": 0.0004501652385091069,
+        "rmse": 0.0008132081773858025,
+        "relative_rmse": 0.007301963728157275,
+        "cosine": 0.9999734343386728,
+        "snr_db": 42.73120657398786
+      },
+      "old_vs_decoded_weight_fp32_reference_diagnostic": {
+        "elements": 460800,
+        "finite": true,
+        "reference_nonfinite": 0,
+        "candidate_nonfinite": 0,
+        "bitwise_equal": false,
+        "bitwise_different_elements": 460796,
+        "value_equal": false,
+        "max_abs": 0.02712273597717285,
+        "mean_abs": 0.00045022036567394884,
+        "rmse": 0.0008132555127087916,
+        "relative_rmse": 0.007302390698396539,
+        "cosine": 0.9999734311044561,
+        "snr_db": 42.730698695820884
+      }
+    },
+    {
+      "T": 136,
+      "input_metadata": {
+        "dtype": "float32",
+        "elements": 208896,
+        "layout": "NCHW",
+        "representation": "canonical_host_values_from_current_backend",
+        "shape": [
+          1,
+          1536,
+          136
+        ]
+      },
+      "output_metadata": {
+        "dtype": "float32",
+        "elements": 522240,
+        "layout": "NCHW",
+        "representation": "canonical_host_values_from_current_backend",
+        "shape": [
+          1,
+          768,
+          680
+        ]
+      },
+      "input_half_representability": {
+        "elements": 208896,
+        "finite": true,
+        "reference_nonfinite": 0,
+        "candidate_nonfinite": 0,
+        "bitwise_equal": true,
+        "bitwise_different_elements": 0,
+        "value_equal": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "rmse": 0.0,
+        "relative_rmse": 0.0,
+        "cosine": 1.0,
+        "snr_db": null,
+        "every_value_representable_as_fp16": true
+      },
+      "old_output_half_representability": {
+        "elements": 522240,
+        "finite": true,
+        "reference_nonfinite": 0,
+        "candidate_nonfinite": 0,
+        "bitwise_equal": true,
+        "bitwise_different_elements": 0,
+        "value_equal": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "rmse": 0.0,
+        "relative_rmse": 0.0,
+        "cosine": 0.9999999999999998,
+        "snr_db": null,
+        "every_value_representable_as_fp16": true
+      },
+      "old_vs_effective_weight_fp32_reference_diagnostic": {
+        "elements": 522240,
+        "finite": true,
+        "reference_nonfinite": 0,
+        "candidate_nonfinite": 0,
+        "bitwise_equal": false,
+        "bitwise_different_elements": 522240,
+        "value_equal": false,
+        "max_abs": 0.10495853424072266,
+        "mean_abs": 0.0007108596628180343,
+        "rmse": 0.002484071002949887,
+        "relative_rmse": 0.012344928892270575,
+        "cosine": 0.9999440145543759,
+        "snr_db": 38.170228145881886
+      },
+      "old_vs_decoded_weight_fp32_reference_diagnostic": {
+        "elements": 522240,
+        "finite": true,
+        "reference_nonfinite": 0,
+        "candidate_nonfinite": 0,
+        "bitwise_equal": false,
+        "bitwise_different_elements": 522238,
+        "value_equal": false,
+        "max_abs": 0.10492086410522461,
+        "mean_abs": 0.0007108784659640619,
+        "rmse": 0.0024840330567257934,
+        "relative_rmse": 0.012344761551911825,
+        "cosine": 0.9999440056955831,
+        "snr_db": 38.17034588732473
+      }
+    }
+  ],
+  "summary": {
+    "shapes": [
+      52,
+      120,
+      136
+    ],
+    "weights_finite": true,
+    "references_finite": true,
+    "all_captured_inputs_exact_half": true,
+    "all_captured_old_outputs_exact_half": true,
+    "decoded_to_packed_rne_exact": true,
+    "bias_to_packed_rne_exact": true,
+    "candidate_or_micro_comparisons": 0,
+    "all_requested_bitwise_gates_passed": null,
+    "claim_limit": "FP32 reference differences are diagnostic and do not fail an unchanged FP16 candidate"
+  }
+}

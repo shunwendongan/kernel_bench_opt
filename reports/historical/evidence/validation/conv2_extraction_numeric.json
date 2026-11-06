@@ -1,0 +1,42 @@
+{
+  "evidence_kind": "synthetic_numeric_validation_only",
+  "device": "Mac CPU ORT",
+  "onnxruntime_version": "1.31.1",
+  "full_onnx_sha256": "e6c2adeabe4dbe5722981577f13fea3a94b5f79358502c1ca5e8f32561dc937c",
+  "subgraph_sha256": "13b26b3c242ce454f6d87161d8b40bacfa894fbfd988d42b0ab542120e614e5f",
+  "tests": [
+    {
+      "seed": 20261105,
+      "mask_valid_range": [
+        0,
+        516
+      ],
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "output_shape": [
+        1,
+        1280,
+        1,
+        258
+      ],
+      "status": "passed"
+    },
+    {
+      "seed": 20261106,
+      "mask_valid_range": [
+        2,
+        400
+      ],
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "output_shape": [
+        1,
+        1280,
+        1,
+        258
+      ],
+      "status": "passed"
+    }
+  ],
+  "limits": "Validates extracted subgraph versus its source FP32 ONNX on synthetic tensors. Does not validate RKNN FP16, answer quality, or unquantized HF equivalence."
+}

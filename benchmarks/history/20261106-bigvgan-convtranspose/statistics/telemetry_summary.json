@@ -1,0 +1,92 @@
+{
+  "scope": "whole process including load, warmup and formal requests; sampled every 5 seconds",
+  "samples": 153,
+  "utc_start": "2026-11-06T01:44:21.095943+00:00",
+  "utc_end": "2026-11-06T01:57:01.843147+00:00",
+  "process_exit": {
+    "exit_code": 0,
+    "wall_s": 762.7242048699991
+  },
+  "metrics": {
+    "/sys/class/thermal/thermal_zone2/temp": {
+      "min": 46230,
+      "median": 53615,
+      "max": 63769
+    },
+    "/sys/class/thermal/thermal_zone0/temp": {
+      "min": 45307,
+      "median": 53615,
+      "max": 60076
+    },
+    "/sys/class/thermal/thermal_zone5/temp": {
+      "min": 44384,
+      "median": 54538,
+      "max": 57307
+    },
+    "/sys/class/thermal/thermal_zone3/temp": {
+      "min": 46230,
+      "median": 53615,
+      "max": 61000
+    },
+    "/sys/class/thermal/thermal_zone1/temp": {
+      "min": 45307,
+      "median": 53615,
+      "max": 63769
+    },
+    "/sys/class/thermal/thermal_zone6/temp": {
+      "min": 45307,
+      "median": 53615,
+      "max": 57307
+    },
+    "/sys/class/thermal/thermal_zone4/temp": {
+      "min": 44384,
+      "median": 53615,
+      "max": 57307
+    },
+    "/sys/devices/system/cpu/cpufreq/policy6/scaling_cur_freq": {
+      "min": 408000,
+      "median": 408000,
+      "max": 2304000
+    },
+    "/sys/devices/system/cpu/cpufreq/policy4/scaling_cur_freq": {
+      "min": 408000,
+      "median": 408000,
+      "max": 2304000
+    },
+    "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": {
+      "min": 408000,
+      "median": 600000,
+      "max": 1800000
+    },
+    "/sys/class/devfreq/fdab0000.npu/cur_freq": {
+      "min": 1000000000,
+      "median": 1000000000,
+      "max": 1000000000
+    },
+    "/sys/class/devfreq/fb000000.gpu/cur_freq": {
+      "min": 300000000,
+      "median": 1000000000,
+      "max": 1000000000
+    },
+    "/sys/class/devfreq/dmc/cur_freq": {
+      "min": 528000000,
+      "median": 2112000000,
+      "max": 2112000000
+    },
+    "/sys/class/devfreq/fdbe0000.rkvenc-core/cur_freq": {
+      "min": 786431991,
+      "median": 786431991,
+      "max": 786431991
+    },
+    "/sys/class/devfreq/fdbd0000.rkvenc-core/cur_freq": {
+      "min": 786431991,
+      "median": 786431991,
+      "max": 786431991
+    },
+    "/sys/class/devfreq/fdd90000.vop/cur_freq": {
+      "min": 750000000,
+      "median": 750000000,
+      "max": 750000000
+    }
+  }
+}

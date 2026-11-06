@@ -1,0 +1,40 @@
+{
+  "argv": [
+    "${BOARD_PROJECT}/experiments/convtranspose_opt_20261105/bin/bench_deconv",
+    "--input",
+    "capture/operators/input_T120.f32",
+    "--weights",
+    "capture/operators/packed_weight.bin",
+    "--bias",
+    "capture/operators/packed_bias.bin",
+    "--T",
+    "120",
+    "--axis",
+    "h",
+    "--baseline",
+    "src/deconv_2d.cl",
+    "--candidate",
+    "src/bigvgan_deconv_s5_tiled.cl",
+    "--out",
+    "${BOARD_PROJECT}/experiments/convtranspose_opt_20261105/bench/T120_profile0",
+    "--tile",
+    "4",
+    "--old-lws",
+    "0,0,0",
+    "--new-lws",
+    "8,4,1",
+    "--warmup",
+    "3",
+    "--reps",
+    "15",
+    "--profile",
+    "0",
+    "--reference",
+    "capture/operators/output_T120.f32"
+  ],
+  "environment": {
+    "LD_LIBRARY_PATH": "${BOARD_PROJECT}/gpu/lib:/lib"
+  },
+  "cwd": "${BOARD_PROJECT}/experiments/convtranspose_opt_20261105",
+  "utc": "2026-11-05T10:14:42.953964+00:00"
+}

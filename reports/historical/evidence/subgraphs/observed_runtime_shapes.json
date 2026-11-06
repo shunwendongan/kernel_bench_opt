@@ -1,0 +1,71 @@
+[
+  {
+    "observed": {
+      "inputs": [
+        [
+          1,
+          1536,
+          120
+        ]
+      ],
+      "outputs": [
+        [
+          1,
+          768,
+          600
+        ]
+      ],
+      "output_tensor_backends": [
+        3
+      ]
+    },
+    "first_source_line": 820499,
+    "calls": 1
+  },
+  {
+    "observed": {
+      "inputs": [
+        [
+          1,
+          1536,
+          136
+        ]
+      ],
+      "outputs": [
+        [
+          1,
+          768,
+          680
+        ]
+      ],
+      "output_tensor_backends": [
+        3
+      ]
+    },
+    "first_source_line": 828261,
+    "calls": 12
+  },
+  {
+    "observed": {
+      "inputs": [
+        [
+          1,
+          1536,
+          46
+        ]
+      ],
+      "outputs": [
+        [
+          1,
+          768,
+          230
+        ]
+      ],
+      "output_tensor_backends": [
+        3
+      ]
+    },
+    "first_source_line": 921405,
+    "calls": 1
+  }
+]

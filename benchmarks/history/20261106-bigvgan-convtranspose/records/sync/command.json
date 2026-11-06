@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "bin/omni_ab_sync",
+    "config.capture.json",
+    "${BOARD_PROJECT}/experiments/vcb_random50_20261105/bundle/manifest.jsonl",
+    "${BOARD_PROJECT}/experiments/vcb_random50_20261105/bundle",
+    "e2e/paired_sync_20261106",
+    "14",
+    "3",
+    "4"
+  ],
+  "environment": {
+    "LD_LIBRARY_PATH": "${BOARD_PROJECT}/gpu/lib:/lib",
+    "OMNI_TEST_SEED": "20261105",
+    "OMNI_RKNN_AUDIO": "${BOARD_PROJECT}/models/rknn/audio_conv_prefix_mnn4bit_fp16.rknn",
+    "OMNI_PREDIT_SYNC": "1"
+  },
+  "cwd": "${BOARD_PROJECT}/experiments/convtranspose_opt_20261105",
+  "utc": "2026-11-06T01:44:21.094284+00:00"
+}

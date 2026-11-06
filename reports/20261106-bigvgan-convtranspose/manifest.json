@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "historical_measured_excerpt",
+  "source_asset_id": "omni-random50-diagnostic-speech-profile",
+  "source_gzip_sha256": "2a895af1fccbd667674459458f446ded0b7e741d5b269842e8c0064c35e00842",
+  "source_gzip_size_bytes": 7745024,
+  "source_locator": "local-asset-store:omni-random50/diagnostic_speech.profile.jsonl.gz",
+  "selection": "kind=op and name=/ups.0.0/ConvTranspose_output_0",
+  "selected_records": 14,
+  "excerpt_sha256": "71fa97c436a63fb83d9676ad66c50bfa5391c406af3da1e2634ceb0f3a751822",
+  "excerpt_size_bytes": 3754,
+  "timing_domain": "synchronized_host_operator_elapsed",
+  "instrumented": true,
+  "scope": "one historical diagnostic request; not E2E and not clean performance",
+  "observed_T": [
+    120,
+    136,
+    46
+  ],
+  "total_us": 13110591.0,
+  "not_a_complete_profile": true,
+  "sample_id": "en_qingganhua_000493",
+  "source_reference": "../../benchmarks/history/20261106-bigvgan-convtranspose/mapping/reference_origin.json"
+}

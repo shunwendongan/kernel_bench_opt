@@ -1,0 +1,13 @@
+CPU Group: [ 0  1  2  3 ], 408000 - 1800000
+CPU Group: [ 6  7 ], 408000 - 2304000
+CPU Group: [ 4  5 ], 408000 - 2304000
+The device supports: i8sdot:1, fp16:1, i8mm: 0, sve2: 0, sme2: 0, perfCores: 0
+arm_release_ver: g24p0-00eac0, rk_so_ver: 10
+OMNI_RKNN_INIT api=2.3.2 (429f97ae6b@2025-04-09T09:09:27) driver=0.9.8 graph=conv1_gelu_conv2_gelu input=NHWC output=NCHW
+OMNI_AUDIO_ROUTE RKNN=conv1_gelu_conv2_gelu MNN=remaining_encoder backend=cpu
+OMNI_CODE2WAV processor_backend=3 async_worker=0 dit_fp32=1
+SAMPLE_START row=44 id=en_qingganhua_000493
+OMNI_RKNN_REQUEST frames=955 output_frames=478 calls=2 total_us=56934.8 prepare_us=618.3 inputs_set_us=3198.7 run_us=41653.2 outputs_get_us=7460.0 copy_release_us=3159.6
+THINKER_DONE row=44 response_s=18.43 text=You deserve all the good things. You're a wonderful person, full of potential and joy. You deserve to be happy and to experience all the wonderful things in life. So, go out there and make the most of your life! What do you think?
+SAMPLE_DONE row=44 success=1 request_s=376.605531723 speech_s=15.82 text=You deserve all the good things. You're a wonderful person, full of potential and joy. You deserve to be happy and to experience all the wonderful things in life. So, go out there and make the most of your life! What do you think?
+Update cache to ./mnn_cachefile.bin, size = 593424

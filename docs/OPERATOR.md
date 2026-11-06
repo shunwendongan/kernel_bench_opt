@@ -31,4 +31,4 @@ FP32 参考是误差诊断，不能用它为改变旧部署精度开绿灯。权
 
 参考 ONNX SHA-256 为 `e8596908a2b5817fa6f7aa1a3d082444c0c3160ff781566092cb6c2b862eb333`。此编号只对该文件有效。它是结构溯源候选，不能证明它就是部署 MNN 的原始转换图，也不能把参考 FP32 权重替换为当前部署权重后仍声称权重未变。
 
-`tools/mapping/export_bigvgan_reference_draft.py` 和 `match_bigvgan_reference.py` 保留这一区分。参考子图可用 ONNX 官方 `onnx.utils.extract_model` 按上述输入输出边界提取；必须保留源图哈希、initializer、dtype、shape 和新板验证记录。仓库没有上传 ONNX 权重文件。
+`tools/mapping/export_bigvgan_reference_draft.py` 和 `match_bigvgan_reference.py` 保留这一区分。参考子图可用 ONNX 官方 `onnx.utils.extract_model` 按上述输入输出边界提取；必须保留源图哈希、initializer、dtype、shape 和新板验证记录。ONNX权重不进入Git；此前参考ONNX的Release见 [ASSETS.md](ASSETS.md)，后续默认使用本地资产。

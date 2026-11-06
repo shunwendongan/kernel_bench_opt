@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "T": 52,
+      "kind": "input",
+      "bitwise_equal": true
+    },
+    {
+      "T": 52,
+      "kind": "output",
+      "bitwise_equal": true
+    },
+    {
+      "T": 120,
+      "kind": "input",
+      "bitwise_equal": true
+    },
+    {
+      "T": 120,
+      "kind": "output",
+      "bitwise_equal": true
+    },
+    {
+      "T": 136,
+      "kind": "input",
+      "bitwise_equal": true
+    },
+    {
+      "T": 136,
+      "kind": "output",
+      "bitwise_equal": true
+    },
+    {
+      "kind": "full_bigvgan_waveform",
+      "file": "wave_id16_T52.f32",
+      "bitwise_equal": true
+    },
+    {
+      "kind": "full_bigvgan_waveform",
+      "file": "wave_id1_T136.f32",
+      "bitwise_equal": true
+    },
+    {
+      "kind": "full_bigvgan_waveform",
+      "file": "wave_id0_T120.f32",
+      "bitwise_equal": true
+    }
+  ],
+  "dispatch": [
+    {
+      "T": 120,
+      "candidate": true,
+      "precision": 0,
+      "tile": 4
+    },
+    {
+      "T": 136,
+      "candidate": true,
+      "precision": 0,
+      "tile": 4
+    },
+    {
+      "T": 52,
+      "candidate": true,
+      "precision": 0,
+      "tile": 4
+    }
+  ],
+  "confirmed_shapes": [
+    52,
+    120,
+    136
+  ]
+}

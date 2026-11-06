@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "shape": [
+      28800
+    ],
+    "bitwise_equal": true,
+    "max_abs": 0.0
+  },
+  {
+    "id": 16,
+    "shape": [
+      12480
+    ],
+    "bitwise_equal": true,
+    "max_abs": 0.0
+  },
+  {
+    "id": 1,
+    "shape": [
+      32640
+    ],
+    "bitwise_equal": true,
+    "max_abs": 0.0
+  }
+]

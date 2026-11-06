@@ -1,5 +1,7 @@
 # 模型、数据与复现资产
 
+当前SOP改为大型模型、数据集和张量由本地主机管理，端侧同步/共享后只读挂载。以下是此前已发布的资产归档和下载方法，继续保留用于历史复现；本次SOP更新没有新增大文件上传，也没有配置台式机存储。新流程见 [SOP.md](SOP.md) 与 [CONTAINERS.md](CONTAINERS.md)。
+
 大文件保存在本仓库的 [GitHub Release](https://github.com/shunwendongan/kernel_bench_opt/releases/tag/qwen2.5-omni-3b-vcb-bench-assets-20261106)，代码保存在 `Qwen2.5-Omni-3B_VCB-Bench` 分支。GitHub 普通 Git 仓库不适合直接提交数 GB 权重；Release 附件是同一仓库的版本资产，单片小于 2 GiB。本项目分片上限为 1 GiB。
 
 ## 下载

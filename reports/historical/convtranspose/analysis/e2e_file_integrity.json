@@ -1,0 +1,128 @@
+{
+  "requests": [
+    {
+      "request": "warmup_old",
+      "bytes": 426240,
+      "sha256": "93d680a5e4b2ca5890ee289dfdaf4633fadfecc7dedca298536bbb9f6eb51408",
+      "sample_count_matches": true,
+      "all_finite": true,
+      "rms": 0.07312395960864626,
+      "quarter_rms": [
+        0.05635241144124124,
+        0.07657546304411654,
+        0.07823017794212092,
+        0.07892463062230967
+      ],
+      "peak": 0.4990234375
+    },
+    {
+      "request": "warmup_new",
+      "bytes": 426240,
+      "sha256": "93d680a5e4b2ca5890ee289dfdaf4633fadfecc7dedca298536bbb9f6eb51408",
+      "sample_count_matches": true,
+      "all_finite": true,
+      "rms": 0.07312395960864626,
+      "quarter_rms": [
+        0.05635241144124124,
+        0.07657546304411654,
+        0.07823017794212092,
+        0.07892463062230967
+      ],
+      "peak": 0.4990234375
+    },
+    {
+      "request": "pair_0_old",
+      "bytes": 426240,
+      "sha256": "93d680a5e4b2ca5890ee289dfdaf4633fadfecc7dedca298536bbb9f6eb51408",
+      "sample_count_matches": true,
+      "all_finite": true,
+      "rms": 0.07312395960864626,
+      "quarter_rms": [
+        0.05635241144124124,
+        0.07657546304411654,
+        0.07823017794212092,
+        0.07892463062230967
+      ],
+      "peak": 0.4990234375
+    },
+    {
+      "request": "pair_0_new",
+      "bytes": 426240,
+      "sha256": "93d680a5e4b2ca5890ee289dfdaf4633fadfecc7dedca298536bbb9f6eb51408",
+      "sample_count_matches": true,
+      "all_finite": true,
+      "rms": 0.07312395960864626,
+      "quarter_rms": [
+        0.05635241144124124,
+        0.07657546304411654,
+        0.07823017794212092,
+        0.07892463062230967
+      ],
+      "peak": 0.4990234375
+    },
+    {
+      "request": "pair_1_new",
+      "bytes": 426240,
+      "sha256": "93d680a5e4b2ca5890ee289dfdaf4633fadfecc7dedca298536bbb9f6eb51408",
+      "sample_count_matches": true,
+      "all_finite": true,
+      "rms": 0.07312395960864626,
+      "quarter_rms": [
+        0.05635241144124124,
+        0.07657546304411654,
+        0.07823017794212092,
+        0.07892463062230967
+      ],
+      "peak": 0.4990234375
+    },
+    {
+      "request": "pair_1_old",
+      "bytes": 426240,
+      "sha256": "93d680a5e4b2ca5890ee289dfdaf4633fadfecc7dedca298536bbb9f6eb51408",
+      "sample_count_matches": true,
+      "all_finite": true,
+      "rms": 0.07312395960864626,
+      "quarter_rms": [
+        0.05635241144124124,
+        0.07657546304411654,
+        0.07823017794212092,
+        0.07892463062230967
+      ],
+      "peak": 0.4990234375
+    },
+    {
+      "request": "pair_2_old",
+      "bytes": 426240,
+      "sha256": "93d680a5e4b2ca5890ee289dfdaf4633fadfecc7dedca298536bbb9f6eb51408",
+      "sample_count_matches": true,
+      "all_finite": true,
+      "rms": 0.07312395960864626,
+      "quarter_rms": [
+        0.05635241144124124,
+        0.07657546304411654,
+        0.07823017794212092,
+        0.07892463062230967
+      ],
+      "peak": 0.4990234375
+    },
+    {
+      "request": "pair_2_new",
+      "bytes": 426240,
+      "sha256": "93d680a5e4b2ca5890ee289dfdaf4633fadfecc7dedca298536bbb9f6eb51408",
+      "sample_count_matches": true,
+      "all_finite": true,
+      "rms": 0.07312395960864626,
+      "quarter_rms": [
+        0.05635241144124124,
+        0.07657546304411654,
+        0.07823017794212092,
+        0.07892463062230967
+      ],
+      "peak": 0.4990234375
+    }
+  ],
+  "same_waveform_sha256": true,
+  "all_files_valid": true,
+  "request_count": 8,
+  "quality_note": "Numerical repeatability and signal statistics only; no ASR/MOS or semantic accuracy assessment."
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "candidate_id": "bigvgan-convtranspose-tile4",
+  "parent_candidate_id": "mnn-3.6.2-deconv_2d",
+  "status": "historically_validated_scoped_candidate",
+  "source_base_commit": "780e019787308d280771be1c947b5e2658566b19",
+  "engine": {
+    "name": "MNN",
+    "revision": "7e3c6fb5225d3ccf22807ee641332669df34650d",
+    "backend": "OpenCL buffer"
+  },
+  "target": {
+    "node": "/ups.0.0/ConvTranspose_output_0",
+    "input": "[1,1536,T]",
+    "weight": "[1536,768,11]",
+    "output": "[1,768,5T]",
+    "supported_T": [
+      52,
+      120,
+      136
+    ],
+    "stride": 5,
+    "padding": 3,
+    "dilation": 1,
+    "groups": 1,
+    "precision": "unchanged deployed FP16 storage and accumulation; DiT separately FP32"
+  },
+  "change": "Reuse one loaded weight vector across four time positions with the same stride phase; preserve per-output reduction order",
+  "integration": {
+    "source": "src/mnn/DeconvBufExecution.candidate.cpp",
+    "symbol": "DeconvBufExecution::onEncode",
+    "enable": "OMNI_BIGVGAN_DECONV_TILE=4",
+    "default": "baseline",
+    "unsupported_shape": "baseline fallback",
+    "e2e_variant": "Apply experiments/predit-sync.patch and set OMNI_PREDIT_SYNC=1 for both sides"
+  },
+  "source_files": [
+    {
+      "path": "kernels/bigvgan_deconv_s5_tiled.cl",
+      "sha256": "8f52e6f5a900b9047bf0b0062dac4b79229db8ae1371199550e0b00632e1dcf8"
+    },
+    {
+      "path": "kernels/bigvgan_deconv_source.hpp",
+      "sha256": "29b0595684ac5a827f29c84d4b26e697f24dcc04b4a3290f199071a4b97d4e6f"
+    },
+    {
+      "path": "kernels/bench_deconv.cpp",
+      "sha256": "5e19d1947c62868e3c9bb81392dee9db883156974a37c7ef58a2d9a9e3d121b3"
+    },
+    {
+      "path": "src/mnn/DeconvBufExecution.candidate.cpp",
+      "sha256": "49ec18b80cf6abf136c9f92ebf759c66f792f482af7f820a1d069a7c50d4d1ed"
+    },
+    {
+      "path": "experiments/predit-sync.patch",
+      "sha256": "d695a11369f62d79023a86191e2300b045daa86ff8f5173f28d7ce1464b2ff37"
+    }
+  ],
+  "results": "benchmarks/history/20261106-bigvgan-convtranspose/summary.json",
+  "design": "experiments/bigvgan-convtranspose-tile4/design.md",
+  "provenance_limitations": [
+    "Historical native RK3588 measurements, not container measurements",
+    "Reference ONNX is not the historical MNN conversion source",
+    "E2E is one sample with three formal A/B pairs; default asynchronous variant failed",
+    "Second-board and container validation not run"
+  ]
+}

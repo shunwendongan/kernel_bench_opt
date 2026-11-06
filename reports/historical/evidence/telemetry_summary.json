@@ -1,0 +1,235 @@
+{
+  "sample_count": 576,
+  "first_utc": "2026-11-05T08:30:00.786806+00:00",
+  "last_utc": "2026-11-05T09:17:58.659823+00:00",
+  "period_s": 5,
+  "coverage_note": "Sampling started after formal run began; frequency/temperature samples are not continuous device counters.",
+  "values": {
+    "/sys/class/devfreq/dmc/cur_freq": {
+      "min": 528000000,
+      "max": 2112000000,
+      "unit": "Hz",
+      "observed_values": [
+        528000000,
+        1068000000,
+        1560000000,
+        2112000000
+      ]
+    },
+    "/sys/class/devfreq/fb000000.gpu/cur_freq": {
+      "min": 300000000,
+      "max": 1000000000,
+      "unit": "Hz",
+      "observed_values": [
+        300000000,
+        800000000,
+        1000000000
+      ]
+    },
+    "/sys/class/devfreq/fdab0000.npu/cur_freq": {
+      "min": 1000000000,
+      "max": 1000000000,
+      "unit": "Hz",
+      "observed_values": [
+        1000000000
+      ]
+    },
+    "/sys/class/devfreq/fdbd0000.rkvenc-core/cur_freq": {
+      "min": 786431991,
+      "max": 786431991,
+      "unit": "Hz",
+      "observed_values": [
+        786431991
+      ]
+    },
+    "/sys/class/devfreq/fdbe0000.rkvenc-core/cur_freq": {
+      "min": 786431991,
+      "max": 786431991,
+      "unit": "Hz",
+      "observed_values": [
+        786431991
+      ]
+    },
+    "/sys/class/devfreq/fdd90000.vop/cur_freq": {
+      "min": 750000000,
+      "max": 750000000,
+      "unit": "Hz",
+      "observed_values": [
+        750000000
+      ]
+    },
+    "/sys/class/thermal/thermal_zone0/temp": {
+      "min": 52692,
+      "max": 61923,
+      "unit": "milli_C",
+      "observed_values": [
+        52692,
+        53615,
+        54538,
+        55461,
+        56384,
+        57307,
+        58230,
+        59153,
+        60076,
+        61000,
+        61923
+      ]
+    },
+    "/sys/class/thermal/thermal_zone1/temp": {
+      "min": 52692,
+      "max": 65615,
+      "unit": "milli_C",
+      "observed_values": [
+        52692,
+        53615,
+        54538,
+        55461,
+        56384,
+        57307,
+        58230,
+        59153,
+        60076,
+        61000,
+        61923,
+        62846,
+        63769,
+        64692,
+        65615
+      ]
+    },
+    "/sys/class/thermal/thermal_zone2/temp": {
+      "min": 52692,
+      "max": 65615,
+      "unit": "milli_C",
+      "observed_values": [
+        52692,
+        53615,
+        54538,
+        55461,
+        56384,
+        57307,
+        58230,
+        59153,
+        60076,
+        61000,
+        61923,
+        62846,
+        63769,
+        64692,
+        65615
+      ]
+    },
+    "/sys/class/thermal/thermal_zone3/temp": {
+      "min": 52692,
+      "max": 62846,
+      "unit": "milli_C",
+      "observed_values": [
+        52692,
+        53615,
+        54538,
+        55461,
+        56384,
+        57307,
+        58230,
+        59153,
+        60076,
+        61000,
+        61923,
+        62846
+      ]
+    },
+    "/sys/class/thermal/thermal_zone4/temp": {
+      "min": 52692,
+      "max": 60076,
+      "unit": "milli_C",
+      "observed_values": [
+        52692,
+        53615,
+        54538,
+        55461,
+        56384,
+        57307,
+        58230,
+        59153,
+        60076
+      ]
+    },
+    "/sys/class/thermal/thermal_zone5/temp": {
+      "min": 52692,
+      "max": 59153,
+      "unit": "milli_C",
+      "observed_values": [
+        52692,
+        53615,
+        54538,
+        55461,
+        56384,
+        57307,
+        58230,
+        59153
+      ]
+    },
+    "/sys/class/thermal/thermal_zone6/temp": {
+      "min": 52692,
+      "max": 59153,
+      "unit": "milli_C",
+      "observed_values": [
+        52692,
+        53615,
+        54538,
+        55461,
+        56384,
+        57307,
+        58230,
+        59153
+      ]
+    },
+    "/sys/devices/system/cpu/cpufreq/policy0/scaling_cur_freq": {
+      "min": 408000,
+      "max": 1800000,
+      "unit": "kHz",
+      "observed_values": [
+        408000,
+        600000,
+        1008000,
+        1200000,
+        1416000,
+        1608000,
+        1800000
+      ]
+    },
+    "/sys/devices/system/cpu/cpufreq/policy4/scaling_cur_freq": {
+      "min": 408000,
+      "max": 2304000,
+      "unit": "kHz",
+      "observed_values": [
+        408000,
+        600000,
+        1200000,
+        1416000,
+        1608000,
+        1800000,
+        2016000,
+        2208000,
+        2304000
+      ]
+    },
+    "/sys/devices/system/cpu/cpufreq/policy6/scaling_cur_freq": {
+      "min": 408000,
+      "max": 2304000,
+      "unit": "kHz",
+      "observed_values": [
+        408000,
+        600000,
+        1200000,
+        1416000,
+        1608000,
+        1800000,
+        2016000,
+        2208000,
+        2304000
+      ]
+    }
+  }
+}

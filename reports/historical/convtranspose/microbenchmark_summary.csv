@@ -1,0 +1,7 @@
+T,profile_enabled,old_median_ms,candidate_median_ms,speedup,latency_reduction_pct,old_min_ms,old_max_ms,candidate_min_ms,candidate_max_ms,paired_repetitions,warmup,timing,evidence,correctness_passed
+52,False,369.15790100000004,30.47451,12.11366158143314,91.74485771063044,364.47530800000004,370.141832,29.293237,32.351131,15,3,host_enqueue_to_finish_resident_buffers,resumed_board/bench/T52_profile0/results.jsonl,True
+120,False,850.6449250000001,64.446955,13.19914843145033,92.42375365961303,778.3450429999999,862.793539,62.948135,66.046277,15,3,host_enqueue_to_finish_resident_buffers,resumed_board/bench/T120_profile0/results.jsonl,True
+136,False,975.302268,72.878692,13.38254352863523,92.52757894745304,961.807287,983.3915450000001,71.242704,73.852879,15,3,host_enqueue_to_finish_resident_buffers,resumed_board/bench/T136_profile0/results.jsonl,True
+52,True,369.11737,30.701433,12.022805906160796,91.68247405967375,366.283436,371.214824,29.086151,31.567699,15,3,host_enqueue_to_finish_resident_buffers,resumed_board/bench/T52_profile1/results.jsonl,True
+120,True,861.7647169999999,64.48158600000001,13.364508698653905,92.5174952364637,849.091996,871.8815999999999,63.741778,65.436978,15,3,host_enqueue_to_finish_resident_buffers,resumed_board/bench/T120_profile1/results.jsonl,True
+136,True,965.522266,73.213288,13.187800908490818,92.41723463268117,952.2521859999999,982.86539,71.981055,74.324514,15,3,host_enqueue_to_finish_resident_buffers,resumed_board/bench/T136_profile1/results.jsonl,True

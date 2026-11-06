@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "metadata": {
+    "format": "rknn",
+    "adapter": "task_rknn_2_3_2_optional_blank_fields_v1",
+    "aggregation": "none",
+    "native_source_sha256": "583f3926ca408febfa28a45a030e2c3e1e0879472a47d6adda33da5d2c9b778b",
+    "source_file": "${TOOLKIT_ROOT}/runs/20261105-172200-qwen-omni-vcb-random50/inputs/npu_perf/tile_0.txt",
+    "source_size_bytes": 4734,
+    "table_count": 1,
+    "input_time_units": [
+      "us"
+    ],
+    "is_end_to_end": false,
+    "reported_summaries": [
+      {
+        "table_index": 1,
+        "raw": "Total Operator Elapsed Per Frame Time(us): 19882",
+        "source_line": 15,
+        "reported_total_us": 19882.0,
+        "parsed_row_sum_us": 19882.0,
+        "parsed_sum_matches_reported": true
+      }
+    ]
+  },
+  "rows": [
+    {
+      "record_id": "rknn_583f3926ca40_l00000006",
+      "layer_id": "1",
+      "layer_name": "InputOperator:mel_halo",
+      "original_layer_name": "InputOperator:mel_halo",
+      "op_type": "InputOperator",
+      "dtype": "FLOAT16",
+      "backend": "CPU",
+      "time_us": 8.0,
+      "input_shape": "\\",
+      "output_shape": "(1,128,1,516)",
+      "rw_kb": 0.0,
+      "cycles_ddr_npu_total": [
+        0,
+        0,
+        0
+      ],
+      "mac_usage_reported": null,
+      "workload_reported": "0.0%/0.0%/0.0%",
+      "source_line": 6,
+      "source_lines": [
+        6
+      ],
+      "sample_count": 1,
+      "table_index": 1,
+      "raw_line": "1    InputOperator      FLOAT16  CPU    \\                                        (1,128,1,516)          0/0/0                    8                                 0.0%/0.0%/0.0%       0            InputOperator:mel_halo",
+      "event_kind": "rknn_compiled_unit",
+      "duration_semantics": "runtime_reported_operator_duration",
+      "clock_domain": "rknn_perf_detail_duration_only"
+    },
+    {
+      "record_id": "rknn_583f3926ca40_l00000007",
+      "layer_id": "2",
+      "layer_name": "InputOperator:true_valid",
+      "original_layer_name": "InputOperator:true_valid",
+      "op_type": "InputOperator",
+      "dtype": "FLOAT16",
+      "backend": "CPU",
+      "time_us": 4.0,
+      "input_shape": "\\",
+      "output_shape": "(1,1,1,516)",
+      "rw_kb": 0.0,
+      "cycles_ddr_npu_total": [
+        0,
+        0,
+        0
+      ],
+      "mac_usage_reported": null,
+      "workload_reported": "0.0%/0.0%/0.0%",
+      "source_line": 7,
+      "source_lines": [
+        7
+      ],
+      "sample_count": 1,
+      "table_index": 1,
+      "raw_line": "2    InputOperator      FLOAT16  CPU    \\                                        (1,1,1,516)            0/0/0                    4                                 0.0%/0.0%/0.0%       0            InputOperator:true_valid",
+      "event_kind": "rknn_compiled_unit",
+      "duration_semantics": "runtime_reported_operator_duration",
+      "clock_domain": "rknn_perf_detail_duration_only"
+    },
+    {
+      "record_id": "rknn_583f3926ca40_l00000008",
+      "layer_id": "3",
+      "layer_name": "Conv:/Conv",
+      "original_layer_name": "Conv:/Conv",
+      "op_type": "ConvExGelu",
+      "dtype": "FLOAT16",
+      "backend": "NPU",
+      "time_us": 1901.0,
+      "input_shape": "(1,128,1,516),(1280,128,1,3),(1280)",
+      "output_shape": "(1,1280,1,516)",
+      "rw_kb": 1094.0,
+      "cycles_ddr_npu_total": [
+        412786,
+        506880,
+        506880
+      ],
+      "mac_usage_reported": "26.06/0.00/0.00",
+      "workload_reported": "100.0%/0.0%/0.0%",
+      "source_line": 8,
+      "source_lines": [
+        8
+      ],
+      "sample_count": 1,
+      "table_index": 1,
+      "raw_line": "3    ConvExGelu         FLOAT16  NPU    (1,128,1,516),(1280,128,1,3),(1280)      (1,1280,1,516)         412786/506880/506880     1901         26.06/0.00/0.00      100.0%/0.0%/0.0%     1094         Conv:/Conv      ",
+      "event_kind": "rknn_compiled_unit",
+      "duration_semantics": "runtime_reported_operator_duration",
+      "clock_domain": "rknn_perf_detail_duration_only"
+    },
+    {
+      "record_id": "rknn_583f3926ca40_l00000009",
+      "layer_id": "4",
+      "layer_name": "[unnamed compiler unit 4]",
+      "original_layer_name": "",
+      "op_type": "Conv",
+      "dtype": "FLOAT16",
+      "backend": "NPU",
+      "time_us": 67.0,
+      "input_shape": "(1,1,1,516),(1,1,1,1)",
+      "output_shape": "(1,1,1,516)",
+      "rw_kb": 1.0,
+      "cycles_ddr_npu_total": [
+        1574,
+        1056,
+        1574
+      ],
+      "mac_usage_reported": "0.00/0.00/0.00",
+      "workload_reported": "100.0%/0.0%/0.0%",
+      "source_line": 9,
+      "source_lines": [
+        9
+      ],
+      "sample_count": 1,
+      "table_index": 1,
+      "raw_line": "4    Conv               FLOAT16  NPU    (1,1,1,516),(1,1,1,1)                    (1,1,1,516)            1574/1056/1574           67           0.00/0.00/0.00       100.0%/0.0%/0.0%     1                            ",
+      "event_kind": "rknn_compiled_unit",
+      "duration_semantics": "runtime_reported_operator_duration",
+      "clock_domain": "rknn_perf_detail_duration_only"
+    },
+    {
+      "record_id": "rknn_583f3926ca40_l00000010",
+      "layer_id": "5",
+      "layer_name": "Mul:/Mul_6",
+      "original_layer_name": "Mul:/Mul_6",
+      "op_type": "Mul",
+      "dtype": "FLOAT16",
+      "backend": "NPU",
+      "time_us": 1067.0,
+      "input_shape": "(1,1280,1,516),(1,1,1,516)",
+      "output_shape": "(1,1280,1,516)",
+      "rw_kb": 1298.0,
+      "cycles_ddr_npu_total": [
+        0,
+        0,
+        0
+      ],
+      "mac_usage_reported": null,
+      "workload_reported": "100.0%/0.0%/0.0%",
+      "source_line": 10,
+      "source_lines": [
+        10
+      ],
+      "sample_count": 1,
+      "table_index": 1,
+      "raw_line": "5    Mul                FLOAT16  NPU    (1,1280,1,516),(1,1,1,516)               (1,1280,1,516)         0/0/0                    1067                              100.0%/0.0%/0.0%     1298         Mul:/Mul_6      ",
+      "event_kind": "rknn_compiled_unit",
+      "duration_semantics": "runtime_reported_operator_duration",
+      "clock_domain": "rknn_perf_detail_duration_only"
+    },
+    {
+      "record_id": "rknn_583f3926ca40_l00000011",
+      "layer_id": "6",
+      "layer_name": "Conv:/Conv_1",
+      "original_layer_name": "Conv:/Conv_1",
+      "op_type": "ConvExGelu",
+      "dtype": "FLOAT16",
+      "backend": "NPU",
+      "time_us": 16319.0,
+      "input_shape": "(1,1280,1,516),(1280,1280,1,3),...",
+      "output_shape": "(1,1280,1,258)",
+      "rw_kb": 10895.0,
+      "cycles_ddr_npu_total": [
+        1998134,
+        2611200,
+        2611200
+      ],
+      "mac_usage_reported": "15.18/0.00/0.00",
+      "workload_reported": "100.0%/0.0%/0.0%",
+      "source_line": 11,
+      "source_lines": [
+        11
+      ],
+      "sample_count": 1,
+      "table_index": 1,
+      "raw_line": "6    ConvExGelu         FLOAT16  NPU    (1,1280,1,516),(1280,1280,1,3),...       (1,1280,1,258)         1998134/2611200/2611200  16319        15.18/0.00/0.00      100.0%/0.0%/0.0%     10895        Conv:/Conv_1    ",
+      "event_kind": "rknn_compiled_unit",
+      "duration_semantics": "runtime_reported_operator_duration",
+      "clock_domain": "rknn_perf_detail_duration_only"
+    },
+    {
+      "record_id": "rknn_583f3926ca40_l00000012",
+      "layer_id": "7",
+      "layer_name": "Slice:/Slice",
+      "original_layer_name": "Slice:/Slice",
+      "op_type": "Slice",
+      "dtype": "FLOAT16",
+      "backend": "NPU",
+      "time_us": 414.0,
+      "input_shape": "(1,1280,1,258),(1),(1),(1),(1)",
+      "output_shape": "(1,1280,1,256)",
+      "rw_kb": 645.0,
+      "cycles_ddr_npu_total": [
+        0,
+        0,
+        0
+      ],
+      "mac_usage_reported": null,
+      "workload_reported": "100.0%/0.0%/0.0%",
+      "source_line": 12,
+      "source_lines": [
+        12
+      ],
+      "sample_count": 1,
+      "table_index": 1,
+      "raw_line": "7    Slice              FLOAT16  NPU    (1,1280,1,258),(1),(1),(1),(1)           (1,1280,1,256)         0/0/0                    414                               100.0%/0.0%/0.0%     645          Slice:/Slice    ",
+      "event_kind": "rknn_compiled_unit",
+      "duration_semantics": "runtime_reported_operator_duration",
+      "clock_domain": "rknn_perf_detail_duration_only"
+    },
+    {
+      "record_id": "rknn_583f3926ca40_l00000013",
+      "layer_id": "8",
+      "layer_name": "OutputOperator:conv2_gelu_valid",
+      "original_layer_name": "OutputOperator:conv2_gelu_valid",
+      "op_type": "OutputOperator",
+      "dtype": "FLOAT16",
+      "backend": "CPU",
+      "time_us": 102.0,
+      "input_shape": "(1,1280,1,256)",
+      "output_shape": "\\",
+      "rw_kb": 640.0,
+      "cycles_ddr_npu_total": [
+        0,
+        0,
+        0
+      ],
+      "mac_usage_reported": null,
+      "workload_reported": "0.0%/0.0%/0.0%",
+      "source_line": 13,
+      "source_lines": [
+        13
+      ],
+      "sample_count": 1,
+      "table_index": 1,
+      "raw_line": "8    OutputOperator     FLOAT16  CPU    (1,1280,1,256)                           \\                      0/0/0                    102                               0.0%/0.0%/0.0%       640          OutputOperator:conv2_gelu_valid",
+      "event_kind": "rknn_compiled_unit",
+      "duration_semantics": "runtime_reported_operator_duration",
+      "clock_domain": "rknn_perf_detail_duration_only"
+    }
+  ],
+  "warnings": []
+}

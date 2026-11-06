@@ -1,0 +1,17 @@
+[
+  {
+    "new_first": false,
+    "pair": -1,
+    "paired": {
+      "passed": false,
+      "speech_tokens_equal": true,
+      "text_tokens_equal": true,
+      "wave_bitwise_equal": false,
+      "wave_max_abs": 0.6606618762016296,
+      "wave_relative_rmse": 0.3390519365445221,
+      "wave_rmse": 0.01701233928652992,
+      "wave_size_equal": true
+    },
+    "warmup": true
+  }
+]

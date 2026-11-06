@@ -1,0 +1,18 @@
+{
+  "evidence_kind": "synthetic_numeric_validation",
+  "scope": "New reference ONNX versus saved original HF PyTorch CPU output on one static mel16 input; not deployed MNN equivalence",
+  "onnxruntime_version": "1.31.1",
+  "provider": "CPUExecutionProvider on Mac",
+  "graph_optimization": "disabled",
+  "shape": [
+    3840
+  ],
+  "all_finite": true,
+  "max_abs": 6.502866744995117e-05,
+  "relative_l2": 2.079861042147968e-05,
+  "tolerance": {
+    "rtol": 0.001,
+    "atol": 0.0002
+  },
+  "allclose": true
+}

@@ -1,0 +1,324 @@
+{
+  "schema_version": 1,
+  "experiment_id": "20261106-bigvgan-convtranspose",
+  "candidate_id": "bigvgan-convtranspose-tile4",
+  "measurement_date": "2026-11-06",
+  "evidence_kind": "historical_measured",
+  "execution_environment": "native Linux/aarch64 on RK3588; not a Docker measurement",
+  "hardware": {
+    "soc": "RK3588",
+    "ram_gib": 16,
+    "gpu": "Mali-G610 r0p0",
+    "opencl_driver_reported": "3.0",
+    "rknn_runtime": "2.3.2",
+    "rknn_driver": "0.9.8"
+  },
+  "three_level_results": {
+    "L1_operator": {
+      "status": "passed_historical_record_audit",
+      "input_shape": "[1,1536,T]",
+      "output_shape": "[1,768,5*T]",
+      "weight_shape": [
+        1536,
+        768,
+        11
+      ],
+      "shapes": [
+        52,
+        120,
+        136
+      ],
+      "dtype": "FP16 storage and accumulation; deployed weights unchanged",
+      "source": "correctness/correctness_complete_20261106.json",
+      "recorded_correctness": {
+        "shapes": [
+          52,
+          120,
+          136
+        ],
+        "weights_finite": true,
+        "references_finite": true,
+        "all_captured_inputs_exact_half": true,
+        "all_captured_old_outputs_exact_half": true,
+        "decoded_to_packed_rne_exact": true,
+        "bias_to_packed_rne_exact": true,
+        "candidate_or_micro_comparisons": 9,
+        "all_requested_bitwise_gates_passed": true,
+        "claim_limit": "FP32 reference differences are diagnostic and do not fail an unchanged FP16 candidate"
+      },
+      "timing_scope": "Resident buffers; synchronized host enqueue-to-clFinish; excludes packing, host/device copies, validation readback and compilation",
+      "formal_cases": [
+        {
+          "T": 52,
+          "profiling_queue": false,
+          "warmup_per_variant": 3,
+          "pairs": 15,
+          "source": "bench/T52_profile0/results.jsonl",
+          "audit_passed": true,
+          "old_median_ms": 369.15790100000004,
+          "candidate_median_ms": 30.47451,
+          "ratio_of_medians": 12.11366158143314,
+          "reduction_of_medians_pct": 91.74485771063044,
+          "timing_domain": "host_enqueue_to_finish",
+          "performance_claim_eligible": true
+        },
+        {
+          "T": 52,
+          "profiling_queue": true,
+          "warmup_per_variant": 3,
+          "pairs": 15,
+          "source": "bench/T52_profile1/results.jsonl",
+          "audit_passed": true,
+          "old_median_ms": 369.11737,
+          "candidate_median_ms": 30.701433,
+          "ratio_of_medians": 12.022805906160796,
+          "reduction_of_medians_pct": 91.68247405967375,
+          "timing_domain": "host_enqueue_to_finish",
+          "performance_claim_eligible": false
+        },
+        {
+          "T": 120,
+          "profiling_queue": false,
+          "warmup_per_variant": 3,
+          "pairs": 15,
+          "source": "bench/T120_profile0/results.jsonl",
+          "audit_passed": true,
+          "old_median_ms": 850.6449250000001,
+          "candidate_median_ms": 64.446955,
+          "ratio_of_medians": 13.19914843145033,
+          "reduction_of_medians_pct": 92.42375365961303,
+          "timing_domain": "host_enqueue_to_finish",
+          "performance_claim_eligible": true
+        },
+        {
+          "T": 120,
+          "profiling_queue": true,
+          "warmup_per_variant": 3,
+          "pairs": 15,
+          "source": "bench/T120_profile1/results.jsonl",
+          "audit_passed": true,
+          "old_median_ms": 861.7647169999999,
+          "candidate_median_ms": 64.48158600000001,
+          "ratio_of_medians": 13.364508698653905,
+          "reduction_of_medians_pct": 92.5174952364637,
+          "timing_domain": "host_enqueue_to_finish",
+          "performance_claim_eligible": false
+        },
+        {
+          "T": 136,
+          "profiling_queue": false,
+          "warmup_per_variant": 3,
+          "pairs": 15,
+          "source": "bench/T136_profile0/results.jsonl",
+          "audit_passed": true,
+          "old_median_ms": 975.302268,
+          "candidate_median_ms": 72.878692,
+          "ratio_of_medians": 13.38254352863523,
+          "reduction_of_medians_pct": 92.52757894745304,
+          "timing_domain": "host_enqueue_to_finish",
+          "performance_claim_eligible": true
+        },
+        {
+          "T": 136,
+          "profiling_queue": true,
+          "warmup_per_variant": 3,
+          "pairs": 15,
+          "source": "bench/T136_profile1/results.jsonl",
+          "audit_passed": true,
+          "old_median_ms": 965.522266,
+          "candidate_median_ms": 73.213288,
+          "ratio_of_medians": 13.187800908490818,
+          "reduction_of_medians_pct": 92.41723463268117,
+          "timing_domain": "host_enqueue_to_finish",
+          "performance_claim_eligible": false
+        }
+      ]
+    },
+    "L2_bigvgan_integration": {
+      "status": "passed_historical_correctness_record",
+      "source": "correctness/integrated_correctness_20261106.json",
+      "shapes": [
+        52,
+        120,
+        136
+      ],
+      "input_output_and_waveform_checks": 9,
+      "all_bitwise_equal": true,
+      "dispatch": [
+        {
+          "T": 120,
+          "candidate": true,
+          "precision": 0,
+          "tile": 4
+        },
+        {
+          "T": 136,
+          "candidate": true,
+          "precision": 0,
+          "tile": 4
+        },
+        {
+          "T": 52,
+          "candidate": true,
+          "precision": 0,
+          "tile": 4
+        }
+      ],
+      "standalone_subgraph_latency_ms": null,
+      "latency_note": "No clean whole-BigVGAN latency result is asserted by this evidence bundle"
+    },
+    "L3_full_request": {
+      "default_async": {
+        "status": "failed_waveform_gate",
+        "source": "e2e/paired_20261106",
+        "measured_pairs_completed": 0,
+        "warmup_comparison": {
+          "passed": false,
+          "speech_tokens_equal": true,
+          "text_tokens_equal": true,
+          "wave_bitwise_equal": false,
+          "wave_max_abs": 0.6606618762016296,
+          "wave_relative_rmse": 0.3390519365445221,
+          "wave_rmse": 0.01701233928652992,
+          "wave_size_equal": true
+        },
+        "performance_claim_eligible": false
+      },
+      "optional_predit_sync": {
+        "status": "passed_historical_record_audit",
+        "source": "e2e/paired_sync_20261106",
+        "configuration": "Both old and candidate use the same OMNI_PREDIT_SYNC=1 build; tile0 versus tile4",
+        "measured_pairs_completed": 3,
+        "warmup_requests": 2,
+        "measured_requests": 6,
+        "sample_id": "yinliang_000806",
+        "sample_row_in_selected_bundle": 14,
+        "seed": "20261105",
+        "speech_tokens": 226,
+        "wave_samples": 106560,
+        "audio_duration_s": 4.44,
+        "same_waveform_sha256": true,
+        "waveform_sha256": "93d680a5e4b2ca5890ee289dfdaf4633fadfecc7dedca298536bbb9f6eb51408",
+        "waveform_hash_source": "correctness/e2e_file_integrity.json",
+        "dispatch": {
+          "old": [
+            {
+              "T": 120,
+              "candidate": false,
+              "precision": 0,
+              "tile": 0
+            },
+            {
+              "T": 136,
+              "candidate": false,
+              "precision": 0,
+              "tile": 0
+            },
+            {
+              "T": 108,
+              "candidate": false,
+              "precision": 0,
+              "tile": 0
+            }
+          ],
+          "new": [
+            {
+              "T": 120,
+              "candidate": true,
+              "precision": 0,
+              "tile": 4
+            },
+            {
+              "T": 136,
+              "candidate": true,
+              "precision": 0,
+              "tile": 4
+            },
+            {
+              "T": 108,
+              "candidate": false,
+              "precision": 0,
+              "tile": 4
+            }
+          ]
+        },
+        "metrics": {
+          "request_s": {
+            "unit": "s",
+            "old_median": 94.06069712,
+            "candidate_median": 91.055044558,
+            "old_sample_std": 0.507199742335976,
+            "candidate_sample_std": 0.5877717155599035,
+            "ratio_of_medians": 1.0330091822654093,
+            "reduction_of_medians_pct": 3.195439385448595,
+            "pairs": 3
+          },
+          "ttfa_s": {
+            "unit": "s",
+            "old_median": 32.23677704,
+            "candidate_median": 31.113332562,
+            "old_sample_std": 0.22995524574132667,
+            "candidate_sample_std": 0.31705075074801264,
+            "ratio_of_medians": 1.036108137106859,
+            "reduction_of_medians_pct": 3.4849776595408666,
+            "pairs": 3
+          },
+          "token2wav_s": {
+            "unit": "s",
+            "old_median": 80.535359,
+            "candidate_median": 77.732916,
+            "old_sample_std": 0.42643920746847136,
+            "candidate_sample_std": 0.6444769731404957,
+            "ratio_of_medians": 1.0360522047056615,
+            "reduction_of_medians_pct": 3.479767191451888,
+            "pairs": 3
+          },
+          "waveform_phase_s": {
+            "unit": "s",
+            "old_median": 85.330605459,
+            "candidate_median": 82.482794059,
+            "old_sample_std": 0.4315993680799299,
+            "candidate_sample_std": 0.6557188971585158,
+            "ratio_of_medians": 1.0345261267212038,
+            "reduction_of_medians_pct": 3.337385671508364,
+            "pairs": 3
+          }
+        },
+        "dit_s": null
+      }
+    }
+  },
+  "reference_mapping": {
+    "source": "mapping/reference_origin.json",
+    "historical_MNN_conversion_source": false,
+    "mapping_status": "reference_structure_candidate",
+    "reference_node_id": "n000022",
+    "reference_node_name": "/ups.0.0/ConvTranspose",
+    "reference_static_T": 16,
+    "earlier_profile_shapes": [
+      120,
+      136,
+      46
+    ],
+    "operator_benchmark_shapes": [
+      52,
+      120,
+      136
+    ],
+    "full_request_shapes": [
+      120,
+      136,
+      108
+    ],
+    "note": "These shape sets belong to different captures/requests. The reference graph is not a tested deployment replacement."
+  },
+  "limitations": [
+    "Three formal E2E pairs for one sample: descriptive medians only; no significance or stable p95 claim.",
+    "Operator-only speedup is not an end-to-end speedup.",
+    "Warmup dispatch confirms T120/T136 candidate and T108 fallback; it is not a count of every timed invocation.",
+    "Default async failure remains preserved; synchronous success belongs to a separate build.",
+    "Git text records permit statistical reanalysis, not a fresh bitwise comparison of absent tensor/waveform bytes.",
+    "Historical result flags are evidence from prior runs, not new device tests or container validation.",
+    "Numeric waveform repeatability is not ASR/MOS/semantic answer quality."
+  ]
+}

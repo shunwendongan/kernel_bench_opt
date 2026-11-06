@@ -1,0 +1,1284 @@
+{
+  "audit_scope": "Existing saved evidence reviewed; no new export, numerical inference or benchmark. DiT graph copied and small external encoding headers read only for precision audit.",
+  "diagnostic": {
+    "sample_selection_index": 44,
+    "sample_id": "en_qingganhua_000493",
+    "source": "${TASK_ROOT}/outputs/evidence/inputs/diagnostic_speech.profile.jsonl.gz",
+    "source_sha256": "2a895af1fccbd667674459458f446ded0b7e741d5b269842e8c0064c35e00842",
+    "toolkit_version": "2.1.0",
+    "raw_records": {
+      "runtime_configuration": 5,
+      "op": 922245,
+      "module_api": 933,
+      "timing_total": 923178
+    },
+    "timing_domain": "instrumented synchronized host callback duration; Tensor wait included; not pure GPU kernel duration",
+    "scope": "One diagnostic request; separate from formal clean benchmark",
+    "raw_crosscheck": {
+      "selection": "Top two entries where available in each of 16 toolkit scopes",
+      "groups_checked": 27,
+      "all_call_counts_match": true,
+      "maximum_total_difference_us": 0.0
+    }
+  },
+  "module_api_inclusive": [
+    {
+      "scope": "module_api__module_api__bigvgan",
+      "runtime_name": "bigvgan",
+      "runtime_type": "ModuleAPI",
+      "output_tensor_owners": [
+        3
+      ],
+      "calls": 14,
+      "synchronized_host_total_us": 232282540.0,
+      "mapping_grade": "unavailable_historical_onnx",
+      "reference_nodes": []
+    },
+    {
+      "scope": "module_api__module_api__dit",
+      "runtime_name": "dit",
+      "runtime_type": "ModuleAPI",
+      "output_tensor_owners": [
+        3
+      ],
+      "calls": 56,
+      "synchronized_host_total_us": 101921198.0,
+      "mapping_grade": "unavailable_historical_onnx",
+      "reference_nodes": []
+    },
+    {
+      "scope": "module_api__module_api__llm_decode",
+      "runtime_name": "llm_decode",
+      "runtime_type": "ModuleAPI",
+      "output_tensor_owners": [
+        13
+      ],
+      "calls": 794,
+      "synchronized_host_total_us": 21978942.699999988,
+      "mapping_grade": "unavailable_historical_onnx",
+      "reference_nodes": []
+    },
+    {
+      "scope": "module_api__module_api__llm_decode",
+      "runtime_name": "llm_decode",
+      "runtime_type": "ModuleAPI",
+      "output_tensor_owners": [
+        13,
+        13
+      ],
+      "calls": 52,
+      "synchronized_host_total_us": 4990861.100000002,
+      "mapping_grade": "unavailable_historical_onnx",
+      "reference_nodes": []
+    },
+    {
+      "scope": "module_api__module_api__llm_prefill",
+      "runtime_name": "llm_prefill",
+      "runtime_type": "ModuleAPI",
+      "output_tensor_owners": [
+        13,
+        13
+      ],
+      "calls": 1,
+      "synchronized_host_total_us": 8471850.0,
+      "mapping_grade": "unavailable_historical_onnx",
+      "reference_nodes": []
+    },
+    {
+      "scope": "module_api__module_api__llm_prefill",
+      "runtime_name": "llm_prefill",
+      "runtime_type": "ModuleAPI",
+      "output_tensor_owners": [
+        13
+      ],
+      "calls": 1,
+      "synchronized_host_total_us": 1068790.0,
+      "mapping_grade": "unavailable_historical_onnx",
+      "reference_nodes": []
+    },
+    {
+      "scope": "module_api__module_api__media_encoder",
+      "runtime_name": "media_encoder",
+      "runtime_type": "ModuleAPI",
+      "output_tensor_owners": [
+        0
+      ],
+      "calls": 1,
+      "synchronized_host_total_us": 4734520.0,
+      "mapping_grade": "unavailable_historical_onnx",
+      "reference_nodes": []
+    },
+    {
+      "scope": "module_api__module_api__predit",
+      "runtime_name": "predit",
+      "runtime_type": "ModuleAPI",
+      "output_tensor_owners": [
+        3,
+        0,
+        0
+      ],
+      "calls": 14,
+      "synchronized_host_total_us": 339683.0,
+      "mapping_grade": "unavailable_historical_onnx",
+      "reference_nodes": []
+    }
+  ],
+  "cpu_output_owned_top5": [
+    {
+      "scope": "op__talker__bigvgan",
+      "runtime_name": "/resblocks.3/activations.1/upsample/ConvTranspose_output_0",
+      "runtime_type": "DeconvolutionDepthwise",
+      "output_tensor_owners": [
+        0
+      ],
+      "calls": 14,
+      "synchronized_host_total_us": 512504.8,
+      "mapping_grade": "reference_structure_candidate",
+      "reference_nodes": [
+        {
+          "index": 1071,
+          "node_id": "n001071",
+          "name": "/resblocks.3/activations.1/upsample/ConvTranspose",
+          "op_type": "ConvTranspose"
+        }
+      ]
+    },
+    {
+      "scope": "op__talker__bigvgan",
+      "runtime_name": "/resblocks.4/activations.4/upsample/ConvTranspose_output_0",
+      "runtime_type": "DeconvolutionDepthwise",
+      "output_tensor_owners": [
+        0
+      ],
+      "calls": 14,
+      "synchronized_host_total_us": 476117.25,
+      "mapping_grade": "reference_structure_candidate",
+      "reference_nodes": [
+        {
+          "index": 1556,
+          "node_id": "n001556",
+          "name": "/resblocks.4/activations.4/upsample/ConvTranspose",
+          "op_type": "ConvTranspose"
+        }
+      ]
+    },
+    {
+      "scope": "op__talker__bigvgan",
+      "runtime_name": "/resblocks.4/activations.1/upsample/ConvTranspose_output_0",
+      "runtime_type": "DeconvolutionDepthwise",
+      "output_tensor_owners": [
+        0
+      ],
+      "calls": 14,
+      "synchronized_host_total_us": 459432.8,
+      "mapping_grade": "reference_structure_candidate",
+      "reference_nodes": [
+        {
+          "index": 1386,
+          "node_id": "n001386",
+          "name": "/resblocks.4/activations.1/upsample/ConvTranspose",
+          "op_type": "ConvTranspose"
+        }
+      ]
+    },
+    {
+      "scope": "op__talker__bigvgan",
+      "runtime_name": "/resblocks.3/activations.0/upsample/ConvTranspose_output_0",
+      "runtime_type": "DeconvolutionDepthwise",
+      "output_tensor_owners": [
+        0
+      ],
+      "calls": 14,
+      "synchronized_host_total_us": 456564.0,
+      "mapping_grade": "reference_structure_candidate",
+      "reference_nodes": [
+        {
+          "index": 1015,
+          "node_id": "n001015",
+          "name": "/resblocks.3/activations.0/upsample/ConvTranspose",
+          "op_type": "ConvTranspose"
+        }
+      ]
+    },
+    {
+      "scope": "op__talker__bigvgan",
+      "runtime_name": "/resblocks.5/activations.4/upsample/ConvTranspose_output_0",
+      "runtime_type": "DeconvolutionDepthwise",
+      "output_tensor_owners": [
+        0
+      ],
+      "calls": 14,
+      "synchronized_host_total_us": 456348.47,
+      "mapping_grade": "reference_structure_candidate",
+      "reference_nodes": [
+        {
+          "index": 1872,
+          "node_id": "n001872",
+          "name": "/resblocks.5/activations.4/upsample/ConvTranspose",
+          "op_type": "ConvTranspose"
+        }
+      ]
+    }
+  ],
+  "gpu_output_owned_top7": [
+    {
+      "scope": "op__talker__bigvgan",
+      "runtime_name": "/ups.0.0/ConvTranspose_output_0",
+      "runtime_type": "Deconvolution",
+      "output_tensor_owners": [
+        3
+      ],
+      "calls": 14,
+      "synchronized_host_total_us": 13110591.0,
+      "mapping_grade": "reference_structure_candidate",
+      "reference_nodes": [
+        {
+          "index": 22,
+          "node_id": "n000022",
+          "name": "/ups.0.0/ConvTranspose",
+          "op_type": "ConvTranspose"
+        }
+      ]
+    },
+    {
+      "scope": "op__talker__bigvgan",
+      "runtime_name": "/resblocks.2/convs2.2/Conv_output_0",
+      "runtime_type": "Convolution",
+      "output_tensor_owners": [
+        3
+      ],
+      "calls": 14,
+      "synchronized_host_total_us": 6842727.0,
+      "mapping_grade": "reference_structure_candidate",
+      "reference_nodes": [
+        {
+          "index": 992,
+          "node_id": "n000992",
+          "name": "/resblocks.2/convs2.2/Conv",
+          "op_type": "Conv"
+        }
+      ]
+    },
+    {
+      "scope": "op__talker__bigvgan",
+      "runtime_name": "/resblocks.2/convs2.1/Conv_output_0",
+      "runtime_type": "Convolution",
+      "output_tensor_owners": [
+        3
+      ],
+      "calls": 14,
+      "synchronized_host_total_us": 6798273.0,
+      "mapping_grade": "reference_structure_candidate",
+      "reference_nodes": [
+        {
+          "index": 879,
+          "node_id": "n000879",
+          "name": "/resblocks.2/convs2.1/Conv",
+          "op_type": "Conv"
+        }
+      ]
+    },
+    {
+      "scope": "op__talker__bigvgan",
+      "runtime_name": "/resblocks.2/convs1.0/Conv_output_0",
+      "runtime_type": "Convolution",
+      "output_tensor_owners": [
+        3
+      ],
+      "calls": 14,
+      "synchronized_host_total_us": 6796309.0,
+      "mapping_grade": "reference_structure_candidate",
+      "reference_nodes": [
+        {
+          "index": 710,
+          "node_id": "n000710",
+          "name": "/resblocks.2/convs1.0/Conv",
+          "op_type": "Conv"
+        }
+      ]
+    },
+    {
+      "scope": "op__talker__bigvgan",
+      "runtime_name": "/resblocks.2/convs2.0/Conv_output_0",
+      "runtime_type": "Convolution",
+      "output_tensor_owners": [
+        3
+      ],
+      "calls": 14,
+      "synchronized_host_total_us": 6784109.0,
+      "mapping_grade": "reference_structure_candidate",
+      "reference_nodes": [
+        {
+          "index": 766,
+          "node_id": "n000766",
+          "name": "/resblocks.2/convs2.0/Conv",
+          "op_type": "Conv"
+        }
+      ]
+    },
+    {
+      "scope": "op__talker__bigvgan",
+      "runtime_name": "/resblocks.2/convs1.2/Conv_output_0",
+      "runtime_type": "Convolution",
+      "output_tensor_owners": [
+        3
+      ],
+      "calls": 14,
+      "synchronized_host_total_us": 6772137.0,
+      "mapping_grade": "reference_structure_candidate",
+      "reference_nodes": [
+        {
+          "index": 936,
+          "node_id": "n000936",
+          "name": "/resblocks.2/convs1.2/Conv",
+          "op_type": "Conv"
+        }
+      ]
+    },
+    {
+      "scope": "op__talker__bigvgan",
+      "runtime_name": "/resblocks.2/convs1.1/Conv_output_0",
+      "runtime_type": "Convolution",
+      "output_tensor_owners": [
+        3
+      ],
+      "calls": 14,
+      "synchronized_host_total_us": 6770248.0,
+      "mapping_grade": "reference_structure_candidate",
+      "reference_nodes": [
+        {
+          "index": 823,
+          "node_id": "n000823",
+          "name": "/resblocks.2/convs1.1/Conv",
+          "op_type": "Conv"
+        }
+      ]
+    }
+  ],
+  "selected_module_top_callbacks": [
+    {
+      "scope": "op__thinker__audio_preprocess_and_encoder",
+      "runtime_name": "_raster_1",
+      "runtime_type": "Stft",
+      "output_tensor_owners": [
+        0
+      ],
+      "calls": 1,
+      "synchronized_host_total_us": 69457.2,
+      "mapping_grade": "unmapped",
+      "reference_nodes": []
+    },
+    {
+      "scope": "op__thinker__media_encoder",
+      "runtime_name": "/fc2_10/Add_output_0__matmul_converted",
+      "runtime_type": "Convolution",
+      "output_tensor_owners": [
+        0
+      ],
+      "calls": 1,
+      "synchronized_host_total_us": 61857.2,
+      "mapping_grade": "unavailable_historical_onnx",
+      "reference_nodes": []
+    },
+    {
+      "scope": "op__thinker__llm_prefill",
+      "runtime_name": "/layers.35/mlp/up_proj/Linear",
+      "runtime_type": "Convolution",
+      "output_tensor_owners": [
+        13
+      ],
+      "calls": 1,
+      "synchronized_host_total_us": 97921.9,
+      "mapping_grade": "unavailable_historical_onnx",
+      "reference_nodes": []
+    },
+    {
+      "scope": "op__thinker__llm_decode",
+      "runtime_name": "/lm/lm_head/Linear",
+      "runtime_type": "Convolution",
+      "output_tensor_owners": [
+        13
+      ],
+      "calls": 52,
+      "synchronized_host_total_us": 380217.19,
+      "mapping_grade": "unavailable_historical_onnx",
+      "reference_nodes": []
+    },
+    {
+      "scope": "op__talker__llm_prefill",
+      "runtime_name": "/mlp/down_proj_13/MatMul_output_0__matmul_converted",
+      "runtime_type": "Convolution",
+      "output_tensor_owners": [
+        13
+      ],
+      "calls": 1,
+      "synchronized_host_total_us": 16288.8,
+      "mapping_grade": "unavailable_historical_onnx",
+      "reference_nodes": []
+    },
+    {
+      "scope": "op__talker__llm_decode",
+      "runtime_name": "logits__matmul_converted",
+      "runtime_type": "Convolution",
+      "output_tensor_owners": [
+        13
+      ],
+      "calls": 794,
+      "synchronized_host_total_us": 275956.87200000003,
+      "mapping_grade": "unavailable_historical_onnx",
+      "reference_nodes": []
+    },
+    {
+      "scope": "op__talker__predit",
+      "runtime_name": "code_embeds__matmul_converted",
+      "runtime_type": "Convolution",
+      "output_tensor_owners": [
+        3
+      ],
+      "calls": 14,
+      "synchronized_host_total_us": 66460.26,
+      "mapping_grade": "unavailable_historical_onnx",
+      "reference_nodes": []
+    },
+    {
+      "scope": "op__talker__dit",
+      "runtime_name": "/transformer_blocks.0/ff/ff.0/Add_output_0__matmul_converted",
+      "runtime_type": "Convolution",
+      "output_tensor_owners": [
+        3
+      ],
+      "calls": 56,
+      "synchronized_host_total_us": 957125.0999999997,
+      "mapping_grade": "unavailable_historical_onnx",
+      "reference_nodes": []
+    }
+  ],
+  "npu": {
+    "source_onnx": "${TASK_ROOT}/outputs/evidence/onnx/audio_conv_prefix_mnn4bit.onnx",
+    "source_onnx_sha256": "e6c2adeabe4dbe5722981577f13fea3a94b5f79358502c1ca5e8f32561dc937c",
+    "nodes": 34,
+    "tiles": [
+      {
+        "tile_index": 0,
+        "source": "${TASK_ROOT}/outputs/evidence/npu_reports/20261105-172447-npu-vcb44-tile0-metadata-preserved/analysis/mapping.json",
+        "metadata": {
+          "mel_frames": 955,
+          "output_tile_start": 0,
+          "query_return": 0
+        },
+        "table_total_us": 19882.0,
+        "npu_rows_total_us": 19768.0,
+        "conv2_share_of_table_percent": 82.07926767930792,
+        "mapping_status_counts": {
+          "unmapped": 3,
+          "manual": 4,
+          "ambiguous": 1
+        },
+        "rows": [
+          {
+            "layer_name": "Conv:/Conv_1",
+            "runtime_type": "ConvExGelu",
+            "backend": "NPU",
+            "time_us": 16319.0,
+            "mapping_grade": "manual",
+            "source_nodes": [
+              {
+                "node_id": "n000015",
+                "index": 15,
+                "name": "/Conv_1",
+                "op_type": "Conv"
+              },
+              {
+                "node_id": "n000016",
+                "index": 16,
+                "name": "/Mul_7",
+                "op_type": "Mul"
+              },
+              {
+                "node_id": "n000017",
+                "index": 17,
+                "name": "/Mul_8",
+                "op_type": "Mul"
+              },
+              {
+                "node_id": "n000018",
+                "index": 18,
+                "name": "/Constant_4",
+                "op_type": "Constant"
+              },
+              {
+                "node_id": "n000019",
+                "index": 19,
+                "name": "/Mul_9",
+                "op_type": "Mul"
+              },
+              {
+                "node_id": "n000020",
+                "index": 20,
+                "name": "/Add_2",
+                "op_type": "Add"
+              },
+              {
+                "node_id": "n000021",
+                "index": 21,
+                "name": "/Constant_5",
+                "op_type": "Constant"
+              },
+              {
+                "node_id": "n000022",
+                "index": 22,
+                "name": "/Mul_10",
+                "op_type": "Mul"
+              },
+              {
+                "node_id": "n000023",
+                "index": 23,
+                "name": "/Tanh_1",
+                "op_type": "Tanh"
+              },
+              {
+                "node_id": "n000024",
+                "index": 24,
+                "name": "/Constant_6",
+                "op_type": "Constant"
+              },
+              {
+                "node_id": "n000025",
+                "index": 25,
+                "name": "/Add_3",
+                "op_type": "Add"
+              },
+              {
+                "node_id": "n000026",
+                "index": 26,
+                "name": "/Mul_11",
+                "op_type": "Mul"
+              },
+              {
+                "node_id": "n000027",
+                "index": 27,
+                "name": "/Constant_7",
+                "op_type": "Constant"
+              },
+              {
+                "node_id": "n000028",
+                "index": 28,
+                "name": "/Mul_12",
+                "op_type": "Mul"
+              }
+            ]
+          },
+          {
+            "layer_name": "Conv:/Conv",
+            "runtime_type": "ConvExGelu",
+            "backend": "NPU",
+            "time_us": 1901.0,
+            "mapping_grade": "manual",
+            "source_nodes": [
+              {
+                "node_id": "n000000",
+                "index": 0,
+                "name": "/Conv",
+                "op_type": "Conv"
+              },
+              {
+                "node_id": "n000001",
+                "index": 1,
+                "name": "/Mul",
+                "op_type": "Mul"
+              },
+              {
+                "node_id": "n000002",
+                "index": 2,
+                "name": "/Mul_1",
+                "op_type": "Mul"
+              },
+              {
+                "node_id": "n000003",
+                "index": 3,
+                "name": "/Constant",
+                "op_type": "Constant"
+              },
+              {
+                "node_id": "n000004",
+                "index": 4,
+                "name": "/Mul_2",
+                "op_type": "Mul"
+              },
+              {
+                "node_id": "n000005",
+                "index": 5,
+                "name": "/Add",
+                "op_type": "Add"
+              },
+              {
+                "node_id": "n000006",
+                "index": 6,
+                "name": "/Constant_1",
+                "op_type": "Constant"
+              },
+              {
+                "node_id": "n000007",
+                "index": 7,
+                "name": "/Mul_3",
+                "op_type": "Mul"
+              },
+              {
+                "node_id": "n000008",
+                "index": 8,
+                "name": "/Tanh",
+                "op_type": "Tanh"
+              },
+              {
+                "node_id": "n000009",
+                "index": 9,
+                "name": "/Constant_2",
+                "op_type": "Constant"
+              },
+              {
+                "node_id": "n000010",
+                "index": 10,
+                "name": "/Add_1",
+                "op_type": "Add"
+              },
+              {
+                "node_id": "n000011",
+                "index": 11,
+                "name": "/Mul_4",
+                "op_type": "Mul"
+              },
+              {
+                "node_id": "n000012",
+                "index": 12,
+                "name": "/Constant_3",
+                "op_type": "Constant"
+              },
+              {
+                "node_id": "n000013",
+                "index": 13,
+                "name": "/Mul_5",
+                "op_type": "Mul"
+              }
+            ]
+          },
+          {
+            "layer_name": "Mul:/Mul_6",
+            "runtime_type": "Mul",
+            "backend": "NPU",
+            "time_us": 1067.0,
+            "mapping_grade": "manual",
+            "source_nodes": [
+              {
+                "node_id": "n000014",
+                "index": 14,
+                "name": "/Mul_6",
+                "op_type": "Mul"
+              }
+            ]
+          },
+          {
+            "layer_name": "Slice:/Slice",
+            "runtime_type": "Slice",
+            "backend": "NPU",
+            "time_us": 414.0,
+            "mapping_grade": "manual",
+            "source_nodes": [
+              {
+                "node_id": "n000029",
+                "index": 29,
+                "name": "/Constant_8",
+                "op_type": "Constant"
+              },
+              {
+                "node_id": "n000030",
+                "index": 30,
+                "name": "/Constant_9",
+                "op_type": "Constant"
+              },
+              {
+                "node_id": "n000031",
+                "index": 31,
+                "name": "/Constant_10",
+                "op_type": "Constant"
+              },
+              {
+                "node_id": "n000032",
+                "index": 32,
+                "name": "/Constant_11",
+                "op_type": "Constant"
+              },
+              {
+                "node_id": "n000033",
+                "index": 33,
+                "name": "/Slice",
+                "op_type": "Slice"
+              }
+            ]
+          },
+          {
+            "layer_name": "OutputOperator:conv2_gelu_valid",
+            "runtime_type": "OutputOperator",
+            "backend": "CPU",
+            "time_us": 102.0,
+            "mapping_grade": "unmapped",
+            "source_nodes": []
+          },
+          {
+            "layer_name": "[unnamed compiler unit 4]",
+            "runtime_type": "Conv",
+            "backend": "NPU",
+            "time_us": 67.0,
+            "mapping_grade": "ambiguous",
+            "source_nodes": []
+          },
+          {
+            "layer_name": "InputOperator:mel_halo",
+            "runtime_type": "InputOperator",
+            "backend": "CPU",
+            "time_us": 8.0,
+            "mapping_grade": "unmapped",
+            "source_nodes": []
+          },
+          {
+            "layer_name": "InputOperator:true_valid",
+            "runtime_type": "InputOperator",
+            "backend": "CPU",
+            "time_us": 4.0,
+            "mapping_grade": "unmapped",
+            "source_nodes": []
+          }
+        ]
+      },
+      {
+        "tile_index": 1,
+        "source": "${TASK_ROOT}/outputs/evidence/npu_reports/20261105-174748-npu-vcb44-tile1/analysis/mapping.json",
+        "metadata": {
+          "mel_frames": 955,
+          "output_tile_start": 256,
+          "query_return": 0
+        },
+        "table_total_us": 18232.0,
+        "npu_rows_total_us": 18118.0,
+        "conv2_share_of_table_percent": 80.34774023694602,
+        "mapping_status_counts": {
+          "unmapped": 3,
+          "manual": 4,
+          "ambiguous": 1
+        },
+        "rows": [
+          {
+            "layer_name": "Conv:/Conv_1",
+            "runtime_type": "ConvExGelu",
+            "backend": "NPU",
+            "time_us": 14649.0,
+            "mapping_grade": "manual",
+            "source_nodes": [
+              {
+                "node_id": "n000015",
+                "index": 15,
+                "name": "/Conv_1",
+                "op_type": "Conv"
+              },
+              {
+                "node_id": "n000016",
+                "index": 16,
+                "name": "/Mul_7",
+                "op_type": "Mul"
+              },
+              {
+                "node_id": "n000017",
+                "index": 17,
+                "name": "/Mul_8",
+                "op_type": "Mul"
+              },
+              {
+                "node_id": "n000018",
+                "index": 18,
+                "name": "/Constant_4",
+                "op_type": "Constant"
+              },
+              {
+                "node_id": "n000019",
+                "index": 19,
+                "name": "/Mul_9",
+                "op_type": "Mul"
+              },
+              {
+                "node_id": "n000020",
+                "index": 20,
+                "name": "/Add_2",
+                "op_type": "Add"
+              },
+              {
+                "node_id": "n000021",
+                "index": 21,
+                "name": "/Constant_5",
+                "op_type": "Constant"
+              },
+              {
+                "node_id": "n000022",
+                "index": 22,
+                "name": "/Mul_10",
+                "op_type": "Mul"
+              },
+              {
+                "node_id": "n000023",
+                "index": 23,
+                "name": "/Tanh_1",
+                "op_type": "Tanh"
+              },
+              {
+                "node_id": "n000024",
+                "index": 24,
+                "name": "/Constant_6",
+                "op_type": "Constant"
+              },
+              {
+                "node_id": "n000025",
+                "index": 25,
+                "name": "/Add_3",
+                "op_type": "Add"
+              },
+              {
+                "node_id": "n000026",
+                "index": 26,
+                "name": "/Mul_11",
+                "op_type": "Mul"
+              },
+              {
+                "node_id": "n000027",
+                "index": 27,
+                "name": "/Constant_7",
+                "op_type": "Constant"
+              },
+              {
+                "node_id": "n000028",
+                "index": 28,
+                "name": "/Mul_12",
+                "op_type": "Mul"
+              }
+            ]
+          },
+          {
+            "layer_name": "Conv:/Conv",
+            "runtime_type": "ConvExGelu",
+            "backend": "NPU",
+            "time_us": 1917.0,
+            "mapping_grade": "manual",
+            "source_nodes": [
+              {
+                "node_id": "n000000",
+                "index": 0,
+                "name": "/Conv",
+                "op_type": "Conv"
+              },
+              {
+                "node_id": "n000001",
+                "index": 1,
+                "name": "/Mul",
+                "op_type": "Mul"
+              },
+              {
+                "node_id": "n000002",
+                "index": 2,
+                "name": "/Mul_1",
+                "op_type": "Mul"
+              },
+              {
+                "node_id": "n000003",
+                "index": 3,
+                "name": "/Constant",
+                "op_type": "Constant"
+              },
+              {
+                "node_id": "n000004",
+                "index": 4,
+                "name": "/Mul_2",
+                "op_type": "Mul"
+              },
+              {
+                "node_id": "n000005",
+                "index": 5,
+                "name": "/Add",
+                "op_type": "Add"
+              },
+              {
+                "node_id": "n000006",
+                "index": 6,
+                "name": "/Constant_1",
+                "op_type": "Constant"
+              },
+              {
+                "node_id": "n000007",
+                "index": 7,
+                "name": "/Mul_3",
+                "op_type": "Mul"
+              },
+              {
+                "node_id": "n000008",
+                "index": 8,
+                "name": "/Tanh",
+                "op_type": "Tanh"
+              },
+              {
+                "node_id": "n000009",
+                "index": 9,
+                "name": "/Constant_2",
+                "op_type": "Constant"
+              },
+              {
+                "node_id": "n000010",
+                "index": 10,
+                "name": "/Add_1",
+                "op_type": "Add"
+              },
+              {
+                "node_id": "n000011",
+                "index": 11,
+                "name": "/Mul_4",
+                "op_type": "Mul"
+              },
+              {
+                "node_id": "n000012",
+                "index": 12,
+                "name": "/Constant_3",
+                "op_type": "Constant"
+              },
+              {
+                "node_id": "n000013",
+                "index": 13,
+                "name": "/Mul_5",
+                "op_type": "Mul"
+              }
+            ]
+          },
+          {
+            "layer_name": "Mul:/Mul_6",
+            "runtime_type": "Mul",
+            "backend": "NPU",
+            "time_us": 1080.0,
+            "mapping_grade": "manual",
+            "source_nodes": [
+              {
+                "node_id": "n000014",
+                "index": 14,
+                "name": "/Mul_6",
+                "op_type": "Mul"
+              }
+            ]
+          },
+          {
+            "layer_name": "Slice:/Slice",
+            "runtime_type": "Slice",
+            "backend": "NPU",
+            "time_us": 387.0,
+            "mapping_grade": "manual",
+            "source_nodes": [
+              {
+                "node_id": "n000029",
+                "index": 29,
+                "name": "/Constant_8",
+                "op_type": "Constant"
+              },
+              {
+                "node_id": "n000030",
+                "index": 30,
+                "name": "/Constant_9",
+                "op_type": "Constant"
+              },
+              {
+                "node_id": "n000031",
+                "index": 31,
+                "name": "/Constant_10",
+                "op_type": "Constant"
+              },
+              {
+                "node_id": "n000032",
+                "index": 32,
+                "name": "/Constant_11",
+                "op_type": "Constant"
+              },
+              {
+                "node_id": "n000033",
+                "index": 33,
+                "name": "/Slice",
+                "op_type": "Slice"
+              }
+            ]
+          },
+          {
+            "layer_name": "OutputOperator:conv2_gelu_valid",
+            "runtime_type": "OutputOperator",
+            "backend": "CPU",
+            "time_us": 102.0,
+            "mapping_grade": "unmapped",
+            "source_nodes": []
+          },
+          {
+            "layer_name": "[unnamed compiler unit 4]",
+            "runtime_type": "Conv",
+            "backend": "NPU",
+            "time_us": 85.0,
+            "mapping_grade": "ambiguous",
+            "source_nodes": []
+          },
+          {
+            "layer_name": "InputOperator:mel_halo",
+            "runtime_type": "InputOperator",
+            "backend": "CPU",
+            "time_us": 10.0,
+            "mapping_grade": "unmapped",
+            "source_nodes": []
+          },
+          {
+            "layer_name": "InputOperator:true_valid",
+            "runtime_type": "InputOperator",
+            "backend": "CPU",
+            "time_us": 2.0,
+            "mapping_grade": "unmapped",
+            "source_nodes": []
+          }
+        ]
+      }
+    ],
+    "mapping_basis": "Reviewed actual RKNN-input ONNX and conversion tensor/weight boundaries; manual mapping bound to model SHA256 and ordered profile fingerprint. Fused time belongs to whole region.",
+    "original_hf_logical_symbols": {
+      "Conv1": "Qwen2_5OmniAudioEncoder.conv1",
+      "Conv2": "Qwen2_5OmniAudioEncoder.conv2"
+    },
+    "precision": "MNN4bit decoded source conv weights; RKNN FP16 runtime, tanh GELU with tiling adapters",
+    "weight_source_comparison": [
+      {
+        "initializer": "conv1_weight",
+        "identical_to_original_hf": false,
+        "relative_l2": 0.2144436205131788
+      },
+      {
+        "initializer": "conv1_bias",
+        "identical_to_original_hf": true,
+        "relative_l2": 0.0
+      },
+      {
+        "initializer": "conv2_weight",
+        "identical_to_original_hf": false,
+        "relative_l2": 0.16669435805208674
+      },
+      {
+        "initializer": "conv2_bias",
+        "identical_to_original_hf": true,
+        "relative_l2": 0.0
+      }
+    ],
+    "timing_scope": "RKNN PERF_DETAIL operator totals; includes CPU IO rows; not end-to-end time"
+  },
+  "reference_mapping": {
+    "source": "${TASK_ROOT}/outputs/evidence/current44_reference_candidates.json",
+    "reference_onnx": "${TASK_ROOT}/outputs/evidence/onnx/bigvgan_reference_fp32_mel16.onnx",
+    "mapping_grade": "reference_structure_candidate",
+    "match_rule": "Exact callback name equals reference node name or output tensor name; no fuzzy matching",
+    "matched_distinct_records": 1049,
+    "total_distinct_records": 1794,
+    "historical_MNN_provenance_confirmed": false,
+    "extracted_top_node": {
+      "index": 22,
+      "name": "/ups.0.0/ConvTranspose",
+      "source": "${TASK_ROOT}/outputs/evidence/subgraphs/reference_origin.json",
+      "static_input": [
+        1,
+        1536,
+        16
+      ],
+      "static_output": [
+        1,
+        768,
+        80
+      ],
+      "observed_runtime_input_lengths": [
+        120,
+        136,
+        46
+      ],
+      "observed_runtime_calls": [
+        1,
+        12,
+        1
+      ]
+    }
+  },
+  "numerical_validation": {
+    "reference_parent_graph": {
+      "evidence_kind": "synthetic_numeric_validation",
+      "scope": "New reference ONNX versus saved original HF PyTorch CPU output on one static mel16 input; not deployed MNN equivalence",
+      "onnxruntime_version": "1.31.1",
+      "provider": "CPUExecutionProvider on Mac",
+      "graph_optimization": "disabled",
+      "shape": [
+        3840
+      ],
+      "all_finite": true,
+      "max_abs": 6.502866744995117e-05,
+      "relative_l2": 2.079861042147968e-05,
+      "tolerance": {
+        "rtol": 0.001,
+        "atol": 0.0002
+      },
+      "allclose": true,
+      "evidence_path": "${TASK_ROOT}/outputs/evidence/reference_ort_validation.json",
+      "input_shape": [
+        1,
+        80,
+        16
+      ],
+      "input_is_all_zero": true,
+      "input_npy_sha256": "9a57c3f52f8baeb6f0dbd33fdeb5beb562672396d20ede24c7c66eac1c4ca9cd",
+      "standalone_extracted_op_tested": false
+    },
+    "conv2_extraction": {
+      "evidence_kind": "synthetic_numeric_validation_only",
+      "device": "Mac CPU ORT",
+      "onnxruntime_version": "1.31.1",
+      "full_onnx_sha256": "e6c2adeabe4dbe5722981577f13fea3a94b5f79358502c1ca5e8f32561dc937c",
+      "subgraph_sha256": "13b26b3c242ce454f6d87161d8b40bacfa894fbfd988d42b0ab542120e614e5f",
+      "tests": [
+        {
+          "seed": 20261105,
+          "mask_valid_range": [
+            0,
+            516
+          ],
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "output_shape": [
+            1,
+            1280,
+            1,
+            258
+          ],
+          "status": "passed"
+        },
+        {
+          "seed": 20261106,
+          "mask_valid_range": [
+            2,
+            400
+          ],
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "output_shape": [
+            1,
+            1280,
+            1,
+            258
+          ],
+          "status": "passed"
+        }
+      ],
+      "limits": "Validates extracted subgraph versus its source FP32 ONNX on synthetic tensors. Does not validate RKNN FP16, answer quality, or unquantized HF equivalence.",
+      "evidence_path": "${TASK_ROOT}/outputs/evidence/validation/conv2_extraction_numeric.json",
+      "tolerance": {
+        "rtol": 1e-05,
+        "atol": 1e-05
+      }
+    }
+  },
+  "dit_precision_audit": {
+    "graph_path": "${TASK_ROOT}/work/mapping/dit.mnn",
+    "remote_graph_path": "${BOARD_PROJECT}/models/Qwen2.5-Omni-3B-MNN/dit.mnn",
+    "graph_size_bytes": 1017496,
+    "graph_sha256": "537d6dec307e23ae51e3445e26790677c55415d7dc9b215e8ea076fada511646",
+    "graph_ops": 7259,
+    "convolutions": 159,
+    "convolutions_with_quanParameter_type_1": 159,
+    "external_weight_file_bytes": 348178426,
+    "encoded_headers_checked": 159,
+    "header_read_bytes_per_op": 262,
+    "all_headers_dictionary_values": 256,
+    "all_headers_index_bits": 8,
+    "all_encoded_sizes_match_header_and_payload_formula": true,
+    "convolution_weight_elements": 326533120,
+    "encoded_convolution_weight_bytes": 326574778,
+    "hot_ff0": {
+      "mnn_op_index": 391,
+      "runtime_name": "/transformer_blocks.0/ff/ff.0/Add_output_0__matmul_converted",
+      "input_channels": 1024,
+      "output_channels": 2048,
+      "external_offset": 12679216,
+      "encoded_weight_bytes": 2097414,
+      "alpha_bytes": 131072,
+      "bias_bytes": 8192,
+      "encoded_dimensions": [
+        16384,
+        128
+      ],
+      "dictionary_values": 256,
+      "index_bits": 8
+    },
+    "computation_configuration": "Precision_High and OpenCL FLOAT=float/COMPUTE_FLOAT=float configuration evidence",
+    "weight_precision": "W8 encoded weights confirmed; original FP32 weights are not retained in this deployed snapshot",
+    "requirement_status": "FP32 compute configuration retained; original FP32 weight preservation not satisfied",
+    "inspector": "${DEPLOYMENT_TASK_ROOT}/work/deployment/npu/inspect_mnn",
+    "format_evidence": {
+      "encoder": "MNN-3.6.2/source/core/IDSTEncoder.hpp:216 WriteCQBlobsInt8",
+      "decoder": "MNN-3.6.2/source/core/ConvolutionCommon.cpp:206 ReadQuanInfo; zero sampleCnt means256"
+    },
+    "limits": "No new DiT inference, re-export, replacement, or exact device kernel capture; W8 storage does not imply INT8 arithmetic."
+  },
+  "hash_audit": {
+    "status": "All listed artifact SHA256 values independently recomputed and matched contracts/provenance or input identity",
+    "artifacts": [
+      {
+        "path": "${TASK_ROOT}/outputs/evidence/onnx/audio_conv_prefix_mnn4bit.onnx",
+        "sha256": "e6c2adeabe4dbe5722981577f13fea3a94b5f79358502c1ca5e8f32561dc937c"
+      },
+      {
+        "path": "${TASK_ROOT}/outputs/evidence/onnx/bigvgan_reference_fp32_mel16.onnx",
+        "sha256": "e8596908a2b5817fa6f7aa1a3d082444c0c3160ff781566092cb6c2b862eb333"
+      },
+      {
+        "path": "${TASK_ROOT}/outputs/evidence/subgraphs/conv2_gelu.onnx",
+        "sha256": "13b26b3c242ce454f6d87161d8b40bacfa894fbfd988d42b0ab542120e614e5f"
+      },
+      {
+        "path": "${TASK_ROOT}/outputs/evidence/subgraphs/bigvgan_ups_0_0_reference.onnx",
+        "sha256": "cca019e850e8b0fbb246bc478af4283c4483f0618012d5ac76aab113f7657e67"
+      },
+      {
+        "path": "${TASK_ROOT}/outputs/evidence/inputs/diagnostic_speech.profile.jsonl.gz",
+        "sha256": "2a895af1fccbd667674459458f446ded0b7e741d5b269842e8c0064c35e00842"
+      },
+      {
+        "path": "${TASK_ROOT}/outputs/evidence/npu_tile0.profile.json",
+        "sha256": "94607c26880c0fcbe98dbe8ec7a4b2111ef520cc3f8ef52d59cb385dea85d046"
+      },
+      {
+        "path": "${TASK_ROOT}/outputs/evidence/npu_tile1.profile.json",
+        "sha256": "92a6ba3dad1ebcff06e25c8371ba865c9ea4d39efe9deac847061ddd66d5dbf5"
+      }
+    ]
+  },
+  "metadata_consistency": {
+    "reference_summary_current_ort_status": "passed_one_static_mel16_input",
+    "reference_export_current_ort_status": "passed_one_static_mel16_input",
+    "note": "Export-time not_run was superseded by later successful parent-graph ORT validation; current exported metadata has been reconciled. Standalone BigVGAN extracted-op validation remains not run."
+  },
+  "key_limits": [
+    "module_api includes op callbacks; do not add nested timing domains or interpret their sum as clean end-to-end latency.",
+    "Output tensor ownership is not a device kernel trace. Top CPU-owned callbacks occur inside the BigVGAN stage; do not claim every BigVGAN operator ran on GPU.",
+    "Historical ONNX for remaining audio encoder, Thinker, Talker, PreDiT, DiT and deployed BigVGAN is unavailable. Exact original ONNX indices for these compiled graphs cannot be asserted.",
+    "BigVGAN reference candidate count is structural coverage, not mapping accuracy or deployed numerical equivalence.",
+    "Conv2 extraction validation is FP32 ONNX-to-ONNX on two synthetic inputs, not RKNN FP16 or original HF equivalence.",
+    "BigVGAN parent graph ORT comparison covers one all-zero static mel16 input only; runtime streaming shapes and the standalone extracted op remain numerically untested.",
+    "Public OpenCL implementation anchors are candidates only; no per-device kernel dispatch captured. RKNN internal NPU kernel source unavailable.",
+    "DiT W8 weights are confirmed. FP32 execution configuration does not recover original FP32 weight precision."
+  ],
+  "supporting_sources": [
+    "${TASK_ROOT}/outputs/evidence/mnn_toolkit_analysis.json",
+    "${TASK_ROOT}/outputs/evidence/mnn_operator_rankings.csv",
+    "${TASK_ROOT}/outputs/evidence/source_map.json",
+    "${TASK_ROOT}/outputs/evidence/onnx_index.json",
+    "${TASK_ROOT}/outputs/evidence/kernel_source_candidates.json",
+    "${TASK_ROOT}/outputs/evidence/subgraphs/reference_origin.json",
+    "${TASK_ROOT}/outputs/evidence/subgraphs/conv2_gelu.contract.json",
+    "${TASK_ROOT}/outputs/evidence/subgraphs/bigvgan_ups_0_0_reference.contract.json"
+  ]
+}

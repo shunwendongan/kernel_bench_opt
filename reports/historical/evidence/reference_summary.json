@@ -1,0 +1,1318 @@
+{
+  "export_state": "completed",
+  "reference_onnx": {
+    "path": "${TASK_ROOT}/work/mapping/reference_export/artifact/bigvgan_reference_fp32_mel16.onnx",
+    "sha256": "e8596908a2b5817fa6f7aa1a3d082444c0c3160ff781566092cb6c2b862eb333"
+  },
+  "tensor_count": 449,
+  "onnx_node_count": 5933,
+  "reference_only": true,
+  "historical_MNN_conversion_source": false,
+  "checks": {
+    "onnx_checker": "passed",
+    "reference_finite": true,
+    "reference_output_shape": [
+      3840
+    ],
+    "onnxruntime_numeric_comparison": "passed_one_static_mel16_input",
+    "MNN_numeric_comparison": "not_run"
+  },
+  "export_adapter": {
+    "applied": true,
+    "validation": "bitwise equal CPU outputs for this static input",
+    "max_absolute_difference": 0.0,
+    "source_pattern": "MNN token2wav.py UpSample1d/DownSample1d fixed-channel filters",
+    "script_sha256": "79e8c8bb009c70b55cf1c0259eea17ba18586a50b0710218f12e3d1aa78bdb70"
+  },
+  "peak_sampled_rss_kib": 1130688,
+  "minimum_memory_free_pct": 27,
+  "current_profile": {
+    "path": "${TOOLKIT_ROOT}/runs/20261105-172200-qwen-omni-vcb-random50/inputs/diagnostic_speech.profile.jsonl.gz",
+    "sha256": "2a895af1fccbd667674459458f446ded0b7e741d5b269842e8c0064c35e00842"
+  },
+  "candidate_distinct_records": 1049,
+  "all_distinct_bigvgan_records": 1794,
+  "top20": [
+    {
+      "executor": "talker",
+      "runtime_name": "/ups.0.0/ConvTranspose_output_0",
+      "runtime_type": "Deconvolution",
+      "output_tensor_backends": [
+        3
+      ],
+      "calls": 14,
+      "total_instrumented_host_us": 13110591.0,
+      "max_instrumented_host_us": 1097530.0,
+      "first_source_line": 820499,
+      "reference_candidates": [
+        {
+          "index": 22,
+          "node_id": "n000022",
+          "name": "/ups.0.0/ConvTranspose",
+          "op_type": "ConvTranspose",
+          "inputs": [
+            "/conv_pre/Conv_output_0",
+            "ups.0.0.weight",
+            "ups.0.0.bias"
+          ],
+          "outputs": [
+            "/ups.0.0/ConvTranspose_output_0"
+          ]
+        }
+      ],
+      "mapping_status": "reference_structure_candidate",
+      "historical_MNN_provenance_confirmed": false,
+      "numerical_equivalence_confirmed": false,
+      "reference_parameters": [
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.ups.0.0.weight",
+          "module_name": "ups.0.0.weight",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            1536,
+            768,
+            11
+          ],
+          "checkpoint_offsets": [
+            400042272,
+            451946784
+          ],
+          "raw_tensor_sha256": "5f1a1398def01e9c805f1a786135c8e96a545346f9e220196c02a864d3112771"
+        },
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.ups.0.0.bias",
+          "module_name": "ups.0.0.bias",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768
+          ],
+          "checkpoint_offsets": [
+            400039200,
+            400042272
+          ],
+          "raw_tensor_sha256": "d2991af5fefb1c5574da59fcca93ce9d5dd0e63dc689b1fad09119e6c34d2992"
+        }
+      ]
+    },
+    {
+      "executor": "talker",
+      "runtime_name": "/resblocks.2/convs2.2/Conv_output_0",
+      "runtime_type": "Convolution",
+      "output_tensor_backends": [
+        3
+      ],
+      "calls": 14,
+      "total_instrumented_host_us": 6842727.0,
+      "max_instrumented_host_us": 542173.0,
+      "first_source_line": 820788,
+      "reference_candidates": [
+        {
+          "index": 992,
+          "node_id": "n000992",
+          "name": "/resblocks.2/convs2.2/Conv",
+          "op_type": "Conv",
+          "inputs": [
+            "/resblocks.2/activations.5/downsample/Conv_output_0",
+            "resblocks.2.convs2.2.weight",
+            "resblocks.2.convs2.2.bias"
+          ],
+          "outputs": [
+            "/resblocks.2/convs2.2/Conv_output_0"
+          ]
+        }
+      ],
+      "mapping_status": "reference_structure_candidate",
+      "historical_MNN_provenance_confirmed": false,
+      "numerical_equivalence_confirmed": false,
+      "reference_parameters": [
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.2.convs2.2.weight",
+          "module_name": "resblocks.2.convs2.2.weight",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768,
+            768,
+            11
+          ],
+          "checkpoint_offsets": [
+            280394784,
+            306347040
+          ],
+          "raw_tensor_sha256": "b95c3457cd05b743508e15f3fb1297904c60f6e4caef1b5bcccc721b538c525f"
+        },
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.2.convs2.2.bias",
+          "module_name": "resblocks.2.convs2.2.bias",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768
+          ],
+          "checkpoint_offsets": [
+            280391712,
+            280394784
+          ],
+          "raw_tensor_sha256": "10a85151aee2daaa0c5d813ce6be8dc79e95769d4ad3bace59bed4d54c12fcb2"
+        }
+      ]
+    },
+    {
+      "executor": "talker",
+      "runtime_name": "/resblocks.2/convs2.1/Conv_output_0",
+      "runtime_type": "Convolution",
+      "output_tensor_backends": [
+        3
+      ],
+      "calls": 14,
+      "total_instrumented_host_us": 6798273.0,
+      "max_instrumented_host_us": 524387.0,
+      "first_source_line": 820755,
+      "reference_candidates": [
+        {
+          "index": 879,
+          "node_id": "n000879",
+          "name": "/resblocks.2/convs2.1/Conv",
+          "op_type": "Conv",
+          "inputs": [
+            "/resblocks.2/activations.3/downsample/Conv_output_0",
+            "resblocks.2.convs2.1.weight",
+            "resblocks.2.convs2.1.bias"
+          ],
+          "outputs": [
+            "/resblocks.2/convs2.1/Conv_output_0"
+          ]
+        }
+      ],
+      "mapping_status": "reference_structure_candidate",
+      "historical_MNN_provenance_confirmed": false,
+      "numerical_equivalence_confirmed": false,
+      "reference_parameters": [
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.2.convs2.1.weight",
+          "module_name": "resblocks.2.convs2.1.weight",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768,
+            768,
+            11
+          ],
+          "checkpoint_offsets": [
+            254439456,
+            280391712
+          ],
+          "raw_tensor_sha256": "324b516611e55e672909b22224c6504cfb31d203dbe825d6cde14cdcb5f28b96"
+        },
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.2.convs2.1.bias",
+          "module_name": "resblocks.2.convs2.1.bias",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768
+          ],
+          "checkpoint_offsets": [
+            254436384,
+            254439456
+          ],
+          "raw_tensor_sha256": "3786b57009bf5cb0b6218642b811c6c76ebdea4f06fb588a7f7b7fc23603a155"
+        }
+      ]
+    },
+    {
+      "executor": "talker",
+      "runtime_name": "/resblocks.2/convs1.0/Conv_output_0",
+      "runtime_type": "Convolution",
+      "output_tensor_backends": [
+        3
+      ],
+      "calls": 14,
+      "total_instrumented_host_us": 6796309.0,
+      "max_instrumented_host_us": 515523.0,
+      "first_source_line": 820706,
+      "reference_candidates": [
+        {
+          "index": 710,
+          "node_id": "n000710",
+          "name": "/resblocks.2/convs1.0/Conv",
+          "op_type": "Conv",
+          "inputs": [
+            "/resblocks.2/activations.0/downsample/Conv_output_0",
+            "resblocks.2.convs1.0.weight",
+            "resblocks.2.convs1.0.bias"
+          ],
+          "outputs": [
+            "/resblocks.2/convs1.0/Conv_output_0"
+          ]
+        }
+      ],
+      "mapping_status": "reference_structure_candidate",
+      "historical_MNN_provenance_confirmed": false,
+      "numerical_equivalence_confirmed": false,
+      "reference_parameters": [
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.2.convs1.0.weight",
+          "module_name": "resblocks.2.convs1.0.weight",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768,
+            768,
+            11
+          ],
+          "checkpoint_offsets": [
+            150618144,
+            176570400
+          ],
+          "raw_tensor_sha256": "233002e93c59f8311f0822f2893d4678a4c68d474cecf04f5af1d2b7f2838b46"
+        },
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.2.convs1.0.bias",
+          "module_name": "resblocks.2.convs1.0.bias",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768
+          ],
+          "checkpoint_offsets": [
+            150615072,
+            150618144
+          ],
+          "raw_tensor_sha256": "61afa6c4d0a570b9eb99cb1ebdcd8d8f18c906c3543704427904b90f692cc9ce"
+        }
+      ]
+    },
+    {
+      "executor": "talker",
+      "runtime_name": "/resblocks.2/convs2.0/Conv_output_0",
+      "runtime_type": "Convolution",
+      "output_tensor_backends": [
+        3
+      ],
+      "calls": 14,
+      "total_instrumented_host_us": 6784109.0,
+      "max_instrumented_host_us": 515763.0,
+      "first_source_line": 820722,
+      "reference_candidates": [
+        {
+          "index": 766,
+          "node_id": "n000766",
+          "name": "/resblocks.2/convs2.0/Conv",
+          "op_type": "Conv",
+          "inputs": [
+            "/resblocks.2/activations.1/downsample/Conv_output_0",
+            "resblocks.2.convs2.0.weight",
+            "resblocks.2.convs2.0.bias"
+          ],
+          "outputs": [
+            "/resblocks.2/convs2.0/Conv_output_0"
+          ]
+        }
+      ],
+      "mapping_status": "reference_structure_candidate",
+      "historical_MNN_provenance_confirmed": false,
+      "numerical_equivalence_confirmed": false,
+      "reference_parameters": [
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.2.convs2.0.weight",
+          "module_name": "resblocks.2.convs2.0.weight",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768,
+            768,
+            11
+          ],
+          "checkpoint_offsets": [
+            228484128,
+            254436384
+          ],
+          "raw_tensor_sha256": "023667dd915aae618d63f7be334640f50200406a352a67fce1326523b4e0dacd"
+        },
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.2.convs2.0.bias",
+          "module_name": "resblocks.2.convs2.0.bias",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768
+          ],
+          "checkpoint_offsets": [
+            228481056,
+            228484128
+          ],
+          "raw_tensor_sha256": "6f4c0cefd32ed02da220ac8598a4b1b3fdbe80f4b1ba69363efb4f5b9131afbc"
+        }
+      ]
+    },
+    {
+      "executor": "talker",
+      "runtime_name": "/resblocks.2/convs1.2/Conv_output_0",
+      "runtime_type": "Convolution",
+      "output_tensor_backends": [
+        3
+      ],
+      "calls": 14,
+      "total_instrumented_host_us": 6772137.0,
+      "max_instrumented_host_us": 590195.0,
+      "first_source_line": 820772,
+      "reference_candidates": [
+        {
+          "index": 936,
+          "node_id": "n000936",
+          "name": "/resblocks.2/convs1.2/Conv",
+          "op_type": "Conv",
+          "inputs": [
+            "/resblocks.2/activations.4/downsample/Conv_output_0",
+            "resblocks.2.convs1.2.weight",
+            "resblocks.2.convs1.2.bias"
+          ],
+          "outputs": [
+            "/resblocks.2/convs1.2/Conv_output_0"
+          ]
+        }
+      ],
+      "mapping_status": "reference_structure_candidate",
+      "historical_MNN_provenance_confirmed": false,
+      "numerical_equivalence_confirmed": false,
+      "reference_parameters": [
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.2.convs1.2.weight",
+          "module_name": "resblocks.2.convs1.2.weight",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768,
+            768,
+            11
+          ],
+          "checkpoint_offsets": [
+            202528800,
+            228481056
+          ],
+          "raw_tensor_sha256": "ea43effd2ab2d8e00c6b4b20a7b893fb8223dd4877d3023165a4cc9a5e5ece04"
+        },
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.2.convs1.2.bias",
+          "module_name": "resblocks.2.convs1.2.bias",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768
+          ],
+          "checkpoint_offsets": [
+            202525728,
+            202528800
+          ],
+          "raw_tensor_sha256": "0d697e8cce0f66915ead4265f679fa0773b9eaa1dd40f3460a45d6cfe6763563"
+        }
+      ]
+    },
+    {
+      "executor": "talker",
+      "runtime_name": "/resblocks.2/convs1.1/Conv_output_0",
+      "runtime_type": "Convolution",
+      "output_tensor_backends": [
+        3
+      ],
+      "calls": 14,
+      "total_instrumented_host_us": 6770248.0,
+      "max_instrumented_host_us": 542383.0,
+      "first_source_line": 820739,
+      "reference_candidates": [
+        {
+          "index": 823,
+          "node_id": "n000823",
+          "name": "/resblocks.2/convs1.1/Conv",
+          "op_type": "Conv",
+          "inputs": [
+            "/resblocks.2/activations.2/downsample/Conv_output_0",
+            "resblocks.2.convs1.1.weight",
+            "resblocks.2.convs1.1.bias"
+          ],
+          "outputs": [
+            "/resblocks.2/convs1.1/Conv_output_0"
+          ]
+        }
+      ],
+      "mapping_status": "reference_structure_candidate",
+      "historical_MNN_provenance_confirmed": false,
+      "numerical_equivalence_confirmed": false,
+      "reference_parameters": [
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.2.convs1.1.weight",
+          "module_name": "resblocks.2.convs1.1.weight",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768,
+            768,
+            11
+          ],
+          "checkpoint_offsets": [
+            176573472,
+            202525728
+          ],
+          "raw_tensor_sha256": "c33befe45be076a43222983276722dd01e236830c7a2aac3167d5f9606d2834b"
+        },
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.2.convs1.1.bias",
+          "module_name": "resblocks.2.convs1.1.bias",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768
+          ],
+          "checkpoint_offsets": [
+            176570400,
+            176573472
+          ],
+          "raw_tensor_sha256": "956c759d9de1f68898ab3f89d065b8be97be28687bc6049a057894bba10bf3fa"
+        }
+      ]
+    },
+    {
+      "executor": "talker",
+      "runtime_name": "/resblocks.5/convs1.0/Conv_output_0",
+      "runtime_type": "Convolution",
+      "output_tensor_backends": [
+        3
+      ],
+      "calls": 14,
+      "total_instrumented_host_us": 5030962.0,
+      "max_instrumented_host_us": 383480.0,
+      "first_source_line": 820999,
+      "reference_candidates": [
+        {
+          "index": 1685,
+          "node_id": "n001685",
+          "name": "/resblocks.5/convs1.0/Conv",
+          "op_type": "Conv",
+          "inputs": [
+            "/resblocks.5/activations.0/downsample/Conv_output_0",
+            "resblocks.5.convs1.0.weight",
+            "resblocks.5.convs1.0.bias"
+          ],
+          "outputs": [
+            "/resblocks.5/convs1.0/Conv_output_0"
+          ]
+        }
+      ],
+      "mapping_status": "reference_structure_candidate",
+      "historical_MNN_provenance_confirmed": false,
+      "numerical_equivalence_confirmed": false,
+      "reference_parameters": [
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.5.convs1.0.weight",
+          "module_name": "resblocks.5.convs1.0.weight",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            384,
+            384,
+            11
+          ],
+          "checkpoint_offsets": [
+            341811744,
+            348299808
+          ],
+          "raw_tensor_sha256": "3ca050582f661b744d1864b1d6af4a5476adb77c3fe5ec1ae0e315a6c6417a42"
+        },
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.5.convs1.0.bias",
+          "module_name": "resblocks.5.convs1.0.bias",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            384
+          ],
+          "checkpoint_offsets": [
+            341810208,
+            341811744
+          ],
+          "raw_tensor_sha256": "224c2fb1efcb51dd217d6d82f3696caa3801670f08d5278846aca0b444d08fb0"
+        }
+      ]
+    },
+    {
+      "executor": "talker",
+      "runtime_name": "/resblocks.5/convs1.1/Conv_output_0",
+      "runtime_type": "Convolution",
+      "output_tensor_backends": [
+        3
+      ],
+      "calls": 14,
+      "total_instrumented_host_us": 5021910.0,
+      "max_instrumented_host_us": 382585.0,
+      "first_source_line": 821032,
+      "reference_candidates": [
+        {
+          "index": 1798,
+          "node_id": "n001798",
+          "name": "/resblocks.5/convs1.1/Conv",
+          "op_type": "Conv",
+          "inputs": [
+            "/resblocks.5/activations.2/downsample/Conv_output_0",
+            "resblocks.5.convs1.1.weight",
+            "resblocks.5.convs1.1.bias"
+          ],
+          "outputs": [
+            "/resblocks.5/convs1.1/Conv_output_0"
+          ]
+        }
+      ],
+      "mapping_status": "reference_structure_candidate",
+      "historical_MNN_provenance_confirmed": false,
+      "numerical_equivalence_confirmed": false,
+      "reference_parameters": [
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.5.convs1.1.weight",
+          "module_name": "resblocks.5.convs1.1.weight",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            384,
+            384,
+            11
+          ],
+          "checkpoint_offsets": [
+            348301344,
+            354789408
+          ],
+          "raw_tensor_sha256": "dd129b968694ba2ccfa3618316fe012bc29da55a1da64a332a111712c9f8da81"
+        },
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.5.convs1.1.bias",
+          "module_name": "resblocks.5.convs1.1.bias",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            384
+          ],
+          "checkpoint_offsets": [
+            348299808,
+            348301344
+          ],
+          "raw_tensor_sha256": "cd3c2709633a8cdd10b44e5cb22b79c4c75099e4457d73c5302bf36392004af7"
+        }
+      ]
+    },
+    {
+      "executor": "talker",
+      "runtime_name": "/resblocks.5/convs2.0/Conv_output_0",
+      "runtime_type": "Convolution",
+      "output_tensor_backends": [
+        3
+      ],
+      "calls": 14,
+      "total_instrumented_host_us": 5020692.0,
+      "max_instrumented_host_us": 383270.0,
+      "first_source_line": 821015,
+      "reference_candidates": [
+        {
+          "index": 1741,
+          "node_id": "n001741",
+          "name": "/resblocks.5/convs2.0/Conv",
+          "op_type": "Conv",
+          "inputs": [
+            "/resblocks.5/activations.1/downsample/Conv_output_0",
+            "resblocks.5.convs2.0.weight",
+            "resblocks.5.convs2.0.bias"
+          ],
+          "outputs": [
+            "/resblocks.5/convs2.0/Conv_output_0"
+          ]
+        }
+      ],
+      "mapping_status": "reference_structure_candidate",
+      "historical_MNN_provenance_confirmed": false,
+      "numerical_equivalence_confirmed": false,
+      "reference_parameters": [
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.5.convs2.0.weight",
+          "module_name": "resblocks.5.convs2.0.weight",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            384,
+            384,
+            11
+          ],
+          "checkpoint_offsets": [
+            361280544,
+            367768608
+          ],
+          "raw_tensor_sha256": "1634df6cd4af08bd754e4557f502cf6c45e7d83ccb637d1dd09077e6e8721ef0"
+        },
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.5.convs2.0.bias",
+          "module_name": "resblocks.5.convs2.0.bias",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            384
+          ],
+          "checkpoint_offsets": [
+            361279008,
+            361280544
+          ],
+          "raw_tensor_sha256": "69f3775d1812d6ab2957d5d1ca2501b978141c7aea3b89e0d08e8678bfb18d12"
+        }
+      ]
+    },
+    {
+      "executor": "talker",
+      "runtime_name": "/resblocks.5/convs2.2/Conv_output_0",
+      "runtime_type": "Convolution",
+      "output_tensor_backends": [
+        3
+      ],
+      "calls": 14,
+      "total_instrumented_host_us": 5011425.0,
+      "max_instrumented_host_us": 379676.0,
+      "first_source_line": 821081,
+      "reference_candidates": [
+        {
+          "index": 1967,
+          "node_id": "n001967",
+          "name": "/resblocks.5/convs2.2/Conv",
+          "op_type": "Conv",
+          "inputs": [
+            "/resblocks.5/activations.5/downsample/Conv_output_0",
+            "resblocks.5.convs2.2.weight",
+            "resblocks.5.convs2.2.bias"
+          ],
+          "outputs": [
+            "/resblocks.5/convs2.2/Conv_output_0"
+          ]
+        }
+      ],
+      "mapping_status": "reference_structure_candidate",
+      "historical_MNN_provenance_confirmed": false,
+      "numerical_equivalence_confirmed": false,
+      "reference_parameters": [
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.5.convs2.2.weight",
+          "module_name": "resblocks.5.convs2.2.weight",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            384,
+            384,
+            11
+          ],
+          "checkpoint_offsets": [
+            374259744,
+            380747808
+          ],
+          "raw_tensor_sha256": "bcde8714d0c79eb145b83dcd4a7dac8265d137ea3d0d7b562c96138492c760e8"
+        },
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.5.convs2.2.bias",
+          "module_name": "resblocks.5.convs2.2.bias",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            384
+          ],
+          "checkpoint_offsets": [
+            374258208,
+            374259744
+          ],
+          "raw_tensor_sha256": "71453778a3976ab0ac351789686a4e61923320ccc9e5f844a1146b04551ae97f"
+        }
+      ]
+    },
+    {
+      "executor": "talker",
+      "runtime_name": "/resblocks.5/convs2.1/Conv_output_0",
+      "runtime_type": "Convolution",
+      "output_tensor_backends": [
+        3
+      ],
+      "calls": 14,
+      "total_instrumented_host_us": 4998267.0,
+      "max_instrumented_host_us": 378573.0,
+      "first_source_line": 821048,
+      "reference_candidates": [
+        {
+          "index": 1854,
+          "node_id": "n001854",
+          "name": "/resblocks.5/convs2.1/Conv",
+          "op_type": "Conv",
+          "inputs": [
+            "/resblocks.5/activations.3/downsample/Conv_output_0",
+            "resblocks.5.convs2.1.weight",
+            "resblocks.5.convs2.1.bias"
+          ],
+          "outputs": [
+            "/resblocks.5/convs2.1/Conv_output_0"
+          ]
+        }
+      ],
+      "mapping_status": "reference_structure_candidate",
+      "historical_MNN_provenance_confirmed": false,
+      "numerical_equivalence_confirmed": false,
+      "reference_parameters": [
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.5.convs2.1.weight",
+          "module_name": "resblocks.5.convs2.1.weight",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            384,
+            384,
+            11
+          ],
+          "checkpoint_offsets": [
+            367770144,
+            374258208
+          ],
+          "raw_tensor_sha256": "b2015a677920cdd8d20670cded88b97c1b617a977aa7adc64a3a0a1bfc3fdbca"
+        },
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.5.convs2.1.bias",
+          "module_name": "resblocks.5.convs2.1.bias",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            384
+          ],
+          "checkpoint_offsets": [
+            367768608,
+            367770144
+          ],
+          "raw_tensor_sha256": "12fea4c109337beab5f46a01c780b0ccea18ca432d1fefae589df3bacc1b0012"
+        }
+      ]
+    },
+    {
+      "executor": "talker",
+      "runtime_name": "/resblocks.5/convs1.2/Conv_output_0",
+      "runtime_type": "Convolution",
+      "output_tensor_backends": [
+        3
+      ],
+      "calls": 14,
+      "total_instrumented_host_us": 4983125.0,
+      "max_instrumented_host_us": 377949.0,
+      "first_source_line": 821065,
+      "reference_candidates": [
+        {
+          "index": 1911,
+          "node_id": "n001911",
+          "name": "/resblocks.5/convs1.2/Conv",
+          "op_type": "Conv",
+          "inputs": [
+            "/resblocks.5/activations.4/downsample/Conv_output_0",
+            "resblocks.5.convs1.2.weight",
+            "resblocks.5.convs1.2.bias"
+          ],
+          "outputs": [
+            "/resblocks.5/convs1.2/Conv_output_0"
+          ]
+        }
+      ],
+      "mapping_status": "reference_structure_candidate",
+      "historical_MNN_provenance_confirmed": false,
+      "numerical_equivalence_confirmed": false,
+      "reference_parameters": [
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.5.convs1.2.weight",
+          "module_name": "resblocks.5.convs1.2.weight",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            384,
+            384,
+            11
+          ],
+          "checkpoint_offsets": [
+            354790944,
+            361279008
+          ],
+          "raw_tensor_sha256": "5bdda9582bd8a5179bc3692784a060a5693fcbaf67196279451a5ac567d97ad5"
+        },
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.5.convs1.2.bias",
+          "module_name": "resblocks.5.convs1.2.bias",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            384
+          ],
+          "checkpoint_offsets": [
+            354789408,
+            354790944
+          ],
+          "raw_tensor_sha256": "cd16f42aae176ce32f44f2ed8c078ef0d47ffe9bb957e9a001f4a08bec681801"
+        }
+      ]
+    },
+    {
+      "executor": "talker",
+      "runtime_name": "/ups.1.0/ConvTranspose_output_0",
+      "runtime_type": "Deconvolution",
+      "output_tensor_backends": [
+        3
+      ],
+      "calls": 14,
+      "total_instrumented_host_us": 4327988.0,
+      "max_instrumented_host_us": 342894.0,
+      "first_source_line": 820792,
+      "reference_candidates": [
+        {
+          "index": 997,
+          "node_id": "n000997",
+          "name": "/ups.1.0/ConvTranspose",
+          "op_type": "ConvTranspose",
+          "inputs": [
+            "/Div_2_output_0",
+            "ups.1.0.weight",
+            "ups.1.0.bias"
+          ],
+          "outputs": [
+            "/ups.1.0/ConvTranspose_output_0"
+          ]
+        }
+      ],
+      "mapping_status": "reference_structure_candidate",
+      "historical_MNN_provenance_confirmed": false,
+      "numerical_equivalence_confirmed": false,
+      "reference_parameters": [
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.ups.1.0.weight",
+          "module_name": "ups.1.0.weight",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768,
+            384,
+            7
+          ],
+          "checkpoint_offsets": [
+            451948320,
+            460205856
+          ],
+          "raw_tensor_sha256": "9a9bc9bc45aa55cacebbbf860387c2fc99b099c04bf13519d7ed4c4686de33e8"
+        },
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.ups.1.0.bias",
+          "module_name": "ups.1.0.bias",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            384
+          ],
+          "checkpoint_offsets": [
+            451946784,
+            451948320
+          ],
+          "raw_tensor_sha256": "2bd9a2751b3e974782c26aa450678269e3264b139f8d310580e2515694d11861"
+        }
+      ]
+    },
+    {
+      "executor": "talker",
+      "runtime_name": "/resblocks.1/convs1.0/Conv_output_0",
+      "runtime_type": "Convolution",
+      "output_tensor_backends": [
+        3
+      ],
+      "calls": 14,
+      "total_instrumented_host_us": 2866488.0,
+      "max_instrumented_host_us": 225896.0,
+      "first_source_line": 820610,
+      "reference_candidates": [
+        {
+          "index": 394,
+          "node_id": "n000394",
+          "name": "/resblocks.1/convs1.0/Conv",
+          "op_type": "Conv",
+          "inputs": [
+            "/resblocks.1/activations.0/downsample/Conv_output_0",
+            "resblocks.1.convs1.0.weight",
+            "resblocks.1.convs1.0.bias"
+          ],
+          "outputs": [
+            "/resblocks.1/convs1.0/Conv_output_0"
+          ]
+        }
+      ],
+      "mapping_status": "reference_structure_candidate",
+      "historical_MNN_provenance_confirmed": false,
+      "numerical_equivalence_confirmed": false,
+      "reference_parameters": [
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.1.convs1.0.weight",
+          "module_name": "resblocks.1.convs1.0.weight",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768,
+            768,
+            7
+          ],
+          "checkpoint_offsets": [
+            46010208,
+            62525280
+          ],
+          "raw_tensor_sha256": "d749c4d05ff9b3fdc6ed463791a370a310067f3af7929d4795a3f6e657848b61"
+        },
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.1.convs1.0.bias",
+          "module_name": "resblocks.1.convs1.0.bias",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768
+          ],
+          "checkpoint_offsets": [
+            46007136,
+            46010208
+          ],
+          "raw_tensor_sha256": "03044a52896268b4802384cd525bf41742ebf48eedb5d25bbde3a5def99f5eba"
+        }
+      ]
+    },
+    {
+      "executor": "talker",
+      "runtime_name": "/resblocks.1/convs2.2/Conv_output_0",
+      "runtime_type": "Convolution",
+      "output_tensor_backends": [
+        3
+      ],
+      "calls": 14,
+      "total_instrumented_host_us": 2797233.7,
+      "max_instrumented_host_us": 216879.0,
+      "first_source_line": 820692,
+      "reference_candidates": [
+        {
+          "index": 676,
+          "node_id": "n000676",
+          "name": "/resblocks.1/convs2.2/Conv",
+          "op_type": "Conv",
+          "inputs": [
+            "/resblocks.1/activations.5/downsample/Conv_output_0",
+            "resblocks.1.convs2.2.weight",
+            "resblocks.1.convs2.2.bias"
+          ],
+          "outputs": [
+            "/resblocks.1/convs2.2/Conv_output_0"
+          ]
+        }
+      ],
+      "mapping_status": "reference_structure_candidate",
+      "historical_MNN_provenance_confirmed": false,
+      "numerical_equivalence_confirmed": false,
+      "reference_parameters": [
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.1.convs2.2.weight",
+          "module_name": "resblocks.1.convs2.2.weight",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768,
+            768,
+            7
+          ],
+          "checkpoint_offsets": [
+            128600928,
+            145116000
+          ],
+          "raw_tensor_sha256": "17c2b138bd7d7d8c9b32baf798e0bbf0c8f626ebb2534cd8ea8b279455de2fa2"
+        },
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.1.convs2.2.bias",
+          "module_name": "resblocks.1.convs2.2.bias",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768
+          ],
+          "checkpoint_offsets": [
+            128597856,
+            128600928
+          ],
+          "raw_tensor_sha256": "41aa7144a03e15bc39c35fb4d5826e3f484d28cb55c246a98bdfc0b3eef66fad"
+        }
+      ]
+    },
+    {
+      "executor": "talker",
+      "runtime_name": "/resblocks.1/convs1.1/Conv_output_0",
+      "runtime_type": "Convolution",
+      "output_tensor_backends": [
+        3
+      ],
+      "calls": 14,
+      "total_instrumented_host_us": 2791132.0,
+      "max_instrumented_host_us": 217698.0,
+      "first_source_line": 820643,
+      "reference_candidates": [
+        {
+          "index": 507,
+          "node_id": "n000507",
+          "name": "/resblocks.1/convs1.1/Conv",
+          "op_type": "Conv",
+          "inputs": [
+            "/resblocks.1/activations.2/downsample/Conv_output_0",
+            "resblocks.1.convs1.1.weight",
+            "resblocks.1.convs1.1.bias"
+          ],
+          "outputs": [
+            "/resblocks.1/convs1.1/Conv_output_0"
+          ]
+        }
+      ],
+      "mapping_status": "reference_structure_candidate",
+      "historical_MNN_provenance_confirmed": false,
+      "numerical_equivalence_confirmed": false,
+      "reference_parameters": [
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.1.convs1.1.weight",
+          "module_name": "resblocks.1.convs1.1.weight",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768,
+            768,
+            7
+          ],
+          "checkpoint_offsets": [
+            62528352,
+            79043424
+          ],
+          "raw_tensor_sha256": "6f94a6862c7598a0a4a4bbfe2be6ed5e6fc7c7e762238fcaf4f7577c0bb3aa24"
+        },
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.1.convs1.1.bias",
+          "module_name": "resblocks.1.convs1.1.bias",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768
+          ],
+          "checkpoint_offsets": [
+            62525280,
+            62528352
+          ],
+          "raw_tensor_sha256": "a2c7204286cfb6319cd611250ab7bd7e6554672e24a0faab936d6ace0006baca"
+        }
+      ]
+    },
+    {
+      "executor": "talker",
+      "runtime_name": "/resblocks.1/convs2.0/Conv_output_0",
+      "runtime_type": "Convolution",
+      "output_tensor_backends": [
+        3
+      ],
+      "calls": 14,
+      "total_instrumented_host_us": 2789916.9,
+      "max_instrumented_host_us": 211326.0,
+      "first_source_line": 820626,
+      "reference_candidates": [
+        {
+          "index": 450,
+          "node_id": "n000450",
+          "name": "/resblocks.1/convs2.0/Conv",
+          "op_type": "Conv",
+          "inputs": [
+            "/resblocks.1/activations.1/downsample/Conv_output_0",
+            "resblocks.1.convs2.0.weight",
+            "resblocks.1.convs2.0.bias"
+          ],
+          "outputs": [
+            "/resblocks.1/convs2.0/Conv_output_0"
+          ]
+        }
+      ],
+      "mapping_status": "reference_structure_candidate",
+      "historical_MNN_provenance_confirmed": false,
+      "numerical_equivalence_confirmed": false,
+      "reference_parameters": [
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.1.convs2.0.weight",
+          "module_name": "resblocks.1.convs2.0.weight",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768,
+            768,
+            7
+          ],
+          "checkpoint_offsets": [
+            95564640,
+            112079712
+          ],
+          "raw_tensor_sha256": "3fd7af00cb933d02e5b5a116695885dd9a26833e745ebbac04c405cb96e8bbb4"
+        },
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.1.convs2.0.bias",
+          "module_name": "resblocks.1.convs2.0.bias",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768
+          ],
+          "checkpoint_offsets": [
+            95561568,
+            95564640
+          ],
+          "raw_tensor_sha256": "88e0d0169c2f80558085533117aca9f22d13217c602bc58b8e401d46b22ea164"
+        }
+      ]
+    },
+    {
+      "executor": "talker",
+      "runtime_name": "/resblocks.1/convs2.1/Conv_output_0",
+      "runtime_type": "Convolution",
+      "output_tensor_backends": [
+        3
+      ],
+      "calls": 14,
+      "total_instrumented_host_us": 2786866.9,
+      "max_instrumented_host_us": 211126.0,
+      "first_source_line": 820659,
+      "reference_candidates": [
+        {
+          "index": 563,
+          "node_id": "n000563",
+          "name": "/resblocks.1/convs2.1/Conv",
+          "op_type": "Conv",
+          "inputs": [
+            "/resblocks.1/activations.3/downsample/Conv_output_0",
+            "resblocks.1.convs2.1.weight",
+            "resblocks.1.convs2.1.bias"
+          ],
+          "outputs": [
+            "/resblocks.1/convs2.1/Conv_output_0"
+          ]
+        }
+      ],
+      "mapping_status": "reference_structure_candidate",
+      "historical_MNN_provenance_confirmed": false,
+      "numerical_equivalence_confirmed": false,
+      "reference_parameters": [
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.1.convs2.1.weight",
+          "module_name": "resblocks.1.convs2.1.weight",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768,
+            768,
+            7
+          ],
+          "checkpoint_offsets": [
+            112082784,
+            128597856
+          ],
+          "raw_tensor_sha256": "96b0c31e7e2f58235e5473c735e049a7cb79b12393490f658aa85b601cc11f1c"
+        },
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.1.convs2.1.bias",
+          "module_name": "resblocks.1.convs2.1.bias",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768
+          ],
+          "checkpoint_offsets": [
+            112079712,
+            112082784
+          ],
+          "raw_tensor_sha256": "4bf59b048335e2c5922467d9c29856373f4a50c7c02254f2ad4bc4637ca91494"
+        }
+      ]
+    },
+    {
+      "executor": "talker",
+      "runtime_name": "/resblocks.1/convs1.2/Conv_output_0",
+      "runtime_type": "Convolution",
+      "output_tensor_backends": [
+        3
+      ],
+      "calls": 14,
+      "total_instrumented_host_us": 2784528.1,
+      "max_instrumented_host_us": 222041.0,
+      "first_source_line": 820676,
+      "reference_candidates": [
+        {
+          "index": 620,
+          "node_id": "n000620",
+          "name": "/resblocks.1/convs1.2/Conv",
+          "op_type": "Conv",
+          "inputs": [
+            "/resblocks.1/activations.4/downsample/Conv_output_0",
+            "resblocks.1.convs1.2.weight",
+            "resblocks.1.convs1.2.bias"
+          ],
+          "outputs": [
+            "/resblocks.1/convs1.2/Conv_output_0"
+          ]
+        }
+      ],
+      "mapping_status": "reference_structure_candidate",
+      "historical_MNN_provenance_confirmed": false,
+      "numerical_equivalence_confirmed": false,
+      "reference_parameters": [
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.1.convs1.2.weight",
+          "module_name": "resblocks.1.convs1.2.weight",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768,
+            768,
+            7
+          ],
+          "checkpoint_offsets": [
+            79046496,
+            95561568
+          ],
+          "raw_tensor_sha256": "12ee36efdd69d26defd7593b810e99fd1881aae9f5af12515cd235920874030d"
+        },
+        {
+          "checkpoint_name": "token2wav.code2wav_bigvgan_model.resblocks.1.convs1.2.bias",
+          "module_name": "resblocks.1.convs1.2.bias",
+          "shard": "model-00003-of-00003.safetensors",
+          "dtype": "torch.float32",
+          "shape": [
+            768
+          ],
+          "checkpoint_offsets": [
+            79043424,
+            79046496
+          ],
+          "raw_tensor_sha256": "92b08cb736750112c3c86379c9e6bb5ef4342d2b83e6e4eef7d8fe6dcbe1fc03"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "The reference ONNX was newly exported from original weights. It is not the historical source of the deployed MNN snapshot.",
+    "All matches are review candidates; quantization, activation export rewrites and runtime fusion can change the executed computation.",
+    "Durations are instrumented synchronized host callbacks, not pure OpenCL kernel times or clean end-to-end timings."
+  ],
+  "checks_at_export_time": {
+    "onnx_checker": "passed",
+    "reference_finite": true,
+    "reference_output_shape": [
+      3840
+    ],
+    "onnxruntime_numeric_comparison": "not_run",
+    "MNN_numeric_comparison": "not_run"
+  },
+  "post_export_validation": {
+    "path": "reference_ort_validation.json",
+    "scope": "Parent reference ONNX versus original HF PyTorch output, Mac CPU, one static mel16 input; not deployed MNN equivalence",
+    "allclose": true,
+    "max_abs": 6.502866744995117e-05,
+    "relative_l2": 2.079861042147968e-05
+  }
+}

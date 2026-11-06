@@ -1,0 +1,19 @@
+[
+  "c++",
+  "-std=c++17",
+  "-O3",
+  "-DNDEBUG",
+  "-DMNN_BUILD_STATIC_LIBS",
+  "-DLLM_SUPPORT_AUDIO",
+  "-DLLM_SUPPORT_VISION",
+  "-I${BOARD_PROJECT}/src/MNN/include",
+  "-I${BOARD_PROJECT}/src/MNN/transformers/llm/engine/app",
+  "-I${BOARD_PROJECT}/src/MNN/transformers/llm/engine/include",
+  "${BOARD_PROJECT}/experiments/convtranspose_opt_20261105/src/omni_ab.cpp",
+  "${BOARD_PROJECT}/experiments/convtranspose_opt_20261105/bin/libMNN_sync_probe.a",
+  "/lib/librknnrt.so",
+  "-pthread",
+  "-ldl",
+  "-o",
+  "${BOARD_PROJECT}/experiments/convtranspose_opt_20261105/bin/omni_ab_sync"
+]

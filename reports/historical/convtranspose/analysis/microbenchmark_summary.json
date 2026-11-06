@@ -1,0 +1,2404 @@
+{
+  "schema_version": 1,
+  "source_policy": "Retrieved raw results.jsonl only; previous summaries not read",
+  "timing_units": "microseconds",
+  "std_definition": "sample standard deviation, ddof=1",
+  "p95_definition": "linear interpolation at (n-1)*0.95; descriptive statistic of 15 measurements",
+  "primary_result": "profile0 host_enqueue_to_finish; profiled device_event is explanatory only",
+  "timing_domain_rule": "Host and device timings are separate overlapping domains and must not be added",
+  "speedup_definition": "old/new; reduction_pct=100*(1-new/old); saved=old-new",
+  "expected_cases": [
+    [
+      52,
+      0
+    ],
+    [
+      52,
+      1
+    ],
+    [
+      120,
+      0
+    ],
+    [
+      120,
+      1
+    ],
+    [
+      136,
+      0
+    ],
+    [
+      136,
+      1
+    ]
+  ],
+  "coverage_passed": true,
+  "audit_passed": true,
+  "cases": [
+    {
+      "case": "T120_profile0",
+      "source": {
+        "path": "${TASK_ROOT}/work/convtranspose_opt/resume_20261106/board/bench/T120_profile0/results.jsonl",
+        "sha256": "102138d5c37c6b0837536fce5198abe89595db5e8bb6f0bd873d6212a909d696"
+      },
+      "manifest": {
+        "kind": "manifest",
+        "device": "Mali-G610 r0p0",
+        "driver": "3.0",
+        "T": 120,
+        "axis": "h",
+        "tile": 4,
+        "warmup": 3,
+        "reps": 15,
+        "profiling_queue": false,
+        "old_lws": [
+          0,
+          0,
+          0
+        ],
+        "new_lws": [
+          8,
+          4,
+          1
+        ],
+        "old_gws": [
+          192,
+          1,
+          600
+        ],
+        "new_gws": [
+          192,
+          30,
+          5
+        ],
+        "old_build_ms": 59.46732,
+        "candidate_build_ms": 51.665377,
+        "build_options": "-DFLOAT=half -DFLOAT4=half4 -DMNN_SUPPORT_FP16 -DUSE_BUFFER -DBIAS -cl-mad-enable -w -DBIGVGAN_TILE=4",
+        "timing_scope": "Resident buffers; device event and synchronized enqueue-to-finish host; no validation/readback/packing"
+      },
+      "correctness_records": [
+        {
+          "kind": "correctness",
+          "elements": 460800,
+          "bit_mismatches": 0,
+          "numeric_failures": 0,
+          "nonfinite": 0,
+          "max_abs": 0,
+          "rmse": 0,
+          "atol": 0,
+          "rtol": 0,
+          "passed": true
+        }
+      ],
+      "baseline_vs_mnn_capture": [
+        {
+          "kind": "baseline_vs_mnn_capture",
+          "numeric_mismatches": 0,
+          "max_abs": 0,
+          "passed": true
+        }
+      ],
+      "sample_rows": 30,
+      "paired_rows": 15,
+      "audit_passed": true,
+      "gain_eligible": true,
+      "audit_errors": [],
+      "summaries_us": {
+        "host_enqueue_to_finish": {
+          "old": {
+            "n": 15,
+            "median": 850644.925,
+            "mean": 846572.4381333333,
+            "p95": 860886.9308,
+            "min": 778345.043,
+            "max": 862793.539,
+            "std": 20325.685789916806
+          },
+          "new": {
+            "n": 15,
+            "median": 64446.955,
+            "mean": 64271.33526666667,
+            "p95": 65464.3922,
+            "min": 62948.135,
+            "max": 66046.277,
+            "std": 846.2448050601863
+          },
+          "paired_saved": {
+            "n": 15,
+            "median": 786976.067,
+            "mean": 782301.1028666666,
+            "p95": 796630.7089,
+            "min": 713502.4979999999,
+            "max": 798242.664,
+            "std": 20532.366562167586
+          },
+          "paired_speedup": {
+            "n": 15,
+            "median": 13.214795993541328,
+            "mean": 13.174855833867799,
+            "p95": 13.562930946757804,
+            "min": 12.00361649901311,
+            "max": 13.585969465179547,
+            "std": 0.391856640098311
+          },
+          "paired_reduction_pct": {
+            "n": 15,
+            "median": 92.43272464827497,
+            "mean": 92.40315508388306,
+            "p95": 92.62695327937244,
+            "min": 91.66917736765235,
+            "max": 92.63946527656366,
+            "std": 0.23901868981709984
+          },
+          "ratio_of_medians": 13.19914843145033,
+          "reduction_of_medians_pct": 92.42375365961303
+        }
+      },
+      "pairs_us": [
+        {
+          "rep": 0,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 858356.006,
+          "new": 65215.013,
+          "saved": 793140.993,
+          "speedup": 13.161938739473992,
+          "reduction_pct": 92.40233509824127
+        },
+        {
+          "rep": 1,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 857290.399,
+          "new": 63254.392,
+          "saved": 794036.007,
+          "speedup": 13.553057296005628,
+          "reduction_pct": 92.62159099486193
+        },
+        {
+          "rep": 2,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 855211.44,
+          "new": 62948.135,
+          "saved": 792263.3049999999,
+          "speedup": 13.585969465179547,
+          "reduction_pct": 92.63946527656366
+        },
+        {
+          "rep": 3,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 859358.766,
+          "new": 63418.895,
+          "saved": 795939.8709999999,
+          "speedup": 13.55051623021814,
+          "reduction_pct": 92.6202073558647
+        },
+        {
+          "rep": 4,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 862793.539,
+          "new": 64550.875,
+          "saved": 798242.664,
+          "speedup": 13.366101373529018,
+          "reduction_pct": 92.51838683506878
+        },
+        {
+          "rep": 5,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 850644.925,
+          "new": 63668.858,
+          "saved": 786976.067,
+          "speedup": 13.360455200877013,
+          "reduction_pct": 92.51522508054697
+        },
+        {
+          "rep": 6,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 860069.813,
+          "new": 64435.664,
+          "saved": 795634.149,
+          "speedup": 13.347729496509883,
+          "reduction_pct": 92.50808910787804
+        },
+        {
+          "rep": 7,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 849563.191,
+          "new": 64889.048,
+          "saved": 784674.143,
+          "speedup": 13.09255131929197,
+          "reduction_pct": 92.36206927425602
+        },
+        {
+          "rep": 8,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 835835.588,
+          "new": 64446.955,
+          "saved": 771388.633,
+          "speedup": 12.969357326502081,
+          "reduction_pct": 92.28951770835582
+        },
+        {
+          "rep": 9,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 847287.432,
+          "new": 64116.573,
+          "saved": 783170.859,
+          "speedup": 13.214795993541328,
+          "reduction_pct": 92.43272464827497
+        },
+        {
+          "rep": 10,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 845039.261,
+          "new": 66046.277,
+          "saved": 778992.984,
+          "speedup": 12.794653981783107,
+          "reduction_pct": 92.1842356860624
+        },
+        {
+          "rep": 11,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 844689.417,
+          "new": 64470.663,
+          "saved": 780218.754,
+          "speedup": 13.101919193851009,
+          "reduction_pct": 92.36753039608641
+        },
+        {
+          "rep": 12,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 851744.677,
+          "new": 64554.331,
+          "saved": 787190.346,
+          "speedup": 13.194229787618744,
+          "reduction_pct": 92.42092932974091
+        },
+        {
+          "rep": 13,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 842357.075,
+          "new": 63211.805,
+          "saved": 779145.2699999999,
+          "speedup": 13.325945604622428,
+          "reduction_pct": 92.49584209879166
+        },
+        {
+          "rep": 14,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 778345.043,
+          "new": 64842.545,
+          "saved": 713502.4979999999,
+          "speedup": 12.00361649901311,
+          "reduction_pct": 91.66917736765235
+        }
+      ]
+    },
+    {
+      "case": "T120_profile1",
+      "source": {
+        "path": "${TASK_ROOT}/work/convtranspose_opt/resume_20261106/board/bench/T120_profile1/results.jsonl",
+        "sha256": "a5320ef0a8e9fc75ecde89c470fcfce86f0a3dba156b33a14607e43a4c8b836a"
+      },
+      "manifest": {
+        "kind": "manifest",
+        "device": "Mali-G610 r0p0",
+        "driver": "3.0",
+        "T": 120,
+        "axis": "h",
+        "tile": 4,
+        "warmup": 3,
+        "reps": 15,
+        "profiling_queue": true,
+        "old_lws": [
+          0,
+          0,
+          0
+        ],
+        "new_lws": [
+          8,
+          4,
+          1
+        ],
+        "old_gws": [
+          192,
+          1,
+          600
+        ],
+        "new_gws": [
+          192,
+          30,
+          5
+        ],
+        "old_build_ms": 61.654867,
+        "candidate_build_ms": 48.794741,
+        "build_options": "-DFLOAT=half -DFLOAT4=half4 -DMNN_SUPPORT_FP16 -DUSE_BUFFER -DBIAS -cl-mad-enable -w -DBIGVGAN_TILE=4",
+        "timing_scope": "Resident buffers; device event and synchronized enqueue-to-finish host; no validation/readback/packing"
+      },
+      "correctness_records": [
+        {
+          "kind": "correctness",
+          "elements": 460800,
+          "bit_mismatches": 0,
+          "numeric_failures": 0,
+          "nonfinite": 0,
+          "max_abs": 0,
+          "rmse": 0,
+          "atol": 0,
+          "rtol": 0,
+          "passed": true
+        }
+      ],
+      "baseline_vs_mnn_capture": [
+        {
+          "kind": "baseline_vs_mnn_capture",
+          "numeric_mismatches": 0,
+          "max_abs": 0,
+          "passed": true
+        }
+      ],
+      "sample_rows": 30,
+      "paired_rows": 15,
+      "audit_passed": true,
+      "gain_eligible": true,
+      "audit_errors": [],
+      "summaries_us": {
+        "host_enqueue_to_finish": {
+          "old": {
+            "n": 15,
+            "median": 861764.717,
+            "mean": 860492.2868,
+            "p95": 869317.0835,
+            "min": 849091.996,
+            "max": 871881.6,
+            "std": 6306.758008823764
+          },
+          "new": {
+            "n": 15,
+            "median": 64481.586,
+            "mean": 64596.6962,
+            "p95": 65316.109,
+            "min": 63741.778,
+            "max": 65436.978,
+            "std": 506.84690660130826
+          },
+          "paired_saved": {
+            "n": 15,
+            "median": 796327.739,
+            "mean": 795895.5906,
+            "p95": 805024.8502999999,
+            "min": 784784.9550000001,
+            "max": 807400.014,
+            "std": 6307.039327841351
+          },
+          "paired_speedup": {
+            "n": 15,
+            "median": 13.330922599685273,
+            "mean": 13.321729595150629,
+            "p95": 13.521338969308825,
+            "min": 13.076177208924458,
+            "max": 13.521404389774158,
+            "std": 0.1397782433908886
+          },
+          "paired_reduction_pct": {
+            "n": 15,
+            "median": 92.49864371710021,
+            "mean": 92.4926932934241,
+            "p95": 92.60428273945455,
+            "min": 92.35250498656823,
+            "max": 92.60431852214796,
+            "std": 0.07903195743786556
+          },
+          "ratio_of_medians": 13.364508698653905,
+          "reduction_of_medians_pct": 92.5174952364637
+        },
+        "device_event": {
+          "old": {
+            "n": 15,
+            "median": 861145.968,
+            "mean": 859754.2405333334,
+            "p95": 868535.3776,
+            "min": 848447.09,
+            "max": 871131.917,
+            "std": 6299.092691472383
+          },
+          "new": {
+            "n": 15,
+            "median": 63846.001,
+            "mean": 63953.306666666664,
+            "p95": 64633.0224,
+            "min": 63239.085,
+            "max": 64747.205,
+            "std": 466.807448864651
+          },
+          "paired_saved": {
+            "n": 15,
+            "median": 796398.763,
+            "mean": 795800.9338666666,
+            "p95": 804890.2472,
+            "min": 784810.546,
+            "max": 807285.916,
+            "std": 6269.101656377693
+          },
+          "paired_speedup": {
+            "n": 15,
+            "median": 13.44991706843758,
+            "mean": 13.444066536037269,
+            "p95": 13.645239784352666,
+            "min": 13.195744719593234,
+            "max": 13.647508427714998,
+            "std": 0.13150775921584776
+          },
+          "paired_reduction_pct": {
+            "n": 15,
+            "median": 92.56500991856178,
+            "mean": 92.56110849337382,
+            "p95": 92.67143686993182,
+            "min": 92.42179944179138,
+            "max": 92.67265519346208,
+            "std": 0.07294153235566304
+          },
+          "ratio_of_medians": 13.487860704071348,
+          "reduction_of_medians_pct": 92.58592580439277
+        }
+      },
+      "pairs_us": [
+        {
+          "rep": 0,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 862605.233,
+          "new": 64306.75,
+          "saved": 798298.483,
+          "speedup": 13.413914293600595,
+          "reduction_pct": 92.54505450003455
+        },
+        {
+          "rep": 0,
+          "domain": "device_event",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 861899.72,
+          "new": 63640.872,
+          "saved": 798258.848,
+          "speedup": 13.54317898095425,
+          "reduction_pct": 92.6162092267532
+        },
+        {
+          "rep": 1,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 868218.005,
+          "new": 64211.082,
+          "saved": 804006.923,
+          "speedup": 13.521310931966541,
+          "reduction_pct": 92.60426740401451
+        },
+        {
+          "rep": 1,
+          "domain": "device_event",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 867422.575,
+          "new": 63559.043,
+          "saved": 803863.532,
+          "speedup": 13.647508427714998,
+          "reduction_pct": 92.67265519346208
+        },
+        {
+          "rep": 2,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 862281.387,
+          "new": 64682.799,
+          "saved": 797598.588,
+          "speedup": 13.330922599685273,
+          "reduction_pct": 92.49864371710021
+        },
+        {
+          "rep": 2,
+          "domain": "device_event",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 861391.519,
+          "new": 64044.374,
+          "saved": 797347.145,
+          "speedup": 13.44991706843758,
+          "reduction_pct": 92.56500991856178
+        },
+        {
+          "rep": 3,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 855779.132,
+          "new": 64439.169,
+          "saved": 791339.963,
+          "speedup": 13.280418498258411,
+          "reduction_pct": 92.47011681046693
+        },
+        {
+          "rep": 3,
+          "domain": "device_event",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 855138.326,
+          "new": 63694.958,
+          "saved": 791443.368,
+          "speedup": 13.42552617744092,
+          "reduction_pct": 92.55150236360707
+        },
+        {
+          "rep": 4,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 863077.397,
+          "new": 64834.385,
+          "saved": 798243.012,
+          "speedup": 13.31203183310831,
+          "reduction_pct": 92.48799873274865
+        },
+        {
+          "rep": 4,
+          "domain": "device_event",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 861909.488,
+          "new": 64169.129,
+          "saved": 797740.359,
+          "speedup": 13.431840223357247,
+          "reduction_pct": 92.55500375696062
+        },
+        {
+          "rep": 5,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 849091.996,
+          "new": 64307.041,
+          "saved": 784784.9550000001,
+          "speedup": 13.203717396979906,
+          "reduction_pct": 92.42637531587332
+        },
+        {
+          "rep": 5,
+          "domain": "device_event",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 848447.09,
+          "new": 63636.544,
+          "saved": 784810.546,
+          "speedup": 13.332702197026915,
+          "reduction_pct": 92.49964496902217
+        },
+        {
+          "rep": 6,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 856339.093,
+          "new": 64012.327,
+          "saved": 792326.766,
+          "speedup": 13.377721653518392,
+          "reduction_pct": 92.52488558291242
+        },
+        {
+          "rep": 6,
+          "domain": "device_event",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 855532.511,
+          "new": 63368.045,
+          "saved": 792164.466,
+          "speedup": 13.50100844992141,
+          "reduction_pct": 92.5931458845519
+        },
+        {
+          "rep": 7,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 871881.6,
+          "new": 64481.586,
+          "saved": 807400.014,
+          "speedup": 13.521404389774158,
+          "reduction_pct": 92.60431852214796
+        },
+        {
+          "rep": 7,
+          "domain": "device_event",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 871131.917,
+          "new": 63846.001,
+          "saved": 807285.916,
+          "speedup": 13.644267508625953,
+          "reduction_pct": 92.670914731276
+        },
+        {
+          "rep": 8,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 852991.939,
+          "new": 65232.516,
+          "saved": 787759.423,
+          "speedup": 13.076177208924458,
+          "reduction_pct": 92.35250498656823
+        },
+        {
+          "rep": 8,
+          "domain": "device_event",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 852235.125,
+          "new": 64584.087,
+          "saved": 787651.038,
+          "speedup": 13.195744719593234,
+          "reduction_pct": 92.42179944179138
+        },
+        {
+          "rep": 9,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 867045.999,
+          "new": 64553.795,
+          "saved": 802492.2039999999,
+          "speedup": 13.431371447643007,
+          "reduction_pct": 92.5547439150342
+        },
+        {
+          "rep": 9,
+          "domain": "device_event",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 866506.817,
+          "new": 64105.128,
+          "saved": 802401.689,
+          "speedup": 13.516965709825898,
+          "reduction_pct": 92.60188993989185
+        },
+        {
+          "rep": 10,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 866218.564,
+          "new": 65230.766,
+          "saved": 800987.798,
+          "speedup": 13.27929468128582,
+          "reduction_pct": 92.46947956197346
+        },
+        {
+          "rep": 10,
+          "domain": "device_event",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 865627.095,
+          "new": 64569.126,
+          "saved": 801057.9689999999,
+          "speedup": 13.406207403210011,
+          "reduction_pct": 92.54076883995873
+        },
+        {
+          "rep": 11,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 854653.878,
+          "new": 65264.308,
+          "saved": 789389.5700000001,
+          "speedup": 13.09527219686448,
+          "reduction_pct": 92.36365624962389
+        },
+        {
+          "rep": 11,
+          "domain": "device_event",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 853893.528,
+          "new": 64410.755,
+          "saved": 789482.773,
+          "speedup": 13.257002312734885,
+          "reduction_pct": 92.4568165833434
+        },
+        {
+          "rep": 12,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 858252.611,
+          "new": 64215.163,
+          "saved": 794037.4480000001,
+          "speedup": 13.365264073222084,
+          "reduction_pct": 92.51791813074949
+        },
+        {
+          "rep": 12,
+          "domain": "device_event",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 857479.072,
+          "new": 63685.248,
+          "saved": 793793.824,
+          "speedup": 13.464328065425764,
+          "reduction_pct": 92.57296765838736
+        },
+        {
+          "rep": 13,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 861764.717,
+          "new": 65436.978,
+          "saved": 796327.739,
+          "speedup": 13.169384396082593,
+          "reduction_pct": 92.40663063721138
+        },
+        {
+          "rep": 13,
+          "domain": "device_event",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 861145.968,
+          "new": 64747.205,
+          "saved": 796398.763,
+          "speedup": 13.300125742879557,
+          "reduction_pct": 92.48127409219896
+        },
+        {
+          "rep": 14,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 857182.751,
+          "new": 63741.778,
+          "saved": 793440.973,
+          "speedup": 13.4477383263454,
+          "reduction_pct": 92.56380533490227
+        },
+        {
+          "rep": 14,
+          "domain": "device_event",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 856552.857,
+          "new": 63239.085,
+          "saved": 793313.772,
+          "speedup": 13.544675053410403,
+          "reduction_pct": 92.61702480084075
+        }
+      ]
+    },
+    {
+      "case": "T136_profile0",
+      "source": {
+        "path": "${TASK_ROOT}/work/convtranspose_opt/resume_20261106/board/bench/T136_profile0/results.jsonl",
+        "sha256": "03c34b6e3e0ef4f574ad8a76610d3d9678f95cc0f6095e1169447ba60d93363a"
+      },
+      "manifest": {
+        "kind": "manifest",
+        "device": "Mali-G610 r0p0",
+        "driver": "3.0",
+        "T": 136,
+        "axis": "h",
+        "tile": 4,
+        "warmup": 3,
+        "reps": 15,
+        "profiling_queue": false,
+        "old_lws": [
+          0,
+          0,
+          0
+        ],
+        "new_lws": [
+          8,
+          4,
+          1
+        ],
+        "old_gws": [
+          192,
+          1,
+          680
+        ],
+        "new_gws": [
+          192,
+          34,
+          5
+        ],
+        "old_build_ms": 56.3015,
+        "candidate_build_ms": 44.245519,
+        "build_options": "-DFLOAT=half -DFLOAT4=half4 -DMNN_SUPPORT_FP16 -DUSE_BUFFER -DBIAS -cl-mad-enable -w -DBIGVGAN_TILE=4",
+        "timing_scope": "Resident buffers; device event and synchronized enqueue-to-finish host; no validation/readback/packing"
+      },
+      "correctness_records": [
+        {
+          "kind": "correctness",
+          "elements": 522240,
+          "bit_mismatches": 0,
+          "numeric_failures": 0,
+          "nonfinite": 0,
+          "max_abs": 0,
+          "rmse": 0,
+          "atol": 0,
+          "rtol": 0,
+          "passed": true
+        }
+      ],
+      "baseline_vs_mnn_capture": [
+        {
+          "kind": "baseline_vs_mnn_capture",
+          "numeric_mismatches": 0,
+          "max_abs": 0,
+          "passed": true
+        }
+      ],
+      "sample_rows": 30,
+      "paired_rows": 15,
+      "audit_passed": true,
+      "gain_eligible": true,
+      "audit_errors": [],
+      "summaries_us": {
+        "host_enqueue_to_finish": {
+          "old": {
+            "n": 15,
+            "median": 975302.268,
+            "mean": 974295.0423333334,
+            "p95": 982196.5988,
+            "min": 961807.287,
+            "max": 983391.545,
+            "std": 6561.624471542318
+          },
+          "new": {
+            "n": 15,
+            "median": 72878.692,
+            "mean": 72529.8322,
+            "p95": 73466.5007,
+            "min": 71242.704,
+            "max": 73852.879,
+            "std": 817.4509231068068
+          },
+          "paired_saved": {
+            "n": 15,
+            "median": 902418.6379999999,
+            "mean": 901765.2101333333,
+            "p95": 910103.1308,
+            "min": 888182.3330000001,
+            "max": 910417.5190000001,
+            "std": 6717.86366607164
+          },
+          "paired_speedup": {
+            "n": 15,
+            "median": 13.418686252445504,
+            "mean": 13.434742668876297,
+            "p95": 13.699052086113943,
+            "min": 13.026373853347005,
+            "max": 13.723711498804088,
+            "std": 0.18600942031368434
+          },
+          "paired_reduction_pct": {
+            "n": 15,
+            "median": 92.54770563088653,
+            "mean": 92.55527523381244,
+            "p95": 92.70021472298761,
+            "min": 92.32326654172405,
+            "max": 92.71334143036202,
+            "std": 0.10347603237385845
+          },
+          "ratio_of_medians": 13.38254352863523,
+          "reduction_of_medians_pct": 92.52757894745304
+        }
+      },
+      "pairs_us": [
+        {
+          "rep": 0,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 962035.212,
+          "new": 73852.879,
+          "saved": 888182.3330000001,
+          "speedup": 13.026373853347005,
+          "reduction_pct": 92.32326654172405
+        },
+        {
+          "rep": 1,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 961807.287,
+          "new": 71242.704,
+          "saved": 890564.583,
+          "speedup": 13.500432086350907,
+          "reduction_pct": 92.59282966942213
+        },
+        {
+          "rep": 2,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 981220.49,
+          "new": 71751.546,
+          "saved": 909468.944,
+          "speedup": 13.675252237770598,
+          "reduction_pct": 92.68752062036536
+        },
+        {
+          "rep": 3,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 975719.548,
+          "new": 73300.91,
+          "saved": 902418.6379999999,
+          "speedup": 13.311151907936749,
+          "reduction_pct": 92.48750215671603
+        },
+        {
+          "rep": 4,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 968982.665,
+          "new": 72878.692,
+          "saved": 896103.973,
+          "speedup": 13.295829527236851,
+          "reduction_pct": 92.47884460347905
+        },
+        {
+          "rep": 5,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 972987.863,
+          "new": 72898.442,
+          "saved": 900089.421,
+          "speedup": 13.347169518382849,
+          "reduction_pct": 92.50777478608693
+        },
+        {
+          "rep": 6,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 972905.608,
+          "new": 73263.699,
+          "saved": 899641.909,
+          "speedup": 13.279504328603448,
+          "reduction_pct": 92.46959844844476
+        },
+        {
+          "rep": 7,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 970144.552,
+          "new": 71567.625,
+          "saved": 898576.927,
+          "speedup": 13.555634296932448,
+          "reduction_pct": 92.62299367115345
+        },
+        {
+          "rep": 8,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 981684.479,
+          "new": 71716.086,
+          "saved": 909968.393,
+          "speedup": 13.688483766389595,
+          "reduction_pct": 92.69458899125571
+        },
+        {
+          "rep": 9,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 975302.268,
+          "new": 72682.396,
+          "saved": 902619.8720000001,
+          "speedup": 13.418686252445504,
+          "reduction_pct": 92.54770563088653
+        },
+        {
+          "rep": 10,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 983391.545,
+          "new": 72974.026,
+          "saved": 910417.5190000001,
+          "speedup": 13.475911895007686,
+          "reduction_pct": 92.57935189995965
+        },
+        {
+          "rep": 11,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 977565.554,
+          "new": 72312.055,
+          "saved": 905253.4990000001,
+          "speedup": 13.51870796646562,
+          "reduction_pct": 92.60284338946747
+        },
+        {
+          "rep": 12,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 972572.748,
+          "new": 73084.319,
+          "saved": 899488.429,
+          "speedup": 13.307543414340358,
+          "reduction_pct": 92.48546505644018
+        },
+        {
+          "rep": 13,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 978787.03,
+          "new": 71320.869,
+          "saved": 907466.1610000001,
+          "speedup": 13.723711498804088,
+          "reduction_pct": 92.71334143036202
+        },
+        {
+          "rep": 14,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 979318.786,
+          "new": 73101.235,
+          "saved": 906217.551,
+          "speedup": 13.396747483130756,
+          "reduction_pct": 92.53550161142319
+        }
+      ]
+    },
+    {
+      "case": "T136_profile1",
+      "source": {
+        "path": "${TASK_ROOT}/work/convtranspose_opt/resume_20261106/board/bench/T136_profile1/results.jsonl",
+        "sha256": "17f61cee9f4f09fe5e97a21ac8ed3d106a0c158102ea15c91edfcb36a440a72a"
+      },
+      "manifest": {
+        "kind": "manifest",
+        "device": "Mali-G610 r0p0",
+        "driver": "3.0",
+        "T": 136,
+        "axis": "h",
+        "tile": 4,
+        "warmup": 3,
+        "reps": 15,
+        "profiling_queue": true,
+        "old_lws": [
+          0,
+          0,
+          0
+        ],
+        "new_lws": [
+          8,
+          4,
+          1
+        ],
+        "old_gws": [
+          192,
+          1,
+          680
+        ],
+        "new_gws": [
+          192,
+          34,
+          5
+        ],
+        "old_build_ms": 56.877266,
+        "candidate_build_ms": 44.778407,
+        "build_options": "-DFLOAT=half -DFLOAT4=half4 -DMNN_SUPPORT_FP16 -DUSE_BUFFER -DBIAS -cl-mad-enable -w -DBIGVGAN_TILE=4",
+        "timing_scope": "Resident buffers; device event and synchronized enqueue-to-finish host; no validation/readback/packing"
+      },
+      "correctness_records": [
+        {
+          "kind": "correctness",
+          "elements": 522240,
+          "bit_mismatches": 0,
+          "numeric_failures": 0,
+          "nonfinite": 0,
+          "max_abs": 0,
+          "rmse": 0,
+          "atol": 0,
+          "rtol": 0,
+          "passed": true
+        }
+      ],
+      "baseline_vs_mnn_capture": [
+        {
+          "kind": "baseline_vs_mnn_capture",
+          "numeric_mismatches": 0,
+          "max_abs": 0,
+          "passed": true
+        }
+      ],
+      "sample_rows": 30,
+      "paired_rows": 15,
+      "audit_passed": true,
+      "gain_eligible": true,
+      "audit_errors": [],
+      "summaries_us": {
+        "host_enqueue_to_finish": {
+          "old": {
+            "n": 15,
+            "median": 965522.266,
+            "mean": 965052.5344,
+            "p95": 975281.1994,
+            "min": 952252.186,
+            "max": 982865.39,
+            "std": 7369.3018217562185
+          },
+          "new": {
+            "n": 15,
+            "median": 73213.288,
+            "mean": 73171.21066666667,
+            "p95": 74098.0892,
+            "min": 71981.055,
+            "max": 74324.514,
+            "std": 730.5844528393163
+          },
+          "paired_saved": {
+            "n": 15,
+            "median": 892354.237,
+            "mean": 891881.3237333333,
+            "p95": 902597.1067,
+            "min": 879485.492,
+            "max": 908540.876,
+            "std": 7202.432323589659
+          },
+          "paired_speedup": {
+            "n": 15,
+            "median": 13.189362926828695,
+            "mean": 13.189941842990715,
+            "p95": 13.402417226933817,
+            "min": 13.03575937831261,
+            "max": 13.503981457343187,
+            "std": 0.14300476968677872
+          },
+          "paired_reduction_pct": {
+            "n": 15,
+            "median": 92.41813266078316,
+            "mean": 92.41763951350113,
+            "p95": 92.538476536912,
+            "min": 92.3287936592042,
+            "max": 92.5947765615731,
+            "std": 0.08162378159339259
+          },
+          "ratio_of_medians": 13.187800908490818,
+          "reduction_of_medians_pct": 92.41723463268117
+        },
+        "device_event": {
+          "old": {
+            "n": 15,
+            "median": 964759.159,
+            "mean": 964448.6389333333,
+            "p95": 974617.9608,
+            "min": 951793.78,
+            "max": 982207.036,
+            "std": 7339.173803584676
+          },
+          "new": {
+            "n": 15,
+            "median": 72626.334,
+            "mean": 72580.84553333333,
+            "p95": 73555.94189999999,
+            "min": 71365.417,
+            "max": 73734.794,
+            "std": 727.5471331009478
+          },
+          "paired_saved": {
+            "n": 15,
+            "median": 892389.678,
+            "mean": 891867.7934,
+            "p95": 902541.7307,
+            "min": 879682.821,
+            "max": 908472.242,
+            "std": 7161.712603910551
+          },
+          "paired_speedup": {
+            "n": 15,
+            "median": 13.288796209925728,
+            "mean": 13.288901949562621,
+            "p95": 13.50413064641104,
+            "min": 13.147964846020095,
+            "max": 13.61115146289974,
+            "std": 0.14292053501071494
+          },
+          "paired_reduction_pct": {
+            "n": 15,
+            "median": 92.47486390638548,
+            "mean": 92.4741176881102,
+            "p95": 92.59465994113508,
+            "min": 92.39426016336893,
+            "max": 92.65308300531572,
+            "std": 0.08030966810446631
+          },
+          "ratio_of_medians": 13.283875226305653,
+          "reduction_of_medians_pct": 92.47207623555714
+        }
+      },
+      "pairs_us": [
+        {
+          "rep": 0,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 965522.266,
+          "new": 73931.052,
+          "saved": 891591.2139999999,
+          "speedup": 13.059766361771777,
+          "reduction_pct": 92.34289517669187
+        },
+        {
+          "rep": 0,
+          "domain": "device_event",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 964759.159,
+          "new": 73279.962,
+          "saved": 891479.1969999999,
+          "speedup": 13.165388363602045,
+          "reduction_pct": 92.40432585517439
+        },
+        {
+          "rep": 1,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 961736.065,
+          "new": 73776.758,
+          "saved": 887959.3069999999,
+          "speedup": 13.03575937831261,
+          "reduction_pct": 92.3287936592042
+        },
+        {
+          "rep": 1,
+          "domain": "device_event",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 961011.533,
+          "new": 73092.037,
+          "saved": 887919.496,
+          "speedup": 13.147964846020095,
+          "reduction_pct": 92.39426016336893
+        },
+        {
+          "rep": 2,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 959555.061,
+          "new": 73506.377,
+          "saved": 886048.684,
+          "speedup": 13.054038304731032,
+          "reduction_pct": 92.33953527133761
+        },
+        {
+          "rep": 2,
+          "domain": "device_event",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 958945.738,
+          "new": 72912.377,
+          "saved": 886033.361,
+          "speedup": 13.152029565570192,
+          "reduction_pct": 92.39661076631221
+        },
+        {
+          "rep": 3,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 955722.44,
+          "new": 73213.288,
+          "saved": 882509.152,
+          "speedup": 13.053947802480883,
+          "reduction_pct": 92.33948216178747
+        },
+        {
+          "rep": 3,
+          "domain": "device_event",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 955085.781,
+          "new": 72586.959,
+          "saved": 882498.8219999999,
+          "speedup": 13.157815042230933,
+          "reduction_pct": 92.39995396811378
+        },
+        {
+          "rep": 4,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 960522.447,
+          "new": 73470.126,
+          "saved": 887052.321,
+          "speedup": 13.0736463824766,
+          "reduction_pct": 92.35102456694591
+        },
+        {
+          "rep": 4,
+          "domain": "device_event",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 959919.385,
+          "new": 72942.546,
+          "saved": 886976.839,
+          "speedup": 13.159938028486145,
+          "reduction_pct": 92.4011800220078
+        },
+        {
+          "rep": 5,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 972030.832,
+          "new": 71981.055,
+          "saved": 900049.777,
+          "speedup": 13.503981457343187,
+          "reduction_pct": 92.5947765615731
+        },
+        {
+          "rep": 5,
+          "domain": "device_event",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 971365.5,
+          "new": 71365.417,
+          "saved": 900000.083,
+          "speedup": 13.61115146289974,
+          "reduction_pct": 92.65308300531572
+        },
+        {
+          "rep": 6,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 960773.736,
+          "new": 72089.723,
+          "saved": 888684.013,
+          "speedup": 13.327471600910439,
+          "reduction_pct": 92.496701325316
+        },
+        {
+          "rep": 6,
+          "domain": "device_event",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 960358.955,
+          "new": 71562.836,
+          "saved": 888796.119,
+          "speedup": 13.419800118038921,
+          "reduction_pct": 92.54832418363819
+        },
+        {
+          "rep": 7,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 968132.124,
+          "new": 73172.994,
+          "saved": 894959.1299999999,
+          "speedup": 13.230729960291086,
+          "reduction_pct": 92.44183803160323
+        },
+        {
+          "rep": 7,
+          "domain": "device_event",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 967509.949,
+          "new": 72621.21,
+          "saved": 894888.7390000001,
+          "speedup": 13.322691111866629,
+          "reduction_pct": 92.49400896858374
+        },
+        {
+          "rep": 8,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 966647.051,
+          "new": 72433.979,
+          "saved": 894213.0719999999,
+          "speedup": 13.345215385723872,
+          "reduction_pct": 92.50667770360788
+        },
+        {
+          "rep": 8,
+          "domain": "device_event",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 966032.486,
+          "new": 71853.872,
+          "saved": 894178.6140000001,
+          "speedup": 13.4444040259932,
+          "reduction_pct": 92.56196110986686
+        },
+        {
+          "rep": 9,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 952252.186,
+          "new": 72766.694,
+          "saved": 879485.492,
+          "speedup": 13.086374186520002,
+          "reduction_pct": 92.35846395841196
+        },
+        {
+          "rep": 9,
+          "domain": "device_event",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 951793.78,
+          "new": 72110.959,
+          "saved": 879682.821,
+          "speedup": 13.199017086986737,
+          "reduction_pct": 92.42367826778612
+        },
+        {
+          "rep": 10,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 965561.856,
+          "new": 73207.619,
+          "saved": 892354.237,
+          "speedup": 13.189362926828695,
+          "reduction_pct": 92.41813266078316
+        },
+        {
+          "rep": 10,
+          "domain": "device_event",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 965116.552,
+          "new": 72626.334,
+          "saved": 892490.218,
+          "speedup": 13.288796209925728,
+          "reduction_pct": 92.47486390638548
+        },
+        {
+          "rep": 11,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 964694.626,
+          "new": 72213.683,
+          "saved": 892480.9430000001,
+          "speedup": 13.358889699615515,
+          "reduction_pct": 92.51434795491438
+        },
+        {
+          "rep": 11,
+          "domain": "device_event",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 964020.014,
+          "new": 71630.336,
+          "saved": 892389.678,
+          "speedup": 13.458264582201597,
+          "reduction_pct": 92.56962148505767
+        },
+        {
+          "rep": 12,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 982865.39,
+          "new": 74324.514,
+          "saved": 908540.876,
+          "speedup": 13.22397331787464,
+          "reduction_pct": 92.4379762726206
+        },
+        {
+          "rep": 12,
+          "domain": "device_event",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 982207.036,
+          "new": 73734.794,
+          "saved": 908472.242,
+          "speedup": 13.320808029924109,
+          "reduction_pct": 92.49294789209797
+        },
+        {
+          "rep": 13,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 971298.205,
+          "new": 73479.248,
+          "saved": 897818.9569999999,
+          "speedup": 13.218673726764322,
+          "reduction_pct": 92.43494452869909
+        },
+        {
+          "rep": 13,
+          "domain": "device_event",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 970720.877,
+          "new": 72913.753,
+          "saved": 897807.124,
+          "speedup": 13.313275439271381,
+          "reduction_pct": 92.4887004361811
+        },
+        {
+          "rep": 14,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 968473.731,
+          "new": 74001.05,
+          "saved": 894472.681,
+          "speedup": 13.087297153216069,
+          "reduction_pct": 92.35900286902051
+        },
+        {
+          "rep": 14,
+          "domain": "device_event",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 967882.839,
+          "new": 73479.291,
+          "saved": 894403.5480000001,
+          "speedup": 13.172185330421874,
+          "reduction_pct": 92.40824529176305
+        }
+      ]
+    },
+    {
+      "case": "T52_profile0",
+      "source": {
+        "path": "${TASK_ROOT}/work/convtranspose_opt/resume_20261106/board/bench/T52_profile0/results.jsonl",
+        "sha256": "f5ee95b9724f6092b756d839436a49b308ef0b06adb64b4d59dee4635ddbf777"
+      },
+      "manifest": {
+        "kind": "manifest",
+        "device": "Mali-G610 r0p0",
+        "driver": "3.0",
+        "T": 52,
+        "axis": "h",
+        "tile": 4,
+        "warmup": 3,
+        "reps": 15,
+        "profiling_queue": false,
+        "old_lws": [
+          0,
+          0,
+          0
+        ],
+        "new_lws": [
+          8,
+          4,
+          1
+        ],
+        "old_gws": [
+          192,
+          1,
+          260
+        ],
+        "new_gws": [
+          192,
+          13,
+          5
+        ],
+        "old_build_ms": 47.954143,
+        "candidate_build_ms": 40.569291,
+        "build_options": "-DFLOAT=half -DFLOAT4=half4 -DMNN_SUPPORT_FP16 -DUSE_BUFFER -DBIAS -cl-mad-enable -w -DBIGVGAN_TILE=4",
+        "timing_scope": "Resident buffers; device event and synchronized enqueue-to-finish host; no validation/readback/packing"
+      },
+      "correctness_records": [
+        {
+          "kind": "correctness",
+          "elements": 199680,
+          "bit_mismatches": 0,
+          "numeric_failures": 0,
+          "nonfinite": 0,
+          "max_abs": 0,
+          "rmse": 0,
+          "atol": 0,
+          "rtol": 0,
+          "passed": true
+        }
+      ],
+      "baseline_vs_mnn_capture": [
+        {
+          "kind": "baseline_vs_mnn_capture",
+          "numeric_mismatches": 0,
+          "max_abs": 0,
+          "passed": true
+        }
+      ],
+      "sample_rows": 30,
+      "paired_rows": 15,
+      "audit_passed": true,
+      "gain_eligible": true,
+      "audit_errors": [],
+      "summaries_us": {
+        "host_enqueue_to_finish": {
+          "old": {
+            "n": 15,
+            "median": 369157.901,
+            "mean": 368579.0230666667,
+            "p95": 370127.22089999996,
+            "min": 364475.308,
+            "max": 370141.832,
+            "std": 1627.9535398760372
+          },
+          "new": {
+            "n": 15,
+            "median": 30474.51,
+            "mean": 30701.250733333334,
+            "p95": 32216.1731,
+            "min": 29293.237,
+            "max": 32351.131,
+            "std": 930.0038292715687
+          },
+          "paired_saved": {
+            "n": 15,
+            "median": 337924.206,
+            "mean": 337877.7723333333,
+            "p95": 340159.3132,
+            "min": 334440.64,
+            "max": 340215.66599999997,
+            "std": 1682.69111031953
+          },
+          "paired_speedup": {
+            "n": 15,
+            "median": 12.016307694528969,
+            "mean": 12.015180943557967,
+            "p95": 12.451766960567214,
+            "min": 11.41097357616338,
+            "max": 12.5833969117172,
+            "std": 0.3522229392920537
+          },
+          "paired_reduction_pct": {
+            "n": 15,
+            "median": 91.67797608532194,
+            "mean": 91.67045955554285,
+            "p95": 91.96862894466517,
+            "min": 91.2365058658192,
+            "max": 92.05302028525512,
+            "std": 0.2462938705609004
+          },
+          "ratio_of_medians": 12.11366158143314,
+          "reduction_of_medians_pct": 91.74485771063044
+        }
+      },
+      "pairs_us": [
+        {
+          "rep": 0,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 369293.697,
+          "new": 31158.774,
+          "saved": 338134.923,
+          "speedup": 11.851997033002645,
+          "reduction_pct": 91.56260335523679
+        },
+        {
+          "rep": 1,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 369427.573,
+          "new": 31037.729,
+          "saved": 338389.844,
+          "speedup": 11.902532334115037,
+          "reduction_pct": 91.5984265202641
+        },
+        {
+          "rep": 2,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 369157.901,
+          "new": 32351.131,
+          "saved": 336806.77,
+          "speedup": 11.41097357616338,
+          "reduction_pct": 91.2365058658192
+        },
+        {
+          "rep": 3,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 368193.173,
+          "new": 30723.016,
+          "saved": 337470.157,
+          "speedup": 11.984278268774133,
+          "reduction_pct": 91.65573447501157
+        },
+        {
+          "rep": 4,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 369085.69,
+          "new": 30234.172,
+          "saved": 338851.518,
+          "speedup": 12.207567318198759,
+          "reduction_pct": 91.80835973348086
+        },
+        {
+          "rep": 5,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 364475.308,
+          "new": 30034.668,
+          "saved": 334440.64,
+          "speedup": 12.13515354989108,
+          "reduction_pct": 91.75947798362242
+        },
+        {
+          "rep": 6,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 369778.161,
+          "new": 32158.334,
+          "saved": 337619.82700000005,
+          "speedup": 11.498672816819429,
+          "reduction_pct": 91.30334416910036
+        },
+        {
+          "rep": 7,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 370120.959,
+          "new": 30138.212,
+          "saved": 339982.747,
+          "speedup": 12.280786896050767,
+          "reduction_pct": 91.85719931088798
+        },
+        {
+          "rep": 8,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 369300.859,
+          "new": 31376.653,
+          "saved": 337924.206,
+          "speedup": 11.769925205215484,
+          "reduction_pct": 91.50376928855181
+        },
+        {
+          "rep": 9,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 368608.428,
+          "new": 29293.237,
+          "saved": 339315.191,
+          "speedup": 12.5833969117172,
+          "reduction_pct": 92.05302028525512
+        },
+        {
+          "rep": 10,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 366191.089,
+          "new": 30474.51,
+          "saved": 335716.57899999997,
+          "speedup": 12.016307694528969,
+          "reduction_pct": 91.67797608532194
+        },
+        {
+          "rep": 11,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 366642.763,
+          "new": 29862.498,
+          "saved": 336780.26499999996,
+          "speedup": 12.277699039109185,
+          "reduction_pct": 91.85515138614642
+        },
+        {
+          "rep": 12,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 370141.832,
+          "new": 29926.166,
+          "saved": 340215.66599999997,
+          "speedup": 12.368501598233465,
+          "reduction_pct": 91.91494626848878
+        },
+        {
+          "rep": 13,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 369983.744,
+          "new": 29848.582,
+          "saved": 340135.162,
+          "speedup": 12.395354124360079,
+          "reduction_pct": 91.93246122726948
+        },
+        {
+          "rep": 14,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 368284.169,
+          "new": 31901.079,
+          "saved": 336383.08999999997,
+          "speedup": 11.544567787189893,
+          "reduction_pct": 91.33791737868592
+        }
+      ]
+    },
+    {
+      "case": "T52_profile1",
+      "source": {
+        "path": "${TASK_ROOT}/work/convtranspose_opt/resume_20261106/board/bench/T52_profile1/results.jsonl",
+        "sha256": "54051524df00cdf983e6dfec1b05dcd24fb8634a2c5ebf26a8f80516c2e63217"
+      },
+      "manifest": {
+        "kind": "manifest",
+        "device": "Mali-G610 r0p0",
+        "driver": "3.0",
+        "T": 52,
+        "axis": "h",
+        "tile": 4,
+        "warmup": 3,
+        "reps": 15,
+        "profiling_queue": true,
+        "old_lws": [
+          0,
+          0,
+          0
+        ],
+        "new_lws": [
+          8,
+          4,
+          1
+        ],
+        "old_gws": [
+          192,
+          1,
+          260
+        ],
+        "new_gws": [
+          192,
+          13,
+          5
+        ],
+        "old_build_ms": 49.814431,
+        "candidate_build_ms": 43.726062,
+        "build_options": "-DFLOAT=half -DFLOAT4=half4 -DMNN_SUPPORT_FP16 -DUSE_BUFFER -DBIAS -cl-mad-enable -w -DBIGVGAN_TILE=4",
+        "timing_scope": "Resident buffers; device event and synchronized enqueue-to-finish host; no validation/readback/packing"
+      },
+      "correctness_records": [
+        {
+          "kind": "correctness",
+          "elements": 199680,
+          "bit_mismatches": 0,
+          "numeric_failures": 0,
+          "nonfinite": 0,
+          "max_abs": 0,
+          "rmse": 0,
+          "atol": 0,
+          "rtol": 0,
+          "passed": true
+        }
+      ],
+      "baseline_vs_mnn_capture": [
+        {
+          "kind": "baseline_vs_mnn_capture",
+          "numeric_mismatches": 0,
+          "max_abs": 0,
+          "passed": true
+        }
+      ],
+      "sample_rows": 30,
+      "paired_rows": 15,
+      "audit_passed": true,
+      "gain_eligible": true,
+      "audit_errors": [],
+      "summaries_us": {
+        "host_enqueue_to_finish": {
+          "old": {
+            "n": 15,
+            "median": 369117.37,
+            "mean": 368735.80593333335,
+            "p95": 370687.3677,
+            "min": 366283.436,
+            "max": 371214.824,
+            "std": 1536.0476413397348
+          },
+          "new": {
+            "n": 15,
+            "median": 30701.433,
+            "mean": 30629.078133333333,
+            "p95": 31520.5358,
+            "min": 29086.151,
+            "max": 31567.699,
+            "std": 713.5508123386337
+          },
+          "paired_saved": {
+            "n": 15,
+            "median": 338074.1,
+            "mean": 338106.7278,
+            "p95": 341311.1766,
+            "min": 335582.00299999997,
+            "max": 342128.673,
+            "std": 1917.5977449878471
+          },
+          "paired_speedup": {
+            "n": 15,
+            "median": 11.963010743395598,
+            "mean": 12.04543417043209,
+            "p95": 12.726763450523405,
+            "min": 11.653284675579298,
+            "max": 12.762597017391542,
+            "std": 0.31152301166237273
+          },
+          "paired_reduction_pct": {
+            "n": 15,
+            "median": 91.64090025955993,
+            "mean": 91.6930786483828,
+            "p95": 92.14251607643068,
+            "min": 91.41872847150464,
+            "max": 92.16460412690847,
+            "std": 0.20807232537561157
+          },
+          "ratio_of_medians": 12.022805906160796,
+          "reduction_of_medians_pct": 91.68247405967375
+        },
+        "device_event": {
+          "old": {
+            "n": 15,
+            "median": 368576.756,
+            "mean": 368180.87693333335,
+            "p95": 370089.6984,
+            "min": 365637.13,
+            "max": 370759.128,
+            "std": 1555.9936682668401
+          },
+          "new": {
+            "n": 15,
+            "median": 30199.75,
+            "mean": 30082.703533333333,
+            "p95": 30908.7212,
+            "min": 28438.094,
+            "max": 30950.752,
+            "std": 692.7387123782019
+          },
+          "paired_saved": {
+            "n": 15,
+            "median": 338098.715,
+            "mean": 338098.17339999997,
+            "p95": 341315.3944,
+            "min": 335417.174,
+            "max": 342038.962,
+            "std": 1916.1037953130947
+          },
+          "paired_speedup": {
+            "n": 15,
+            "median": 12.218806155957525,
+            "mean": 12.245608995444183,
+            "p95": 12.933899387352309,
+            "min": 11.888243480855149,
+            "max": 12.99114448387434,
+            "std": 0.31380418731503895
+          },
+          "paired_reduction_pct": {
+            "n": 15,
+            "median": 91.81589439069356,
+            "mean": 91.82896792051895,
+            "p95": 92.26831488067774,
+            "min": 91.58832840519794,
+            "max": 92.30244878546858,
+            "std": 0.2024194097976246
+          },
+          "ratio_of_medians": 12.204629376070994,
+          "reduction_of_medians_pct": 91.80638781247508
+        }
+      },
+      "pairs_us": [
+        {
+          "rep": 0,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 369023.579,
+          "new": 31500.323,
+          "saved": 337523.25600000005,
+          "speedup": 11.714914129610671,
+          "reduction_pct": 91.46387255650133
+        },
+        {
+          "rep": 0,
+          "domain": "device_event",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 368526.805,
+          "new": 30950.752,
+          "saved": 337576.053,
+          "speedup": 11.906877254549421,
+          "reduction_pct": 91.60149232563965
+        },
+        {
+          "rep": 1,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 369238.834,
+          "new": 31164.734,
+          "saved": 338074.1,
+          "speedup": 11.847970016365291,
+          "reduction_pct": 91.55973556129256
+        },
+        {
+          "rep": 1,
+          "domain": "device_event",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 368657.672,
+          "new": 30558.957,
+          "saved": 338098.715,
+          "speedup": 12.063817230411367,
+          "reduction_pct": 91.7107497494315
+        },
+        {
+          "rep": 2,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 370461.315,
+          "new": 30930.687,
+          "saved": 339530.628,
+          "speedup": 11.977144736552408,
+          "reduction_pct": 91.65076466891017
+        },
+        {
+          "rep": 2,
+          "domain": "device_event",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 369802.8,
+          "new": 30199.75,
+          "saved": 339603.05,
+          "speedup": 12.245227195589367,
+          "reduction_pct": 91.83355290982112
+        },
+        {
+          "rep": 3,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 370074.389,
+          "new": 29113.568,
+          "saved": 340960.821,
+          "speedup": 12.711406207579918,
+          "reduction_pct": 92.13304976908306
+        },
+        {
+          "rep": 3,
+          "domain": "device_event",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 369443.388,
+          "new": 28438.094,
+          "saved": 341005.294,
+          "speedup": 12.99114448387434,
+          "reduction_pct": 92.30244878546858
+        },
+        {
+          "rep": 4,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 369877.594,
+          "new": 30918.437,
+          "saved": 338959.157,
+          "speedup": 11.963010743395598,
+          "reduction_pct": 91.64090025955993
+        },
+        {
+          "rep": 4,
+          "domain": "device_event",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 369433.843,
+          "new": 30465.204,
+          "saved": 338968.63899999997,
+          "speedup": 12.126419471866985,
+          "reduction_pct": 91.75354273105943
+        },
+        {
+          "rep": 5,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 369775.758,
+          "new": 30487.22,
+          "saved": 339288.53799999994,
+          "speedup": 12.12887754278678,
+          "reduction_pct": 91.75521398025232
+        },
+        {
+          "rep": 5,
+          "domain": "device_event",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 369289.588,
+          "new": 30135.205,
+          "saved": 339154.383,
+          "speedup": 12.25442428548271,
+          "reduction_pct": 91.83968192463634
+        },
+        {
+          "rep": 6,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 369117.37,
+          "new": 30361.634,
+          "saved": 338755.736,
+          "speedup": 12.15736182051335,
+          "reduction_pct": 91.77453122837325
+        },
+        {
+          "rep": 6,
+          "domain": "device_event",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 368576.756,
+          "new": 29950.328,
+          "saved": 338626.428,
+          "speedup": 12.30626776441313,
+          "reduction_pct": 91.87405946999002
+        },
+        {
+          "rep": 7,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 366628.903,
+          "new": 30716.599,
+          "saved": 335912.304,
+          "speedup": 11.935856017132627,
+          "reduction_pct": 91.62188284975448
+        },
+        {
+          "rep": 7,
+          "domain": "device_event",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 366245.637,
+          "new": 30314.627,
+          "saved": 335931.01,
+          "speedup": 12.08148254636285,
+          "reduction_pct": 91.72287013483249
+        },
+        {
+          "rep": 8,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 366949.743,
+          "new": 30437.76,
+          "saved": 336511.983,
+          "speedup": 12.055740731249607,
+          "reduction_pct": 91.70519653422949
+        },
+        {
+          "rep": 8,
+          "domain": "device_event",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 366365.004,
+          "new": 29876.337,
+          "saved": 336488.667,
+          "speedup": 12.262714937242809,
+          "reduction_pct": 91.8451990026864
+        },
+        {
+          "rep": 9,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 368649.359,
+          "new": 31077.398,
+          "saved": 337571.961,
+          "speedup": 11.86229809200886,
+          "reduction_pct": 91.56993027621134
+        },
+        {
+          "rep": 9,
+          "domain": "device_event",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 368001.544,
+          "new": 30539.129,
+          "saved": 337462.415,
+          "speedup": 12.050165019441124,
+          "reduction_pct": 91.70135845951776
+        },
+        {
+          "rep": 10,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 366283.436,
+          "new": 30701.433,
+          "saved": 335582.00299999997,
+          "speedup": 11.93049966104188,
+          "reduction_pct": 91.61812138291724
+        },
+        {
+          "rep": 10,
+          "domain": "device_event",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 365637.13,
+          "new": 30219.956,
+          "saved": 335417.174,
+          "speedup": 12.099194651375404,
+          "reduction_pct": 91.73498708952233
+        },
+        {
+          "rep": 11,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 371214.824,
+          "new": 29086.151,
+          "saved": 342128.673,
+          "speedup": 12.762597017391542,
+          "reduction_pct": 92.16460412690847
+        },
+        {
+          "rep": 11,
+          "domain": "device_event",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 370759.128,
+          "new": 28720.166,
+          "saved": 342038.962,
+          "speedup": 12.909365774557154,
+          "reduction_pct": 92.2536860643388
+        },
+        {
+          "rep": 12,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 367867.383,
+          "new": 31567.699,
+          "saved": 336299.68399999995,
+          "speedup": 11.653284675579298,
+          "reduction_pct": 91.41872847150464
+        },
+        {
+          "rep": 12,
+          "domain": "device_event",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 367236.258,
+          "new": 30890.708,
+          "saved": 336345.55,
+          "speedup": 11.888243480855149,
+          "reduction_pct": 91.58832840519794
+        },
+        {
+          "rep": 13,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 369273.494,
+          "new": 30700.265,
+          "saved": 338573.229,
+          "speedup": 12.028348745523859,
+          "reduction_pct": 91.68630689751049
+        },
+        {
+          "rep": 13,
+          "domain": "device_event",
+          "old_order": 1,
+          "new_order": 0,
+          "old": 368776.671,
+          "new": 30030.711,
+          "saved": 338745.95999999996,
+          "speedup": 12.279984679683407,
+          "reduction_pct": 91.85666736494836
+        },
+        {
+          "rep": 14,
+          "domain": "host_enqueue_to_finish",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 366601.108,
+          "new": 30672.264,
+          "saved": 335928.844,
+          "speedup": 11.952202419749648,
+          "reduction_pct": 91.6333411627332
+        },
+        {
+          "rep": 14,
+          "domain": "device_event",
+          "old_order": 0,
+          "new_order": 1,
+          "old": 365960.93,
+          "new": 29950.629,
+          "saved": 336010.301,
+          "speedup": 12.218806155957525,
+          "reduction_pct": 91.81589439069356
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "yinliang_000806",
+  "messages": [
+    {
+      "content": "<audio>{BUNDLE}/audio/014_00_yinliang_000806.wav</audio>",
+      "role": "user"
+    }
+  ],
+  "prepared_audios": [
+    "audio/014_00_yinliang_000806.wav"
+  ],
+  "row": 14,
+  "task_type": "audio2audio"
+}

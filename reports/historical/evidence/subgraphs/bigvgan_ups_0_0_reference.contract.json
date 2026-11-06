@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "source_model": {
+    "path": "${TASK_ROOT}/work/mapping/reference_export/artifact/bigvgan_reference_fp32_mel16.onnx",
+    "sha256": "e8596908a2b5817fa6f7aa1a3d082444c0c3160ff781566092cb6c2b862eb333",
+    "hash_scope": "ONNX protobuf only; external weights are not hashed during indexing",
+    "graph_name": "main_graph",
+    "ir_version": 8,
+    "opsets": [
+      {
+        "domain": "",
+        "version": 15
+      }
+    ]
+  },
+  "output_model": {
+    "path": "${TASK_ROOT}/work/mapping/reference_export/artifact/subgraphs/bigvgan_ups_0_0_reference.onnx",
+    "sha256": "cca019e850e8b0fbb246bc478af4283c4483f0618012d5ac76aab113f7657e67"
+  },
+  "contract_path": "${TASK_ROOT}/work/mapping/reference_export/artifact/subgraphs/bigvgan_ups_0_0_reference.contract.json",
+  "source_node_ids": [
+    "n000022"
+  ],
+  "source_nodes": [
+    {
+      "node_id": "n000022",
+      "index": 22,
+      "name": "/ups.0.0/ConvTranspose",
+      "op_type": "ConvTranspose",
+      "domain": "",
+      "inputs": [
+        "/conv_pre/Conv_output_0",
+        "ups.0.0.weight",
+        "ups.0.0.bias"
+      ],
+      "outputs": [
+        "/ups.0.0/ConvTranspose_output_0"
+      ],
+      "has_subgraph": false
+    }
+  ],
+  "boundary": {
+    "inputs": [
+      {
+        "name": "/conv_pre/Conv_output_0",
+        "dtype": "FLOAT",
+        "shape": [
+          1,
+          1536,
+          16
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "name": "/ups.0.0/ConvTranspose_output_0",
+        "dtype": "FLOAT",
+        "shape": [
+          1,
+          768,
+          80
+        ]
+      }
+    ],
+    "initializers": [
+      {
+        "name": "ups.0.0.weight",
+        "dtype": "FLOAT",
+        "shape": [
+          1536,
+          768,
+          11
+        ],
+        "initializer": true,
+        "external_data": {}
+      },
+      {
+        "name": "ups.0.0.bias",
+        "dtype": "FLOAT",
+        "shape": [
+          768
+        ],
+        "initializer": true,
+        "external_data": {}
+      }
+    ]
+  },
+  "external_data": [],
+  "mapping_status": "explicit_selection",
+  "uncertain_mapping": false,
+  "warnings": [],
+  "validation": {
+    "onnx_checker": "passed",
+    "exact_node_set": "passed",
+    "onnx_extractor": "used",
+    "graphsurgeon_cleanup_toposort": "structure only; passed",
+    "static_shape_inference_used": true,
+    "runtime_inference_executed": false,
+    "numeric_equivalence_tested": false
+  },
+  "limitations": [
+    "Static validation only; no CPU/NPU execution or numerical equivalence test",
+    "Symbolic dimensions, when present, are preserved and require concrete runtime inputs"
+  ]
+}

@@ -1,0 +1,327 @@
+{
+  "artifact_role": "extracted_new_reference_ONNX_subgraph",
+  "source_role": "new_reference_export_from_original_HF_BigVGAN_checkpoint",
+  "historical_MNN_conversion_source": false,
+  "deployed_MNN_to_reference_relation": "reference_structure_candidate",
+  "full_reference_onnx": {
+    "path": "${TASK}/work/mapping/reference_export/artifact/bigvgan_reference_fp32_mel16.onnx",
+    "sha256": "e8596908a2b5817fa6f7aa1a3d082444c0c3160ff781566092cb6c2b862eb333",
+    "hash_scope": "ONNX protobuf only; external weights are not hashed during indexing",
+    "graph_name": "main_graph",
+    "ir_version": 8,
+    "opsets": [
+      {
+        "domain": "",
+        "version": 15
+      }
+    ]
+  },
+  "extracted_onnx": {
+    "path": "${TASK}/work/mapping/reference_export/artifact/subgraphs/bigvgan_ups_0_0_reference.onnx",
+    "sha256": "cca019e850e8b0fbb246bc478af4283c4483f0618012d5ac76aab113f7657e67"
+  },
+  "selection": {
+    "method": "desktop hotspot_pipeline extract --nodes n000022",
+    "zero_based_index": 22,
+    "node_id": "n000022",
+    "node_name": "/ups.0.0/ConvTranspose",
+    "op_type": "ConvTranspose"
+  },
+  "contract": "${TASK}/work/mapping/reference_export/artifact/subgraphs/bigvgan_ups_0_0_reference.contract.json",
+  "contract_semantics": "mapping_status=explicit_selection and uncertain_mapping=false certify selected reference node identity only, not runtime-to-original compiler provenance.",
+  "boundary": {
+    "inputs": [
+      {
+        "name": "/conv_pre/Conv_output_0",
+        "dtype": "FLOAT",
+        "shape": [
+          1,
+          1536,
+          16
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "name": "/ups.0.0/ConvTranspose_output_0",
+        "dtype": "FLOAT",
+        "shape": [
+          1,
+          768,
+          80
+        ]
+      }
+    ],
+    "initializers": [
+      {
+        "name": "ups.0.0.weight",
+        "dtype": "FLOAT",
+        "shape": [
+          1536,
+          768,
+          11
+        ],
+        "initializer": true,
+        "external_data": {}
+      },
+      {
+        "name": "ups.0.0.bias",
+        "dtype": "FLOAT",
+        "shape": [
+          768
+        ],
+        "initializer": true,
+        "external_data": {}
+      }
+    ]
+  },
+  "parameter_verification": [
+    {
+      "checkpoint_name": "token2wav.code2wav_bigvgan_model.ups.0.0.weight",
+      "module_name": "ups.0.0.weight",
+      "shard": "model-00003-of-00003.safetensors",
+      "dtype": "torch.float32",
+      "shape": [
+        1536,
+        768,
+        11
+      ],
+      "checkpoint_offsets": [
+        400042272,
+        451946784
+      ],
+      "raw_tensor_sha256": "5f1a1398def01e9c805f1a786135c8e96a545346f9e220196c02a864d3112771",
+      "extracted_initializer_raw_sha256": "5f1a1398def01e9c805f1a786135c8e96a545346f9e220196c02a864d3112771",
+      "bitwise_equal_to_selected_original_HF_parameter": true
+    },
+    {
+      "checkpoint_name": "token2wav.code2wav_bigvgan_model.ups.0.0.bias",
+      "module_name": "ups.0.0.bias",
+      "shard": "model-00003-of-00003.safetensors",
+      "dtype": "torch.float32",
+      "shape": [
+        768
+      ],
+      "checkpoint_offsets": [
+        400039200,
+        400042272
+      ],
+      "raw_tensor_sha256": "d2991af5fefb1c5574da59fcca93ce9d5dd0e63dc689b1fad09119e6c34d2992",
+      "extracted_initializer_raw_sha256": "d2991af5fefb1c5574da59fcca93ce9d5dd0e63dc689b1fad09119e6c34d2992",
+      "bitwise_equal_to_selected_original_HF_parameter": true
+    }
+  ],
+  "runtime_evidence": {
+    "profile": {
+      "path": "${ANALYSIS_TOOLKIT}/runs/20261105-172200-qwen-omni-vcb-random50/inputs/diagnostic_speech.profile.jsonl.gz",
+      "sha256": "2a895af1fccbd667674459458f446ded0b7e741d5b269842e8c0064c35e00842"
+    },
+    "sample_selection_index": 44,
+    "sample_id": "en_qingganhua_000493",
+    "runtime_name": "/ups.0.0/ConvTranspose_output_0",
+    "runtime_type": "Deconvolution",
+    "callbacks": 14,
+    "total_instrumented_host_us": 13110591.0,
+    "output_tensor_backends": [
+      3
+    ],
+    "mapping_status": "reference_structure_candidate",
+    "observed_shapes": [
+      {
+        "observed": {
+          "inputs": [
+            [
+              1,
+              1536,
+              120
+            ]
+          ],
+          "outputs": [
+            [
+              1,
+              768,
+              600
+            ]
+          ],
+          "output_tensor_backends": [
+            3
+          ]
+        },
+        "first_source_line": 820499,
+        "calls": 1
+      },
+      {
+        "observed": {
+          "inputs": [
+            [
+              1,
+              1536,
+              136
+            ]
+          ],
+          "outputs": [
+            [
+              1,
+              768,
+              680
+            ]
+          ],
+          "output_tensor_backends": [
+            3
+          ]
+        },
+        "first_source_line": 828261,
+        "calls": 12
+      },
+      {
+        "observed": {
+          "inputs": [
+            [
+              1,
+              1536,
+              46
+            ]
+          ],
+          "outputs": [
+            [
+              1,
+              768,
+              230
+            ]
+          ],
+          "output_tensor_backends": [
+            3
+          ]
+        },
+        "first_source_line": 921405,
+        "calls": 1
+      }
+    ]
+  },
+  "shape_scope": {
+    "reference_model_input_mel": [
+      1,
+      80,
+      16
+    ],
+    "reference_subgraph_input": [
+      1,
+      1536,
+      16
+    ],
+    "reference_subgraph_output": [
+      1,
+      768,
+      80
+    ],
+    "actual_deployment_shape": false,
+    "actual_observed_input_lengths": [
+      120,
+      136,
+      46
+    ],
+    "note": "Reference static mel16 export is not the deployed streaming shape. No claim of deployment readiness."
+  },
+  "hf_source": {
+    "version": "4.52.4",
+    "class": {
+      "file": "${TASK}/work/mapping/reference_export/.venv/lib/python3.11/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py",
+      "line": 3967,
+      "symbol": "Qwen2_5OmniToken2WavBigVGANModel",
+      "file_sha256": "9a3a67e5d368e0641f1aab4985a38ee03fb1b0f3b18806488b7787108e2f84e1",
+      "status": "reference_source_confirmed"
+    },
+    "constructor": {
+      "file": "${TASK}/work/mapping/reference_export/.venv/lib/python3.11/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py",
+      "line": 3976,
+      "symbol": "ups ModuleList of nn.ConvTranspose1d",
+      "file_sha256": "9a3a67e5d368e0641f1aab4985a38ee03fb1b0f3b18806488b7787108e2f84e1",
+      "status": "reference_source_confirmed"
+    },
+    "forward": {
+      "file": "${TASK}/work/mapping/reference_export/.venv/lib/python3.11/site-packages/transformers/models/qwen2_5_omni/modeling_qwen2_5_omni.py",
+      "line": 4023,
+      "symbol": "forward(mel_spectrogram), self.ups[layer_index][0]",
+      "file_sha256": "9a3a67e5d368e0641f1aab4985a38ee03fb1b0f3b18806488b7787108e2f84e1",
+      "status": "reference_source_confirmed"
+    },
+    "parameters": [
+      "token2wav.code2wav_bigvgan_model.ups.0.0.weight",
+      "token2wav.code2wav_bigvgan_model.ups.0.0.bias"
+    ]
+  },
+  "mnn_exporter": {
+    "commit": "7e3c6fb5225d3ccf22807ee641332669df34650d",
+    "binding": {
+      "file": "${ORIGINAL_PROJECT}/work/upstreams/MNN-3.6.2/transformers/llm/export/utils/token2wav.py",
+      "line": 329,
+      "symbol": "Qwen2_5OmniToken2Wav.load: self.bigvgan = self.token2wav.code2wav_bigvgan_model",
+      "file_sha256": "9fc4a65fed8282a412809d0e1a991a0a57e41414212a8da352fda3ea6fe64847",
+      "status": "source_candidate_for_deployed_export"
+    },
+    "export": {
+      "file": "${ORIGINAL_PROJECT}/work/upstreams/MNN-3.6.2/transformers/llm/export/utils/token2wav.py",
+      "line": 493,
+      "symbol": "Qwen2_5OmniToken2Wav.export_bigvgan",
+      "file_sha256": "9fc4a65fed8282a412809d0e1a991a0a57e41414212a8da352fda3ea6fe64847",
+      "status": "source_candidate_for_deployed_export"
+    },
+    "scope_note": "Current local exporter preserves the HF BigVGAN module scopes; exact historical MNN export logs remain absent."
+  },
+  "opencl_implementation_candidates": [
+    {
+      "file": "${ORIGINAL_PROJECT}/work/upstreams/MNN-3.6.2/source/backend/opencl/execution/buffer/DeconvBufExecution.cpp",
+      "line": 198,
+      "symbol": "REGISTER_OPENCL_OP_CREATOR(DeconvolutionBufCreator, OpType_Deconvolution, BUFFER)",
+      "file_sha256": "e24139fefcbc7def3a705894565a99e377c2e44beab33bf0093a938515511ce9",
+      "status": "source_candidate"
+    },
+    {
+      "file": "${ORIGINAL_PROJECT}/work/upstreams/MNN-3.6.2/source/backend/opencl/execution/buffer/DeconvBufExecution.cpp",
+      "line": 141,
+      "symbol": "DeconvBufExecution::onEncode buildKernel(\"deconv_2d\", \"deconv_2d\", ...)",
+      "file_sha256": "e24139fefcbc7def3a705894565a99e377c2e44beab33bf0093a938515511ce9",
+      "status": "source_candidate"
+    },
+    {
+      "file": "${ORIGINAL_PROJECT}/work/upstreams/MNN-3.6.2/source/backend/opencl/execution/image/DeconvExecution.cpp",
+      "line": 187,
+      "symbol": "REGISTER_OPENCL_OP_CREATOR(DeconvolutionCreator, OpType_Deconvolution, IMAGE)",
+      "file_sha256": "b688b5ca5fff129e6b50f0661b17b22ae824e7c9b2004adce4173e18edfb7e71",
+      "status": "source_candidate"
+    },
+    {
+      "file": "${ORIGINAL_PROJECT}/work/upstreams/MNN-3.6.2/source/backend/opencl/execution/cl/deconv_2d.cl",
+      "line": 13,
+      "symbol": "__kernel void deconv_2d; USE_BUFFER selects buffer/image arguments",
+      "file_sha256": "33326f54819a3fd96567a569b673381e89750a41ec6542d63152a1cd0d51934d",
+      "status": "source_candidate"
+    }
+  ],
+  "kernel_execution_confirmed": false,
+  "checks": {
+    "onnx_checker": "passed",
+    "exact_node_set": "passed",
+    "onnx_extractor": "used",
+    "graphsurgeon_cleanup_toposort": "structure only; passed",
+    "static_shape_inference_used": true,
+    "runtime_inference_executed": false,
+    "numeric_equivalence_tested": false,
+    "selected_weights_bitwise_equal_to_original_HF": true,
+    "onnxruntime_numerical_equivalence": "not_run",
+    "deployed_MNN_numerical_equivalence": "not_run",
+    "actual_device_subgraph_run": "not_run",
+    "full_reference_ort_validation": {
+      "path": "../reference_ort_validation.json",
+      "passed": true,
+      "scope": "Parent reference graph only, one static mel16 input; extracted standalone op and current MNN equivalence not tested"
+    }
+  },
+  "limitations": [
+    "The graph and weights are a reference from original HF; deployed MNN uses its own quantization/export/runtime transformations.",
+    "Callback output-tensor backend3 is OpenCL ownership evidence. It does not identify the executed OpenCL source branch or compiled device kernel.",
+    "The synchronized host callback total includes host dispatch/wait/instrumentation and is not pure GPU execution time.",
+    "No runtime latency is assigned to a reference ONNX node as a measured device-node duration.",
+    "Extracted standalone op was not tested numerically or substituted on device. Parent reference ONNX passed a single static CPU ORT-to-PyTorch check; current MNN equivalence remains unconfirmed."
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "policy": "Large binaries and full traces remain external; source paths are identifiers, not portable download URLs",
+  "assets": [
+    {
+      "source_id": "workspace/outputs/ConvTranspose_优化证据/resumed_board/bin/omni_ab_sync",
+      "size_bytes": 10411888,
+      "sha256": "aa1724e5deb91e962aa19edc433456d4f4bdc5e8d954f8511da079cc0e10f3e7",
+      "storage": "external_local_asset",
+      "note": "No new hash verification or asset transfer in this documentation task",
+      "hash_source": "assets/manifest.json",
+      "historical_release_package": "runtime-rk3588"
+    },
+    {
+      "source_id": "workspace/outputs/evidence/onnx/bigvgan_reference_fp32_mel16.onnx",
+      "size_bytes": 464291354,
+      "sha256": "e8596908a2b5817fa6f7aa1a3d082444c0c3160ff781566092cb6c2b862eb333",
+      "storage": "external_local_asset",
+      "note": "No new hash verification or asset transfer in this documentation task",
+      "hash_source": "assets/manifest.json",
+      "historical_release_package": "reference-onnx"
+    },
+    {
+      "source_id": "workspace/outputs/evidence/diagnostic_speech.profile.jsonl.gz",
+      "size_bytes": 7745024,
+      "sha256": "2a895af1fccbd667674459458f446ded0b7e741d5b269842e8c0064c35e00842",
+      "storage": "external_local_asset",
+      "note": "No new hash verification or asset transfer in this documentation task",
+      "hash_source": "reports/20261106-bigvgan-convtranspose/manifest.json"
+    },
+    {
+      "source_id": "workspace/outputs/evidence/onnx/audio_conv_prefix_mnn4bit.onnx",
+      "size_bytes": 21639980,
+      "sha256": "e6c2adeabe4dbe5722981577f13fea3a94b5f79358502c1ca5e8f32561dc937c",
+      "storage": "external_local_asset",
+      "note": "No new hash verification or asset transfer in this documentation task",
+      "hash_source": "assets/manifest.json",
+      "historical_release_package": "npu-prefix"
+    },
+    {
+      "source_id": "workspace/outputs/evidence/subgraphs/conv2_gelu.onnx",
+      "size_bytes": 19667829,
+      "sha256": null,
+      "storage": "external_local_asset",
+      "note": "No new hash verification or asset transfer in this documentation task"
+    },
+    {
+      "source_id": "workspace/outputs/evidence/subgraphs/bigvgan_ups_0_0_reference.onnx",
+      "size_bytes": 51908135,
+      "sha256": "cca019e850e8b0fbb246bc478af4283c4483f0618012d5ac76aab113f7657e67",
+      "storage": "external_local_asset",
+      "note": "No new hash verification or asset transfer in this documentation task",
+      "hash_source": "assets/manifest.json",
+      "historical_release_package": "reference-onnx"
+    },
+    {
+      "source_id": "workspace/outputs/evidence/formal50/6_qingganhua_000306/answer.wav",
+      "size_bytes": 979244,
+      "sha256": null,
+      "storage": "external_local_asset",
+      "note": "No new hash verification or asset transfer in this documentation task"
+    },
+    {
+      "source_id": "workspace/outputs/evidence/formal50/10_yuyan_000675/answer.wav",
+      "size_bytes": 979244,
+      "sha256": null,
+      "storage": "external_local_asset",
+      "note": "No new hash verification or asset transfer in this documentation task"
+    },
+    {
+      "source_id": "workspace/outputs/evidence/formal50/14_yinliang_000806/answer.wav",
+      "size_bytes": 249644,
+      "sha256": null,
+      "storage": "external_local_asset",
+      "note": "No new hash verification or asset transfer in this documentation task"
+    },
+    {
+      "source_id": "workspace/outputs/evidence/formal50/24_en_yuyan_000313/answer.wav",
+      "size_bytes": 979244,
+      "sha256": null,
+      "storage": "external_local_asset",
+      "note": "No new hash verification or asset transfer in this documentation task"
+    },
+    {
+      "source_id": "workspace/outputs/evidence/formal50/26_en_yuyan_000057/answer.wav",
+      "size_bytes": 979244,
+      "sha256": null,
+      "storage": "external_local_asset",
+      "note": "No new hash verification or asset transfer in this documentation task"
+    },
+    {
+      "source_id": "workspace/outputs/evidence/formal50/29_en_yuyan_000404/answer.wav",
+      "size_bytes": 979244,
+      "sha256": null,
+      "storage": "external_local_asset",
+      "note": "No new hash verification or asset transfer in this documentation task"
+    }
+  ]
+}

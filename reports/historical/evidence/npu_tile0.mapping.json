@@ -1,0 +1,1118 @@
+{
+  "schema_version": 1,
+  "model": {
+    "path": "${DESKTOP_ROOT}/RK3588_Omni_模型与测试数据/models/rknn/audio_conv_prefix_mnn4bit.onnx",
+    "sha256": "e6c2adeabe4dbe5722981577f13fea3a94b5f79358502c1ca5e8f32561dc937c",
+    "hash_scope": "ONNX protobuf only; external weights are not hashed during indexing",
+    "graph_name": "main_graph",
+    "ir_version": 7,
+    "opsets": [
+      {
+        "domain": "",
+        "version": 13
+      }
+    ]
+  },
+  "profile_sha256": "1070bc66cc29bf03b3f5e888e83f7088df2c9f42b7e16ebe4ff2ea74a908c6a4",
+  "rows": [
+    {
+      "record_id": "rknn_583f3926ca40_l00000006",
+      "layer_id": "1",
+      "layer_name": "InputOperator:mel_halo",
+      "original_layer_name": "InputOperator:mel_halo",
+      "op_type": "InputOperator",
+      "dtype": "FLOAT16",
+      "backend": "CPU",
+      "time_us": 8.0,
+      "input_shape": "\\",
+      "output_shape": "(1,128,1,516)",
+      "rw_kb": 0.0,
+      "cycles_ddr_npu_total": [
+        0,
+        0,
+        0
+      ],
+      "mac_usage_reported": null,
+      "workload_reported": "0.0%/0.0%/0.0%",
+      "source_line": 6,
+      "source_lines": [
+        6
+      ],
+      "sample_count": 1,
+      "table_index": 1,
+      "raw_line": "1    InputOperator      FLOAT16  CPU    \\                                        (1,128,1,516)          0/0/0                    8                                 0.0%/0.0%/0.0%       0            InputOperator:mel_halo",
+      "event_kind": "rknn_compiled_unit",
+      "duration_semantics": "runtime_reported_operator_duration",
+      "clock_domain": "rknn_perf_detail_duration_only",
+      "model_sha256": "e6c2adeabe4dbe5722981577f13fea3a94b5f79358502c1ca5e8f32561dc937c",
+      "profile_sha256": "1070bc66cc29bf03b3f5e888e83f7088df2c9f42b7e16ebe4ff2ea74a908c6a4",
+      "mapping_status": "unmapped",
+      "evidence": [],
+      "candidates": [],
+      "source_node_ids": [],
+      "source_nodes": [],
+      "boundary": null,
+      "requires_review": true
+    },
+    {
+      "record_id": "rknn_583f3926ca40_l00000007",
+      "layer_id": "2",
+      "layer_name": "InputOperator:true_valid",
+      "original_layer_name": "InputOperator:true_valid",
+      "op_type": "InputOperator",
+      "dtype": "FLOAT16",
+      "backend": "CPU",
+      "time_us": 4.0,
+      "input_shape": "\\",
+      "output_shape": "(1,1,1,516)",
+      "rw_kb": 0.0,
+      "cycles_ddr_npu_total": [
+        0,
+        0,
+        0
+      ],
+      "mac_usage_reported": null,
+      "workload_reported": "0.0%/0.0%/0.0%",
+      "source_line": 7,
+      "source_lines": [
+        7
+      ],
+      "sample_count": 1,
+      "table_index": 1,
+      "raw_line": "2    InputOperator      FLOAT16  CPU    \\                                        (1,1,1,516)            0/0/0                    4                                 0.0%/0.0%/0.0%       0            InputOperator:true_valid",
+      "event_kind": "rknn_compiled_unit",
+      "duration_semantics": "runtime_reported_operator_duration",
+      "clock_domain": "rknn_perf_detail_duration_only",
+      "model_sha256": "e6c2adeabe4dbe5722981577f13fea3a94b5f79358502c1ca5e8f32561dc937c",
+      "profile_sha256": "1070bc66cc29bf03b3f5e888e83f7088df2c9f42b7e16ebe4ff2ea74a908c6a4",
+      "mapping_status": "unmapped",
+      "evidence": [],
+      "candidates": [],
+      "source_node_ids": [],
+      "source_nodes": [],
+      "boundary": null,
+      "requires_review": true
+    },
+    {
+      "record_id": "rknn_583f3926ca40_l00000008",
+      "layer_id": "3",
+      "layer_name": "Conv:/Conv",
+      "original_layer_name": "Conv:/Conv",
+      "op_type": "ConvExGelu",
+      "dtype": "FLOAT16",
+      "backend": "NPU",
+      "time_us": 1901.0,
+      "input_shape": "(1,128,1,516),(1280,128,1,3),(1280)",
+      "output_shape": "(1,1280,1,516)",
+      "rw_kb": 1094.0,
+      "cycles_ddr_npu_total": [
+        412786,
+        506880,
+        506880
+      ],
+      "mac_usage_reported": "26.06/0.00/0.00",
+      "workload_reported": "100.0%/0.0%/0.0%",
+      "source_line": 8,
+      "source_lines": [
+        8
+      ],
+      "sample_count": 1,
+      "table_index": 1,
+      "raw_line": "3    ConvExGelu         FLOAT16  NPU    (1,128,1,516),(1280,128,1,3),(1280)      (1,1280,1,516)         412786/506880/506880     1901         26.06/0.00/0.00      100.0%/0.0%/0.0%     1094         Conv:/Conv      ",
+      "event_kind": "rknn_compiled_unit",
+      "duration_semantics": "runtime_reported_operator_duration",
+      "clock_domain": "rknn_perf_detail_duration_only",
+      "model_sha256": "e6c2adeabe4dbe5722981577f13fea3a94b5f79358502c1ca5e8f32561dc937c",
+      "profile_sha256": "1070bc66cc29bf03b3f5e888e83f7088df2c9f42b7e16ebe4ff2ea74a908c6a4",
+      "mapping_status": "manual",
+      "evidence": [
+        "Manual selection bound to the ONNX protobuf SHA-256",
+        "Reviewed actual RKNN-input ONNX boundary; prepare_mnn_prefix.py builds this Conv1 from MNN-decoded weights and tanh GELU; ONNX nodes 0-13 are the complete chain including constants. mnn_aligned_convert.log lines 19-20 record tanh GELU replacement; compiler tensor/weight table identifies ConvExGelu using conv1_weight/conv1_bias. HF forward uses per-window chunking and default GELU; this mapping establishes logical source location, not equivalence to unquantized HF execution.",
+        "Manual selection bound to the ordered profile SHA-256"
+      ],
+      "candidates": [],
+      "source_node_ids": [
+        "n000000",
+        "n000001",
+        "n000002",
+        "n000003",
+        "n000004",
+        "n000005",
+        "n000006",
+        "n000007",
+        "n000008",
+        "n000009",
+        "n000010",
+        "n000011",
+        "n000012",
+        "n000013"
+      ],
+      "source_nodes": [
+        {
+          "node_id": "n000000",
+          "index": 0,
+          "name": "/Conv",
+          "op_type": "Conv",
+          "domain": "",
+          "inputs": [
+            "mel_halo",
+            "conv1_weight",
+            "conv1_bias"
+          ],
+          "outputs": [
+            "/Conv_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000001",
+          "index": 1,
+          "name": "/Mul",
+          "op_type": "Mul",
+          "domain": "",
+          "inputs": [
+            "/Conv_output_0",
+            "/Conv_output_0"
+          ],
+          "outputs": [
+            "/Mul_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000002",
+          "index": 2,
+          "name": "/Mul_1",
+          "op_type": "Mul",
+          "domain": "",
+          "inputs": [
+            "/Conv_output_0",
+            "/Mul_output_0"
+          ],
+          "outputs": [
+            "/Mul_1_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000003",
+          "index": 3,
+          "name": "/Constant",
+          "op_type": "Constant",
+          "domain": "",
+          "inputs": [],
+          "outputs": [
+            "/Constant_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000004",
+          "index": 4,
+          "name": "/Mul_2",
+          "op_type": "Mul",
+          "domain": "",
+          "inputs": [
+            "/Constant_output_0",
+            "/Mul_1_output_0"
+          ],
+          "outputs": [
+            "/Mul_2_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000005",
+          "index": 5,
+          "name": "/Add",
+          "op_type": "Add",
+          "domain": "",
+          "inputs": [
+            "/Conv_output_0",
+            "/Mul_2_output_0"
+          ],
+          "outputs": [
+            "/Add_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000006",
+          "index": 6,
+          "name": "/Constant_1",
+          "op_type": "Constant",
+          "domain": "",
+          "inputs": [],
+          "outputs": [
+            "/Constant_1_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000007",
+          "index": 7,
+          "name": "/Mul_3",
+          "op_type": "Mul",
+          "domain": "",
+          "inputs": [
+            "/Constant_1_output_0",
+            "/Add_output_0"
+          ],
+          "outputs": [
+            "/Mul_3_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000008",
+          "index": 8,
+          "name": "/Tanh",
+          "op_type": "Tanh",
+          "domain": "",
+          "inputs": [
+            "/Mul_3_output_0"
+          ],
+          "outputs": [
+            "/Tanh_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000009",
+          "index": 9,
+          "name": "/Constant_2",
+          "op_type": "Constant",
+          "domain": "",
+          "inputs": [],
+          "outputs": [
+            "/Constant_2_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000010",
+          "index": 10,
+          "name": "/Add_1",
+          "op_type": "Add",
+          "domain": "",
+          "inputs": [
+            "/Constant_2_output_0",
+            "/Tanh_output_0"
+          ],
+          "outputs": [
+            "/Add_1_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000011",
+          "index": 11,
+          "name": "/Mul_4",
+          "op_type": "Mul",
+          "domain": "",
+          "inputs": [
+            "/Conv_output_0",
+            "/Add_1_output_0"
+          ],
+          "outputs": [
+            "/Mul_4_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000012",
+          "index": 12,
+          "name": "/Constant_3",
+          "op_type": "Constant",
+          "domain": "",
+          "inputs": [],
+          "outputs": [
+            "/Constant_3_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000013",
+          "index": 13,
+          "name": "/Mul_5",
+          "op_type": "Mul",
+          "domain": "",
+          "inputs": [
+            "/Constant_3_output_0",
+            "/Mul_4_output_0"
+          ],
+          "outputs": [
+            "/Mul_5_output_0"
+          ],
+          "has_subgraph": false
+        }
+      ],
+      "boundary": {
+        "inputs": [
+          {
+            "name": "mel_halo",
+            "dtype": "FLOAT",
+            "shape": [
+              1,
+              128,
+              1,
+              516
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "name": "/Mul_5_output_0",
+            "dtype": null,
+            "shape": null
+          }
+        ],
+        "initializers": [
+          {
+            "name": "conv1_weight",
+            "dtype": "FLOAT",
+            "shape": [
+              1280,
+              128,
+              1,
+              3
+            ],
+            "initializer": true,
+            "external_data": {}
+          },
+          {
+            "name": "conv1_bias",
+            "dtype": "FLOAT",
+            "shape": [
+              1280
+            ],
+            "initializer": true,
+            "external_data": {}
+          }
+        ]
+      },
+      "requires_review": false
+    },
+    {
+      "record_id": "rknn_583f3926ca40_l00000009",
+      "layer_id": "4",
+      "layer_name": "[unnamed compiler unit 4]",
+      "original_layer_name": "",
+      "op_type": "Conv",
+      "dtype": "FLOAT16",
+      "backend": "NPU",
+      "time_us": 67.0,
+      "input_shape": "(1,1,1,516),(1,1,1,1)",
+      "output_shape": "(1,1,1,516)",
+      "rw_kb": 1.0,
+      "cycles_ddr_npu_total": [
+        1574,
+        1056,
+        1574
+      ],
+      "mac_usage_reported": "0.00/0.00/0.00",
+      "workload_reported": "100.0%/0.0%/0.0%",
+      "source_line": 9,
+      "source_lines": [
+        9
+      ],
+      "sample_count": 1,
+      "table_index": 1,
+      "raw_line": "4    Conv               FLOAT16  NPU    (1,1,1,516),(1,1,1,1)                    (1,1,1,516)            1574/1056/1574           67           0.00/0.00/0.00       100.0%/0.0%/0.0%     1                            ",
+      "event_kind": "rknn_compiled_unit",
+      "duration_semantics": "runtime_reported_operator_duration",
+      "clock_domain": "rknn_perf_detail_duration_only",
+      "model_sha256": "e6c2adeabe4dbe5722981577f13fea3a94b5f79358502c1ca5e8f32561dc937c",
+      "profile_sha256": "1070bc66cc29bf03b3f5e888e83f7088df2c9f42b7e16ebe4ff2ea74a908c6a4",
+      "mapping_status": "ambiguous",
+      "evidence": [
+        "Candidate suggestions require review; tensor shape and type cannot establish lineage"
+      ],
+      "candidates": [
+        {
+          "node_ids": [
+            "n000000"
+          ],
+          "nodes": [
+            {
+              "node_id": "n000000",
+              "index": 0,
+              "name": "/Conv",
+              "op_type": "Conv",
+              "domain": "",
+              "inputs": [
+                "mel_halo",
+                "conv1_weight",
+                "conv1_bias"
+              ],
+              "outputs": [
+                "/Conv_output_0"
+              ],
+              "has_subgraph": false
+            }
+          ],
+          "reason": "Operator type/name similarity only; no compiler provenance"
+        },
+        {
+          "node_ids": [
+            "n000015"
+          ],
+          "nodes": [
+            {
+              "node_id": "n000015",
+              "index": 15,
+              "name": "/Conv_1",
+              "op_type": "Conv",
+              "domain": "",
+              "inputs": [
+                "/Mul_6_output_0",
+                "conv2_weight",
+                "conv2_bias"
+              ],
+              "outputs": [
+                "/Conv_1_output_0"
+              ],
+              "has_subgraph": false
+            }
+          ],
+          "reason": "Operator type/name similarity only; no compiler provenance"
+        }
+      ],
+      "source_node_ids": [],
+      "source_nodes": [],
+      "boundary": null,
+      "requires_review": true
+    },
+    {
+      "record_id": "rknn_583f3926ca40_l00000010",
+      "layer_id": "5",
+      "layer_name": "Mul:/Mul_6",
+      "original_layer_name": "Mul:/Mul_6",
+      "op_type": "Mul",
+      "dtype": "FLOAT16",
+      "backend": "NPU",
+      "time_us": 1067.0,
+      "input_shape": "(1,1280,1,516),(1,1,1,516)",
+      "output_shape": "(1,1280,1,516)",
+      "rw_kb": 1298.0,
+      "cycles_ddr_npu_total": [
+        0,
+        0,
+        0
+      ],
+      "mac_usage_reported": null,
+      "workload_reported": "100.0%/0.0%/0.0%",
+      "source_line": 10,
+      "source_lines": [
+        10
+      ],
+      "sample_count": 1,
+      "table_index": 1,
+      "raw_line": "5    Mul                FLOAT16  NPU    (1,1280,1,516),(1,1,1,516)               (1,1280,1,516)         0/0/0                    1067                              100.0%/0.0%/0.0%     1298         Mul:/Mul_6      ",
+      "event_kind": "rknn_compiled_unit",
+      "duration_semantics": "runtime_reported_operator_duration",
+      "clock_domain": "rknn_perf_detail_duration_only",
+      "model_sha256": "e6c2adeabe4dbe5722981577f13fea3a94b5f79358502c1ca5e8f32561dc937c",
+      "profile_sha256": "1070bc66cc29bf03b3f5e888e83f7088df2c9f42b7e16ebe4ff2ea74a908c6a4",
+      "mapping_status": "manual",
+      "evidence": [
+        "Manual selection bound to the ONNX protobuf SHA-256",
+        "Reviewed actual RKNN-input ONNX boundary; Added by prepare_mnn_prefix.py for zero-padding halo validity. Do not attribute this tile mask to an original HF node.",
+        "Manual selection bound to the ordered profile SHA-256"
+      ],
+      "candidates": [],
+      "source_node_ids": [
+        "n000014"
+      ],
+      "source_nodes": [
+        {
+          "node_id": "n000014",
+          "index": 14,
+          "name": "/Mul_6",
+          "op_type": "Mul",
+          "domain": "",
+          "inputs": [
+            "/Mul_5_output_0",
+            "true_valid"
+          ],
+          "outputs": [
+            "/Mul_6_output_0"
+          ],
+          "has_subgraph": false
+        }
+      ],
+      "boundary": {
+        "inputs": [
+          {
+            "name": "/Mul_5_output_0",
+            "dtype": null,
+            "shape": null
+          },
+          {
+            "name": "true_valid",
+            "dtype": "FLOAT",
+            "shape": [
+              1,
+              1,
+              1,
+              516
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "name": "/Mul_6_output_0",
+            "dtype": null,
+            "shape": null
+          }
+        ],
+        "initializers": []
+      },
+      "requires_review": false
+    },
+    {
+      "record_id": "rknn_583f3926ca40_l00000011",
+      "layer_id": "6",
+      "layer_name": "Conv:/Conv_1",
+      "original_layer_name": "Conv:/Conv_1",
+      "op_type": "ConvExGelu",
+      "dtype": "FLOAT16",
+      "backend": "NPU",
+      "time_us": 16319.0,
+      "input_shape": "(1,1280,1,516),(1280,1280,1,3),...",
+      "output_shape": "(1,1280,1,258)",
+      "rw_kb": 10895.0,
+      "cycles_ddr_npu_total": [
+        1998134,
+        2611200,
+        2611200
+      ],
+      "mac_usage_reported": "15.18/0.00/0.00",
+      "workload_reported": "100.0%/0.0%/0.0%",
+      "source_line": 11,
+      "source_lines": [
+        11
+      ],
+      "sample_count": 1,
+      "table_index": 1,
+      "raw_line": "6    ConvExGelu         FLOAT16  NPU    (1,1280,1,516),(1280,1280,1,3),...       (1,1280,1,258)         1998134/2611200/2611200  16319        15.18/0.00/0.00      100.0%/0.0%/0.0%     10895        Conv:/Conv_1    ",
+      "event_kind": "rknn_compiled_unit",
+      "duration_semantics": "runtime_reported_operator_duration",
+      "clock_domain": "rknn_perf_detail_duration_only",
+      "model_sha256": "e6c2adeabe4dbe5722981577f13fea3a94b5f79358502c1ca5e8f32561dc937c",
+      "profile_sha256": "1070bc66cc29bf03b3f5e888e83f7088df2c9f42b7e16ebe4ff2ea74a908c6a4",
+      "mapping_status": "manual",
+      "evidence": [
+        "Manual selection bound to the ONNX protobuf SHA-256",
+        "Reviewed actual RKNN-input ONNX boundary; prepare_mnn_prefix.py builds this Conv2 with stride2 from MNN-decoded weights and tanh GELU. Compiler tensor table identifies ConvExGelu input /Mul_6_output_0 and output /Mul_12_output_0 plus conv2_weight/conv2_bias; the full ONNX region is indices15-28. Fused runtime duration belongs to the whole region and cannot be allocated to individual ONNX nodes.",
+        "Manual selection bound to the ordered profile SHA-256"
+      ],
+      "candidates": [],
+      "source_node_ids": [
+        "n000015",
+        "n000016",
+        "n000017",
+        "n000018",
+        "n000019",
+        "n000020",
+        "n000021",
+        "n000022",
+        "n000023",
+        "n000024",
+        "n000025",
+        "n000026",
+        "n000027",
+        "n000028"
+      ],
+      "source_nodes": [
+        {
+          "node_id": "n000015",
+          "index": 15,
+          "name": "/Conv_1",
+          "op_type": "Conv",
+          "domain": "",
+          "inputs": [
+            "/Mul_6_output_0",
+            "conv2_weight",
+            "conv2_bias"
+          ],
+          "outputs": [
+            "/Conv_1_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000016",
+          "index": 16,
+          "name": "/Mul_7",
+          "op_type": "Mul",
+          "domain": "",
+          "inputs": [
+            "/Conv_1_output_0",
+            "/Conv_1_output_0"
+          ],
+          "outputs": [
+            "/Mul_7_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000017",
+          "index": 17,
+          "name": "/Mul_8",
+          "op_type": "Mul",
+          "domain": "",
+          "inputs": [
+            "/Conv_1_output_0",
+            "/Mul_7_output_0"
+          ],
+          "outputs": [
+            "/Mul_8_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000018",
+          "index": 18,
+          "name": "/Constant_4",
+          "op_type": "Constant",
+          "domain": "",
+          "inputs": [],
+          "outputs": [
+            "/Constant_4_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000019",
+          "index": 19,
+          "name": "/Mul_9",
+          "op_type": "Mul",
+          "domain": "",
+          "inputs": [
+            "/Constant_4_output_0",
+            "/Mul_8_output_0"
+          ],
+          "outputs": [
+            "/Mul_9_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000020",
+          "index": 20,
+          "name": "/Add_2",
+          "op_type": "Add",
+          "domain": "",
+          "inputs": [
+            "/Conv_1_output_0",
+            "/Mul_9_output_0"
+          ],
+          "outputs": [
+            "/Add_2_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000021",
+          "index": 21,
+          "name": "/Constant_5",
+          "op_type": "Constant",
+          "domain": "",
+          "inputs": [],
+          "outputs": [
+            "/Constant_5_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000022",
+          "index": 22,
+          "name": "/Mul_10",
+          "op_type": "Mul",
+          "domain": "",
+          "inputs": [
+            "/Constant_5_output_0",
+            "/Add_2_output_0"
+          ],
+          "outputs": [
+            "/Mul_10_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000023",
+          "index": 23,
+          "name": "/Tanh_1",
+          "op_type": "Tanh",
+          "domain": "",
+          "inputs": [
+            "/Mul_10_output_0"
+          ],
+          "outputs": [
+            "/Tanh_1_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000024",
+          "index": 24,
+          "name": "/Constant_6",
+          "op_type": "Constant",
+          "domain": "",
+          "inputs": [],
+          "outputs": [
+            "/Constant_6_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000025",
+          "index": 25,
+          "name": "/Add_3",
+          "op_type": "Add",
+          "domain": "",
+          "inputs": [
+            "/Constant_6_output_0",
+            "/Tanh_1_output_0"
+          ],
+          "outputs": [
+            "/Add_3_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000026",
+          "index": 26,
+          "name": "/Mul_11",
+          "op_type": "Mul",
+          "domain": "",
+          "inputs": [
+            "/Conv_1_output_0",
+            "/Add_3_output_0"
+          ],
+          "outputs": [
+            "/Mul_11_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000027",
+          "index": 27,
+          "name": "/Constant_7",
+          "op_type": "Constant",
+          "domain": "",
+          "inputs": [],
+          "outputs": [
+            "/Constant_7_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000028",
+          "index": 28,
+          "name": "/Mul_12",
+          "op_type": "Mul",
+          "domain": "",
+          "inputs": [
+            "/Constant_7_output_0",
+            "/Mul_11_output_0"
+          ],
+          "outputs": [
+            "/Mul_12_output_0"
+          ],
+          "has_subgraph": false
+        }
+      ],
+      "boundary": {
+        "inputs": [
+          {
+            "name": "/Mul_6_output_0",
+            "dtype": null,
+            "shape": null
+          }
+        ],
+        "outputs": [
+          {
+            "name": "/Mul_12_output_0",
+            "dtype": null,
+            "shape": null
+          }
+        ],
+        "initializers": [
+          {
+            "name": "conv2_weight",
+            "dtype": "FLOAT",
+            "shape": [
+              1280,
+              1280,
+              1,
+              3
+            ],
+            "initializer": true,
+            "external_data": {}
+          },
+          {
+            "name": "conv2_bias",
+            "dtype": "FLOAT",
+            "shape": [
+              1280
+            ],
+            "initializer": true,
+            "external_data": {}
+          }
+        ]
+      },
+      "requires_review": false
+    },
+    {
+      "record_id": "rknn_583f3926ca40_l00000012",
+      "layer_id": "7",
+      "layer_name": "Slice:/Slice",
+      "original_layer_name": "Slice:/Slice",
+      "op_type": "Slice",
+      "dtype": "FLOAT16",
+      "backend": "NPU",
+      "time_us": 414.0,
+      "input_shape": "(1,1280,1,258),(1),(1),(1),(1)",
+      "output_shape": "(1,1280,1,256)",
+      "rw_kb": 645.0,
+      "cycles_ddr_npu_total": [
+        0,
+        0,
+        0
+      ],
+      "mac_usage_reported": null,
+      "workload_reported": "100.0%/0.0%/0.0%",
+      "source_line": 12,
+      "source_lines": [
+        12
+      ],
+      "sample_count": 1,
+      "table_index": 1,
+      "raw_line": "7    Slice              FLOAT16  NPU    (1,1280,1,258),(1),(1),(1),(1)           (1,1280,1,256)         0/0/0                    414                               100.0%/0.0%/0.0%     645          Slice:/Slice    ",
+      "event_kind": "rknn_compiled_unit",
+      "duration_semantics": "runtime_reported_operator_duration",
+      "clock_domain": "rknn_perf_detail_duration_only",
+      "model_sha256": "e6c2adeabe4dbe5722981577f13fea3a94b5f79358502c1ca5e8f32561dc937c",
+      "profile_sha256": "1070bc66cc29bf03b3f5e888e83f7088df2c9f42b7e16ebe4ff2ea74a908c6a4",
+      "mapping_status": "manual",
+      "evidence": [
+        "Manual selection bound to the ONNX protobuf SHA-256",
+        "Reviewed actual RKNN-input ONNX boundary; Added by prepare_mnn_prefix.py to take output positions1:257. It is not an original HF crop operator.",
+        "Manual selection bound to the ordered profile SHA-256"
+      ],
+      "candidates": [],
+      "source_node_ids": [
+        "n000029",
+        "n000030",
+        "n000031",
+        "n000032",
+        "n000033"
+      ],
+      "source_nodes": [
+        {
+          "node_id": "n000029",
+          "index": 29,
+          "name": "/Constant_8",
+          "op_type": "Constant",
+          "domain": "",
+          "inputs": [],
+          "outputs": [
+            "/Constant_8_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000030",
+          "index": 30,
+          "name": "/Constant_9",
+          "op_type": "Constant",
+          "domain": "",
+          "inputs": [],
+          "outputs": [
+            "/Constant_9_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000031",
+          "index": 31,
+          "name": "/Constant_10",
+          "op_type": "Constant",
+          "domain": "",
+          "inputs": [],
+          "outputs": [
+            "/Constant_10_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000032",
+          "index": 32,
+          "name": "/Constant_11",
+          "op_type": "Constant",
+          "domain": "",
+          "inputs": [],
+          "outputs": [
+            "/Constant_11_output_0"
+          ],
+          "has_subgraph": false
+        },
+        {
+          "node_id": "n000033",
+          "index": 33,
+          "name": "/Slice",
+          "op_type": "Slice",
+          "domain": "",
+          "inputs": [
+            "/Mul_12_output_0",
+            "/Constant_9_output_0",
+            "/Constant_10_output_0",
+            "/Constant_8_output_0",
+            "/Constant_11_output_0"
+          ],
+          "outputs": [
+            "conv2_gelu_valid"
+          ],
+          "has_subgraph": false
+        }
+      ],
+      "boundary": {
+        "inputs": [
+          {
+            "name": "/Mul_12_output_0",
+            "dtype": null,
+            "shape": null
+          }
+        ],
+        "outputs": [
+          {
+            "name": "conv2_gelu_valid",
+            "dtype": "FLOAT",
+            "shape": [
+              1,
+              1280,
+              1,
+              256
+            ]
+          }
+        ],
+        "initializers": []
+      },
+      "requires_review": false
+    },
+    {
+      "record_id": "rknn_583f3926ca40_l00000013",
+      "layer_id": "8",
+      "layer_name": "OutputOperator:conv2_gelu_valid",
+      "original_layer_name": "OutputOperator:conv2_gelu_valid",
+      "op_type": "OutputOperator",
+      "dtype": "FLOAT16",
+      "backend": "CPU",
+      "time_us": 102.0,
+      "input_shape": "(1,1280,1,256)",
+      "output_shape": "\\",
+      "rw_kb": 640.0,
+      "cycles_ddr_npu_total": [
+        0,
+        0,
+        0
+      ],
+      "mac_usage_reported": null,
+      "workload_reported": "0.0%/0.0%/0.0%",
+      "source_line": 13,
+      "source_lines": [
+        13
+      ],
+      "sample_count": 1,
+      "table_index": 1,
+      "raw_line": "8    OutputOperator     FLOAT16  CPU    (1,1280,1,256)                           \\                      0/0/0                    102                               0.0%/0.0%/0.0%       640          OutputOperator:conv2_gelu_valid",
+      "event_kind": "rknn_compiled_unit",
+      "duration_semantics": "runtime_reported_operator_duration",
+      "clock_domain": "rknn_perf_detail_duration_only",
+      "model_sha256": "e6c2adeabe4dbe5722981577f13fea3a94b5f79358502c1ca5e8f32561dc937c",
+      "profile_sha256": "1070bc66cc29bf03b3f5e888e83f7088df2c9f42b7e16ebe4ff2ea74a908c6a4",
+      "mapping_status": "unmapped",
+      "evidence": [],
+      "candidates": [],
+      "source_node_ids": [],
+      "source_nodes": [],
+      "boundary": null,
+      "requires_review": true
+    }
+  ],
+  "summary": {
+    "total_rows": 8,
+    "status_counts": {
+      "unmapped": 3,
+      "manual": 4,
+      "ambiguous": 1
+    },
+    "requires_review": 4
+  },
+  "limitations": [
+    "Name, operator type and shape similarity are not compiler provenance",
+    "Fusion logs are accepted only with exact endpoint names and connected source nodes",
+    "No model execution or runtime performance validation was performed"
+  ],
+  "metadata": {
+    "format": "rknn",
+    "adapter": "task_rknn_2_3_2_optional_blank_fields_v1",
+    "aggregation": "none",
+    "native_source_sha256": "583f3926ca408febfa28a45a030e2c3e1e0879472a47d6adda33da5d2c9b778b",
+    "source_file": "${TOOLKIT_ROOT}/runs/20261105-172200-qwen-omni-vcb-random50/inputs/npu_perf/tile_0.txt",
+    "source_size_bytes": 4734,
+    "table_count": 1,
+    "input_time_units": [
+      "us"
+    ],
+    "is_end_to_end": false,
+    "reported_summaries": [
+      {
+        "table_index": 1,
+        "raw": "Total Operator Elapsed Per Frame Time(us): 19882",
+        "source_line": 15,
+        "reported_total_us": 19882.0,
+        "parsed_row_sum_us": 19882.0,
+        "parsed_sum_matches_reported": true
+      }
+    ],
+    "input_file": {
+      "path": "${TOOLKIT_ROOT}/runs/20261105-172200-qwen-omni-vcb-random50/analysis/20261105-172447-npu-vcb44-tile0-metadata-preserved/inputs/profile.json",
+      "sha256": "94607c26880c0fcbe98dbe8ec7a4b2111ef520cc3f8ef52d59cb385dea85d046",
+      "size_bytes": 9383
+    },
+    "original_input_file": {
+      "path": "${TOOLKIT_ROOT}/runs/20261105-172200-qwen-omni-vcb-random50/analysis/npu_tile0.profile.json",
+      "sha256": "94607c26880c0fcbe98dbe8ec7a4b2111ef520cc3f8ef52d59cb385dea85d046",
+      "size_bytes": 9383,
+      "snapshot": "inputs/profile.json",
+      "copied": true
+    }
+  },
+  "provenance_metadata_adapter": "task-local metadata copy; original per-row identity and fingerprint checked",
+  "provenance": {
+    "profile": {
+      "path": "${TOOLKIT_ROOT}/runs/20261105-172200-qwen-omni-vcb-random50/analysis/npu_tile0.profile.json",
+      "sha256": "94607c26880c0fcbe98dbe8ec7a4b2111ef520cc3f8ef52d59cb385dea85d046",
+      "size_bytes": 9383,
+      "snapshot": "inputs/profile.json",
+      "copied": true
+    },
+    "onnx": {
+      "path": "${DESKTOP_ROOT}/RK3588_Omni_模型与测试数据/models/rknn/audio_conv_prefix_mnn4bit.onnx",
+      "sha256": "e6c2adeabe4dbe5722981577f13fea3a94b5f79358502c1ca5e8f32561dc937c",
+      "size_bytes": 21639980,
+      "copied": false,
+      "hash_scope": "ONNX protobuf only; external data is not copied or hashed."
+    },
+    "manual_map": {
+      "path": "${TOOLKIT_ROOT}/runs/20261105-172200-qwen-omni-vcb-random50/analysis/npu_tile0.manual_map.json",
+      "sha256": "dce34dd9006cddce9fa3bb09172e5ba56d47607c59fc6ebc736ee61d7198226d",
+      "size_bytes": 3000,
+      "snapshot": "inputs/manual_map.json",
+      "copied": true
+    }
+  }
+}

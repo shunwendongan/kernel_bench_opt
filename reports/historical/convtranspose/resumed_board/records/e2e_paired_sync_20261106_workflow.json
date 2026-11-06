@@ -1,0 +1,16 @@
+{
+  "stage": "e2e_paired_sync_20261106",
+  "command": [
+    "bin/omni_ab_sync",
+    "config.capture.json",
+    "${BOARD_PROJECT}/experiments/vcb_random50_20261105/bundle/manifest.jsonl",
+    "${BOARD_PROJECT}/experiments/vcb_random50_20261105/bundle",
+    "e2e/paired_sync_20261106",
+    "14",
+    "3",
+    "4"
+  ],
+  "started_utc": "2026-11-06T01:44:21.044476+00:00",
+  "exit_code": 0,
+  "ended_utc": "2026-11-06T01:57:03.889156+00:00"
+}

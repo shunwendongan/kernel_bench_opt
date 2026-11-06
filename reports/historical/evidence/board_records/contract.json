@@ -1,0 +1,27 @@
+{
+  "run_id": "vcb_random50_20261105",
+  "sample_count": 50,
+  "dataset": "tencent/VCB-Bench",
+  "dataset_revision": "c0a083c335363046032c1e382b05546ad5ef0692",
+  "sample_seed": 20261105,
+  "model": "taobao-mnn/Qwen2.5-Omni-3B-MNN",
+  "model_revision": "00dc2e9131a4bb325b43a47f4210dd6450116687",
+  "mnn_commit": "7e3c6fb5225d3ccf22807ee641332669df34650d",
+  "cpu_threads": 4,
+  "speech_token_limit": 1024,
+  "thinker_token_limit": 1024,
+  "context_token_limit": 8192,
+  "thinker_sampling": "greedy",
+  "talker_sampling": "native MNN mixed sampler; random_device seed, not fixed",
+  "formal_repetitions": 1,
+  "formal_warmup_requests_in_same_process": 0,
+  "profiling_separate_process": true,
+  "formal_timing": "host monotonic request through final waveform callback; includes preprocess, transfers and synchronization; excludes model load",
+  "sha256": {
+    "${BOARD_PROJECT}/experiments/vcb_random50_20261105/bin/vcb_eval": "6f6fcb72a50fb368d3b989e8530d804749e1d0baa2409b32e3bc808aa82944b6",
+    "${BOARD_PROJECT}/experiments/vcb_random50_20261105/bundle/manifest.jsonl": "35db935b69e7ca6ffedecc3bfe58b31a671f1b9ea0112b8ced782938490663fa",
+    "${BOARD_PROJECT}/models/Qwen2.5-Omni-3B-MNN/config.vcb_random50_20261105.json": "3b7b0cb0e9d66a53ece5069b3e738a06086dc20ed337cba9bf154315568e0c36",
+    "${BOARD_PROJECT}/models/rknn/audio_conv_prefix_mnn4bit.onnx": "e6c2adeabe4dbe5722981577f13fea3a94b5f79358502c1ca5e8f32561dc937c",
+    "${BOARD_PROJECT}/models/rknn/audio_conv_prefix_mnn4bit_fp16.rknn": "babb232111b8bdef1817c109336568634d701a7bc16f0c324eca77d6a7c9244a"
+  }
+}
