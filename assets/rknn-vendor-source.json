@@ -1,0 +1,23 @@
+{
+  "source": "Official vendor; files are downloaded directly, not redistributed by this repository",
+  "repository": "airockchip/rknn-toolkit2",
+  "revision": "42aa1d426c0a9e0869b6374edba009f7208a1926",
+  "version": "v2.3.2",
+  "files": [
+    {
+      "path": "lib/librknnrt.so",
+      "url": "https://raw.githubusercontent.com/airockchip/rknn-toolkit2/42aa1d426c0a9e0869b6374edba009f7208a1926/rknpu2/runtime/Linux/librknn_api/aarch64/librknnrt.so",
+      "sha256": "d31fc19c85b85f6091b2bd0f6af9d962d5264a4e410bfb536402ec92bac738e8"
+    },
+    {
+      "path": "include/rknn_api.h",
+      "url": "https://raw.githubusercontent.com/airockchip/rknn-toolkit2/42aa1d426c0a9e0869b6374edba009f7208a1926/rknpu2/runtime/Linux/librknn_api/include/rknn_api.h",
+      "sha256": "c48e11a6f41b451a5fd1e4ad774ea60252d3d94f78bee9b21ea3d21b21deba9a"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/airockchip/rknn-toolkit2/42aa1d426c0a9e0869b6374edba009f7208a1926/LICENSE",
+      "sha256": "d846f57d942c7dfdca7b8b54f9e8bb39e1e226790dc4f5ee205d6fd678961720"
+    }
+  ]
+}

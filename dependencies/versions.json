@@ -7,7 +7,8 @@
   "mnn_model": {
     "repository": "https://huggingface.co/taobao-mnn/Qwen2.5-Omni-3B-MNN",
     "revision": "00dc2e9131a4bb325b43a47f4210dd6450116687",
-    "included": false
+    "included_in_git": false,
+    "release_package": "model-mnn"
   },
   "vcb_code": {
     "repository": "https://github.com/Tencent/VCB-Bench",
@@ -16,8 +17,10 @@
   },
   "vcb_data": {
     "historical_snapshot": "c0a083c335363046032c1e382b05546ad5ef0692",
-    "included": false,
-    "identity_note": "Historical dataset snapshot identifier; verify all source inventory hashes before claiming same inputs."
+    "identity_note": "Historical dataset snapshot identifier; verify all source inventory hashes before claiming same inputs.",
+    "included_in_git": false,
+    "release_package": "vcb-random50",
+    "selected_records": 50
   },
   "hardware_observed": {
     "soc": "RK3588",
@@ -33,5 +36,5 @@
     "audio_conv_prefix_mnn4bit.onnx": "e6c2adeabe4dbe5722981577f13fea3a94b5f79358502c1ca5e8f32561dc937c",
     "audio_conv_prefix_mnn4bit_fp16.rknn": "babb232111b8bdef1817c109336568634d701a7bc16f0c324eca77d6a7c9244a"
   },
-  "scope": "Source code migration only. No model, test set, tensor dumps, runtime libraries or machine configuration included."
+  "scope": "Source code plus checksummed GitHub Release model/data/capture/evidence assets. Vendor RKNN dependencies are obtained directly from their upstream source."
 }

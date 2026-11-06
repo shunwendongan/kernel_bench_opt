@@ -1,0 +1,17 @@
+--- a/src/mnn/omni.cpp
++++ b/src/mnn/omni.cpp
+@@ -3238,6 +3238,14 @@
+     auto code = _Const(codec_tokens, {1, codec_size}, NCHW, halide_type_of<int>());
+     const int max_duration = codec_size * 2;
+     auto outputs = OmniProfile::forward(preDit, {condition, speaker, code}, "predit");
++    // PreDiT and FP32 DiT may use different OpenCL command queues.
++    if (std::getenv("OMNI_PREDIT_SYNC")) {
++        for (const auto& value : outputs) {
++            auto* tensor = const_cast<MNN::Tensor*>(value->getTensor());
++            if (tensor) tensor->wait(MNN::Tensor::MAP_TENSOR_READ, true);
++        }
++    }
++
+     auto code_embeds = outputs[0];
+     auto rope = outputs[1];
+     auto mask = outputs[2];

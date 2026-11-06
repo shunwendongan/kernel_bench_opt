@@ -1,6 +1,6 @@
 # 依赖与外部资产
 
-版本身份见机器可读的 [versions.json](../dependencies/versions.json)。本仓库只保存源码与说明，安装命令需要在新板按实际已有环境执行。
+版本身份见机器可读的 [versions.json](../dependencies/versions.json)。代码分支保存源码与说明，大文件通过同仓库Release提供，见 [ASSETS.md](ASSETS.md)。安装命令需要在新板按实际已有环境执行。
 
 | 组件 | 原实验身份 / 要求 | 用途 |
 |---|---|---|
@@ -17,7 +17,7 @@
 
 `dependencies/requirements-analysis.txt` 记录本机已核对的分析环境直接依赖；`requirements-reference-export.txt` 记录此前参考 ONNX 导出所用的另一环境。两个环境的 NumPy/ONNX 版本不同，应分开使用。导出依赖的特定 wheel 是否支持目标系统需在安装时确认；它们不要求安装到推理板上。复用已有匹配环境优先。
 
-## 模型与测试数据需单独提供
+## 从 Release 获取模型与测试数据
 
 MNN 模型来源：[taobao-mnn/Qwen2.5-Omni-3B-MNN](https://huggingface.co/taobao-mnn/Qwen2.5-Omni-3B-MNN/tree/00dc2e9131a4bb325b43a47f4210dd6450116687)。需保留同一快照的完整依赖关系，包括：
 
@@ -27,7 +27,7 @@ MNN 模型来源：[taobao-mnn/Qwen2.5-Omni-3B-MNN](https://huggingface.co/taoba
 
 配置检查只核实若干必需文件存在，完整资产由 MNN 加载时检查。为了复现三设备分工，另需已转换的 `audio_conv_prefix_mnn4bit_fp16.rknn`，通过 `OMNI_RKNN_AUDIO` 指定。该模型来自部署 MNN 4bit 解码权重与 tanh GELU，不能用原 HF FP32/BF16 权重生成的新图冒充同一部署前缀。
 
-VCB 的原始数据根目录应含 `data/downloaded_datasets/vcb_bench/`，每条 `audio_path` 从数据根目录解析。也可复用已有准备完成的 bundle（含 `manifest.jsonl`、音频、references 和 SHA256SUMS）。**仅克隆代码仓库不会自动得到模型、数据或三种真实 capture。**
+VCB 的原始数据根目录应含 `data/downloaded_datasets/vcb_bench/`，每条 `audio_path` 从数据根目录解析。也可复用已有准备完成的 bundle（含 `manifest.jsonl`、音频、references 和 SHA256SUMS）。**克隆后运行 `scripts/fetch_assets.py` 即可取得这些资产；仅 `git clone` 不下载Release附件。**
 
 ## 额外分析工具
 

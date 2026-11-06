@@ -1,6 +1,6 @@
 # 在第二台 RK3588 上继续实验
 
-先按 [README](../README.md) 编译并生成配置。本页所有推理命令都只在准备好的新板运行；工具不会连接或调度原板。输出放入被 Git 忽略的 `runs/`，每次使用新目录，避免覆盖原始证据。
+先按 [ASSETS.md](ASSETS.md) 下载已有模型、数据和capture，再按 [README](../README.md) 编译并生成配置。本页所有推理命令都只在准备好的新板运行；工具不会连接或调度原板。输出放入被 Git 忽略的 `runs/`，每次使用新目录，避免覆盖原始证据。
 
 ## 1. 准备 VCB 输入
 
@@ -119,7 +119,7 @@ python3 tools/analysis/analysis_correctness.py \
 
 ## 5. 完整端到端 A/B
 
-先阅读 [当前失败状态](STATUS.md)。目前暖机波形不一致是未解决问题，不能跳过正确性门。
+先阅读 [实验状态](STATUS.md)。默认异步源码曾在暖机波形门失败；后续通过的独立同步构建见 [SYNC_VARIANT.md](SYNC_VARIANT.md)。选择相应源码与开关，不能跳过正确性门。
 
 ```bash
 export OMNI_TEST_SEED=20261105

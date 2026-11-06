@@ -20,7 +20,7 @@
 - 集成 dispatch 确认为候选 tile4、precision0。不是只凭配置猜测 GPU 执行。
 - 同有效权重的 FP32 参考相对 RMSE 约 0.73%–1.24%，是已有 FP16 累加误差的诊断，候选没有新增此误差。
 
-## 未通过：完整 Omni 端到端 A/B
+## 默认异步版本未通过：完整 Omni 端到端 A/B
 
 完整请求使用两个独立常驻 LLM 实例、相同输入和种子。当前样本中 text token 和 226 个 speech token 相同，两个输出各有 106,560 个 float 样本；波形不同：
 
@@ -30,7 +30,7 @@
 
 差异集中在波形前段。T108 出现在该请求末块，按合同回退到原 kernel。问题根因尚未确定；同一 mel 的三形状回放通过不能证明完整请求通过，也不能据此断定 kernel 数学本身有错。暖机的旧/新耗时不作为加速证据。
 
-下一步应在新板捕获 old/new 的 initial noise 和进入 BigVGAN 的 native mel：noise 不一致先查种子/构建身份；noise 相同而 mel 不同查 PreDiT/DiT 与实例状态；mel 相同而波形不同再查 BigVGAN 的动态 shape 和执行序列。在问题解决前保持候选默认关闭。
+后续独立构建加入可选PreDiT输出等待后，已在同一真实样本通过3对完整A/B，所有8次暖机/测量波形位级一致，完整请求中位94.060697120→91.055044558秒（降低3.19544%）。这一结果属于独立同步候选，不归给本仓库默认异步实现；源码补丁、限制和操作见 [SYNC_VARIANT.md](SYNC_VARIANT.md)。新板和其他输入仍需验证。
 
 ## 代码迁移的变更与局限
 
@@ -44,7 +44,7 @@
 
 ## 结果来源身份
 
-统计来自原始 `T*_profile*/results.jsonl`，分析入口为 `tools/analysis/analyze_results.py`。原始张量、音频和完整结果不随此次代码上传。下列 SHA 可与本地原始记录核对：
+统计来自原始 `T*_profile*/results.jsonl`，分析入口为 `tools/analysis/analyze_results.py`。原始张量、音频和完整结果已通过Release附加，见 [ASSETS.md](ASSETS.md)。公开元数据路径作了可移植整理，随包记录整理前后摘要；下列SHA对应原始本地日志：
 
 | 未 profiling 原始日志 | SHA-256 |
 |---|---|
@@ -52,4 +52,4 @@
 | T120 | `102138d5c37c6b0837536fce5198abe89595db5e8bb6f0bd873d6212a909d696` |
 | T136 | `03c34b6e3e0ef4f574ad8a76610d3d9678f95cc0f6095e1169447ba60d93363a` |
 
-完整原始结果尚未随代码公开，以上是历史结果摘要，不能在仅克隆本仓库时重新计算出这些指标。可用仓库采集程序在新板生成新的独立证据。
+下载 `benchmark-evidence` 后，可对 `evidence/bench` 和 `evidence/e2e/paired_sync_20261106` 运行分析器复算。仅克隆代码不下载Release附件。上述测量是历史板端结果，不代表已在新板重新测试。

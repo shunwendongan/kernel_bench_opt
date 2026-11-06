@@ -1,6 +1,6 @@
 # 许可与修改来源
 
-仓库保留原有 Apache-2.0 许可。模型权重、数据集、厂商 SDK/runtime 和完整 MNN 源码不随本次代码迁移上传，各自适用原项目条款。
+仓库保留原有 Apache-2.0 许可。模型权重、选中数据和可选GPU运行库通过Release分发，各自适用随包提供的原项目条款；RKNN SDK通过官方固定版本获取，完整MNN源码仍从上游取得。
 
 ## MNN
 
@@ -22,8 +22,8 @@ OpenCL 候选复用原 `deconv_2d` 的参数接口、buffer 合同和逐输出�
 
 ## VCB-Bench
 
-`tools/data/` 为任务适配工具，在用户指定的 [Tencent/VCB-Bench](https://github.com/Tencent/VCB-Bench/tree/542990571e5b6e3fbce4a318492aec5607aaee3c) checkout 中读取 dataset 常量与纯 prompt 函数，记录和校验其来源。没有复制 VCB 源码、标注或音频到此仓库。
+`tools/data/` 为任务适配工具，在用户指定的 [Tencent/VCB-Bench](https://github.com/Tencent/VCB-Bench/tree/542990571e5b6e3fbce4a318492aec5607aaee3c) checkout 中读取 dataset 常量与纯 prompt 函数，记录和校验其来源。代码分支没有复制VCB源码；Release随机50包包含标注与音频，并附CC-BY-4.0许可、来源和变更说明。
 
 ## 外部模型和驱动
 
-模型、OpenCL 实现、RKNN runtime/API headers 由用户在新板准备。本次上传不包含这些二进制，也不改变其许可或授予再分发权。参考 ONNX 导出工具只使用用户已有本地模型，默认设置离线模式。
+模型与可选OpenCL/Mali用户态快照已附在Release，并保留其原许可证。RKNN runtime/API headers由新板已有SDK或官方固定版本获取。本仓库Apache许可不覆盖这些外部资产。参考ONNX导出工具只使用本地模型，默认设置离线模式。
