@@ -1,0 +1,11 @@
+--- a/transformers/llm/engine/include/llm/llm.hpp
++++ b/transformers/llm/engine/include/llm/llm.hpp
+@@ -217,6 +217,8 @@
+     const LlmContext* getContext() const {
+         return mContext.get();
+     }
++    // Deployment metrics: preserve the native Thinker -> Talker path.
++    virtual const LlmContext* getTalkerContext() const { return nullptr; }
+     const std::shared_ptr<Express::Executor>& getExecutor() const {
+         return mExecutor;
+     }

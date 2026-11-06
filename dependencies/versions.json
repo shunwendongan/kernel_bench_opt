@@ -1,0 +1,37 @@
+{
+  "mnn_source": {
+    "repository": "https://github.com/alibaba/MNN",
+    "revision": "7e3c6fb5225d3ccf22807ee641332669df34650d",
+    "reported_version": "3.6.2"
+  },
+  "mnn_model": {
+    "repository": "https://huggingface.co/taobao-mnn/Qwen2.5-Omni-3B-MNN",
+    "revision": "00dc2e9131a4bb325b43a47f4210dd6450116687",
+    "included": false
+  },
+  "vcb_code": {
+    "repository": "https://github.com/Tencent/VCB-Bench",
+    "revision": "542990571e5b6e3fbce4a318492aec5607aaee3c",
+    "included": false
+  },
+  "vcb_data": {
+    "historical_snapshot": "c0a083c335363046032c1e382b05546ad5ef0692",
+    "included": false,
+    "identity_note": "Historical dataset snapshot identifier; verify all source inventory hashes before claiming same inputs."
+  },
+  "hardware_observed": {
+    "soc": "RK3588",
+    "ram_gib": 16,
+    "gpu": "Mali-G610 r0p0",
+    "opencl_driver_reported": "3.0",
+    "rknn_runtime": "2.3.2",
+    "rknn_driver": "0.9.8"
+  },
+  "external_files_sha256": {
+    "bigvgan.mnn": "f47227fdd290c752749b773cc777bc4838edcb02ced3d26231a0401edab1e48d",
+    "bigvgan.mnn.weight": "9434b8ec498fc79f0b97b66b945f6655f60eb44685450e76b7bb7cbb8ec897fd",
+    "audio_conv_prefix_mnn4bit.onnx": "e6c2adeabe4dbe5722981577f13fea3a94b5f79358502c1ca5e8f32561dc937c",
+    "audio_conv_prefix_mnn4bit_fp16.rknn": "babb232111b8bdef1817c109336568634d701a7bc16f0c324eca77d6a7c9244a"
+  },
+  "scope": "Source code migration only. No model, test set, tensor dumps, runtime libraries or machine configuration included."
+}

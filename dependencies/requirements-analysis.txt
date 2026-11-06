@@ -1,0 +1,5 @@
+# Direct dependencies verified in the existing Python 3.11 analysis environment.
+# MNN C++ runtime and standard-library-only log summaries do not require these.
+numpy==2.4.6
+onnx==1.23.2
+onnxruntime==1.31.1

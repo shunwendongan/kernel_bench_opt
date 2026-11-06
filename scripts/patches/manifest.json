@@ -1,0 +1,71 @@
+{
+  "mnn_commit": "7e3c6fb5225d3ccf22807ee641332669df34650d",
+  "patches": [
+    {
+      "path": "transformers/llm/engine/include/llm/llm.hpp",
+      "patch": "01-llm.hpp.patch",
+      "before_sha256": "ac4e6c65e62b88d9de569a0e6c437b4ebabf6510d4fa70c7249a97695483c462",
+      "after_sha256": "ebf1f60ba52ab7caa874dd3f5a63c7a8cfc1e18d6917dd8058aedae7ef046a0c"
+    },
+    {
+      "path": "transformers/llm/engine/src/omni.hpp",
+      "patch": "02-omni.hpp.patch",
+      "before_sha256": "f2467b5a1eef2e8dbc2f9a58aa834922031e3f1338cc019270032a33fb14ad3c",
+      "after_sha256": "332d43298d5a541608ab541f8acf90e2ccc4e9aaffad1af2a1fa238178b997d4"
+    },
+    {
+      "path": "transformers/llm/engine/src/llm.cpp",
+      "patch": "03-llm.cpp.patch",
+      "before_sha256": "260283e43bc0a7ce233b645602bd83e49f9fbf5964f0be4a477fdacde190fdd7",
+      "after_sha256": "d6419952680e68840300f9a64e44ab622a2975f0008a7d5fc0b7b477f359daa3"
+    },
+    {
+      "path": "transformers/llm/engine/CMakeLists.txt",
+      "patch": "04-CMakeLists.txt.patch",
+      "before_sha256": "75257137df1d2c03d909e1561c83cfc480751f56d4dd7b6649102a5d419407cf",
+      "after_sha256": "c1661edad46db332332ca7ec291b1a2cc96feec2afa9e4d09c717f2d47309892"
+    }
+  ],
+  "overlays": [
+    {
+      "source": "src/mnn/omni.cpp",
+      "path": "transformers/llm/engine/src/omni.cpp",
+      "before_sha256": "8d1cd7d7f03e43328ded1928c5cebb55f528ec1d0a553ab9ce8b5a452da04b77"
+    },
+    {
+      "source": "src/mnn/sampler.repeat.cpp",
+      "path": "transformers/llm/engine/src/sampler.cpp",
+      "before_sha256": "e84b328a565731ac26217feae92b6b76b12f4b94b19b3cffefa74ec8e70ac821"
+    },
+    {
+      "source": "src/mnn/omni_profile.hpp",
+      "path": "transformers/llm/engine/src/omni_profile.hpp",
+      "before_sha256": null
+    },
+    {
+      "source": "src/mnn/omni_capture.hpp",
+      "path": "transformers/llm/engine/src/omni_capture.hpp",
+      "before_sha256": null
+    },
+    {
+      "source": "src/mnn/omni_rknn_prefix.hpp",
+      "path": "transformers/llm/engine/src/omni_rknn_prefix.hpp",
+      "before_sha256": null
+    },
+    {
+      "source": "src/mnn/DeconvBufExecution.candidate.cpp",
+      "path": "source/backend/opencl/execution/buffer/DeconvBufExecution.cpp",
+      "before_sha256": "e24139fefcbc7def3a705894565a99e377c2e44beab33bf0093a938515511ce9"
+    },
+    {
+      "source": "src/mnn/DeconvBufExecution.task.hpp",
+      "path": "source/backend/opencl/execution/buffer/DeconvBufExecution.task.hpp",
+      "before_sha256": null
+    },
+    {
+      "source": "kernels/bigvgan_deconv_source.hpp",
+      "path": "source/backend/opencl/execution/buffer/bigvgan_deconv_source.hpp",
+      "before_sha256": null
+    }
+  ]
+}

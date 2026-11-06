@@ -1,0 +1,11 @@
+--- a/transformers/llm/engine/CMakeLists.txt
++++ b/transformers/llm/engine/CMakeLists.txt
+@@ -206,3 +206,8 @@
+ target_link_libraries(mls PRIVATE ${LLM_DEPS})
+ target_compile_definitions(mls PRIVATE CPPHTTPLIB_OPENSSL_SUPPORT)
+ endif()
++
++# kernel_bench_opt portable experiment targets.
++if(DEFINED KERNEL_BENCH_ROOT)
++    include("${KERNEL_BENCH_ROOT}/scripts/cmake/targets.cmake")
++endif()

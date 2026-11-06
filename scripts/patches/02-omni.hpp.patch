@@ -1,0 +1,27 @@
+--- a/transformers/llm/engine/src/omni.hpp
++++ b/transformers/llm/engine/src/omni.hpp
+@@ -19,6 +19,7 @@
+ #include <queue>
+ #include <atomic>
+ 
++class OmniRknnPrefix;
+ namespace MNN {
+ using namespace Express;
+ namespace Transformer {
+@@ -178,6 +179,7 @@
+                   int max_new_tokens = -1) override;
+     void setWavformCallback(std::function<bool(const float*, size_t, bool)> callback) override;
+     void generateWavform() override;
++    const LlmContext* getTalkerContext() const override { return mTalker ? mTalker->getContext() : nullptr; }
+     bool generateTTS(const std::string& text, const std::string& language = "english", int max_new_tokens = -1,
+                      const std::string& ref_audio = "") override;
+     // Embedding API — single ExecutorScope wrapping the forward pass (same pattern as forwardVec)
+@@ -215,6 +217,8 @@
+     std::vector<int> audioProcess(const std::string& file);
+     std::vector<int> audioProcess(VARP waveform);
+     std::shared_ptr<Module> mAudioModule;
++    std::shared_ptr<::OmniRknnPrefix> mRknnAudioPrefix;
++    std::shared_ptr<Executor::RuntimeManager> mAudioTailRuntime;
+     ujson::json mAudioConfig;
+     std::unique_ptr<AudioProcessor> mAudioProcessor;
+     int mAudioPad = 151646;

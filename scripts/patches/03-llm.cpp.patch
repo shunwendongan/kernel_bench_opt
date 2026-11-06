@@ -1,0 +1,35 @@
+--- a/transformers/llm/engine/src/llm.cpp
++++ b/transformers/llm/engine/src/llm.cpp
+@@ -20,6 +20,7 @@
+ #include "llm/llm.hpp"
+ #include "kvmeta.hpp"
+ #include "llmconfig.hpp"
++#include "omni_profile.hpp"
+ #include "tokenizer/tokenizer.hpp"
+ #ifdef MNN_LLM_TOKEN_COMPRESS
+ #include "token_compressor.hpp"
+@@ -264,6 +265,7 @@
+ 
+     mRuntimeManager.reset(Executor::RuntimeManager::createRuntimeManager(config));
+     setRuntimeHint(mRuntimeManager);
++    OmniProfile::debug(mRuntimeManager, config.type, "llm");
+ 
+ #if DEBUG_MODE == 1
+     mRuntimeManager->setMode(MNN::Interpreter::Session_Debug);
+@@ -630,7 +632,7 @@
+         extraArgs.push_back(mDeepstackInput);
+     }
+     inputs.insert(inputs.end(), extraArgs.begin(), extraArgs.end());
+-    std::vector<Express::VARP> outputs = selectModule->onForward(inputs);
++    std::vector<Express::VARP> outputs = OmniProfile::forward(selectModule.get(), inputs, inDecode ? "llm_decode" : "llm_prefill");
+ 
+     if (outputs.empty()) {
+         MNN_ERROR("[Error]: onForward returned no outputs. seqLen=%d, inDecode=%d, inputs=%zu, moduleKey=(%d,%d)\n",
+@@ -1413,6 +1415,7 @@
+ Llm::Llm(std::shared_ptr<LlmConfig> config) : mConfig(config) {
+     MNN::BackendConfig backendConfig;
+     mExecutor = MNN::Express::Executor::newExecutor(MNN_FORWARD_CPU, backendConfig, 1);
++    OmniProfile::attach(mExecutor, "llm");
+     mContext.reset(new LlmContext);
+     mMeta.reset(new KVMeta);
+     mMeta->layer_nums = mConfig->layer_nums();
