@@ -55,3 +55,9 @@
 | T136 | `03c34b6e3e0ef4f574ad8a76610d3d9678f95cc0f6095e1169447ba60d93363a` |
 
 下载 `benchmark-evidence` 后，可对 `evidence/bench` 和 `evidence/e2e/paired_sync_20261106` 运行分析器复算。仅克隆代码不下载Release附件。上述测量是历史板端结果，不代表已在新板重新测试。
+
+## 本地任务管理代码交付
+
+已新增 [Task / Candidate / Run 管理CLI](SANDBOX.md)、资产引用清单、候选/输入快照、显式精选文件归档、派生索引与查询。默认工作区 `.sandbox/` 被Git忽略。另附图片与样式内嵌的 [README.html](../README.html) 和可重复导出脚本。
+
+本轮仅代码、配置与文档交付，未运行任务管理流程测试、模型测试、Docker构建或板端操作。该模块不执行记录中的命令，也不提供设备锁、调度或自动Git发布。

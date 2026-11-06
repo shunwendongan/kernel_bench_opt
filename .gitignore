@@ -38,3 +38,6 @@ __pycache__/
 *.so.*
 *.dylib
 *.log
+
+# Local Task / Candidate / Run records; publish reviewed selections only.
+/.sandbox/

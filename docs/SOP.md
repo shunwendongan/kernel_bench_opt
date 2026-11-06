@@ -87,6 +87,8 @@ MNN callback包含宿主同步开销，RKNN报告的是编译单元，参考ONNX
 
 ## 5. Git内的沉淀格式
 
+本地任务工作区可用 [sandbox CLI](SANDBOX.md) 初始化 Task、Candidate 和 Run，登记外置资产，冻结快照并归档精选文件；它不启动实验。新Run从planned开始，已有历史目录不自动导入或改写。
+
 每轮从 [run.template.json](../experiments/templates/run.template.json) 和 [design.template.md](../experiments/templates/design.template.md) 创建独立记录，填写已知字段，缺失保留null。模板自身标为 `template_not_measurement`，不可纳入实测样本。
 
 推荐结构：
@@ -135,6 +137,7 @@ git push origin Qwen2.5-Omni-3B_VCB-Bench
 | 分级benchmark和离线统计 | 已有CLI；历史小型数据现可从Git复算 |
 | 主机热点/ONNX来源分析 | 已有工具包及附录，按稳定文件运行 |
 | arm64容器配方、挂载启动器 | 本次新增；参数测试通过，镜像/板端运行未验证 |
+| 本地Task/Candidate/Run与归档索引 | 已补齐脚本与配置；流程测试未运行 |
 | 台式机大资产管理 | 后续配置，本次不操作 |
 | 按请求profile分片与持续回传 | 待实现 |
 | 跨机任务队列、设备独占、agent自动循环 | 待实现；不操作其他人的工作负载 |

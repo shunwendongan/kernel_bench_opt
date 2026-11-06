@@ -1,6 +1,7 @@
 {
   "schema_version": 1,
   "record_type": "template_not_measurement",
+  "task_id": null,
   "run_id": "REPLACE_WITH_UNIQUE_RUN_ID",
   "candidate_id": null,
   "parent_candidate_id": null,
