@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "protocol_id": "rk3588_yolov8n_general_quality_v1",
+  "declared_utc": "2026-11-06T03:33:33.948038+00:00",
+  "scope": "COCO val2017 独立4960图上的RK3588 YOLOv8n通用目标检测技术质量验收",
+  "dataset": {
+    "source": "COCO val2017",
+    "annotation_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+    "all_image_count": 5000,
+    "development_count": 40,
+    "acceptance_count": 4960,
+    "development_manifest_sha256": "5049d85d8c2feaa243b54585cc081eb6e3822ce197235833c78aa11381ab9bb8",
+    "all_categories": true,
+    "retain_crowd": true,
+    "include_zero_prediction_images": true,
+    "profile_count": 80,
+    "sampling_seed": 20261106
+  },
+  "tensor_gates": {
+    "finite_all": true,
+    "regression_relative_l2_max": 0.02,
+    "probability_rmse_max": 0.001,
+    "probability_range": [0.0, 1.0],
+    "score_sum_mae_max": 0.005,
+    "expected_shapes": [[1,64,80,80],[1,80,80,80],[1,1,80,80],[1,64,40,40],[1,80,40,40],[1,1,40,40],[1,64,20,20],[1,80,20,20],[1,1,20,20]]
+  },
+  "detection": {
+    "confidence": 0.25,
+    "nms_iou": 0.45,
+    "max_detections": 300,
+    "matching_iou_min": 0.90,
+    "reference_match_fraction_min": 0.95,
+    "actual_match_fraction_min": 0.95
+  },
+  "evaluation": {
+    "confidence": 0.001,
+    "nms_iou": 0.65,
+    "max_detections": 300,
+    "coco_max_dets": [1,10,100],
+    "minimum": {"AP": 0.30, "AP50": 0.45, "AR100": 0.45},
+    "maximum_drop": {"AP": 0.01, "AP50": 0.015, "AP75": 0.015, "AP_small": 0.02, "AP_medium": 0.02, "AP_large": 0.02},
+    "category_gate": {"minimum_non_crowd_instances": 100, "minimum_images": 20, "maximum_ap_drop": 0.05}
+  },
+  "runtime": {"failed_samples_max": 0, "core_mask": 7},
+  "performance": {"warmup": 3, "normal_repeats": 10, "detail_repeats": 1, "frequency_locked": false},
+  "failure_policy": "全部硬门槛同时通过才接受；失败结果保留，不根据验收结果放宽门槛追认。",
+  "limitations": ["验收不外推到任意RK3588任务或产品部署分布", "不包含夜间红外、工业缺陷与安全关键任务验收", "性能未设业务SLA", "内部子图未独立重放"]
+}

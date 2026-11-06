@@ -1,0 +1,10 @@
+* text=auto eol=lf
+
+# 固定证据与协议保留原始字节，避免换行转换破坏哈希。
+benchmarks/**/*.json -text whitespace=cr-at-eol
+benchmarks/fixtures/*.perf.txt -text -whitespace
+benchmarks/fixtures/yolov8n_home_sources/** -text -whitespace
+benchmarks/**/evidence/** -text -whitespace
+benchmarks/**/vendor/** -text -whitespace
+# Markdown 行末双空格表示换行。
+*.md whitespace=-blank-at-eol,cr-at-eol

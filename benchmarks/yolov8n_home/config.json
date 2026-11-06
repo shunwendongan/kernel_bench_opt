@@ -1,0 +1,25 @@
+{
+  "run_id": "yolov8n_home_20261106_01",
+  "task": "object_detection",
+  "model": "YOLOv8n Rockchip detection export",
+  "model_zoo_commit": "837db8e992815ff8647eadb709f07067f4bc3a71",
+  "onnx_sha256": "0c8716701f471067932b797eeb67c8e5db47c693c2557c881d7679ec12e21bc5",
+  "rknn_sha256": "56808e7b2d85de3cc59e953711d158f15b36bb4b33f12a05d8bd27e0a70d5813",
+  "target": "rk3588",
+  "precision": "FP16, do_quantization=false",
+  "input": {"shape": [640, 640, 3], "dtype": "uint8", "layout": "HWC", "colors": "RGB", "letterbox_fill": 114, "interpolation": "OpenCV INTER_LINEAR", "rknn_mean": [0, 0, 0], "rknn_std": [255, 255, 255]},
+  "sampling": {"dataset": "COCO val2017", "seed": 42, "per_category": 5, "category_ids": [44, 47, 62, 63, 65, 67, 72, 73], "license_id": 4, "count": 40},
+  "baseline": {"resident": true, "warmup": 3, "repeats_per_sample": 10, "sample_order_seed": 42, "confidence": 0.25, "nms_iou": 0.45, "max_detections": 300, "core_mask": 7, "frequency_locked": false},
+  "detail": {"resident": true, "warmup": 3, "repeats_per_sample": 1, "collect_perf": true, "core_mask": 7},
+  "evaluation": {"confidence": 0.001, "nms_iou": 0.65, "max_detections": 300, "all_selected_image_ids": true, "all_80_categories": true},
+  "quality_gate_declared_before_inference": {
+    "finite_all_outputs": true,
+    "per_tensor_relative_l2_max": 0.02,
+    "detection_matching_iou_min": 0.90,
+    "reference_detections_match_fraction_min": 0.95,
+    "subset_AP_drop_absolute_max": 0.01,
+    "scope": "部署一致性门槛，只用于当前40张子集，不表示产品精度验收"
+  },
+  "timing": {"e2e": "读取解码 + letterbox/RGB + 输入提交/run/输出获取与复制释放 + DFL/NMS/坐标还原", "excluded": ["模型加载", "哈希计算", "文件保存", "绘图", "精度评估", "详细报告查询写盘"], "synchronization": "阻塞 rknn_run 及 rknn_outputs_get 后消费输出", "cache": "不清理OS页缓存；哈希及参考输入核验预先读过文件"},
+  "limitations": ["未固定CPU/NPU/DDR频率", "未采能耗", "单独的设备kernel时间线不可由PERF_DETAIL推导", "热点边界值未捕获时不可独立重放", "8类主分层只代表家庭物品相关性"]
+}

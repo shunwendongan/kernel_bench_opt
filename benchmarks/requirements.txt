@@ -1,0 +1,9 @@
+numpy==1.26.4
+opencv-python-headless==4.11.0.86
+onnx==1.17.0
+onnxruntime==1.20.1
+pycocotools==2.0.10
+requests==2.32.3
+Pillow==11.3.0
+pytest==8.3.5
+flatbuffers==25.12.19

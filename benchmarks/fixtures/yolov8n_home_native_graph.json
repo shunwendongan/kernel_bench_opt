@@ -1,0 +1,5108 @@
+{
+  "metadata": {
+    "format": "RKNPU v2",
+    "generator": "{'attrs': {'images': {'idx': 0, 'shape': [1, 3, 640, 640], 'layout': 'nchw', 'layout_ori': 'nchw', 'is_output': False, 'range': [0, 1], 'origin_dynamic': False, 'dtype': 'float32', 'mean': [0, 0, 0], 'std': [255, 255, 255], 'rgb2bgr': False}, '318': {'is_output': True, 'idx': 0, 'shape': [1, 64, 80, 80], 'dtype': 'float32', 'layout': 'nchw'}, 'onnx::ReduceSum_326': {'is_output': True, 'idx': 1, 'shape': [1, 80, 80, 80], 'dtype': 'float32', 'layout': 'nchw'}, '331': {'is_output': True, 'idx': 2, 'shape': [1, 1, 80, 80], 'dtype': 'float32', 'layout': 'nchw'}, '338': {'is_output': True, 'idx': 3, 'shape': [1, 64, 40, 40], 'dtype': 'float32', 'layout': 'nchw'}, 'onnx::ReduceSum_346': {'is_output': True, 'idx': 4, 'shape': [1, 80, 40, 40], 'dtype': 'float32', 'layout': 'nchw'}, '350': {'is_output': True, 'idx': 5, 'shape': [1, 1, 40, 40], 'dtype': 'float32', 'layout': 'nchw'}, '357': {'is_output': True, 'idx': 6, 'shape': [1, 64, 20, 20], 'dtype': 'float32', 'layout': 'nchw'}, 'onnx::ReduceSum_365': {'is_output': True, 'idx': 7, 'shape': [1, 80, 20, 20], 'dtype': 'float32', 'layout': 'nchw'}, '369': {'is_output': True, 'idx': 8, 'shape': [1, 1, 20, 20], 'dtype': 'float32', 'layout': 'nchw'}}, 'quant_tab': {'images': {'dtype': 'float32', 'qmethod': '', 'qtype': '', 'min': [], 'max': [], 'scale': [], 'zero_point': [], 'name': 'images', 'shape': [1, 3, 640, 640]}, '318': {'dtype': 'float16', 'qmethod': '', 'qtype': '', 'min': [], 'max': [], 'scale': [], 'zero_point': [], 'name': '318', 'shape': [1, 64, 80, 80]}, 'onnx::ReduceSum_326': {'dtype': 'float16', 'qmethod': '', 'qtype': '', 'min': [], 'max': [], 'scale': [], 'zero_point': [], 'name': 'onnx::ReduceSum_326', 'shape': [1, 80, 80, 80]}, '331': {'dtype': 'float16', 'qmethod': '', 'qtype': '', 'min': [], 'max': [], 'scale': [], 'zero_point': [], 'name': '331', 'shape': [1, 1, 80, 80]}, '338': {'dtype': 'float16', 'qmethod': '', 'qtype': '', 'min': [], 'max': [], 'scale': [], 'zero_point': [], 'name': '338', 'shape': [1, 64, 40, 40]}, 'onnx::ReduceSum_346': {'dtype': 'float16', 'qmethod': '', 'qtype': '', 'min': [], 'max': [], 'scale': [], 'zero_point': [], 'name': 'onnx::ReduceSum_346', 'shape': [1, 80, 40, 40]}, '350': {'dtype': 'float16', 'qmethod': '', 'qtype': '', 'min': [], 'max': [], 'scale': [], 'zero_point': [], 'name': '350', 'shape': [1, 1, 40, 40]}, '357': {'dtype': 'float16', 'qmethod': '', 'qtype': '', 'min': [], 'max': [], 'scale': [], 'zero_point': [], 'name': '357', 'shape': [1, 64, 20, 20]}, 'onnx::ReduceSum_365': {'dtype': 'float16', 'qmethod': '', 'qtype': '', 'min': [], 'max': [], 'scale': [], 'zero_point': [], 'name': 'onnx::ReduceSum_365', 'shape': [1, 80, 20, 20]}, '369': {'dtype': 'float16', 'qmethod': '', 'qtype': '', 'min': [], 'max': [], 'scale': [], 'zero_point': [], 'name': '369', 'shape': [1, 1, 20, 20]}}, 'dynamic_shapes': {}}",
+    "compiler": "2.3.2(compiler version: 2.3.2 (@2025-04-03T08:26:16))",
+    "runtime": "rk3588",
+    "source": "ONNX",
+    "input_json": "{\"images\": {\"dtype\": \"float16\", \"layout\": \"NHWC\"}}",
+    "output_json": "{\"318\": {\"dtype\": \"float16\", \"layout\": \"NCHW\"}, \"onnx::ReduceSum_326\": {\"dtype\": \"float16\", \"layout\": \"NCHW\"}, \"331\": {\"dtype\": \"float16\", \"layout\": \"NCHW\"}, \"338\": {\"dtype\": \"float16\", \"layout\": \"NCHW\"}, \"onnx::ReduceSum_346\": {\"dtype\": \"float16\", \"layout\": \"NCHW\"}, \"350\": {\"dtype\": \"float16\", \"layout\": \"NCHW\"}, \"357\": {\"dtype\": \"float16\", \"layout\": \"NCHW\"}, \"onnx::ReduceSum_365\": {\"dtype\": \"float16\", \"layout\": \"NCHW\"}, \"369\": {\"dtype\": \"float16\", \"layout\": \"NCHW\"}}"
+  },
+  "graphs": [
+    {
+      "nodes": [
+        {
+          "index": 0,
+          "type": "InputOperator",
+          "name": "InputOperator:images",
+          "inputs": [],
+          "outputs": [
+            144
+          ],
+          "var1": 0,
+          "var2": 0,
+          "var4": 0,
+          "var5": 0,
+          "var6": 112
+        },
+        {
+          "index": 1,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.0/conv/Conv",
+          "inputs": [
+            144,
+            3,
+            4
+          ],
+          "outputs": [
+            145
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 204,
+          "var6": 112
+        },
+        {
+          "index": 2,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.1/conv/Conv",
+          "inputs": [
+            145,
+            5,
+            6
+          ],
+          "outputs": [
+            146
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 204,
+          "var6": 112
+        },
+        {
+          "index": 3,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.2/cv1/conv/Conv",
+          "inputs": [
+            146,
+            7,
+            8
+          ],
+          "outputs": [
+            147
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 208,
+          "var6": 112
+        },
+        {
+          "index": 4,
+          "type": "Split",
+          "name": "Split:/model.2/Split",
+          "inputs": [
+            147,
+            129
+          ],
+          "outputs": [
+            148,
+            149
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 20,
+          "var5": 232,
+          "var6": 112
+        },
+        {
+          "index": 5,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.2/m.0/cv1/conv/Conv",
+          "inputs": [
+            149,
+            11,
+            12
+          ],
+          "outputs": [
+            150
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 212,
+          "var6": 112
+        },
+        {
+          "index": 6,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.2/m.0/cv2/conv/Conv",
+          "inputs": [
+            150,
+            13,
+            14
+          ],
+          "outputs": [
+            151
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 212,
+          "var6": 112
+        },
+        {
+          "index": 7,
+          "type": "Add",
+          "name": "Add:/model.2/m.0/Add",
+          "inputs": [
+            149,
+            151
+          ],
+          "outputs": [
+            152
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 0,
+          "var5": 0,
+          "var6": 112
+        },
+        {
+          "index": 8,
+          "type": "Concat",
+          "name": "Concat:/model.2/Concat",
+          "inputs": [
+            148,
+            149,
+            152
+          ],
+          "outputs": [
+            153
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 19,
+          "var5": 232,
+          "var6": 112
+        },
+        {
+          "index": 9,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.2/cv2/conv/Conv",
+          "inputs": [
+            153,
+            9,
+            10
+          ],
+          "outputs": [
+            154
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 208,
+          "var6": 112
+        },
+        {
+          "index": 10,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.3/conv/Conv",
+          "inputs": [
+            154,
+            15,
+            16
+          ],
+          "outputs": [
+            155
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 204,
+          "var6": 112
+        },
+        {
+          "index": 11,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.4/cv1/conv/Conv",
+          "inputs": [
+            155,
+            17,
+            18
+          ],
+          "outputs": [
+            156
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 208,
+          "var6": 112
+        },
+        {
+          "index": 12,
+          "type": "Split",
+          "name": "Split:/model.4/Split",
+          "inputs": [
+            156,
+            130
+          ],
+          "outputs": [
+            157,
+            158
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 20,
+          "var5": 232,
+          "var6": 112
+        },
+        {
+          "index": 13,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.4/m.0/cv1/conv/Conv",
+          "inputs": [
+            158,
+            21,
+            22
+          ],
+          "outputs": [
+            159
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 212,
+          "var6": 112
+        },
+        {
+          "index": 14,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.4/m.0/cv2/conv/Conv",
+          "inputs": [
+            159,
+            23,
+            24
+          ],
+          "outputs": [
+            160
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 212,
+          "var6": 112
+        },
+        {
+          "index": 15,
+          "type": "Add",
+          "name": "Add:/model.4/m.0/Add",
+          "inputs": [
+            158,
+            160
+          ],
+          "outputs": [
+            161
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 0,
+          "var5": 0,
+          "var6": 112
+        },
+        {
+          "index": 16,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.4/m.1/cv1/conv/Conv",
+          "inputs": [
+            161,
+            25,
+            26
+          ],
+          "outputs": [
+            162
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 212,
+          "var6": 112
+        },
+        {
+          "index": 17,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.4/m.1/cv2/conv/Conv",
+          "inputs": [
+            162,
+            27,
+            28
+          ],
+          "outputs": [
+            163
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 212,
+          "var6": 112
+        },
+        {
+          "index": 18,
+          "type": "Add",
+          "name": "Add:/model.4/m.1/Add",
+          "inputs": [
+            161,
+            163
+          ],
+          "outputs": [
+            164
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 0,
+          "var5": 0,
+          "var6": 112
+        },
+        {
+          "index": 19,
+          "type": "Concat",
+          "name": "Concat:/model.4/Concat",
+          "inputs": [
+            157,
+            158,
+            161,
+            164
+          ],
+          "outputs": [
+            165
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 19,
+          "var5": 236,
+          "var6": 112
+        },
+        {
+          "index": 20,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.4/cv2/conv/Conv",
+          "inputs": [
+            165,
+            19,
+            20
+          ],
+          "outputs": [
+            166
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 208,
+          "var6": 112
+        },
+        {
+          "index": 21,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.5/conv/Conv",
+          "inputs": [
+            166,
+            29,
+            30
+          ],
+          "outputs": [
+            167
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 204,
+          "var6": 112
+        },
+        {
+          "index": 22,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.6/cv1/conv/Conv",
+          "inputs": [
+            167,
+            31,
+            32
+          ],
+          "outputs": [
+            168
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 208,
+          "var6": 112
+        },
+        {
+          "index": 23,
+          "type": "Split",
+          "name": "Split:/model.6/Split",
+          "inputs": [
+            168,
+            131
+          ],
+          "outputs": [
+            169,
+            170
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 20,
+          "var5": 232,
+          "var6": 112
+        },
+        {
+          "index": 24,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.6/m.0/cv1/conv/Conv",
+          "inputs": [
+            170,
+            35,
+            36
+          ],
+          "outputs": [
+            171
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 212,
+          "var6": 112
+        },
+        {
+          "index": 25,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.6/m.0/cv2/conv/Conv",
+          "inputs": [
+            171,
+            37,
+            38
+          ],
+          "outputs": [
+            172
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 212,
+          "var6": 112
+        },
+        {
+          "index": 26,
+          "type": "Add",
+          "name": "Add:/model.6/m.0/Add",
+          "inputs": [
+            170,
+            172
+          ],
+          "outputs": [
+            173
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 0,
+          "var5": 0,
+          "var6": 112
+        },
+        {
+          "index": 27,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.6/m.1/cv1/conv/Conv",
+          "inputs": [
+            173,
+            39,
+            40
+          ],
+          "outputs": [
+            174
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 212,
+          "var6": 112
+        },
+        {
+          "index": 28,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.6/m.1/cv2/conv/Conv",
+          "inputs": [
+            174,
+            41,
+            42
+          ],
+          "outputs": [
+            175
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 212,
+          "var6": 112
+        },
+        {
+          "index": 29,
+          "type": "Add",
+          "name": "Add:/model.6/m.1/Add",
+          "inputs": [
+            173,
+            175
+          ],
+          "outputs": [
+            176
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 0,
+          "var5": 0,
+          "var6": 112
+        },
+        {
+          "index": 30,
+          "type": "Concat",
+          "name": "Concat:/model.6/Concat",
+          "inputs": [
+            169,
+            170,
+            173,
+            176
+          ],
+          "outputs": [
+            177
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 19,
+          "var5": 236,
+          "var6": 112
+        },
+        {
+          "index": 31,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.6/cv2/conv/Conv",
+          "inputs": [
+            177,
+            33,
+            34
+          ],
+          "outputs": [
+            178
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 208,
+          "var6": 112
+        },
+        {
+          "index": 32,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.7/conv/Conv",
+          "inputs": [
+            178,
+            43,
+            44
+          ],
+          "outputs": [
+            179
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 204,
+          "var6": 112
+        },
+        {
+          "index": 33,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.8/cv1/conv/Conv",
+          "inputs": [
+            179,
+            45,
+            46
+          ],
+          "outputs": [
+            180
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 208,
+          "var6": 112
+        },
+        {
+          "index": 34,
+          "type": "Split",
+          "name": "Split:/model.8/Split",
+          "inputs": [
+            180,
+            132
+          ],
+          "outputs": [
+            181,
+            182
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 20,
+          "var5": 232,
+          "var6": 112
+        },
+        {
+          "index": 35,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.8/m.0/cv1/conv/Conv",
+          "inputs": [
+            182,
+            49,
+            50
+          ],
+          "outputs": [
+            183
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 212,
+          "var6": 112
+        },
+        {
+          "index": 36,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.8/m.0/cv2/conv/Conv",
+          "inputs": [
+            183,
+            51,
+            52
+          ],
+          "outputs": [
+            184
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 212,
+          "var6": 112
+        },
+        {
+          "index": 37,
+          "type": "Add",
+          "name": "Add:/model.8/m.0/Add",
+          "inputs": [
+            182,
+            184
+          ],
+          "outputs": [
+            185
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 0,
+          "var5": 0,
+          "var6": 112
+        },
+        {
+          "index": 38,
+          "type": "Concat",
+          "name": "Concat:/model.8/Concat",
+          "inputs": [
+            181,
+            182,
+            185
+          ],
+          "outputs": [
+            186
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 19,
+          "var5": 232,
+          "var6": 112
+        },
+        {
+          "index": 39,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.8/cv2/conv/Conv",
+          "inputs": [
+            186,
+            47,
+            48
+          ],
+          "outputs": [
+            187
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 208,
+          "var6": 112
+        },
+        {
+          "index": 40,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.9/cv1/conv/Conv",
+          "inputs": [
+            187,
+            53,
+            54
+          ],
+          "outputs": [
+            188
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 208,
+          "var6": 112
+        },
+        {
+          "index": 41,
+          "type": "MaxPool",
+          "name": "MaxPool:/model.9/m/MaxPool",
+          "inputs": [
+            188
+          ],
+          "outputs": [
+            189
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 3,
+          "var5": 480,
+          "var6": 112
+        },
+        {
+          "index": 42,
+          "type": "MaxPool",
+          "name": "MaxPool:/model.9/m_1/MaxPool",
+          "inputs": [
+            189
+          ],
+          "outputs": [
+            190
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 3,
+          "var5": 484,
+          "var6": 112
+        },
+        {
+          "index": 43,
+          "type": "MaxPool",
+          "name": "MaxPool:/model.9/m_2/MaxPool",
+          "inputs": [
+            190
+          ],
+          "outputs": [
+            191
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 3,
+          "var5": 484,
+          "var6": 112
+        },
+        {
+          "index": 44,
+          "type": "Concat",
+          "name": "Concat:/model.9/Concat",
+          "inputs": [
+            188,
+            189,
+            190,
+            191
+          ],
+          "outputs": [
+            192
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 19,
+          "var5": 236,
+          "var6": 112
+        },
+        {
+          "index": 45,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.9/cv2/conv/Conv",
+          "inputs": [
+            192,
+            55,
+            56
+          ],
+          "outputs": [
+            193
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 208,
+          "var6": 112
+        },
+        {
+          "index": 46,
+          "type": "Resize",
+          "name": "Resize:/model.10/Resize",
+          "inputs": [
+            193,
+            138,
+            137,
+            194
+          ],
+          "outputs": [
+            195
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 26,
+          "var5": 208,
+          "var6": 112
+        },
+        {
+          "index": 47,
+          "type": "Concat",
+          "name": "Concat:/model.11/Concat",
+          "inputs": [
+            195,
+            178
+          ],
+          "outputs": [
+            196
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 19,
+          "var5": 228,
+          "var6": 112
+        },
+        {
+          "index": 48,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.12/cv1/conv/Conv",
+          "inputs": [
+            196,
+            57,
+            58
+          ],
+          "outputs": [
+            197
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 212,
+          "var6": 112
+        },
+        {
+          "index": 49,
+          "type": "Split",
+          "name": "Split:/model.12/Split",
+          "inputs": [
+            197,
+            133
+          ],
+          "outputs": [
+            198,
+            199
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 20,
+          "var5": 232,
+          "var6": 112
+        },
+        {
+          "index": 50,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.12/m.0/cv1/conv/Conv",
+          "inputs": [
+            199,
+            61,
+            62
+          ],
+          "outputs": [
+            200
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 216,
+          "var6": 112
+        },
+        {
+          "index": 51,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.12/m.0/cv2/conv/Conv",
+          "inputs": [
+            200,
+            63,
+            64
+          ],
+          "outputs": [
+            201
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 216,
+          "var6": 112
+        },
+        {
+          "index": 52,
+          "type": "Concat",
+          "name": "Concat:/model.12/Concat",
+          "inputs": [
+            198,
+            199,
+            201
+          ],
+          "outputs": [
+            202
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 19,
+          "var5": 232,
+          "var6": 112
+        },
+        {
+          "index": 53,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.12/cv2/conv/Conv",
+          "inputs": [
+            202,
+            59,
+            60
+          ],
+          "outputs": [
+            203
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 212,
+          "var6": 112
+        },
+        {
+          "index": 54,
+          "type": "Resize",
+          "name": "Resize:/model.13/Resize",
+          "inputs": [
+            203,
+            140,
+            139,
+            204
+          ],
+          "outputs": [
+            205
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 26,
+          "var5": 208,
+          "var6": 112
+        },
+        {
+          "index": 55,
+          "type": "Concat",
+          "name": "Concat:/model.14/Concat",
+          "inputs": [
+            205,
+            166
+          ],
+          "outputs": [
+            206
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 19,
+          "var5": 228,
+          "var6": 112
+        },
+        {
+          "index": 56,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.15/cv1/conv/Conv",
+          "inputs": [
+            206,
+            65,
+            66
+          ],
+          "outputs": [
+            207
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 212,
+          "var6": 112
+        },
+        {
+          "index": 57,
+          "type": "Split",
+          "name": "Split:/model.15/Split",
+          "inputs": [
+            207,
+            134
+          ],
+          "outputs": [
+            208,
+            209
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 20,
+          "var5": 232,
+          "var6": 112
+        },
+        {
+          "index": 58,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.15/m.0/cv1/conv/Conv",
+          "inputs": [
+            209,
+            69,
+            70
+          ],
+          "outputs": [
+            210
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 216,
+          "var6": 112
+        },
+        {
+          "index": 59,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.15/m.0/cv2/conv/Conv",
+          "inputs": [
+            210,
+            71,
+            72
+          ],
+          "outputs": [
+            211
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 216,
+          "var6": 112
+        },
+        {
+          "index": 60,
+          "type": "Concat",
+          "name": "Concat:/model.15/Concat",
+          "inputs": [
+            208,
+            209,
+            211
+          ],
+          "outputs": [
+            212
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 19,
+          "var5": 232,
+          "var6": 112
+        },
+        {
+          "index": 61,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.15/cv2/conv/Conv",
+          "inputs": [
+            212,
+            67,
+            68
+          ],
+          "outputs": [
+            213
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 212,
+          "var6": 112
+        },
+        {
+          "index": 62,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.16/conv/Conv",
+          "inputs": [
+            213,
+            73,
+            74
+          ],
+          "outputs": [
+            214
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 208,
+          "var6": 112
+        },
+        {
+          "index": 63,
+          "type": "Concat",
+          "name": "Concat:/model.17/Concat",
+          "inputs": [
+            214,
+            203
+          ],
+          "outputs": [
+            215
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 19,
+          "var5": 228,
+          "var6": 112
+        },
+        {
+          "index": 64,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.22/cv2.0/cv2.0.0/conv/Conv",
+          "inputs": [
+            213,
+            93,
+            94
+          ],
+          "outputs": [
+            216
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 220,
+          "var6": 112
+        },
+        {
+          "index": 65,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.22/cv3.0/cv3.0.0/conv/Conv",
+          "inputs": [
+            213,
+            111,
+            112
+          ],
+          "outputs": [
+            217
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 220,
+          "var6": 112
+        },
+        {
+          "index": 66,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.18/cv1/conv/Conv",
+          "inputs": [
+            215,
+            75,
+            76
+          ],
+          "outputs": [
+            218
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 212,
+          "var6": 112
+        },
+        {
+          "index": 67,
+          "type": "Split",
+          "name": "Split:/model.18/Split",
+          "inputs": [
+            218,
+            135
+          ],
+          "outputs": [
+            219,
+            220
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 20,
+          "var5": 232,
+          "var6": 112
+        },
+        {
+          "index": 68,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.22/cv2.0/cv2.0.1/conv/Conv",
+          "inputs": [
+            216,
+            95,
+            96
+          ],
+          "outputs": [
+            221
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 220,
+          "var6": 112
+        },
+        {
+          "index": 69,
+          "type": "Conv",
+          "name": "Conv:/model.22/cv2.0/cv2.0.2/Conv",
+          "inputs": [
+            221,
+            97,
+            98
+          ],
+          "outputs": [
+            222
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 488,
+          "var6": 112
+        },
+        {
+          "index": 70,
+          "type": "OutputOperator",
+          "name": "OutputOperator:318",
+          "inputs": [
+            222
+          ],
+          "outputs": [],
+          "var1": 0,
+          "var2": 0,
+          "var4": 0,
+          "var5": 0,
+          "var6": 112
+        },
+        {
+          "index": 71,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.22/cv3.0/cv3.0.1/conv/Conv",
+          "inputs": [
+            217,
+            113,
+            114
+          ],
+          "outputs": [
+            223
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 220,
+          "var6": 112
+        },
+        {
+          "index": 72,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.18/m.0/cv1/conv/Conv",
+          "inputs": [
+            220,
+            79,
+            80
+          ],
+          "outputs": [
+            224
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 216,
+          "var6": 112
+        },
+        {
+          "index": 73,
+          "type": "ConvSigmoid",
+          "name": "Conv:/model.22/cv3.0/cv3.0.2/Conv",
+          "inputs": [
+            223,
+            115,
+            116
+          ],
+          "outputs": [
+            225
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 216,
+          "var6": 112
+        },
+        {
+          "index": 74,
+          "type": "OutputOperator",
+          "name": "OutputOperator:onnx::ReduceSum_326",
+          "inputs": [
+            225
+          ],
+          "outputs": [],
+          "var1": 0,
+          "var2": 0,
+          "var4": 0,
+          "var5": 0,
+          "var6": 112
+        },
+        {
+          "index": 75,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.18/m.0/cv2/conv/Conv",
+          "inputs": [
+            224,
+            81,
+            82
+          ],
+          "outputs": [
+            226
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 216,
+          "var6": 112
+        },
+        {
+          "index": 76,
+          "type": "Concat",
+          "name": "Concat:/model.18/Concat",
+          "inputs": [
+            219,
+            220,
+            226
+          ],
+          "outputs": [
+            227
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 19,
+          "var5": 232,
+          "var6": 112
+        },
+        {
+          "index": 77,
+          "type": "ConvClip",
+          "name": "Conv:/model.22/ReduceSum_2conv",
+          "inputs": [
+            225,
+            143
+          ],
+          "outputs": [
+            228
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 208,
+          "var6": 112
+        },
+        {
+          "index": 78,
+          "type": "OutputOperator",
+          "name": "OutputOperator:331",
+          "inputs": [
+            228
+          ],
+          "outputs": [],
+          "var1": 0,
+          "var2": 0,
+          "var4": 0,
+          "var5": 0,
+          "var6": 112
+        },
+        {
+          "index": 79,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.18/cv2/conv/Conv",
+          "inputs": [
+            227,
+            77,
+            78
+          ],
+          "outputs": [
+            229
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 212,
+          "var6": 112
+        },
+        {
+          "index": 80,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.19/conv/Conv",
+          "inputs": [
+            229,
+            83,
+            84
+          ],
+          "outputs": [
+            230
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 208,
+          "var6": 112
+        },
+        {
+          "index": 81,
+          "type": "Concat",
+          "name": "Concat:/model.20/Concat",
+          "inputs": [
+            230,
+            193
+          ],
+          "outputs": [
+            231
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 19,
+          "var5": 228,
+          "var6": 112
+        },
+        {
+          "index": 82,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.22/cv2.1/cv2.1.0/conv/Conv",
+          "inputs": [
+            229,
+            99,
+            100
+          ],
+          "outputs": [
+            232
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 220,
+          "var6": 112
+        },
+        {
+          "index": 83,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.22/cv3.1/cv3.1.0/conv/Conv",
+          "inputs": [
+            229,
+            117,
+            118
+          ],
+          "outputs": [
+            233
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 220,
+          "var6": 112
+        },
+        {
+          "index": 84,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.21/cv1/conv/Conv",
+          "inputs": [
+            231,
+            85,
+            86
+          ],
+          "outputs": [
+            234
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 212,
+          "var6": 112
+        },
+        {
+          "index": 85,
+          "type": "Split",
+          "name": "Split:/model.21/Split",
+          "inputs": [
+            234,
+            136
+          ],
+          "outputs": [
+            235,
+            236
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 20,
+          "var5": 232,
+          "var6": 112
+        },
+        {
+          "index": 86,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.22/cv2.1/cv2.1.1/conv/Conv",
+          "inputs": [
+            232,
+            101,
+            102
+          ],
+          "outputs": [
+            237
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 220,
+          "var6": 112
+        },
+        {
+          "index": 87,
+          "type": "Conv",
+          "name": "Conv:/model.22/cv2.1/cv2.1.2/Conv",
+          "inputs": [
+            237,
+            103,
+            104
+          ],
+          "outputs": [
+            238
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 488,
+          "var6": 112
+        },
+        {
+          "index": 88,
+          "type": "OutputOperator",
+          "name": "OutputOperator:338",
+          "inputs": [
+            238
+          ],
+          "outputs": [],
+          "var1": 0,
+          "var2": 0,
+          "var4": 0,
+          "var5": 0,
+          "var6": 112
+        },
+        {
+          "index": 89,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.22/cv3.1/cv3.1.1/conv/Conv",
+          "inputs": [
+            233,
+            119,
+            120
+          ],
+          "outputs": [
+            239
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 220,
+          "var6": 112
+        },
+        {
+          "index": 90,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.21/m.0/cv1/conv/Conv",
+          "inputs": [
+            236,
+            89,
+            90
+          ],
+          "outputs": [
+            240
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 216,
+          "var6": 112
+        },
+        {
+          "index": 91,
+          "type": "ConvSigmoid",
+          "name": "Conv:/model.22/cv3.1/cv3.1.2/Conv",
+          "inputs": [
+            239,
+            121,
+            122
+          ],
+          "outputs": [
+            241
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 216,
+          "var6": 112
+        },
+        {
+          "index": 92,
+          "type": "OutputOperator",
+          "name": "OutputOperator:onnx::ReduceSum_346",
+          "inputs": [
+            241
+          ],
+          "outputs": [],
+          "var1": 0,
+          "var2": 0,
+          "var4": 0,
+          "var5": 0,
+          "var6": 112
+        },
+        {
+          "index": 93,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.21/m.0/cv2/conv/Conv",
+          "inputs": [
+            240,
+            91,
+            92
+          ],
+          "outputs": [
+            242
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 216,
+          "var6": 112
+        },
+        {
+          "index": 94,
+          "type": "Concat",
+          "name": "Concat:/model.21/Concat",
+          "inputs": [
+            235,
+            236,
+            242
+          ],
+          "outputs": [
+            243
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 19,
+          "var5": 232,
+          "var6": 112
+        },
+        {
+          "index": 95,
+          "type": "ConvClip",
+          "name": "Conv:/model.22/ReduceSum_1_2conv",
+          "inputs": [
+            241,
+            142
+          ],
+          "outputs": [
+            244
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 212,
+          "var6": 112
+        },
+        {
+          "index": 96,
+          "type": "OutputOperator",
+          "name": "OutputOperator:350",
+          "inputs": [
+            244
+          ],
+          "outputs": [],
+          "var1": 0,
+          "var2": 0,
+          "var4": 0,
+          "var5": 0,
+          "var6": 112
+        },
+        {
+          "index": 97,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.21/cv2/conv/Conv",
+          "inputs": [
+            243,
+            87,
+            88
+          ],
+          "outputs": [
+            245
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 212,
+          "var6": 112
+        },
+        {
+          "index": 98,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.22/cv2.2/cv2.2.0/conv/Conv",
+          "inputs": [
+            245,
+            105,
+            106
+          ],
+          "outputs": [
+            246
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 220,
+          "var6": 112
+        },
+        {
+          "index": 99,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.22/cv3.2/cv3.2.0/conv/Conv",
+          "inputs": [
+            245,
+            123,
+            124
+          ],
+          "outputs": [
+            247
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 220,
+          "var6": 112
+        },
+        {
+          "index": 100,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.22/cv2.2/cv2.2.1/conv/Conv",
+          "inputs": [
+            246,
+            107,
+            108
+          ],
+          "outputs": [
+            248
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 220,
+          "var6": 112
+        },
+        {
+          "index": 101,
+          "type": "Conv",
+          "name": "Conv:/model.22/cv2.2/cv2.2.2/Conv",
+          "inputs": [
+            248,
+            109,
+            110
+          ],
+          "outputs": [
+            249
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 488,
+          "var6": 112
+        },
+        {
+          "index": 102,
+          "type": "OutputOperator",
+          "name": "OutputOperator:357",
+          "inputs": [
+            249
+          ],
+          "outputs": [],
+          "var1": 0,
+          "var2": 0,
+          "var4": 0,
+          "var5": 0,
+          "var6": 112
+        },
+        {
+          "index": 103,
+          "type": "ConvExSwish",
+          "name": "Conv:/model.22/cv3.2/cv3.2.1/conv/Conv",
+          "inputs": [
+            247,
+            125,
+            126
+          ],
+          "outputs": [
+            250
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 220,
+          "var6": 112
+        },
+        {
+          "index": 104,
+          "type": "ConvSigmoid",
+          "name": "Conv:/model.22/cv3.2/cv3.2.2/Conv",
+          "inputs": [
+            250,
+            127,
+            128
+          ],
+          "outputs": [
+            251
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 216,
+          "var6": 112
+        },
+        {
+          "index": 105,
+          "type": "OutputOperator",
+          "name": "OutputOperator:onnx::ReduceSum_365",
+          "inputs": [
+            251
+          ],
+          "outputs": [],
+          "var1": 0,
+          "var2": 0,
+          "var4": 0,
+          "var5": 0,
+          "var6": 112
+        },
+        {
+          "index": 106,
+          "type": "ConvClip",
+          "name": "Conv:/model.22/ReduceSum_2_2conv",
+          "inputs": [
+            251,
+            141
+          ],
+          "outputs": [
+            252
+          ],
+          "var1": 0,
+          "var2": 2,
+          "var4": 1,
+          "var5": 212,
+          "var6": 112
+        },
+        {
+          "index": 107,
+          "type": "OutputOperator",
+          "name": "OutputOperator:369",
+          "inputs": [
+            252
+          ],
+          "outputs": [],
+          "var1": 0,
+          "var2": 0,
+          "var4": 0,
+          "var5": 0,
+          "var6": 112
+        }
+      ],
+      "tensors": [
+        {
+          "index": 0,
+          "name": "",
+          "shape": [],
+          "data_type": 0,
+          "kind": 0
+        },
+        {
+          "index": 1,
+          "name": "Sigmoid",
+          "shape": [],
+          "data_type": 13,
+          "kind": 6
+        },
+        {
+          "index": 2,
+          "name": "exSwish",
+          "shape": [],
+          "data_type": 13,
+          "kind": 6
+        },
+        {
+          "index": 3,
+          "name": "model.0.conv.weight",
+          "shape": [
+            16,
+            3,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 4,
+          "name": "model.0.conv.bias",
+          "shape": [
+            16
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 5,
+          "name": "model.1.conv.weight",
+          "shape": [
+            32,
+            16,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 6,
+          "name": "model.1.conv.bias",
+          "shape": [
+            32
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 7,
+          "name": "model.2.cv1.conv.weight",
+          "shape": [
+            32,
+            32,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 8,
+          "name": "model.2.cv1.conv.bias",
+          "shape": [
+            32
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 9,
+          "name": "model.2.cv2.conv.weight",
+          "shape": [
+            32,
+            48,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 10,
+          "name": "model.2.cv2.conv.bias",
+          "shape": [
+            32
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 11,
+          "name": "model.2.m.0.cv1.conv.weight",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 12,
+          "name": "model.2.m.0.cv1.conv.bias",
+          "shape": [
+            16
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 13,
+          "name": "model.2.m.0.cv2.conv.weight",
+          "shape": [
+            16,
+            16,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 14,
+          "name": "model.2.m.0.cv2.conv.bias",
+          "shape": [
+            16
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 15,
+          "name": "model.3.conv.weight",
+          "shape": [
+            64,
+            32,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 16,
+          "name": "model.3.conv.bias",
+          "shape": [
+            64
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 17,
+          "name": "model.4.cv1.conv.weight",
+          "shape": [
+            64,
+            64,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 18,
+          "name": "model.4.cv1.conv.bias",
+          "shape": [
+            64
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 19,
+          "name": "model.4.cv2.conv.weight",
+          "shape": [
+            64,
+            128,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 20,
+          "name": "model.4.cv2.conv.bias",
+          "shape": [
+            64
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 21,
+          "name": "model.4.m.0.cv1.conv.weight",
+          "shape": [
+            32,
+            32,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 22,
+          "name": "model.4.m.0.cv1.conv.bias",
+          "shape": [
+            32
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 23,
+          "name": "model.4.m.0.cv2.conv.weight",
+          "shape": [
+            32,
+            32,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 24,
+          "name": "model.4.m.0.cv2.conv.bias",
+          "shape": [
+            32
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 25,
+          "name": "model.4.m.1.cv1.conv.weight",
+          "shape": [
+            32,
+            32,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 26,
+          "name": "model.4.m.1.cv1.conv.bias",
+          "shape": [
+            32
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 27,
+          "name": "model.4.m.1.cv2.conv.weight",
+          "shape": [
+            32,
+            32,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 28,
+          "name": "model.4.m.1.cv2.conv.bias",
+          "shape": [
+            32
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 29,
+          "name": "model.5.conv.weight",
+          "shape": [
+            128,
+            64,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 30,
+          "name": "model.5.conv.bias",
+          "shape": [
+            128
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 31,
+          "name": "model.6.cv1.conv.weight",
+          "shape": [
+            128,
+            128,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 32,
+          "name": "model.6.cv1.conv.bias",
+          "shape": [
+            128
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 33,
+          "name": "model.6.cv2.conv.weight",
+          "shape": [
+            128,
+            256,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 34,
+          "name": "model.6.cv2.conv.bias",
+          "shape": [
+            128
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 35,
+          "name": "model.6.m.0.cv1.conv.weight",
+          "shape": [
+            64,
+            64,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 36,
+          "name": "model.6.m.0.cv1.conv.bias",
+          "shape": [
+            64
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 37,
+          "name": "model.6.m.0.cv2.conv.weight",
+          "shape": [
+            64,
+            64,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 38,
+          "name": "model.6.m.0.cv2.conv.bias",
+          "shape": [
+            64
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 39,
+          "name": "model.6.m.1.cv1.conv.weight",
+          "shape": [
+            64,
+            64,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 40,
+          "name": "model.6.m.1.cv1.conv.bias",
+          "shape": [
+            64
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 41,
+          "name": "model.6.m.1.cv2.conv.weight",
+          "shape": [
+            64,
+            64,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 42,
+          "name": "model.6.m.1.cv2.conv.bias",
+          "shape": [
+            64
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 43,
+          "name": "model.7.conv.weight",
+          "shape": [
+            256,
+            128,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 44,
+          "name": "model.7.conv.bias",
+          "shape": [
+            256
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 45,
+          "name": "model.8.cv1.conv.weight",
+          "shape": [
+            256,
+            256,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 46,
+          "name": "model.8.cv1.conv.bias",
+          "shape": [
+            256
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 47,
+          "name": "model.8.cv2.conv.weight",
+          "shape": [
+            256,
+            384,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 48,
+          "name": "model.8.cv2.conv.bias",
+          "shape": [
+            256
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 49,
+          "name": "model.8.m.0.cv1.conv.weight",
+          "shape": [
+            128,
+            128,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 50,
+          "name": "model.8.m.0.cv1.conv.bias",
+          "shape": [
+            128
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 51,
+          "name": "model.8.m.0.cv2.conv.weight",
+          "shape": [
+            128,
+            128,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 52,
+          "name": "model.8.m.0.cv2.conv.bias",
+          "shape": [
+            128
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 53,
+          "name": "model.9.cv1.conv.weight",
+          "shape": [
+            128,
+            256,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 54,
+          "name": "model.9.cv1.conv.bias",
+          "shape": [
+            128
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 55,
+          "name": "model.9.cv2.conv.weight",
+          "shape": [
+            256,
+            512,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 56,
+          "name": "model.9.cv2.conv.bias",
+          "shape": [
+            256
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 57,
+          "name": "model.12.cv1.conv.weight",
+          "shape": [
+            128,
+            384,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 58,
+          "name": "model.12.cv1.conv.bias",
+          "shape": [
+            128
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 59,
+          "name": "model.12.cv2.conv.weight",
+          "shape": [
+            128,
+            192,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 60,
+          "name": "model.12.cv2.conv.bias",
+          "shape": [
+            128
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 61,
+          "name": "model.12.m.0.cv1.conv.weight",
+          "shape": [
+            64,
+            64,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 62,
+          "name": "model.12.m.0.cv1.conv.bias",
+          "shape": [
+            64
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 63,
+          "name": "model.12.m.0.cv2.conv.weight",
+          "shape": [
+            64,
+            64,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 64,
+          "name": "model.12.m.0.cv2.conv.bias",
+          "shape": [
+            64
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 65,
+          "name": "model.15.cv1.conv.weight",
+          "shape": [
+            64,
+            192,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 66,
+          "name": "model.15.cv1.conv.bias",
+          "shape": [
+            64
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 67,
+          "name": "model.15.cv2.conv.weight",
+          "shape": [
+            64,
+            96,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 68,
+          "name": "model.15.cv2.conv.bias",
+          "shape": [
+            64
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 69,
+          "name": "model.15.m.0.cv1.conv.weight",
+          "shape": [
+            32,
+            32,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 70,
+          "name": "model.15.m.0.cv1.conv.bias",
+          "shape": [
+            32
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 71,
+          "name": "model.15.m.0.cv2.conv.weight",
+          "shape": [
+            32,
+            32,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 72,
+          "name": "model.15.m.0.cv2.conv.bias",
+          "shape": [
+            32
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 73,
+          "name": "model.16.conv.weight",
+          "shape": [
+            64,
+            64,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 74,
+          "name": "model.16.conv.bias",
+          "shape": [
+            64
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 75,
+          "name": "model.18.cv1.conv.weight",
+          "shape": [
+            128,
+            192,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 76,
+          "name": "model.18.cv1.conv.bias",
+          "shape": [
+            128
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 77,
+          "name": "model.18.cv2.conv.weight",
+          "shape": [
+            128,
+            192,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 78,
+          "name": "model.18.cv2.conv.bias",
+          "shape": [
+            128
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 79,
+          "name": "model.18.m.0.cv1.conv.weight",
+          "shape": [
+            64,
+            64,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 80,
+          "name": "model.18.m.0.cv1.conv.bias",
+          "shape": [
+            64
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 81,
+          "name": "model.18.m.0.cv2.conv.weight",
+          "shape": [
+            64,
+            64,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 82,
+          "name": "model.18.m.0.cv2.conv.bias",
+          "shape": [
+            64
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 83,
+          "name": "model.19.conv.weight",
+          "shape": [
+            128,
+            128,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 84,
+          "name": "model.19.conv.bias",
+          "shape": [
+            128
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 85,
+          "name": "model.21.cv1.conv.weight",
+          "shape": [
+            256,
+            384,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 86,
+          "name": "model.21.cv1.conv.bias",
+          "shape": [
+            256
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 87,
+          "name": "model.21.cv2.conv.weight",
+          "shape": [
+            256,
+            384,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 88,
+          "name": "model.21.cv2.conv.bias",
+          "shape": [
+            256
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 89,
+          "name": "model.21.m.0.cv1.conv.weight",
+          "shape": [
+            128,
+            128,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 90,
+          "name": "model.21.m.0.cv1.conv.bias",
+          "shape": [
+            128
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 91,
+          "name": "model.21.m.0.cv2.conv.weight",
+          "shape": [
+            128,
+            128,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 92,
+          "name": "model.21.m.0.cv2.conv.bias",
+          "shape": [
+            128
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 93,
+          "name": "model.22.cv2.0.0.conv.weight",
+          "shape": [
+            64,
+            64,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 94,
+          "name": "model.22.cv2.0.0.conv.bias",
+          "shape": [
+            64
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 95,
+          "name": "model.22.cv2.0.1.conv.weight",
+          "shape": [
+            64,
+            64,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 96,
+          "name": "model.22.cv2.0.1.conv.bias",
+          "shape": [
+            64
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 97,
+          "name": "model.22.cv2.0.2.weight",
+          "shape": [
+            64,
+            64,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 98,
+          "name": "model.22.cv2.0.2.bias",
+          "shape": [
+            64
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 99,
+          "name": "model.22.cv2.1.0.conv.weight",
+          "shape": [
+            64,
+            128,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 100,
+          "name": "model.22.cv2.1.0.conv.bias",
+          "shape": [
+            64
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 101,
+          "name": "model.22.cv2.1.1.conv.weight",
+          "shape": [
+            64,
+            64,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 102,
+          "name": "model.22.cv2.1.1.conv.bias",
+          "shape": [
+            64
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 103,
+          "name": "model.22.cv2.1.2.weight",
+          "shape": [
+            64,
+            64,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 104,
+          "name": "model.22.cv2.1.2.bias",
+          "shape": [
+            64
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 105,
+          "name": "model.22.cv2.2.0.conv.weight",
+          "shape": [
+            64,
+            256,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 106,
+          "name": "model.22.cv2.2.0.conv.bias",
+          "shape": [
+            64
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 107,
+          "name": "model.22.cv2.2.1.conv.weight",
+          "shape": [
+            64,
+            64,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 108,
+          "name": "model.22.cv2.2.1.conv.bias",
+          "shape": [
+            64
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 109,
+          "name": "model.22.cv2.2.2.weight",
+          "shape": [
+            64,
+            64,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 110,
+          "name": "model.22.cv2.2.2.bias",
+          "shape": [
+            64
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 111,
+          "name": "model.22.cv3.0.0.conv.weight",
+          "shape": [
+            80,
+            64,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 112,
+          "name": "model.22.cv3.0.0.conv.bias",
+          "shape": [
+            80
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 113,
+          "name": "model.22.cv3.0.1.conv.weight",
+          "shape": [
+            80,
+            80,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 114,
+          "name": "model.22.cv3.0.1.conv.bias",
+          "shape": [
+            80
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 115,
+          "name": "model.22.cv3.0.2.weight",
+          "shape": [
+            80,
+            80,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 116,
+          "name": "model.22.cv3.0.2.bias",
+          "shape": [
+            80
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 117,
+          "name": "model.22.cv3.1.0.conv.weight",
+          "shape": [
+            80,
+            128,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 118,
+          "name": "model.22.cv3.1.0.conv.bias",
+          "shape": [
+            80
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 119,
+          "name": "model.22.cv3.1.1.conv.weight",
+          "shape": [
+            80,
+            80,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 120,
+          "name": "model.22.cv3.1.1.conv.bias",
+          "shape": [
+            80
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 121,
+          "name": "model.22.cv3.1.2.weight",
+          "shape": [
+            80,
+            80,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 122,
+          "name": "model.22.cv3.1.2.bias",
+          "shape": [
+            80
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 123,
+          "name": "model.22.cv3.2.0.conv.weight",
+          "shape": [
+            80,
+            256,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 124,
+          "name": "model.22.cv3.2.0.conv.bias",
+          "shape": [
+            80
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 125,
+          "name": "model.22.cv3.2.1.conv.weight",
+          "shape": [
+            80,
+            80,
+            3,
+            3
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 126,
+          "name": "model.22.cv3.2.1.conv.bias",
+          "shape": [
+            80
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 127,
+          "name": "model.22.cv3.2.2.weight",
+          "shape": [
+            80,
+            80,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 128,
+          "name": "model.22.cv3.2.2.bias",
+          "shape": [
+            80
+          ],
+          "data_type": 1,
+          "kind": 4
+        },
+        {
+          "index": 129,
+          "name": "/model.2/Split_split",
+          "shape": [
+            2
+          ],
+          "data_type": 7,
+          "kind": 5
+        },
+        {
+          "index": 130,
+          "name": "/model.4/Split_split",
+          "shape": [
+            2
+          ],
+          "data_type": 7,
+          "kind": 5
+        },
+        {
+          "index": 131,
+          "name": "/model.6/Split_split",
+          "shape": [
+            2
+          ],
+          "data_type": 7,
+          "kind": 5
+        },
+        {
+          "index": 132,
+          "name": "/model.8/Split_split",
+          "shape": [
+            2
+          ],
+          "data_type": 7,
+          "kind": 5
+        },
+        {
+          "index": 133,
+          "name": "/model.12/Split_split",
+          "shape": [
+            2
+          ],
+          "data_type": 7,
+          "kind": 5
+        },
+        {
+          "index": 134,
+          "name": "/model.15/Split_split",
+          "shape": [
+            2
+          ],
+          "data_type": 7,
+          "kind": 5
+        },
+        {
+          "index": 135,
+          "name": "/model.18/Split_split",
+          "shape": [
+            2
+          ],
+          "data_type": 7,
+          "kind": 5
+        },
+        {
+          "index": 136,
+          "name": "/model.21/Split_split",
+          "shape": [
+            2
+          ],
+          "data_type": 7,
+          "kind": 5
+        },
+        {
+          "index": 137,
+          "name": "/model.10/Constant_output_0",
+          "shape": [
+            4
+          ],
+          "data_type": 1,
+          "kind": 5
+        },
+        {
+          "index": 138,
+          "name": "/model.10/Constant_1_output_0",
+          "shape": [
+            0
+          ],
+          "data_type": 1,
+          "kind": 5
+        },
+        {
+          "index": 139,
+          "name": "/model.13/Constant_output_0",
+          "shape": [
+            4
+          ],
+          "data_type": 1,
+          "kind": 5
+        },
+        {
+          "index": 140,
+          "name": "/model.13/Constant_1_output_0",
+          "shape": [
+            0
+          ],
+          "data_type": 1,
+          "kind": 5
+        },
+        {
+          "index": 141,
+          "name": "/model.22/ReduceSum_2_2conv_i1",
+          "shape": [
+            1,
+            80,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 142,
+          "name": "/model.22/ReduceSum_1_2conv_i1",
+          "shape": [
+            1,
+            80,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 143,
+          "name": "/model.22/ReduceSum_2conv_i1",
+          "shape": [
+            1,
+            80,
+            1,
+            1
+          ],
+          "data_type": 10,
+          "kind": 4
+        },
+        {
+          "index": 144,
+          "name": "images",
+          "shape": [
+            1,
+            3,
+            640,
+            640
+          ],
+          "data_type": 10,
+          "kind": 1
+        },
+        {
+          "index": 145,
+          "name": "/model.0/act/Mul_output_0",
+          "shape": [
+            1,
+            16,
+            320,
+            320
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 146,
+          "name": "/model.1/act/Mul_output_0",
+          "shape": [
+            1,
+            32,
+            160,
+            160
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 147,
+          "name": "/model.2/cv1/act/Mul_output_0",
+          "shape": [
+            1,
+            32,
+            160,
+            160
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 148,
+          "name": "/model.2/Split_output_0",
+          "shape": [
+            1,
+            16,
+            160,
+            160
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 149,
+          "name": "/model.2/Split_output_1",
+          "shape": [
+            1,
+            16,
+            160,
+            160
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 150,
+          "name": "/model.2/m.0/cv1/act/Mul_output_0",
+          "shape": [
+            1,
+            16,
+            160,
+            160
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 151,
+          "name": "/model.2/m.0/cv2/act/Mul_output_0",
+          "shape": [
+            1,
+            16,
+            160,
+            160
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 152,
+          "name": "/model.2/m.0/Add_output_0",
+          "shape": [
+            1,
+            16,
+            160,
+            160
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 153,
+          "name": "/model.2/Concat_output_0",
+          "shape": [
+            1,
+            48,
+            160,
+            160
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 154,
+          "name": "/model.2/cv2/act/Mul_output_0",
+          "shape": [
+            1,
+            32,
+            160,
+            160
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 155,
+          "name": "/model.3/act/Mul_output_0",
+          "shape": [
+            1,
+            64,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 156,
+          "name": "/model.4/cv1/act/Mul_output_0",
+          "shape": [
+            1,
+            64,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 157,
+          "name": "/model.4/Split_output_0",
+          "shape": [
+            1,
+            32,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 158,
+          "name": "/model.4/Split_output_1",
+          "shape": [
+            1,
+            32,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 159,
+          "name": "/model.4/m.0/cv1/act/Mul_output_0",
+          "shape": [
+            1,
+            32,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 160,
+          "name": "/model.4/m.0/cv2/act/Mul_output_0",
+          "shape": [
+            1,
+            32,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 161,
+          "name": "/model.4/m.0/Add_output_0",
+          "shape": [
+            1,
+            32,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 162,
+          "name": "/model.4/m.1/cv1/act/Mul_output_0",
+          "shape": [
+            1,
+            32,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 163,
+          "name": "/model.4/m.1/cv2/act/Mul_output_0",
+          "shape": [
+            1,
+            32,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 164,
+          "name": "/model.4/m.1/Add_output_0",
+          "shape": [
+            1,
+            32,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 165,
+          "name": "/model.4/Concat_output_0",
+          "shape": [
+            1,
+            128,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 166,
+          "name": "/model.4/cv2/act/Mul_output_0",
+          "shape": [
+            1,
+            64,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 167,
+          "name": "/model.5/act/Mul_output_0",
+          "shape": [
+            1,
+            128,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 168,
+          "name": "/model.6/cv1/act/Mul_output_0",
+          "shape": [
+            1,
+            128,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 169,
+          "name": "/model.6/Split_output_0",
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 170,
+          "name": "/model.6/Split_output_1",
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 171,
+          "name": "/model.6/m.0/cv1/act/Mul_output_0",
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 172,
+          "name": "/model.6/m.0/cv2/act/Mul_output_0",
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 173,
+          "name": "/model.6/m.0/Add_output_0",
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 174,
+          "name": "/model.6/m.1/cv1/act/Mul_output_0",
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 175,
+          "name": "/model.6/m.1/cv2/act/Mul_output_0",
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 176,
+          "name": "/model.6/m.1/Add_output_0",
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 177,
+          "name": "/model.6/Concat_output_0",
+          "shape": [
+            1,
+            256,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 178,
+          "name": "/model.6/cv2/act/Mul_output_0",
+          "shape": [
+            1,
+            128,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 179,
+          "name": "/model.7/act/Mul_output_0",
+          "shape": [
+            1,
+            256,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 180,
+          "name": "/model.8/cv1/act/Mul_output_0",
+          "shape": [
+            1,
+            256,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 181,
+          "name": "/model.8/Split_output_0",
+          "shape": [
+            1,
+            128,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 182,
+          "name": "/model.8/Split_output_1",
+          "shape": [
+            1,
+            128,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 183,
+          "name": "/model.8/m.0/cv1/act/Mul_output_0",
+          "shape": [
+            1,
+            128,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 184,
+          "name": "/model.8/m.0/cv2/act/Mul_output_0",
+          "shape": [
+            1,
+            128,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 185,
+          "name": "/model.8/m.0/Add_output_0",
+          "shape": [
+            1,
+            128,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 186,
+          "name": "/model.8/Concat_output_0",
+          "shape": [
+            1,
+            384,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 187,
+          "name": "/model.8/cv2/act/Mul_output_0",
+          "shape": [
+            1,
+            256,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 188,
+          "name": "/model.9/cv1/act/Mul_output_0",
+          "shape": [
+            1,
+            128,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 189,
+          "name": "/model.9/m/MaxPool_output_0",
+          "shape": [
+            1,
+            128,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 190,
+          "name": "/model.9/m_1/MaxPool_output_0",
+          "shape": [
+            1,
+            128,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 191,
+          "name": "/model.9/m_2/MaxPool_output_0",
+          "shape": [
+            1,
+            128,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 192,
+          "name": "/model.9/Concat_output_0",
+          "shape": [
+            1,
+            512,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 193,
+          "name": "/model.9/cv2/act/Mul_output_0",
+          "shape": [
+            1,
+            256,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 194,
+          "name": "/model.9/cv2/act/Mul_output_0_exSecondary",
+          "shape": [
+            1,
+            256,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 195,
+          "name": "/model.10/Resize_output_0",
+          "shape": [
+            1,
+            256,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 196,
+          "name": "/model.11/Concat_output_0",
+          "shape": [
+            1,
+            384,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 197,
+          "name": "/model.12/cv1/act/Mul_output_0",
+          "shape": [
+            1,
+            128,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 198,
+          "name": "/model.12/Split_output_0",
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 199,
+          "name": "/model.12/Split_output_1",
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 200,
+          "name": "/model.12/m.0/cv1/act/Mul_output_0",
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 201,
+          "name": "/model.12/m.0/cv2/act/Mul_output_0",
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 202,
+          "name": "/model.12/Concat_output_0",
+          "shape": [
+            1,
+            192,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 203,
+          "name": "/model.12/cv2/act/Mul_output_0",
+          "shape": [
+            1,
+            128,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 204,
+          "name": "/model.12/cv2/act/Mul_output_0_exSecondary",
+          "shape": [
+            1,
+            128,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 205,
+          "name": "/model.13/Resize_output_0",
+          "shape": [
+            1,
+            128,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 206,
+          "name": "/model.14/Concat_output_0",
+          "shape": [
+            1,
+            192,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 207,
+          "name": "/model.15/cv1/act/Mul_output_0",
+          "shape": [
+            1,
+            64,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 208,
+          "name": "/model.15/Split_output_0",
+          "shape": [
+            1,
+            32,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 209,
+          "name": "/model.15/Split_output_1",
+          "shape": [
+            1,
+            32,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 210,
+          "name": "/model.15/m.0/cv1/act/Mul_output_0",
+          "shape": [
+            1,
+            32,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 211,
+          "name": "/model.15/m.0/cv2/act/Mul_output_0",
+          "shape": [
+            1,
+            32,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 212,
+          "name": "/model.15/Concat_output_0",
+          "shape": [
+            1,
+            96,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 213,
+          "name": "/model.15/cv2/act/Mul_output_0",
+          "shape": [
+            1,
+            64,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 214,
+          "name": "/model.16/act/Mul_output_0",
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 215,
+          "name": "/model.17/Concat_output_0",
+          "shape": [
+            1,
+            192,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 216,
+          "name": "/model.22/cv2.0/cv2.0.0/act/Mul_output_0",
+          "shape": [
+            1,
+            64,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 217,
+          "name": "/model.22/cv3.0/cv3.0.0/act/Mul_output_0",
+          "shape": [
+            1,
+            80,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 218,
+          "name": "/model.18/cv1/act/Mul_output_0",
+          "shape": [
+            1,
+            128,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 219,
+          "name": "/model.18/Split_output_0",
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 220,
+          "name": "/model.18/Split_output_1",
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 221,
+          "name": "/model.22/cv2.0/cv2.0.1/act/Mul_output_0",
+          "shape": [
+            1,
+            64,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 222,
+          "name": "318",
+          "shape": [
+            1,
+            64,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 2
+        },
+        {
+          "index": 223,
+          "name": "/model.22/cv3.0/cv3.0.1/act/Mul_output_0",
+          "shape": [
+            1,
+            80,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 224,
+          "name": "/model.18/m.0/cv1/act/Mul_output_0",
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 225,
+          "name": "onnx::ReduceSum_326",
+          "shape": [
+            1,
+            80,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 2
+        },
+        {
+          "index": 226,
+          "name": "/model.18/m.0/cv2/act/Mul_output_0",
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 227,
+          "name": "/model.18/Concat_output_0",
+          "shape": [
+            1,
+            192,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 228,
+          "name": "331",
+          "shape": [
+            1,
+            1,
+            80,
+            80
+          ],
+          "data_type": 10,
+          "kind": 2
+        },
+        {
+          "index": 229,
+          "name": "/model.18/cv2/act/Mul_output_0",
+          "shape": [
+            1,
+            128,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 230,
+          "name": "/model.19/act/Mul_output_0",
+          "shape": [
+            1,
+            128,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 231,
+          "name": "/model.20/Concat_output_0",
+          "shape": [
+            1,
+            384,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 232,
+          "name": "/model.22/cv2.1/cv2.1.0/act/Mul_output_0",
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 233,
+          "name": "/model.22/cv3.1/cv3.1.0/act/Mul_output_0",
+          "shape": [
+            1,
+            80,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 234,
+          "name": "/model.21/cv1/act/Mul_output_0",
+          "shape": [
+            1,
+            256,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 235,
+          "name": "/model.21/Split_output_0",
+          "shape": [
+            1,
+            128,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 236,
+          "name": "/model.21/Split_output_1",
+          "shape": [
+            1,
+            128,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 237,
+          "name": "/model.22/cv2.1/cv2.1.1/act/Mul_output_0",
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 238,
+          "name": "338",
+          "shape": [
+            1,
+            64,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 2
+        },
+        {
+          "index": 239,
+          "name": "/model.22/cv3.1/cv3.1.1/act/Mul_output_0",
+          "shape": [
+            1,
+            80,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 240,
+          "name": "/model.21/m.0/cv1/act/Mul_output_0",
+          "shape": [
+            1,
+            128,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 241,
+          "name": "onnx::ReduceSum_346",
+          "shape": [
+            1,
+            80,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 2
+        },
+        {
+          "index": 242,
+          "name": "/model.21/m.0/cv2/act/Mul_output_0",
+          "shape": [
+            1,
+            128,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 243,
+          "name": "/model.21/Concat_output_0",
+          "shape": [
+            1,
+            384,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 244,
+          "name": "350",
+          "shape": [
+            1,
+            1,
+            40,
+            40
+          ],
+          "data_type": 10,
+          "kind": 2
+        },
+        {
+          "index": 245,
+          "name": "/model.21/cv2/act/Mul_output_0",
+          "shape": [
+            1,
+            256,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 246,
+          "name": "/model.22/cv2.2/cv2.2.0/act/Mul_output_0",
+          "shape": [
+            1,
+            64,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 247,
+          "name": "/model.22/cv3.2/cv3.2.0/act/Mul_output_0",
+          "shape": [
+            1,
+            80,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 248,
+          "name": "/model.22/cv2.2/cv2.2.1/act/Mul_output_0",
+          "shape": [
+            1,
+            64,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 249,
+          "name": "357",
+          "shape": [
+            1,
+            64,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 2
+        },
+        {
+          "index": 250,
+          "name": "/model.22/cv3.2/cv3.2.1/act/Mul_output_0",
+          "shape": [
+            1,
+            80,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 3
+        },
+        {
+          "index": 251,
+          "name": "onnx::ReduceSum_365",
+          "shape": [
+            1,
+            80,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 2
+        },
+        {
+          "index": 252,
+          "name": "369",
+          "shape": [
+            1,
+            1,
+            20,
+            20
+          ],
+          "data_type": 10,
+          "kind": 2
+        },
+        {
+          "index": 253,
+          "name": "tempMC11_output",
+          "shape": [
+            1,
+            32,
+            1,
+            1
+          ],
+          "data_type": 3,
+          "kind": 4
+        },
+        {
+          "index": 254,
+          "name": "tempMC11_input",
+          "shape": [
+            1,
+            32,
+            1,
+            1
+          ],
+          "data_type": 3,
+          "kind": 4
+        },
+        {
+          "index": 255,
+          "name": "regcmd",
+          "shape": [],
+          "data_type": 13,
+          "kind": 9
+        },
+        {
+          "index": 256,
+          "name": "task",
+          "shape": [],
+          "data_type": 13,
+          "kind": 10
+        }
+      ],
+      "inputs": [
+        144
+      ],
+      "outputs": [
+        222,
+        225,
+        228,
+        238,
+        241,
+        244,
+        249,
+        251,
+        252
+      ]
+    }
+  ],
+  "outer": {
+    "connection": [
+      {
+        "left": "input",
+        "left_tensor_id": 0,
+        "node_id": 0,
+        "right_tensor": {
+          "tensor_id": 0,
+          "type": "norm_tensor"
+        }
+      },
+      {
+        "left": "output",
+        "left_tensor_id": 0,
+        "node_id": 0,
+        "right_tensor": {
+          "tensor_id": 1,
+          "type": "norm_tensor"
+        }
+      },
+      {
+        "left": "output",
+        "left_tensor_id": 1,
+        "node_id": 0,
+        "right_tensor": {
+          "tensor_id": 2,
+          "type": "norm_tensor"
+        }
+      },
+      {
+        "left": "output",
+        "left_tensor_id": 2,
+        "node_id": 0,
+        "right_tensor": {
+          "tensor_id": 3,
+          "type": "norm_tensor"
+        }
+      },
+      {
+        "left": "output",
+        "left_tensor_id": 3,
+        "node_id": 0,
+        "right_tensor": {
+          "tensor_id": 4,
+          "type": "norm_tensor"
+        }
+      },
+      {
+        "left": "output",
+        "left_tensor_id": 4,
+        "node_id": 0,
+        "right_tensor": {
+          "tensor_id": 5,
+          "type": "norm_tensor"
+        }
+      },
+      {
+        "left": "output",
+        "left_tensor_id": 5,
+        "node_id": 0,
+        "right_tensor": {
+          "tensor_id": 6,
+          "type": "norm_tensor"
+        }
+      },
+      {
+        "left": "output",
+        "left_tensor_id": 6,
+        "node_id": 0,
+        "right_tensor": {
+          "tensor_id": 7,
+          "type": "norm_tensor"
+        }
+      },
+      {
+        "left": "output",
+        "left_tensor_id": 7,
+        "node_id": 0,
+        "right_tensor": {
+          "tensor_id": 8,
+          "type": "norm_tensor"
+        }
+      },
+      {
+        "left": "output",
+        "left_tensor_id": 8,
+        "node_id": 0,
+        "right_tensor": {
+          "tensor_id": 9,
+          "type": "norm_tensor"
+        }
+      }
+    ],
+    "const_tensor": [],
+    "graph": [
+      {
+        "left": "input",
+        "left_tensor_id": 0,
+        "right": "norm_tensor",
+        "right_tensor_id": 0
+      },
+      {
+        "left": "output",
+        "left_tensor_id": 0,
+        "right": "norm_tensor",
+        "right_tensor_id": 1
+      },
+      {
+        "left": "output",
+        "left_tensor_id": 1,
+        "right": "norm_tensor",
+        "right_tensor_id": 2
+      },
+      {
+        "left": "output",
+        "left_tensor_id": 2,
+        "right": "norm_tensor",
+        "right_tensor_id": 3
+      },
+      {
+        "left": "output",
+        "left_tensor_id": 3,
+        "right": "norm_tensor",
+        "right_tensor_id": 4
+      },
+      {
+        "left": "output",
+        "left_tensor_id": 4,
+        "right": "norm_tensor",
+        "right_tensor_id": 5
+      },
+      {
+        "left": "output",
+        "left_tensor_id": 5,
+        "right": "norm_tensor",
+        "right_tensor_id": 6
+      },
+      {
+        "left": "output",
+        "left_tensor_id": 6,
+        "right": "norm_tensor",
+        "right_tensor_id": 7
+      },
+      {
+        "left": "output",
+        "left_tensor_id": 7,
+        "right": "norm_tensor",
+        "right_tensor_id": 8
+      },
+      {
+        "left": "output",
+        "left_tensor_id": 8,
+        "right": "norm_tensor",
+        "right_tensor_id": 9
+      }
+    ],
+    "input_num": 1,
+    "name": "rknn model",
+    "network_platform": "ONNX",
+    "node_num": 1,
+    "nodes": [
+      {
+        "input_num": 1,
+        "lid": "npu_network_bin_graph",
+        "name": "nnbg",
+        "nn": {
+          "nbg": {
+            "type": "RKNN_OP_NNBG"
+          }
+        },
+        "op": "RKNN_OP_NNBG",
+        "output_num": 9,
+        "uid": 0
+      }
+    ],
+    "norm_tensor": [
+      {
+        "dim_num": 4,
+        "dtype": {
+          "qnt_method": "",
+          "qnt_type": "",
+          "vx_type": ""
+        },
+        "size": [
+          1,
+          3,
+          640,
+          640
+        ],
+        "tensor_id": 0,
+        "url": "images"
+      },
+      {
+        "dim_num": 4,
+        "dtype": {
+          "qnt_method": "",
+          "qnt_type": "",
+          "vx_type": ""
+        },
+        "size": [
+          1,
+          64,
+          80,
+          80
+        ],
+        "tensor_id": 1,
+        "url": "318"
+      },
+      {
+        "dim_num": 4,
+        "dtype": {
+          "qnt_method": "",
+          "qnt_type": "",
+          "vx_type": ""
+        },
+        "size": [
+          1,
+          80,
+          80,
+          80
+        ],
+        "tensor_id": 2,
+        "url": "onnx::ReduceSum_326"
+      },
+      {
+        "dim_num": 4,
+        "dtype": {
+          "qnt_method": "",
+          "qnt_type": "",
+          "vx_type": ""
+        },
+        "size": [
+          1,
+          1,
+          80,
+          80
+        ],
+        "tensor_id": 3,
+        "url": "331"
+      },
+      {
+        "dim_num": 4,
+        "dtype": {
+          "qnt_method": "",
+          "qnt_type": "",
+          "vx_type": ""
+        },
+        "size": [
+          1,
+          64,
+          40,
+          40
+        ],
+        "tensor_id": 4,
+        "url": "338"
+      },
+      {
+        "dim_num": 4,
+        "dtype": {
+          "qnt_method": "",
+          "qnt_type": "",
+          "vx_type": ""
+        },
+        "size": [
+          1,
+          80,
+          40,
+          40
+        ],
+        "tensor_id": 5,
+        "url": "onnx::ReduceSum_346"
+      },
+      {
+        "dim_num": 4,
+        "dtype": {
+          "qnt_method": "",
+          "qnt_type": "",
+          "vx_type": ""
+        },
+        "size": [
+          1,
+          1,
+          40,
+          40
+        ],
+        "tensor_id": 6,
+        "url": "350"
+      },
+      {
+        "dim_num": 4,
+        "dtype": {
+          "qnt_method": "",
+          "qnt_type": "",
+          "vx_type": ""
+        },
+        "size": [
+          1,
+          64,
+          20,
+          20
+        ],
+        "tensor_id": 7,
+        "url": "357"
+      },
+      {
+        "dim_num": 4,
+        "dtype": {
+          "qnt_method": "",
+          "qnt_type": "",
+          "vx_type": ""
+        },
+        "size": [
+          1,
+          80,
+          20,
+          20
+        ],
+        "tensor_id": 8,
+        "url": "onnx::ReduceSum_365"
+      },
+      {
+        "dim_num": 4,
+        "dtype": {
+          "qnt_method": "",
+          "qnt_type": "",
+          "vx_type": ""
+        },
+        "size": [
+          1,
+          1,
+          20,
+          20
+        ],
+        "tensor_id": 9,
+        "url": "369"
+      }
+    ],
+    "norm_tensor_num": 10,
+    "ori_network_platform": "ONNX",
+    "output_num": 9,
+    "target_platform": [
+      "rk3588"
+    ],
+    "version": "2.3.2",
+    "virtual_tensor": []
+  },
+  "provenance": {
+    "model_path": "models/yolov8n_fp16.rknn",
+    "sha256": "56808e7b2d85de3cc59e953711d158f15b36bb4b33f12a05d8bd27e0a70d5813",
+    "source": "actual RKNN binary; graph structure only; no timing data"
+  }
+}

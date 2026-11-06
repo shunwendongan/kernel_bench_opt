@@ -1,0 +1,37 @@
+{
+  "host_tests": {
+    "command": "python -m pytest tests -q --ignore=tests/test_bridge.py",
+    "environment": "Windows Python 3.12 independent venv",
+    "passed": 110,
+    "evidence": "evidence/host_tests_final.log"
+  },
+  "bridge_tests": {
+    "command": "python tests/test_bridge.py -v",
+    "environment": "RK3588 Linux aarch64, GCC 12.2, Python 3.11",
+    "passed": 14,
+    "evidence": "evidence/board_bridge_tests_final.log",
+    "scope": "桥接ABI、返回值和资源生命周期。替身测试不作为性能证据。"
+  },
+  "initial_host_full_suite": {
+    "passed": 110,
+    "failed": 14,
+    "reason": "Windows缺少g++，桥接测试不能编译。相同14项已在板端复核通过。"
+  },
+  "real_execution": {
+    "verify": 40,
+    "baseline": 400,
+    "detail": 40,
+    "execution_failures": 0,
+    "output_evidence": "evidence/output_diagnostics.json"
+  },
+  "artifact_validation": {
+    "samples": 40,
+    "hotspots": 160,
+    "hashed_evidence_files": 436,
+    "connected_disjoint_ranked": true,
+    "evidence": "evidence/independent_audit.json"
+  },
+  "quality_status": "failed",
+  "formal_acceptance": false,
+  "quality_evidence": "runs/verify_01/verification.json"
+}
