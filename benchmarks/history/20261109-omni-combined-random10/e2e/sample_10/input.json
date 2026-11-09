@@ -1,0 +1,28 @@
+{
+  "benchmark_meta": {
+    "audio_type": "Speech",
+    "dataset_name": "discourse_comprehension",
+    "dataset_series": "vcb_bench",
+    "interactive": "Audio-analysis",
+    "lang": "zh",
+    "task": "MQA"
+  },
+  "chat_messages": [
+    {
+      "content": "记最先说话的说话者为A，后说话的说话者为B。请完成下面的单项选择题。从对话中可以推断出，A和B对电视剧《三生三世十里桃花》的讨论主要集中在哪个方面？\nA. A和B主要讨论了剧中的演员表现。\nB. A和B主要讨论了剧中的制作细节。\nC. A和B主要讨论了剧中的剧情发展。\nD. A和B主要讨论了剧中的网络流行文化现象。<audio>{BUNDLE}/audio/010_00_dc_induction_conv0081_649_39.wav</audio>",
+      "role": "user"
+    }
+  ],
+  "index": "dc_induction_conv0081_649_39",
+  "max_new_tokens": 1024,
+  "original_row_number": 10,
+  "prepared_audios": [
+    "audio/010_00_dc_induction_conv0081_649_39.wav"
+  ],
+  "prepared_duration_s": 45.013,
+  "source_jsonl": "data/downloaded_datasets/vcb_bench/discourse_comprehension/discourse_comprehension.jsonl",
+  "source_line_number": 134,
+  "subset": "discourse_comprehension",
+  "system_prompt": "You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.",
+  "task_type": "audio2text"
+}

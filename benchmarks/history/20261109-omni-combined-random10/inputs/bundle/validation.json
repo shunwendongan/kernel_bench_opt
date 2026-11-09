@@ -1,0 +1,120 @@
+{
+  "verified_records": 10,
+  "verified_prepared_audio_files": 26,
+  "selection_unchanged_sha256": "23698758183a7f0b50e9ce47e09f308b2ba7f8cb99efabf03c5fd03e722bf614",
+  "manifest_sha256": "93a23a4eeced6ca4e310682583b65ce1af74dc130cd3f41910bcb51fed264f6d",
+  "references_sha256": "c327c37620a243811abac0184c934e2c67a88802c4dbeeab0b801751e1fbc891",
+  "ffmpeg_version": "ffmpeg version 4.4 Copyright (c) 2000-2021 the FFmpeg developers",
+  "sample_rate": 16000,
+  "channels": 1,
+  "sample_format": "PCM16",
+  "no_trim_or_augmentation": true,
+  "audio_analysis_count": 1,
+  "input_audio_duration_s": 172.35399999999998,
+  "max_abs_duration_delta_s": 6.802721088661201e-06,
+  "all_user_transcripts_excluded": true,
+  "all_target_answers_excluded": true,
+  "references_must_not_be_model_inputs": true,
+  "checks": [
+    {
+      "sample_ordinal": 1,
+      "upstream_prompt_ast_match": true,
+      "user_content_audio_only": true,
+      "user_transcript_excluded": true,
+      "target_answer_fields_excluded": true,
+      "historical_assistant_text_exact": true,
+      "roles_alternate_and_end_in_user": true,
+      "audio_count": 7
+    },
+    {
+      "sample_ordinal": 2,
+      "upstream_prompt_ast_match": true,
+      "user_content_audio_only": true,
+      "user_transcript_excluded": true,
+      "target_answer_fields_excluded": true,
+      "historical_assistant_text_exact": true,
+      "roles_alternate_and_end_in_user": true,
+      "audio_count": 1
+    },
+    {
+      "sample_ordinal": 3,
+      "upstream_prompt_ast_match": true,
+      "user_content_audio_only": true,
+      "user_transcript_excluded": true,
+      "target_answer_fields_excluded": true,
+      "historical_assistant_text_exact": true,
+      "roles_alternate_and_end_in_user": true,
+      "audio_count": 1
+    },
+    {
+      "sample_ordinal": 4,
+      "upstream_prompt_ast_match": true,
+      "user_content_audio_only": true,
+      "user_transcript_excluded": true,
+      "target_answer_fields_excluded": true,
+      "historical_assistant_text_exact": true,
+      "roles_alternate_and_end_in_user": true,
+      "audio_count": 1
+    },
+    {
+      "sample_ordinal": 5,
+      "upstream_prompt_ast_match": true,
+      "user_content_audio_only": true,
+      "user_transcript_excluded": true,
+      "target_answer_fields_excluded": true,
+      "historical_assistant_text_exact": true,
+      "roles_alternate_and_end_in_user": true,
+      "audio_count": 1
+    },
+    {
+      "sample_ordinal": 6,
+      "upstream_prompt_ast_match": true,
+      "user_content_audio_only": true,
+      "user_transcript_excluded": true,
+      "target_answer_fields_excluded": true,
+      "historical_assistant_text_exact": true,
+      "roles_alternate_and_end_in_user": true,
+      "audio_count": 9
+    },
+    {
+      "sample_ordinal": 7,
+      "upstream_prompt_ast_match": true,
+      "user_content_audio_only": true,
+      "user_transcript_excluded": true,
+      "target_answer_fields_excluded": true,
+      "historical_assistant_text_exact": true,
+      "roles_alternate_and_end_in_user": true,
+      "audio_count": 1
+    },
+    {
+      "sample_ordinal": 8,
+      "upstream_prompt_ast_match": true,
+      "user_content_audio_only": true,
+      "user_transcript_excluded": true,
+      "target_answer_fields_excluded": true,
+      "historical_assistant_text_exact": true,
+      "roles_alternate_and_end_in_user": true,
+      "audio_count": 1
+    },
+    {
+      "sample_ordinal": 9,
+      "upstream_prompt_ast_match": true,
+      "user_content_audio_only": true,
+      "user_transcript_excluded": true,
+      "target_answer_fields_excluded": true,
+      "historical_assistant_text_exact": true,
+      "roles_alternate_and_end_in_user": true,
+      "audio_count": 3
+    },
+    {
+      "sample_ordinal": 10,
+      "upstream_prompt_ast_match": true,
+      "user_content_audio_only": false,
+      "user_transcript_excluded": true,
+      "target_answer_fields_excluded": true,
+      "historical_assistant_text_exact": true,
+      "roles_alternate_and_end_in_user": true,
+      "audio_count": 1
+    }
+  ]
+}

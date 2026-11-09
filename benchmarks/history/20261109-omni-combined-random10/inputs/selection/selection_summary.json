@@ -1,0 +1,96 @@
+{
+  "schema_version": 2,
+  "portability_note": "Source audio paths are relative. This selection hash differs from the historical host-specific selection even for the same draw; compare source JSONL, physical line, and audio SHA to establish identity.",
+  "seed": 20261109,
+  "sampling_algorithm": "Python random.Random(seed).sample(population, count), no replacement, retain draw order",
+  "population_order": "JSONL relative paths sorted lexicographically (POSIX); nonempty physical lines ascending within each file",
+  "population_jsonl_files": 63,
+  "population_records": 11362,
+  "excluded_records": 0,
+  "resampling_after_draw": false,
+  "selected_records": 10,
+  "unique_source_records": 10,
+  "selection_sha256": "23698758183a7f0b50e9ce47e09f308b2ba7f8cb99efabf03c5fd03e722bf614",
+  "task_types": {
+    "audio2text": 8,
+    "audio2audio": 2
+  },
+  "subsets": {
+    "accent_cmp": 1,
+    "backtracking": 1,
+    "continuation_en": 1,
+    "discourse_comprehension": 1,
+    "general_knowledge": 1,
+    "language_control": 1,
+    "non_verbal_vocalization_en": 1,
+    "topic_shift": 1,
+    "transition": 2
+  },
+  "top_level_categories": {
+    "discourse_comprehension": 1,
+    "general_knowledge": 1,
+    "multi_turn_dialog": 3,
+    "real_scenario": 2,
+    "speech_instruction_follow": 2,
+    "text_instruction_follow": 1
+  },
+  "multi_turn_records": [
+    {
+      "sample_ordinal": 1,
+      "id": "zhuanzhe0124-3",
+      "subset": "transition",
+      "mt_meta": {
+        "rounds": "5",
+        "this_round": "4",
+        "score_ratio": "1:1:1:1:4"
+      },
+      "audio_count": 7,
+      "audio_content_count": 7,
+      "source_line_number": 293
+    },
+    {
+      "sample_ordinal": 6,
+      "id": "huisu0141-4",
+      "subset": "backtracking",
+      "mt_meta": {
+        "rounds": "5",
+        "this_round": "5",
+        "score_ratio": "1:1:1:1:4"
+      },
+      "audio_count": 9,
+      "audio_content_count": 9,
+      "source_line_number": 227
+    },
+    {
+      "sample_ordinal": 9,
+      "id": "zhuanzhe0263-1",
+      "subset": "transition",
+      "mt_meta": {
+        "rounds": "5",
+        "this_round": "2",
+        "score_ratio": "1:1:1:1:4"
+      },
+      "audio_count": 3,
+      "audio_content_count": 3,
+      "source_line_number": 271
+    }
+  ],
+  "audio_references": 26,
+  "unique_audio_files": 26,
+  "source_audio_total_duration_s": 172.3539931972789,
+  "missing_audio_files": [],
+  "nonempty_questions": [
+    {
+      "sample_ordinal": 10,
+      "id": "dc_induction_conv0081_649_39",
+      "question": "记最先说话的说话者为A，后说话的说话者为B。请完成下面的单项选择题。从对话中可以推断出，A和B对电视剧《三生三世十里桃花》的讨论主要集中在哪个方面？\nA. A和B主要讨论了剧中的演员表现。\nB. A和B主要讨论了剧中的制作细节。\nC. A和B主要讨论了剧中的剧情发展。\nD. A和B主要讨论了剧中的网络流行文化现象。"
+    }
+  ],
+  "preparation_status": "raw selection only; source audio hashed and inventoried; no resampling or inference",
+  "runner_requirements": [
+    "Preserve each source question; do not append a fixed Chinese answer instruction to all task types.",
+    "Preserve multi-turn history and roles using benchmark protocol; do not concatenate history audio into a single utterance.",
+    "Retain audio2text/audio2audio labels when adapting deployment performance runs.",
+    "Selected records with no supplied reference answer require their task-specific evaluator; infrastructure success is not answer correctness."
+  ]
+}

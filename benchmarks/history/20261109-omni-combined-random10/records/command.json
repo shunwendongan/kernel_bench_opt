@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "${BOARD_RUN}/omni_batch_ab",
+    "${BOARD_RUN}/config.json",
+    "${BOARD_RUN}/bundle/manifest.jsonl",
+    "${BOARD_RUN}/bundle",
+    "${BOARD_RUN}/e2e",
+    "1",
+    "-",
+    "${BOARD_PROJECT}/models/rknn/audio_conv_prefix_mnn4bit_fp16.rknn"
+  ],
+  "environment": {
+    "LD_LIBRARY_PATH": "${BOARD_PROJECT}/gpu/lib:/lib",
+    "OMNI_TEST_SEED": "20261109",
+    "OMNI_PREDIT_SYNC": "1"
+  },
+  "utc": "2026-11-09T02:26:20.971015+00:00",
+  "binary_sha256": "02df5e64e0f770bd8bfee4c8ac0dc13351d6eba97f82e4db40886ee95eeeb5bc",
+  "source_sha256": "84d75273ab1e25cad8b2786dbdd400003c3d0a483c9670e0f7f112f9d6435fa0",
+  "formal_pairs_per_sample": 1,
+  "original_manifest_unchanged": true
+}

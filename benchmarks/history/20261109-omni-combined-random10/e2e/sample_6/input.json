@@ -1,0 +1,68 @@
+{
+  "benchmark_meta": {
+    "audio_type": "Speech",
+    "dataset_name": "backtracking",
+    "dataset_series": "vcb_bench",
+    "interactive": "Audio-QA",
+    "lang": "zh",
+    "task": "Multi-Turn"
+  },
+  "chat_messages": [
+    {
+      "content": "<audio>{BUNDLE}/audio/006_00_huisu0141-4.wav</audio>",
+      "role": "user"
+    },
+    {
+      "content": "睡前一小时关掉电子设备，泡个热水澡，温度在37度左右，有助于放松。<audio>{BUNDLE}/audio/006_01_huisu0141-4.wav</audio>",
+      "role": "assistant"
+    },
+    {
+      "content": "<audio>{BUNDLE}/audio/006_02_huisu0141-4.wav</audio>",
+      "role": "user"
+    },
+    {
+      "content": "可以听轻音乐，每晚听15分钟，这有助于缓解压力，提高睡眠质量。<audio>{BUNDLE}/audio/006_03_huisu0141-4.wav</audio>",
+      "role": "assistant"
+    },
+    {
+      "content": "<audio>{BUNDLE}/audio/006_04_huisu0141-4.wav</audio>",
+      "role": "user"
+    },
+    {
+      "content": "可以喝一杯热牛奶或者吃香蕉，含有助眠的物质。睡前一小时食用最好。<audio>{BUNDLE}/audio/006_05_huisu0141-4.wav</audio>",
+      "role": "assistant"
+    },
+    {
+      "content": "<audio>{BUNDLE}/audio/006_06_huisu0141-4.wav</audio>",
+      "role": "user"
+    },
+    {
+      "content": "起床后去晒太阳，户外活动至少30分钟，有助于调整生物钟。<audio>{BUNDLE}/audio/006_07_huisu0141-4.wav</audio>",
+      "role": "assistant"
+    },
+    {
+      "content": "<audio>{BUNDLE}/audio/006_08_huisu0141-4.wav</audio>",
+      "role": "user"
+    }
+  ],
+  "index": "huisu0141-4",
+  "max_new_tokens": 1024,
+  "original_row_number": 6,
+  "prepared_audios": [
+    "audio/006_00_huisu0141-4.wav",
+    "audio/006_01_huisu0141-4.wav",
+    "audio/006_02_huisu0141-4.wav",
+    "audio/006_03_huisu0141-4.wav",
+    "audio/006_04_huisu0141-4.wav",
+    "audio/006_05_huisu0141-4.wav",
+    "audio/006_06_huisu0141-4.wav",
+    "audio/006_07_huisu0141-4.wav",
+    "audio/006_08_huisu0141-4.wav"
+  ],
+  "prepared_duration_s": 40.87,
+  "source_jsonl": "data/downloaded_datasets/vcb_bench/multi_turn_dialog/backtracking/backtracking.jsonl",
+  "source_line_number": 227,
+  "subset": "backtracking",
+  "system_prompt": "You are a helpful assistant.",
+  "task_type": "audio2text"
+}

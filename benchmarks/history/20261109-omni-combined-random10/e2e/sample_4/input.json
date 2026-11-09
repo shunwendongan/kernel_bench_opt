@@ -1,0 +1,28 @@
+{
+  "benchmark_meta": {
+    "audio_type": "Speech",
+    "dataset_name": "topic_shift",
+    "dataset_series": "vcb_bench",
+    "interactive": "Audio-QA",
+    "lang": "zh",
+    "task": "Open-Ended"
+  },
+  "chat_messages": [
+    {
+      "content": "<audio>{BUNDLE}/audio/004_00_topic_shift_neirong_000074.wav</audio>",
+      "role": "user"
+    }
+  ],
+  "index": "topic_shift_neirong_000074",
+  "max_new_tokens": 1024,
+  "original_row_number": 4,
+  "prepared_audios": [
+    "audio/004_00_topic_shift_neirong_000074.wav"
+  ],
+  "prepared_duration_s": 9.08,
+  "source_jsonl": "data/downloaded_datasets/vcb_bench/real_scenario/content_variations/topic_shift/topic_shift.jsonl",
+  "source_line_number": 56,
+  "subset": "topic_shift",
+  "system_prompt": "You are a helpful assistant.",
+  "task_type": "audio2text"
+}

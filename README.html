@@ -2,8 +2,8 @@
 <html lang="zh-CN" data-register="paper"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light">
-<meta name="readme-sha256" content="026797684ff5f7ac8626249a29c6cdb5bbf00895eb644fe7c39674bd868c735f">
-<meta name="embedded-assets" content="{&quot;readme_sha256&quot;: &quot;026797684ff5f7ac8626249a29c6cdb5bbf00895eb644fe7c39674bd868c735f&quot;, &quot;images&quot;: {&quot;docs/images/01-workflow-overview.svg&quot;: &quot;530a80d8f9b4fbf62db4810486e796a780dd184c12b4ff12b85cbd11ca913cec&quot;, &quot;docs/images/02-task-sandbox.svg&quot;: &quot;70e9edc255a7c306bf5f2c684f694b910f237c9106393044e13bbf921c868934&quot;, &quot;docs/images/03-hotspot-to-kernel.svg&quot;: &quot;f2b92d59b265fe425cd62527fe334f06dc51f98a8231f50902ce29ae434a26b7&quot;, &quot;docs/images/04-benchmark-gates.svg&quot;: &quot;b9bbe628657659413e8517c07a9e9c61204a33f95cbfd81892d8e28901c1e514&quot;, &quot;docs/images/05-knowledge-cycle.svg&quot;: &quot;71b00387398379f7ee25b91c3d3be3c3d489ae6508988b1c34d03313b475655e&quot;}}">
+<meta name="readme-sha256" content="736a1819bc8537210b95f5fe14e61a687ff0af122ba943d5ec38ff0609c5988b">
+<meta name="embedded-assets" content="{&quot;readme_sha256&quot;: &quot;736a1819bc8537210b95f5fe14e61a687ff0af122ba943d5ec38ff0609c5988b&quot;, &quot;images&quot;: {&quot;docs/images/01-workflow-overview.svg&quot;: &quot;530a80d8f9b4fbf62db4810486e796a780dd184c12b4ff12b85cbd11ca913cec&quot;, &quot;docs/images/02-task-sandbox.svg&quot;: &quot;70e9edc255a7c306bf5f2c684f694b910f237c9106393044e13bbf921c868934&quot;, &quot;docs/images/03-hotspot-to-kernel.svg&quot;: &quot;f2b92d59b265fe425cd62527fe334f06dc51f98a8231f50902ce29ae434a26b7&quot;, &quot;docs/images/04-benchmark-gates.svg&quot;: &quot;b9bbe628657659413e8517c07a9e9c61204a33f95cbfd81892d8e28901c1e514&quot;, &quot;docs/images/05-knowledge-cycle.svg&quot;: &quot;71b00387398379f7ee25b91c3d3be3c3d489ae6508988b1c34d03313b475655e&quot;}}">
 <title>kernel_bench_opt · 完整图文 README</title>
 <style>
 :root {
@@ -358,6 +358,8 @@ details[open] summary { margin-bottom: 20px; }
 <p>已有 BigVGAN ConvTranspose 实验走过了这条路径：<strong>真实请求的热点 → 参考 ONNX 与 MNN 执行器定位 → 捕获三种真实 shape 和当前部署权重 → tile4 候选 → MNN 接入 → 分级对拍与完整请求 A/B → 成功、失败和来源记录归档。</strong></p>
 <p>历史 L1 中位速度比为 <strong>12.11–13.38×</strong>；独立 PreDiT 同步构建中的一个样本、三对完整请求中位延迟为 <strong>94.061 → 91.055 秒（降低 3.20%）</strong>。这些数字只代表原板裸机及该工作负载；异步构建曾在波形检查失败，相关记录同样保留。它说明了为何需要多级评测，不能把局部算子加速直接当作业务收益。</p>
 <p><a href="https://github.com/shunwendongan/kernel_bench_opt/blob/Qwen2.5-Omni-3B_VCB-Bench/experiments/bigvgan-convtranspose-tile4/design.md">候选与设计</a> · <a href="https://github.com/shunwendongan/kernel_bench_opt/blob/Qwen2.5-Omni-3B_VCB-Bench/benchmarks/history/20261106-bigvgan-convtranspose/README.md">逐次 benchmark</a> · <a href="https://github.com/shunwendongan/kernel_bench_opt/blob/Qwen2.5-Omni-3B_VCB-Bench/reports/20261106-bigvgan-convtranspose/README.md">热点片段</a> · <a href="https://github.com/shunwendongan/kernel_bench_opt/blob/Qwen2.5-Omni-3B_VCB-Bench/reports/historical/README.md">历史 profile / 映射 / VCB 结果</a></p>
+<p>后续还保存了 <a href="https://github.com/shunwendongan/kernel_bench_opt/blob/Qwen2.5-Omni-3B_VCB-Bench/reports/20261109-omni-combined-random10/README.md">随机 10 条组合路径 A/B</a>：将既有 RKNN 音频前缀与 tile4 同时启用，与原 MNN/OpenCL 音频编码器和旧 ConvTranspose 比较。<strong>9 对有效、其中 1 对严格同输出，8 对输出变化，第 10 对编码失败；组合的输出保持验收未通过。</strong> 有效 9 对累计耗时降低 8.25%，仅为系统路径描述。这类负例同样进入 Task → Candidate → Run 证据链，供下一轮检查音频边界与数值路径。</p>
+<p><a href="https://github.com/shunwendongan/kernel_bench_opt/blob/Qwen2.5-Omni-3B_VCB-Bench/benchmarks/history/README.md">全部历史运行索引</a> · <a href="https://github.com/shunwendongan/kernel_bench_opt/blob/Qwen2.5-Omni-3B_VCB-Bench/experiments/rknn-prefix-bigvgan-tile4/design.md">组合候选与决策</a> · <a href="https://github.com/shunwendongan/kernel_bench_opt/blob/Qwen2.5-Omni-3B_VCB-Bench/benchmarks/history/20261109-omni-combined-random10/README.md">逐请求证据与离线复算</a> · <a href="https://github.com/shunwendongan/kernel_bench_opt/blob/Qwen2.5-Omni-3B_VCB-Bench/assets/runs/20261109-112115-omni-combined-e2e-random10.json">外置资产清单</a></p>
 <h2 id="从这里开始">从这里开始</h2>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="at">--branch</span> Qwen2.5-Omni-3B_VCB-Bench <span class="dt">\</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  https://github.com/shunwendongan/kernel_bench_opt.git</span>
@@ -392,7 +394,7 @@ details[open] summary { margin-bottom: 20px; }
 </tr>
 <tr>
 <td>查看分层结果或复用记录格式</td>
-<td><a href="https://github.com/shunwendongan/kernel_bench_opt/blob/Qwen2.5-Omni-3B_VCB-Bench/docs/REPRODUCE.md">三级复现入口</a> · <a href="https://github.com/shunwendongan/kernel_bench_opt/blob/Qwen2.5-Omni-3B_VCB-Bench/benchmarks/history/20261106-bigvgan-convtranspose/README.md">历史 benchmark</a> · <a href="https://github.com/shunwendongan/kernel_bench_opt/blob/Qwen2.5-Omni-3B_VCB-Bench/experiments/templates/run.template.json">run 模板</a></td>
+<td><a href="https://github.com/shunwendongan/kernel_bench_opt/blob/Qwen2.5-Omni-3B_VCB-Bench/docs/REPRODUCE.md">三级复现入口</a> · <a href="https://github.com/shunwendongan/kernel_bench_opt/blob/Qwen2.5-Omni-3B_VCB-Bench/benchmarks/history/README.md">历史 benchmark 索引</a> · <a href="https://github.com/shunwendongan/kernel_bench_opt/blob/Qwen2.5-Omni-3B_VCB-Bench/experiments/templates/run.template.json">run 模板</a></td>
 </tr>
 <tr>
 <td>核对依赖与实际完成状态</td>
@@ -461,5 +463,5 @@ assets/                       资产清单与来源；大型文件外置</code><
 </tbody>
 </table></div>
 <p>手绘图展示目标工作方式；它们是可编辑 SVG，不依赖外部图片服务。另提供 <a href="#top">README.html 单文件版</a>，五张图和样式全部内嵌，下载后无需携带图片目录。两份历史 HTML 仅用于理解既有实验，未随本页重新发布。代码遵循 <a href="https://github.com/shunwendongan/kernel_bench_opt/blob/Qwen2.5-Omni-3B_VCB-Bench/LICENSE">Apache-2.0</a>，模型、数据与厂商依赖保留各自 <a href="https://github.com/shunwendongan/kernel_bench_opt/blob/Qwen2.5-Omni-3B_VCB-Bench/docs/THIRD_PARTY.md">来源和许可</a>。</p>
-<footer class="export-footer"><p>本文由 README.md 导出，保留完整正文与手绘图。共内嵌 5 张图。<a href="https://github.com/shunwendongan/kernel_bench_opt/blob/Qwen2.5-Omni-3B_VCB-Bench/README.md">查看仓库中的 README</a>。</p><p>来源 SHA256：<code>026797684ff5f7ac8626249a29c6cdb5bbf00895eb644fe7c39674bd868c735f</code></p></footer>
+<footer class="export-footer"><p>本文由 README.md 导出，保留完整正文与手绘图。共内嵌 5 张图。<a href="https://github.com/shunwendongan/kernel_bench_opt/blob/Qwen2.5-Omni-3B_VCB-Bench/README.md">查看仓库中的 README</a>。</p><p>来源 SHA256：<code>736a1819bc8537210b95f5fe14e61a687ff0af122ba943d5ec38ff0609c5988b</code></p></footer>
 </main></body></html>

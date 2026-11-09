@@ -1,0 +1,34 @@
+{
+  "completed_at_utc": "2026-11-09T03:20:27.571927+00:00",
+  "board_processes_verified_exited_at_utc": "2026-11-09T03:25:01.949539+00:00",
+  "board_inference_pid": 47730,
+  "board_supervisor_pid": 47493,
+  "board_processes_exited": true,
+  "formal_samples_attempted": 10,
+  "formal_requests": 20,
+  "warmup_requests": 2,
+  "valid_audio_feature_pairs": 9,
+  "strict_equal_output_pairs": 1,
+  "full_combination_unchanged_output_acceptance": false,
+  "record_integrity_passed": true,
+  "runtime_invalid_sample_rows": [
+    10
+  ],
+  "valid_9_pair_latency": {
+    "pairs": 9,
+    "old_s": 1263.105123413,
+    "new_s": 1158.94907302,
+    "saved_s": 104.15605039299999,
+    "old_over_new": 1.0898711192905044,
+    "reduction_pct": 8.246031819708154
+  },
+  "strict_equal_subset_latency": {
+    "pairs": 1,
+    "old_s": 14.698678489,
+    "new_s": 6.055010139,
+    "saved_s": 8.64366835,
+    "old_over_new": 2.4275233486937684,
+    "reduction_pct": 58.80575152704124
+  },
+  "note": "Runtime diagnostics in process.log override the runner reported success for sample 10. No replacement inputs, cropping or token-limit changes."
+}

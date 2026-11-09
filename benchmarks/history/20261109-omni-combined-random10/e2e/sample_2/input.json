@@ -1,0 +1,28 @@
+{
+  "benchmark_meta": {
+    "audio_type": "Speech",
+    "dataset_name": "general_knowledge",
+    "dataset_series": "vcb_bench",
+    "interactive": "Audio-QA",
+    "lang": "zh",
+    "task": "Ref-QA"
+  },
+  "chat_messages": [
+    {
+      "content": "<audio>{BUNDLE}/audio/002_00_gk_law_02982.wav</audio>",
+      "role": "user"
+    }
+  ],
+  "index": "gk_law_02982",
+  "max_new_tokens": 1024,
+  "original_row_number": 2,
+  "prepared_audios": [
+    "audio/002_00_gk_law_02982.wav"
+  ],
+  "prepared_duration_s": 4.6,
+  "source_jsonl": "data/downloaded_datasets/vcb_bench/general_knowledge/general_knowledge.jsonl",
+  "source_line_number": 449,
+  "subset": "general_knowledge",
+  "system_prompt": "You are a helpful assistant.",
+  "task_type": "audio2text"
+}

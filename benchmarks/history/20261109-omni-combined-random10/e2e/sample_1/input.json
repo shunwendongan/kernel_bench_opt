@@ -1,0 +1,58 @@
+{
+  "benchmark_meta": {
+    "audio_type": "Speech",
+    "dataset_name": "transition",
+    "dataset_series": "vcb_bench",
+    "interactive": "Audio-QA",
+    "lang": "zh",
+    "task": "Multi-Turn"
+  },
+  "chat_messages": [
+    {
+      "content": "<audio>{BUNDLE}/audio/001_00_zhuanzhe0124-3.wav</audio>",
+      "role": "user"
+    },
+    {
+      "content": "可以从每次跑15分钟开始，慢慢增加时间，注意穿合适的跑鞋。<audio>{BUNDLE}/audio/001_01_zhuanzhe0124-3.wav</audio>",
+      "role": "assistant"
+    },
+    {
+      "content": "<audio>{BUNDLE}/audio/001_02_zhuanzhe0124-3.wav</audio>",
+      "role": "user"
+    },
+    {
+      "content": "因为这样可以让身体逐渐适应，避免受伤。<audio>{BUNDLE}/audio/001_03_zhuanzhe0124-3.wav</audio>",
+      "role": "assistant"
+    },
+    {
+      "content": "<audio>{BUNDLE}/audio/001_04_zhuanzhe0124-3.wav</audio>",
+      "role": "user"
+    },
+    {
+      "content": "跑鞋要合脚，底部支撑好，减震效果好。<audio>{BUNDLE}/audio/001_05_zhuanzhe0124-3.wav</audio>",
+      "role": "assistant"
+    },
+    {
+      "content": "<audio>{BUNDLE}/audio/001_06_zhuanzhe0124-3.wav</audio>",
+      "role": "user"
+    }
+  ],
+  "index": "zhuanzhe0124-3",
+  "max_new_tokens": 1024,
+  "original_row_number": 1,
+  "prepared_audios": [
+    "audio/001_00_zhuanzhe0124-3.wav",
+    "audio/001_01_zhuanzhe0124-3.wav",
+    "audio/001_02_zhuanzhe0124-3.wav",
+    "audio/001_03_zhuanzhe0124-3.wav",
+    "audio/001_04_zhuanzhe0124-3.wav",
+    "audio/001_05_zhuanzhe0124-3.wav",
+    "audio/001_06_zhuanzhe0124-3.wav"
+  ],
+  "prepared_duration_s": 28.12,
+  "source_jsonl": "data/downloaded_datasets/vcb_bench/multi_turn_dialog/transition/transition.jsonl",
+  "source_line_number": 293,
+  "subset": "transition",
+  "system_prompt": "You are a helpful assistant.",
+  "task_type": "audio2text"
+}

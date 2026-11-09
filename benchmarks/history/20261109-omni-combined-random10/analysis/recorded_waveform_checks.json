@@ -1,0 +1,361 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "recorded_device_waveform_validation",
+  "bindings": {
+    "e2e/results.jsonl": "27ec7ca2aaef60dc367882b5a51d0461408dee3c00ee1ed4ef452ecedd56b2aa",
+    "records/process.txt": "344d174d590df20273c1e1406785758a165302d63fb7dd5742849ddad576309c",
+    "inputs/bundle/manifest.jsonl": "93a23a4eeced6ca4e310682583b65ce1af74dc130cd3f41910bcb51fed264f6d"
+  },
+  "source_summary_sha256": "f68d95afd2f3e1ea4cf1ab86a4ef5d800dcc0d0a602f6d3f1b146f60f654de63",
+  "checks": [
+    {
+      "row": 1,
+      "id": "zhuanzhe0124-3",
+      "pair": 0,
+      "comparison": {
+        "outputs_valid": true,
+        "text_tokens_equal": false,
+        "speech_tokens_equal": null,
+        "wave_size_equal": null,
+        "wave_bitwise_equal": null,
+        "wave_max_abs": null,
+        "wave_rmse": null,
+        "wave_relative_rmse": null,
+        "matched_generated_workload": false,
+        "strict_correctness_pass": false,
+        "old_waveform": {
+          "path": "sample_1/pair_0_old/waveform.f32",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "applicable_to_speech": false,
+          "valid_float32_size": true,
+          "sample_count": 0
+        },
+        "new_waveform": {
+          "path": "sample_1/pair_0_new/waveform.f32",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "applicable_to_speech": false,
+          "valid_float32_size": true,
+          "sample_count": 0
+        },
+        "wave_comparison_note": "not applicable to audio2text"
+      }
+    },
+    {
+      "row": 2,
+      "id": "gk_law_02982",
+      "pair": 0,
+      "comparison": {
+        "outputs_valid": true,
+        "text_tokens_equal": true,
+        "speech_tokens_equal": null,
+        "wave_size_equal": null,
+        "wave_bitwise_equal": null,
+        "wave_max_abs": null,
+        "wave_rmse": null,
+        "wave_relative_rmse": null,
+        "matched_generated_workload": true,
+        "strict_correctness_pass": true,
+        "old_waveform": {
+          "path": "sample_2/pair_0_old/waveform.f32",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "applicable_to_speech": false,
+          "valid_float32_size": true,
+          "sample_count": 0
+        },
+        "new_waveform": {
+          "path": "sample_2/pair_0_new/waveform.f32",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "applicable_to_speech": false,
+          "valid_float32_size": true,
+          "sample_count": 0
+        },
+        "wave_comparison_note": "not applicable to audio2text"
+      }
+    },
+    {
+      "row": 3,
+      "id": "en_teshuyinxiao_000060",
+      "pair": 0,
+      "comparison": {
+        "outputs_valid": true,
+        "text_tokens_equal": false,
+        "speech_tokens_equal": false,
+        "wave_size_equal": false,
+        "wave_bitwise_equal": false,
+        "wave_max_abs": null,
+        "wave_rmse": null,
+        "wave_relative_rmse": null,
+        "matched_generated_workload": false,
+        "strict_correctness_pass": false,
+        "old_waveform": {
+          "path": "sample_3/pair_0_old/waveform.f32",
+          "bytes": 1918080,
+          "sha256": "baca50ca91a6ff2d211dd2e1690880d85906a738ea5ab5d83d9c09f63267d665",
+          "applicable_to_speech": true,
+          "valid_float32_size": true,
+          "sample_count": 479520,
+          "nonfinite": 0,
+          "matches_metric_samples": true
+        },
+        "new_waveform": {
+          "path": "sample_3/pair_0_new/waveform.f32",
+          "bytes": 1958400,
+          "sha256": "1d2daa50db28b725852625c505543fc1cd630752b0c67c3b9db3f1acdb5b7164",
+          "applicable_to_speech": true,
+          "valid_float32_size": true,
+          "sample_count": 489600,
+          "nonfinite": 0,
+          "matches_metric_samples": true
+        },
+        "wave_comparison_note": "Different lengths are not aligned or truncated for numeric comparison"
+      }
+    },
+    {
+      "row": 4,
+      "id": "topic_shift_neirong_000074",
+      "pair": 0,
+      "comparison": {
+        "outputs_valid": true,
+        "text_tokens_equal": false,
+        "speech_tokens_equal": null,
+        "wave_size_equal": null,
+        "wave_bitwise_equal": null,
+        "wave_max_abs": null,
+        "wave_rmse": null,
+        "wave_relative_rmse": null,
+        "matched_generated_workload": false,
+        "strict_correctness_pass": false,
+        "old_waveform": {
+          "path": "sample_4/pair_0_old/waveform.f32",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "applicable_to_speech": false,
+          "valid_float32_size": true,
+          "sample_count": 0
+        },
+        "new_waveform": {
+          "path": "sample_4/pair_0_new/waveform.f32",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "applicable_to_speech": false,
+          "valid_float32_size": true,
+          "sample_count": 0
+        },
+        "wave_comparison_note": "not applicable to audio2text"
+      }
+    },
+    {
+      "row": 5,
+      "id": "en_xuxie_000273",
+      "pair": 0,
+      "comparison": {
+        "outputs_valid": true,
+        "text_tokens_equal": false,
+        "speech_tokens_equal": null,
+        "wave_size_equal": null,
+        "wave_bitwise_equal": null,
+        "wave_max_abs": null,
+        "wave_rmse": null,
+        "wave_relative_rmse": null,
+        "matched_generated_workload": false,
+        "strict_correctness_pass": false,
+        "old_waveform": {
+          "path": "sample_5/pair_0_old/waveform.f32",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "applicable_to_speech": false,
+          "valid_float32_size": true,
+          "sample_count": 0
+        },
+        "new_waveform": {
+          "path": "sample_5/pair_0_new/waveform.f32",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "applicable_to_speech": false,
+          "valid_float32_size": true,
+          "sample_count": 0
+        },
+        "wave_comparison_note": "not applicable to audio2text"
+      }
+    },
+    {
+      "row": 6,
+      "id": "huisu0141-4",
+      "pair": 0,
+      "comparison": {
+        "outputs_valid": true,
+        "text_tokens_equal": false,
+        "speech_tokens_equal": null,
+        "wave_size_equal": null,
+        "wave_bitwise_equal": null,
+        "wave_max_abs": null,
+        "wave_rmse": null,
+        "wave_relative_rmse": null,
+        "matched_generated_workload": false,
+        "strict_correctness_pass": false,
+        "old_waveform": {
+          "path": "sample_6/pair_0_old/waveform.f32",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "applicable_to_speech": false,
+          "valid_float32_size": true,
+          "sample_count": 0
+        },
+        "new_waveform": {
+          "path": "sample_6/pair_0_new/waveform.f32",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "applicable_to_speech": false,
+          "valid_float32_size": true,
+          "sample_count": 0
+        },
+        "wave_comparison_note": "not applicable to audio2text"
+      }
+    },
+    {
+      "row": 7,
+      "id": "yuyan_000986",
+      "pair": 0,
+      "comparison": {
+        "outputs_valid": true,
+        "text_tokens_equal": false,
+        "speech_tokens_equal": false,
+        "wave_size_equal": true,
+        "wave_bitwise_equal": false,
+        "wave_max_abs": 0.82421875,
+        "wave_rmse": 0.1092166991621057,
+        "wave_relative_rmse": 1.446085158303416,
+        "matched_generated_workload": false,
+        "strict_correctness_pass": false,
+        "old_waveform": {
+          "path": "sample_7/pair_0_old/waveform.f32",
+          "bytes": 1958400,
+          "sha256": "29b12f99166c8f961f96876fc508f1d74b3897bee178bab827629d64a2002f20",
+          "applicable_to_speech": true,
+          "valid_float32_size": true,
+          "sample_count": 489600,
+          "nonfinite": 0,
+          "matches_metric_samples": true
+        },
+        "new_waveform": {
+          "path": "sample_7/pair_0_new/waveform.f32",
+          "bytes": 1958400,
+          "sha256": "8343c7618b22c35a6e4bb8e44abd853d4457af5d2e65c596bfbe72ff57117949",
+          "applicable_to_speech": true,
+          "valid_float32_size": true,
+          "sample_count": 489600,
+          "nonfinite": 0,
+          "matches_metric_samples": true
+        },
+        "wave_comparison_note": "Different lengths are not aligned or truncated for numeric comparison"
+      }
+    },
+    {
+      "row": 8,
+      "id": "accent_dongbei_cmp_gongqing_000110",
+      "pair": 0,
+      "comparison": {
+        "outputs_valid": true,
+        "text_tokens_equal": false,
+        "speech_tokens_equal": null,
+        "wave_size_equal": null,
+        "wave_bitwise_equal": null,
+        "wave_max_abs": null,
+        "wave_rmse": null,
+        "wave_relative_rmse": null,
+        "matched_generated_workload": false,
+        "strict_correctness_pass": false,
+        "old_waveform": {
+          "path": "sample_8/pair_0_old/waveform.f32",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "applicable_to_speech": false,
+          "valid_float32_size": true,
+          "sample_count": 0
+        },
+        "new_waveform": {
+          "path": "sample_8/pair_0_new/waveform.f32",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "applicable_to_speech": false,
+          "valid_float32_size": true,
+          "sample_count": 0
+        },
+        "wave_comparison_note": "not applicable to audio2text"
+      }
+    },
+    {
+      "row": 9,
+      "id": "zhuanzhe0263-1",
+      "pair": 0,
+      "comparison": {
+        "outputs_valid": true,
+        "text_tokens_equal": false,
+        "speech_tokens_equal": null,
+        "wave_size_equal": null,
+        "wave_bitwise_equal": null,
+        "wave_max_abs": null,
+        "wave_rmse": null,
+        "wave_relative_rmse": null,
+        "matched_generated_workload": false,
+        "strict_correctness_pass": false,
+        "old_waveform": {
+          "path": "sample_9/pair_0_old/waveform.f32",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "applicable_to_speech": false,
+          "valid_float32_size": true,
+          "sample_count": 0
+        },
+        "new_waveform": {
+          "path": "sample_9/pair_0_new/waveform.f32",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "applicable_to_speech": false,
+          "valid_float32_size": true,
+          "sample_count": 0
+        },
+        "wave_comparison_note": "not applicable to audio2text"
+      }
+    },
+    {
+      "row": 10,
+      "id": "dc_induction_conv0081_649_39",
+      "pair": 0,
+      "comparison": {
+        "outputs_valid": false,
+        "text_tokens_equal": true,
+        "speech_tokens_equal": null,
+        "wave_size_equal": null,
+        "wave_bitwise_equal": null,
+        "wave_max_abs": null,
+        "wave_rmse": null,
+        "wave_relative_rmse": null,
+        "matched_generated_workload": false,
+        "strict_correctness_pass": false,
+        "old_waveform": {
+          "path": "sample_10/pair_0_old/waveform.f32",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "applicable_to_speech": false,
+          "valid_float32_size": true,
+          "sample_count": 0
+        },
+        "new_waveform": {
+          "path": "sample_10/pair_0_new/waveform.f32",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "applicable_to_speech": false,
+          "valid_float32_size": true,
+          "sample_count": 0
+        },
+        "wave_comparison_note": "not applicable to audio2text"
+      }
+    }
+  ],
+  "note": "Historical waveform evidence only; a text-only replay does not rehash absent waveform bytes."
+}

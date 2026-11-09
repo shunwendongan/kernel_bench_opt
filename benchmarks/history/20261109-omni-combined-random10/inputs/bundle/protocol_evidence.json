@@ -1,0 +1,548 @@
+{
+  "upstream_commit": "542990571e5b6e3fbce4a318492aec5607aaee3c",
+  "upstream_source_sha256": {
+    "almeval/datasets/base.py": "c7207c3b823bc411bd06fb9a78fd7167e7013eed741d5d90cbceaa98cd048f98",
+    "almeval/datasets/ds_asr.py": "aa5083a3fefce85e37380664d07ed94c1d5b9776adfa2251cb06c837e3b6cb87",
+    "almeval/datasets/ds_mqa.py": "6d23023a6cb0a5998ceb6468e4820d04b70ecea052092de1111faa74f463d2fe",
+    "almeval/datasets/ds_mtturn.py": "9ccea8295528a0ffcdc33644b8b907b82c33c12248235d34d809d43fc6c979ae",
+    "almeval/datasets/ds_openqa.py": "c9b624f430aa9f24845f253f0f5d6f0725946440b130d5c8e48d6ad597c1be33",
+    "almeval/datasets/ds_pretrain.py": "52bb6da3878cacf114084cb213cfbeb69009bb20bf42b5f7347f937d498d5873",
+    "almeval/datasets/ds_refqa.py": "9aa43b6983f51297a8bb17aa2dfd41f1c9d246d9b5b40c6a2bed1c9b84a458ee",
+    "almeval/models/qwen_omni.py": "4f4e1dd57be831d51f4b5f3a1bc9733bc56e8251b4653cac4c6cdadad8ee7e18"
+  },
+  "selection_identity_note": "User-supplied selection digest verified. Seed alone does not establish identity with the historical sample; compare JSONL/line/audio hashes.",
+  "prompt_method": "upstream pure prompt methods executed through a bounded AST subset ending before tokenization; dataset constants resolved from AST inheritance",
+  "chat_messages_contains_system": false,
+  "system_prompt_field_is_separate": true,
+  "story_continue_note": "Official pretrain dataset wrapper omits task_type; recovered from unchanged source record. Input generation follows its declared Audio-QA mode. No answer candidates or story continuation instruction injected.",
+  "max_new_tokens_note": "Local run cap 1024, ASR 256 if encountered; not claimed as official default for every task",
+  "rows": [
+    {
+      "sample_ordinal": 1,
+      "subset": "transition",
+      "metadata": {
+        "task": "Multi-Turn",
+        "interactive": "Audio-QA",
+        "audio_type": "Speech",
+        "dataset_series": "vcb_bench",
+        "dataset_name": "transition",
+        "lang": "zh"
+      },
+      "source_constants": {
+        "INTERACTIVE": {
+          "file": "ds_mtturn.py",
+          "line": 285,
+          "class": "TaskTransitionDataset"
+        },
+        "TASK": {
+          "file": "ds_mtturn.py",
+          "line": 34,
+          "class": "AudioMtTurnDataset"
+        },
+        "AUDIO_TYPE": {
+          "file": "ds_mtturn.py",
+          "line": 284,
+          "class": "TaskTransitionDataset"
+        },
+        "DATASET_SERIES": {
+          "file": "ds_mtturn.py",
+          "line": 283,
+          "class": "TaskTransitionDataset"
+        },
+        "DATASET_NAME": {
+          "file": "ds_mtturn.py",
+          "line": 282,
+          "class": "TaskTransitionDataset"
+        },
+        "LANG": {
+          "file": "ds_mtturn.py",
+          "line": 286,
+          "class": "TaskTransitionDataset"
+        }
+      },
+      "native_message_roles": [
+        "system",
+        "user",
+        "assistant",
+        "user",
+        "assistant",
+        "user",
+        "assistant",
+        "user"
+      ],
+      "historical_assistant_text_indices": [
+        1,
+        3,
+        5
+      ],
+      "official_task_type_recovered_from_source_record": false
+    },
+    {
+      "sample_ordinal": 2,
+      "subset": "general_knowledge",
+      "metadata": {
+        "task": "Ref-QA",
+        "interactive": "Audio-QA",
+        "audio_type": "Speech",
+        "dataset_series": "vcb_bench",
+        "dataset_name": "general_knowledge",
+        "lang": "zh"
+      },
+      "source_constants": {
+        "INTERACTIVE": {
+          "file": "ds_refqa.py",
+          "line": 445,
+          "class": "GeneralKnowledge"
+        },
+        "TASK": {
+          "file": "ds_refqa.py",
+          "line": 176,
+          "class": "AudioRefQADataset"
+        },
+        "AUDIO_TYPE": {
+          "file": "ds_refqa.py",
+          "line": 444,
+          "class": "GeneralKnowledge"
+        },
+        "DATASET_SERIES": {
+          "file": "ds_refqa.py",
+          "line": 443,
+          "class": "GeneralKnowledge"
+        },
+        "DATASET_NAME": {
+          "file": "ds_refqa.py",
+          "line": 442,
+          "class": "GeneralKnowledge"
+        },
+        "LANG": {
+          "file": "ds_refqa.py",
+          "line": 446,
+          "class": "GeneralKnowledge"
+        }
+      },
+      "native_message_roles": [
+        "system",
+        "user"
+      ],
+      "historical_assistant_text_indices": [],
+      "official_task_type_recovered_from_source_record": false
+    },
+    {
+      "sample_ordinal": 3,
+      "subset": "non_verbal_vocalization_en",
+      "metadata": {
+        "task": "Open-Ended",
+        "interactive": "Audio-QA",
+        "audio_type": "Speech",
+        "dataset_series": "vcb_bench",
+        "dataset_name": "non_verbal_vocalization_en",
+        "lang": "en"
+      },
+      "source_constants": {
+        "INTERACTIVE": {
+          "file": "ds_openqa.py",
+          "line": 587,
+          "class": "NonVerbalEnDataset"
+        },
+        "TASK": {
+          "file": "ds_openqa.py",
+          "line": 90,
+          "class": "AudioOpenQADataset"
+        },
+        "AUDIO_TYPE": {
+          "file": "ds_openqa.py",
+          "line": 586,
+          "class": "NonVerbalEnDataset"
+        },
+        "DATASET_SERIES": {
+          "file": "ds_openqa.py",
+          "line": 585,
+          "class": "NonVerbalEnDataset"
+        },
+        "DATASET_NAME": {
+          "file": "ds_openqa.py",
+          "line": 584,
+          "class": "NonVerbalEnDataset"
+        },
+        "LANG": {
+          "file": "ds_openqa.py",
+          "line": 588,
+          "class": "NonVerbalEnDataset"
+        }
+      },
+      "native_message_roles": [
+        "system",
+        "user"
+      ],
+      "historical_assistant_text_indices": [],
+      "official_task_type_recovered_from_source_record": false
+    },
+    {
+      "sample_ordinal": 4,
+      "subset": "topic_shift",
+      "metadata": {
+        "task": "Open-Ended",
+        "interactive": "Audio-QA",
+        "audio_type": "Speech",
+        "dataset_series": "vcb_bench",
+        "dataset_name": "topic_shift",
+        "lang": "zh"
+      },
+      "source_constants": {
+        "INTERACTIVE": {
+          "file": "ds_openqa.py",
+          "line": 763,
+          "class": "TopicShiftDataset"
+        },
+        "TASK": {
+          "file": "ds_openqa.py",
+          "line": 90,
+          "class": "AudioOpenQADataset"
+        },
+        "AUDIO_TYPE": {
+          "file": "ds_openqa.py",
+          "line": 762,
+          "class": "TopicShiftDataset"
+        },
+        "DATASET_SERIES": {
+          "file": "ds_openqa.py",
+          "line": 761,
+          "class": "TopicShiftDataset"
+        },
+        "DATASET_NAME": {
+          "file": "ds_openqa.py",
+          "line": 760,
+          "class": "TopicShiftDataset"
+        },
+        "LANG": {
+          "file": "ds_openqa.py",
+          "line": 764,
+          "class": "TopicShiftDataset"
+        }
+      },
+      "native_message_roles": [
+        "system",
+        "user"
+      ],
+      "historical_assistant_text_indices": [],
+      "official_task_type_recovered_from_source_record": false
+    },
+    {
+      "sample_ordinal": 5,
+      "subset": "continuation_en",
+      "metadata": {
+        "task": "Open-Ended",
+        "interactive": "Audio-QA",
+        "audio_type": "Speech",
+        "dataset_series": "vcb_bench",
+        "dataset_name": "continuation_en",
+        "lang": "en"
+      },
+      "source_constants": {
+        "INTERACTIVE": {
+          "file": "ds_openqa.py",
+          "line": 530,
+          "class": "ContinuationEnDataset"
+        },
+        "TASK": {
+          "file": "ds_openqa.py",
+          "line": 90,
+          "class": "AudioOpenQADataset"
+        },
+        "AUDIO_TYPE": {
+          "file": "ds_openqa.py",
+          "line": 529,
+          "class": "ContinuationEnDataset"
+        },
+        "DATASET_SERIES": {
+          "file": "ds_openqa.py",
+          "line": 528,
+          "class": "ContinuationEnDataset"
+        },
+        "DATASET_NAME": {
+          "file": "ds_openqa.py",
+          "line": 527,
+          "class": "ContinuationEnDataset"
+        },
+        "LANG": {
+          "file": "ds_openqa.py",
+          "line": 531,
+          "class": "ContinuationEnDataset"
+        }
+      },
+      "native_message_roles": [
+        "system",
+        "user"
+      ],
+      "historical_assistant_text_indices": [],
+      "official_task_type_recovered_from_source_record": false
+    },
+    {
+      "sample_ordinal": 6,
+      "subset": "backtracking",
+      "metadata": {
+        "task": "Multi-Turn",
+        "interactive": "Audio-QA",
+        "audio_type": "Speech",
+        "dataset_series": "vcb_bench",
+        "dataset_name": "backtracking",
+        "lang": "zh"
+      },
+      "source_constants": {
+        "INTERACTIVE": {
+          "file": "ds_mtturn.py",
+          "line": 278,
+          "class": "BacktrackingDataset"
+        },
+        "TASK": {
+          "file": "ds_mtturn.py",
+          "line": 34,
+          "class": "AudioMtTurnDataset"
+        },
+        "AUDIO_TYPE": {
+          "file": "ds_mtturn.py",
+          "line": 277,
+          "class": "BacktrackingDataset"
+        },
+        "DATASET_SERIES": {
+          "file": "ds_mtturn.py",
+          "line": 276,
+          "class": "BacktrackingDataset"
+        },
+        "DATASET_NAME": {
+          "file": "ds_mtturn.py",
+          "line": 275,
+          "class": "BacktrackingDataset"
+        },
+        "LANG": {
+          "file": "ds_mtturn.py",
+          "line": 279,
+          "class": "BacktrackingDataset"
+        }
+      },
+      "native_message_roles": [
+        "system",
+        "user",
+        "assistant",
+        "user",
+        "assistant",
+        "user",
+        "assistant",
+        "user",
+        "assistant",
+        "user"
+      ],
+      "historical_assistant_text_indices": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "official_task_type_recovered_from_source_record": false
+    },
+    {
+      "sample_ordinal": 7,
+      "subset": "language_control",
+      "metadata": {
+        "task": "Open-Ended",
+        "interactive": "Audio-QA",
+        "audio_type": "Speech",
+        "dataset_series": "vcb_bench",
+        "dataset_name": "language_control",
+        "lang": "zh"
+      },
+      "source_constants": {
+        "INTERACTIVE": {
+          "file": "ds_openqa.py",
+          "line": 480,
+          "class": "LanguageDataset"
+        },
+        "TASK": {
+          "file": "ds_openqa.py",
+          "line": 90,
+          "class": "AudioOpenQADataset"
+        },
+        "AUDIO_TYPE": {
+          "file": "ds_openqa.py",
+          "line": 479,
+          "class": "LanguageDataset"
+        },
+        "DATASET_SERIES": {
+          "file": "ds_openqa.py",
+          "line": 478,
+          "class": "LanguageDataset"
+        },
+        "DATASET_NAME": {
+          "file": "ds_openqa.py",
+          "line": 477,
+          "class": "LanguageDataset"
+        },
+        "LANG": {
+          "file": "ds_openqa.py",
+          "line": 481,
+          "class": "LanguageDataset"
+        }
+      },
+      "native_message_roles": [
+        "system",
+        "user"
+      ],
+      "historical_assistant_text_indices": [],
+      "official_task_type_recovered_from_source_record": false
+    },
+    {
+      "sample_ordinal": 8,
+      "subset": "accent_cmp",
+      "metadata": {
+        "task": "Open-Ended",
+        "interactive": "Audio-QA",
+        "audio_type": "Speech",
+        "dataset_series": "vcb_bench",
+        "dataset_name": "accent_cmp",
+        "lang": "zh"
+      },
+      "source_constants": {
+        "INTERACTIVE": {
+          "file": "ds_openqa.py",
+          "line": 602,
+          "class": "AccentCmpDataset"
+        },
+        "TASK": {
+          "file": "ds_openqa.py",
+          "line": 90,
+          "class": "AudioOpenQADataset"
+        },
+        "AUDIO_TYPE": {
+          "file": "ds_openqa.py",
+          "line": 601,
+          "class": "AccentCmpDataset"
+        },
+        "DATASET_SERIES": {
+          "file": "ds_openqa.py",
+          "line": 600,
+          "class": "AccentCmpDataset"
+        },
+        "DATASET_NAME": {
+          "file": "ds_openqa.py",
+          "line": 599,
+          "class": "AccentCmpDataset"
+        },
+        "LANG": {
+          "file": "ds_openqa.py",
+          "line": 603,
+          "class": "AccentCmpDataset"
+        }
+      },
+      "native_message_roles": [
+        "system",
+        "user"
+      ],
+      "historical_assistant_text_indices": [],
+      "official_task_type_recovered_from_source_record": false
+    },
+    {
+      "sample_ordinal": 9,
+      "subset": "transition",
+      "metadata": {
+        "task": "Multi-Turn",
+        "interactive": "Audio-QA",
+        "audio_type": "Speech",
+        "dataset_series": "vcb_bench",
+        "dataset_name": "transition",
+        "lang": "zh"
+      },
+      "source_constants": {
+        "INTERACTIVE": {
+          "file": "ds_mtturn.py",
+          "line": 285,
+          "class": "TaskTransitionDataset"
+        },
+        "TASK": {
+          "file": "ds_mtturn.py",
+          "line": 34,
+          "class": "AudioMtTurnDataset"
+        },
+        "AUDIO_TYPE": {
+          "file": "ds_mtturn.py",
+          "line": 284,
+          "class": "TaskTransitionDataset"
+        },
+        "DATASET_SERIES": {
+          "file": "ds_mtturn.py",
+          "line": 283,
+          "class": "TaskTransitionDataset"
+        },
+        "DATASET_NAME": {
+          "file": "ds_mtturn.py",
+          "line": 282,
+          "class": "TaskTransitionDataset"
+        },
+        "LANG": {
+          "file": "ds_mtturn.py",
+          "line": 286,
+          "class": "TaskTransitionDataset"
+        }
+      },
+      "native_message_roles": [
+        "system",
+        "user",
+        "assistant",
+        "user"
+      ],
+      "historical_assistant_text_indices": [
+        1
+      ],
+      "official_task_type_recovered_from_source_record": false
+    },
+    {
+      "sample_ordinal": 10,
+      "subset": "discourse_comprehension",
+      "metadata": {
+        "task": "MQA",
+        "interactive": "Audio-analysis",
+        "audio_type": "Speech",
+        "dataset_series": "vcb_bench",
+        "dataset_name": "discourse_comprehension",
+        "lang": "zh"
+      },
+      "source_constants": {
+        "INTERACTIVE": {
+          "file": "ds_mqa.py",
+          "line": 192,
+          "class": "AudioMQADataset"
+        },
+        "TASK": {
+          "file": "ds_mqa.py",
+          "line": 193,
+          "class": "AudioMQADataset"
+        },
+        "AUDIO_TYPE": {
+          "file": "ds_mqa.py",
+          "line": 580,
+          "class": "DiscourseComprehension"
+        },
+        "DATASET_SERIES": {
+          "file": "ds_mqa.py",
+          "line": 579,
+          "class": "DiscourseComprehension"
+        },
+        "DATASET_NAME": {
+          "file": "ds_mqa.py",
+          "line": 578,
+          "class": "DiscourseComprehension"
+        },
+        "LANG": {
+          "file": "ds_mqa.py",
+          "line": 581,
+          "class": "DiscourseComprehension"
+        }
+      },
+      "native_message_roles": [
+        "system",
+        "user"
+      ],
+      "historical_assistant_text_indices": [],
+      "official_task_type_recovered_from_source_record": false
+    }
+  ]
+}

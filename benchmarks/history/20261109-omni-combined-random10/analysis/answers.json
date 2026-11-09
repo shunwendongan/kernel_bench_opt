@@ -1,0 +1,122 @@
+[
+  {
+    "row": 1,
+    "id": "zhuanzhe0124-3",
+    "pair": 0,
+    "task_type": "audio2text",
+    "source_jsonl": "data/downloaded_datasets/vcb_bench/multi_turn_dialog/transition/transition.jsonl",
+    "source_line_number": 293,
+    "old_text": "不需要，可以分几次跑，比如分两次，每次15分钟，这样可以避免过度训练。",
+    "new_text": "不一定，可以分几次跑，比如分段跑，每次跑个15分钟，这样可以避免过度训练。",
+    "text_equal": false,
+    "answer_quality_evaluated": false
+  },
+  {
+    "row": 2,
+    "id": "gk_law_02982",
+    "pair": 0,
+    "task_type": "audio2text",
+    "source_jsonl": "data/downloaded_datasets/vcb_bench/general_knowledge/general_knowledge.jsonl",
+    "source_line_number": 449,
+    "old_text": "记者证不能抵扣个人所得税。",
+    "new_text": "记者证不能抵扣个人所得税。",
+    "text_equal": true,
+    "answer_quality_evaluated": false
+  },
+  {
+    "row": 3,
+    "id": "en_teshuyinxiao_000060",
+    "pair": 0,
+    "task_type": "audio2audio",
+    "source_jsonl": "data/downloaded_datasets/vcb_bench/speech_instruction_follow/english/non_verbal_vocalization_en/non_verbal_vocalization_en.jsonl",
+    "source_line_number": 11,
+    "old_text": "I'm not sure what you mean by \"Speak with that utterly exhausted tone like you're running out of breath in the middle of long sentences.\" Can you please clarify? I'm not sure what you're asking me to do. But if you want me to speak in a certain way, you should tell me what kind of tone or style you want. So, what do you think?",
+    "new_text": "I'm not sure what you mean by \"Speak with that utterly exhausted tone like you're running out of breath in the middle of long sentences.\" Can you please clarify? I'm here to help, so let's keep the conversation going.",
+    "text_equal": false,
+    "answer_quality_evaluated": false
+  },
+  {
+    "row": 4,
+    "id": "topic_shift_neirong_000074",
+    "pair": 0,
+    "task_type": "audio2text",
+    "source_jsonl": "data/downloaded_datasets/vcb_bench/real_scenario/content_variations/topic_shift/topic_shift.jsonl",
+    "source_line_number": 56,
+    "old_text": "如果你觉得社交困难，可以试试以下几种方法：\n\n1. **参加兴趣小组或俱乐部**：找到你感兴趣的活动或话题，参加相关的小组或俱乐部，这样可以逐渐熟悉环境和人。\n\n2. **线上社交平台**：现在有很多线上社交平台，如微信、微博、抖音、小红书等，可以先从这些平台上认识一些人，逐渐积累朋友。\n\n3. **参加线下活动**：比如电影、音乐会、展览、运动比赛等，这些地方人多，有机会认识新朋友。\n\n4. **志愿服务**：参加一些志愿服务活动，不仅可以帮助他人，也可以结识一些志同道合的人。\n\n5. **线上课程或工作坊**：参加一些线上课程或工作坊，可以认识一些有共同兴趣的人。\n\n6. **参加线上游戏或直播**：一些游戏或直播平台可以让你认识一些人，虽然不是面对面，但也是认识新朋友的一种方式。\n\n7. **参加线上论坛或社区**：一些论坛或社区可以让你在特定领域内认识一些人。\n\n8. **参加线上课程或工作坊**：参加一些线上课程或工作坊，可以认识一些人，虽然不是面对面，但也是认识新朋友的一种方式。\n\n9. **参加线上游戏或直播**：一些游戏或直播平台可以让你认识一些人，虽然不是面对面，但也是认识新朋友的一种方式。\n\n10. **参加线上课程或工作坊**：参加一些线上课程或工作坊，可以认识一些人，虽然不是面对面，但也是认识新朋友的一种方式。\n\n11. **参加线上游戏或直播**：一些游戏或直播平台可以让你认识一些人，虽然不是面对面，但也是认识新朋友的一种方式。\n\n12. **参加线上课程或工作坊**：参加一些线上课程或工作坊，可以认识一些人，虽然不是面对面，但也是认识新朋友的一种方式。\n\n13. **参加线上游戏或直播**：一些游戏或直播平台可以让你认识一些人，虽然不是面对面，但也是认识新朋友的一种方式。\n\n14. **参加线上课程或工作坊**：参加一些线上课程或工作坊，可以认识一些人，虽然不是面对面，但也是认识新朋友的一种方式。\n\n15. **参加线上游戏或直播**：一些游戏或直播平台可以让你认识一些人，虽然不是面对面，但也是认识新朋友的一种方式。\n\n16. **参加线上课程或工作坊**：参加一些线上课程或工作坊，可以认识一些人，虽然不是面对面，但也是认识新朋友的一种方式。\n\n17. **参加线上游戏或直播**：一些游戏或直播平台可以让你认识一些人，虽然不是面对面，但也是认识新朋友的一种方式。\n\n18. **参加线上课程或工作坊**：参加一些线上课程或工作坊，可以认识一些人，虽然不是面对面，但也是认识新朋友的一种方式。\n\n19. **参加线上游戏或直播**：一些游戏或直播平台可以让你认识一些人，虽然不是面对面，但也是认识新朋友的一种方式。\n\n20. **参加线上课程或工作坊**：参加一些线上课程或工作坊，可以认识一些人，虽然不是面对面，但也是认识新朋友的一种方式。\n\n21. **参加线上游戏或直播**：一些游戏或直播平台可以让你认识一些人，虽然不是面对面，但也是认识新朋友的一种方式。\n\n22. **参加线上课程或工作坊**：参加一些线上课程或工作坊，可以认识一些人，虽然不是面对面，但也是认识新朋友的一种方式。\n\n23. **参加线上游戏或直播**：一些游戏或直播平台可以让你认识一些人，虽然不是面对面，但也是认识新朋友的一种方式。\n\n24. **参加线上课程或工作坊**：参加一些线上课程或工作坊，可以认识一些人，虽然不是面对面，但也是认识新朋友的一种方式。\n\n25. **参加线上游戏或直播**：一些游戏或直播平台可以让你认识一些人，虽然不是面对面，但也是认识新朋友的一种方式。\n\n26. **参加线上课程或工作坊**：参加一些线上课程或工作坊，可以认识一些人，虽然不是面对面，但也是认识新朋友的一种方式。\n\n27. **参加线上游戏或直播**：一些游戏或直播平台可以让你认识一些人，虽然不是面对面，但也是认识新朋友的一种方式。\n\n28. **参加线上课程或工作坊**：参加一些线上课程或工作坊，可以认识一些人，虽然不是面对面，但也是认识新朋友的一种方式。\n\n29. **参加线上游戏或直播**：一些游戏或直播平台可以让你认识一些人，虽然不是面对面，但也是认识新朋友的一种方式。\n\n30. **参加线上课程或工作坊**：参加一些线上课程或工作坊，可以认识一些人，虽然不是",
+    "new_text": "如果你的性格比较内向，可能在社交方面会有一些困难，但是这并不意味着你不能交朋友。以下是一些建议，希望能对你有所帮助：\n\n1. **参加兴趣小组或俱乐部**：参加一些兴趣小组或俱乐部，比如运动、艺术、音乐、烹饪等，这些地方通常有很多共同兴趣的人，可以很容易地认识新朋友。\n\n2. **线上社交平台**：现在有很多线上社交平台，如微信、微博、抖音、小红书等，这些平台上有很多人，你可以通过关注、私信、评论等方式认识新朋友。\n\n3. **参加社区活动**：社区、学校、公司等地方经常会组织一些活动，如运动会、读书会、电影之夜等，这些活动是认识新朋友的好机会。\n\n4. **参加志愿者活动**：参加一些志愿者活动，如社区服务、环保活动、关爱弱势群体等，这些活动不仅可以帮助别人，也可以认识新朋友。\n\n5. **参加线上课程或讲座**：参加一些线上课程或讲座，如编程、绘画、摄影等，这些课程通常会有讲师和同学，可以认识新朋友。\n\n6. **参加线上游戏或直播**：现在有很多线上游戏和直播平台，如王者荣耀、斗地主、快手、抖音等，这些平台上有很多人，你可以通过玩游戏、看直播等方式认识新朋友。\n\n7. **参加线上会议或研讨会**：参加一些线上会议或研讨会，如学术会议、行业研讨会等，这些会议通常会有讲师和同学，可以认识新朋友。\n\n8. **参加线上论坛或社区**：参加一些线上论坛或社区，如知乎、豆瓣、B站等，这些地方有很多人，你可以通过提问、回答、评论等方式认识新朋友。\n\n9. **参加线上课程或讲座**：参加一些线上课程或讲座，如编程、绘画、摄影等，这些课程通常会有讲师和同学，可以认识新朋友。\n\n10. **参加线上游戏或直播**：参加一些线上游戏或直播平台，如王者荣耀、斗地主、快手、抖音等，这些平台上有很多人，你可以通过玩游戏、看直播等方式认识新朋友。\n\n希望这些建议能对你有所帮助，祝你早日认识新朋友！",
+    "text_equal": false,
+    "answer_quality_evaluated": false
+  },
+  {
+    "row": 5,
+    "id": "en_xuxie_000273",
+    "pair": 0,
+    "task_type": "audio2text",
+    "source_jsonl": "data/downloaded_datasets/vcb_bench/text_instruction_follow/english/continuation_en/continuation_en.jsonl",
+    "source_line_number": 136,
+    "old_text": "The waves parted on their own, revealing a path on the ocean floor with sparkling pearl shells. Cross here, and you'll meet the Sea Prince. Do you dare take the road under the sea?",
+    "new_text": "The waves parted on their own, revealing a path on the ocean floor, where the shimmering pearls of the sea floor sparkled in the moonlight. As you crossed the path, you felt a strange pull, a gentle tug that seemed to guide you forward. The sea floor was soft beneath your feet, and you could hear the distant whispers of the ocean, a soft, rhythmic sound that seemed to hum in harmony with the gentle waves.\n\nYou continued on, deeper into the ocean, and the path grew wider. As you walked, you saw the sea floor become more and more alive, with schools of tiny fish darting around you, their scales glinting in the moonlight. The sea floor was teeming with life, and you felt a sense of awe and wonder as you explored this hidden world.\n\nSuddenly, you heard a faint sound, like the soft chime of a distant bell. As you approached, you saw a small, shimmering figure on the sea floor. It was the Sea Prince, a creature of legend, with scales that glowed in the moonlight and a voice that seemed to come from the very depths of the ocean.\n\nThe Sea Prince smiled at you, his eyes glowing with a soft, otherworldly light. \"Welcome, traveler,\" he said. \"You have come to the hidden realm of the sea. What do you seek?\"\n\nYou hesitated, unsure of what to say. But the Sea Prince continued, his voice soft and gentle. \"You have come to the hidden realm of the sea. What do you seek?\"\n\nYou hesitated, unsure of what to say. But the Sea Prince continued, his voice soft and gentle. \"You have come to the hidden realm of the sea. What do you seek?\"\n\nThe Sea Prince continued, his voice soft and gentle. \"You have come to the hidden realm of the sea. What do you seek?\"\n\nYou hesitated, unsure of what to say. But the Sea Prince continued, his voice soft and gentle. \"You have come to the hidden realm of the sea. What do you seek?\"\n\nThe Sea Prince continued, his voice soft and gentle. \"You have come to the hidden realm of the sea. What do you seek?\"\n\nYou hesitated, unsure of what to say. But the Sea Prince continued, his voice soft and gentle. \"You have come to the hidden realm of the sea. What do you seek?\"\n\nThe Sea Prince continued, his voice soft and gentle. \"You have come to the hidden realm of the sea. What do you seek?\"\n\nYou hesitated, unsure of what to say. But the Sea Prince continued, his voice soft and gentle. \"You have come to the hidden realm of the sea. What do you seek?\"\n\nThe Sea Prince continued, his voice soft and gentle. \"You have come to the hidden realm of the sea. What do you seek?\"\n\nYou hesitated, unsure of what to say. But the Sea Prince continued, his voice soft and gentle. \"You have come to the hidden realm of the sea. What do you seek?\"\n\nThe Sea Prince continued, his voice soft and gentle. \"You have come to the hidden realm of the sea. What do you seek?\"\n\nYou hesitated, unsure of what to say. But the Sea Prince continued, his voice soft and gentle. \"You have come to the hidden realm of the sea. What do you seek?\"\n\nThe Sea Prince continued, his voice soft and gentle. \"You have come to the hidden realm of the sea. What do you seek?\"\n\nYou hesitated, unsure of what to say. But the Sea Prince continued, his voice soft and gentle. \"You have come to the hidden realm of the sea. What do you seek?\"\n\nThe Sea Prince continued, his voice soft and gentle. \"You have come to the hidden realm of the sea. What do you seek?\"\n\nYou hesitated, unsure of what to say. But the Sea Prince continued, his voice soft and gentle. \"You have come to the hidden realm of the sea. What do you seek?\"\n\nThe Sea Prince continued, his voice soft and gentle. \"You have come to the hidden realm of the sea. What do you seek?\"\n\nYou hesitated, unsure of what to say. But the Sea Prince continued, his voice soft and gentle. \"You have come to the hidden realm of the sea. What do you seek?\"\n\nThe Sea Prince continued, his voice soft and gentle. \"You have come to the hidden realm of the sea. What do you seek?\"\n\nYou hesitated, unsure of what to say. But the Sea Prince continued, his voice soft and gentle. \"You have come to the hidden realm of the sea. What do you seek?\"\n\nThe Sea Prince continued, his voice soft and gentle. \"You have come to the hidden realm of the sea. What do you seek?\"\n\nYou hesitated, unsure of what to say. But the Sea Prince continued, his voice soft and gentle. \"You have come to the hidden realm of the sea. What do",
+    "text_equal": false,
+    "answer_quality_evaluated": false
+  },
+  {
+    "row": 6,
+    "id": "huisu0141-4",
+    "pair": 0,
+    "task_type": "audio2text",
+    "source_jsonl": "data/downloaded_datasets/vcb_bench/multi_turn_dialog/backtracking/backtracking.jsonl",
+    "source_line_number": 227,
+    "old_text": "水温在37度左右，有助于放松。",
+    "new_text": "泡澡的时候水温在37度左右，有助于放松。",
+    "text_equal": false,
+    "answer_quality_evaluated": false
+  },
+  {
+    "row": 7,
+    "id": "yuyan_000986",
+    "pair": 0,
+    "task_type": "audio2audio",
+    "source_jsonl": "data/downloaded_datasets/vcb_bench/speech_instruction_follow/chinese/language_control/language_control.jsonl",
+    "source_line_number": 136,
+    "old_text": "嗯…那我给你说几句哈。“侬这身衣服，穿得真好看，料子细，款式也潮。”“侬这身打扮，打扮得真漂亮，身材好，气质佳。”“侬这身打扮，打扮得真好看，衣服颜色搭配得恰到好处。”要是你还想了解更多上海话夸人的话，或者有啥别的想法，都可以跟我说哦。",
+    "new_text": "嗯…上海话里夸人长的漂亮，可以说“侬的身材好，身材好”。衣服好看的话，就说“侬的衣裳真好看，衣裳真好看”。要是想再加点啥，比如夸人有气质，可以说“侬的气质真好，气质真好”。你要是还有别的想法或者想再聊聊上海话里的其他东西，随时跟我说哈。",
+    "text_equal": false,
+    "answer_quality_evaluated": false
+  },
+  {
+    "row": 8,
+    "id": "accent_dongbei_cmp_gongqing_000110",
+    "pair": 0,
+    "task_type": "audio2text",
+    "source_jsonl": "data/downloaded_datasets/vcb_bench/real_scenario/speaker_variations/accent_cmp/accent_cmp.jsonl",
+    "source_line_number": 53,
+    "old_text": "哈哈，这种情况确实挺让人头疼的。不过别担心，现在机场一般都有应急措施，你可以尝试联系航空公司或者机场工作人员看看能不能帮你补办。希望你能尽快解决问题，顺利到达目的地！",
+    "new_text": "哎呀，这确实挺让人头疼的。带身份证确实很重要，可能是因为匆忙或者其他原因没注意到。不过还好，现在找到了，可以继续赶路了。希望你能顺利到达目的地，别再遇到其他麻烦了。",
+    "text_equal": false,
+    "answer_quality_evaluated": false
+  },
+  {
+    "row": 9,
+    "id": "zhuanzhe0263-1",
+    "pair": 0,
+    "task_type": "audio2text",
+    "source_jsonl": "data/downloaded_datasets/vcb_bench/multi_turn_dialog/transition/transition.jsonl",
+    "source_line_number": 271,
+    "old_text": "情境扮演游戏是一种通过模拟真实生活中的场景，让孩子们在安全的环境中学习和成长的活动。具体操作可以是：选择一个场景，如购物、面试、团队合作等，然后让孩子们扮演其中的角色，体验不同的角色和情境，同时也可以让孩子们分享自己的想法和感受，从而提高他们的沟通能力和理解能力。",
+    "new_text": "情境扮演游戏是一种通过模拟真实生活中的场景，让孩子们在安全的环境中学习和体验不同情境下的应对方式，从而提高他们的情商和解决问题的能力。以下是一些情境扮演游戏的玩法：\n\n1. 情境扮演游戏的玩法：\n情境扮演游戏是一种通过模拟真实生活中的场景，让孩子们在安全的环境中学习和体验不同情境下的应对方式，从而提高他们的情商和解决问题的能力。以下是一些情境扮演游戏的玩法：\n\n1. 情境扮演游戏的玩法：\n情境扮演游戏是一种通过模拟真实生活中的场景，让孩子们在安全的环境中学习和体验不同情境下的应对方式，从而提高他们的情商和解决问题的能力。以下是一些情境扮演游戏的玩法：\n\n1. 情境扮演游戏的玩法：\n情境扮演游戏是一种通过模拟真实生活中的场景，让孩子们在安全的环境中学习和体验不同情境下的应对方式，从而提高他们的情商和解决问题的能力。以下是一些情境扮演游戏的玩法：\n\n1. 情境扮演游戏的玩法：\n情境扮演游戏是一种通过模拟真实生活中的场景，让孩子们在安全的环境中学习和体验不同情境下的应对方式，从而提高他们的情商和解决问题的能力。以下是一些情境扮演游戏的玩法：\n\n1. 情境扮演游戏的玩法：\n情境扮演游戏是一种通过模拟真实生活中的场景，让孩子们在安全的环境中学习和和体验不同情境下的应对方式，从而提高他们的情商和解决问题的能力。以下是一些情境扮演游戏的玩法：\n\n1. 情境扮演游戏的玩法：\n情境扮演游戏是一种通过模拟模拟真实生活中的场景，让孩子们在安全的环境中学习和体验不同情境下的应对方式，从而提高他们的情商和解决问题的能力。以下是一些情境扮演游戏的玩法：\n\n1. 情境扮演游戏的玩法：\n情境扮演游戏是一种通过模拟真实生活中的场景，让孩子们在安全的环境中学习和体验不同情境下的应对方式，从而提高他们的情商和解决问题的能力。以下是一些情境扮演游戏的玩法：\n\n1. 情境扮演游戏的玩法：\n情境扮演游戏是一种通过模拟，模拟真实生活中的场景，让孩子们在安全的环境中学习和对不同情境下的应对方式，从而提高他们的情商和解决问题的能力。以下是一些情境扮演游戏的玩法：\n\n1. 情境扮演游戏的玩法：\n情境扮演游戏是一种通过模拟”模拟真实生活中的场景，让孩子们在安全的环境中学习和应对不同情境下的应对方式，从而提高他们的情商和解决问题的能力。以下是一些情境扮演游戏的玩法：\n\n1. 情境扮演游戏的玩法：\n情境扮演游戏是一种通过模拟”模拟真实生活中的场景，让孩子们在安全的环境中学习应对不同情境下的应对方式，从而提高他们的情商和解决问题的能力。以下是一些情境扮演游戏的玩法：\n\n1. 情境扮演游戏的玩法：\n情境扮演游戏是一种通过模拟”man, 通过模拟真实生活中的场景，让孩子们在安全的环境中学习应对不同情境下的应对方式，从而提高他们的情商和解决问题的能力。以下是一些情境扮演游戏的玩法：\n\n1. 情境扮演游戏的玩法：\n情境扮演游戏是一种通过模拟customerId, 通过模拟真实生活中的场景，让孩子们在安全的环境中学习应对不同情境下的应对方式，从而提高他们的情商和解决问题的能力。以下是一些情境扮演游戏的玩法：\n\n1. 情境扮演游戏的玩法：\n情境扮演游戏是一种通过模拟嚯， 通过模拟真实生活中的场景，让孩子们在安全的环境中学习应对不同情境下的应对方式，从而提高他们的情商和解决问题的能力。以下是一些情境扮演游戏的玩法：\n\n1. 情境扮演游戏是一种通过模拟”是对模拟真实生活中的场景，让孩子们在安全的环境中学习应对不同情境下的应对方式，从而提高他们的情商和解决问题的能力。以下是一些情境扮演游戏的玩法：\n\n1. 情境扮演游戏是一种通过模拟”是对模拟真实生活中的场景，让孩子们在安全的环境中学习应对不同情境下的应对方式，从而提高他们的情商和解决问题的能力。以下是一些情境扮演游戏的玩法：\n\n1. 情境扮演游戏是一种通过模拟”模拟真实生活中的场景，让孩子们在安全的环境中学习应对不同情境下的应对方式，从而提高他们的情商和解决问题的能力。以下是一些情境扮演游戏的玩法：\n\n1. 情境扮演游戏是一种通过模拟嚯，模拟真实生活中的场景，让孩子们在安全的环境中学习应对不同情境下的应对方式，从而提高他们的情商和解决问题的能力。以下是一些情境扮演游戏的玩法：\n\n1. 情境扮演游戏是一种通过模拟”的情境，模拟真实生活中的场景，让孩子们在安全的环境中学习应对不同情境下的应对方式，从而提高他们的情商和解决问题的能力。以下是一些情境扮演游戏的玩法：\n\n1. 情境扮演游戏是一种通过模拟”是对模拟真实生活中的场景，让孩子们在安全的环境中学习应对不同情境下的应对方式，从而提高他们的情商和解决问题的能力。以下是一些情境扮演游戏的玩法：\n\n1. 情境扮演游戏是一种通过模拟，",
+    "text_equal": false,
+    "answer_quality_evaluated": false
+  },
+  {
+    "row": 10,
+    "id": "dc_induction_conv0081_649_39",
+    "pair": 0,
+    "task_type": "audio2text",
+    "source_jsonl": "data/downloaded_datasets/vcb_bench/discourse_comprehension/discourse_comprehension.jsonl",
+    "source_line_number": 134,
+    "old_text": "嗯…从你给的这些信息里，我感觉不太能确定具体是哪个方面呢。因为A和B的讨论内容没有明确指向哪个方面。不过，如果要选的话，我觉得可以试试看，说不定A和B的讨论内容就是剧中的演员表现之类的，因为这是电视剧的一个重要方面。所以，我觉得答案可能是A。不过这只是我的猜测，你要是有其他想法或者信息，可以和我说说呀。",
+    "new_text": "嗯…从你给的这些信息里，我感觉不太能确定具体是哪个方面呢。因为A和B的讨论内容没有明确指向哪个方面。不过，如果要选的话，我觉得可以试试看，说不定A和B的讨论内容就是剧中的演员表现之类的，因为这是电视剧的一个重要方面。所以，我觉得答案可能是A。不过这只是我的猜测，你要是有其他想法或者信息，可以和我说说呀。",
+    "text_equal": true,
+    "answer_quality_evaluated": false
+  }
+]

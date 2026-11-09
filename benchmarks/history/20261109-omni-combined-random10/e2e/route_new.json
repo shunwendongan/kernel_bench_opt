@@ -1,0 +1,8 @@
+{
+  "predit_sync": true,
+  "rknn_enabled": true,
+  "rknn_prefix": "${BOARD_PROJECT}/models/rknn/audio_conv_prefix_mnn4bit_fp16.rknn",
+  "route_note": "RKNN audio prefix plus existing CPU tail",
+  "tile": 4,
+  "variant": "new"
+}

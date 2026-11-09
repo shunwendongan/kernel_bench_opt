@@ -1,0 +1,28 @@
+{
+  "benchmark_meta": {
+    "audio_type": "Speech",
+    "dataset_name": "non_verbal_vocalization_en",
+    "dataset_series": "vcb_bench",
+    "interactive": "Audio-QA",
+    "lang": "en",
+    "task": "Open-Ended"
+  },
+  "chat_messages": [
+    {
+      "content": "<audio>{BUNDLE}/audio/003_00_en_teshuyinxiao_000060.wav</audio>",
+      "role": "user"
+    }
+  ],
+  "index": "en_teshuyinxiao_000060",
+  "max_new_tokens": 1024,
+  "original_row_number": 3,
+  "prepared_audios": [
+    "audio/003_00_en_teshuyinxiao_000060.wav"
+  ],
+  "prepared_duration_s": 7.011,
+  "source_jsonl": "data/downloaded_datasets/vcb_bench/speech_instruction_follow/english/non_verbal_vocalization_en/non_verbal_vocalization_en.jsonl",
+  "source_line_number": 11,
+  "subset": "non_verbal_vocalization_en",
+  "system_prompt": "You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.",
+  "task_type": "audio2audio"
+}

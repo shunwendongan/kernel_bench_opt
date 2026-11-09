@@ -1,0 +1,36 @@
+{
+  "llm_model": "llm.mnn",
+  "llm_weight": "llm.mnn.weight",
+  "backend_type": "cpu",
+  "thread_num": 4,
+  "precision": "low",
+  "memory": "low",
+  "system_prompt": "You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.",
+  "talker_max_new_tokens": 1024,
+  "talker_speaker": "Chelsie",
+  "dit_steps": 5,
+  "dit_solver": 1,
+  "mllm": {
+    "backend_type": "opencl",
+    "thread_num": 1,
+    "precision": "normal",
+    "memory": "low"
+  },
+  "max_new_tokens": 1024,
+  "max_all_tokens": 8192,
+  "reuse_kv": false,
+  "audio_start": 151647,
+  "audio_end": 151648,
+  "sampler_type": "greedy",
+  "mixed_samplers": [
+    "greedy"
+  ],
+  "temperature": 1.0,
+  "topK": 1,
+  "topP": 1.0,
+  "penalty": 1.0,
+  "prompt_cache": false,
+  "is_visual": false,
+  "base_dir": "${BOARD_PROJECT}/models/Qwen2.5-Omni-3B-MNN/",
+  "tmp_path": "${BOARD_RUN}/cache"
+}

@@ -1,0 +1,28 @@
+{
+  "benchmark_meta": {
+    "audio_type": "Speech",
+    "dataset_name": "language_control",
+    "dataset_series": "vcb_bench",
+    "interactive": "Audio-QA",
+    "lang": "zh",
+    "task": "Open-Ended"
+  },
+  "chat_messages": [
+    {
+      "content": "<audio>{BUNDLE}/audio/007_00_yuyan_000986.wav</audio>",
+      "role": "user"
+    }
+  ],
+  "index": "yuyan_000986",
+  "max_new_tokens": 1024,
+  "original_row_number": 7,
+  "prepared_audios": [
+    "audio/007_00_yuyan_000986.wav"
+  ],
+  "prepared_duration_s": 7.73,
+  "source_jsonl": "data/downloaded_datasets/vcb_bench/speech_instruction_follow/chinese/language_control/language_control.jsonl",
+  "source_line_number": 136,
+  "subset": "language_control",
+  "system_prompt": "You are Qwen, a virtual human developed by the Qwen Team, Alibaba Group, capable of perceiving auditory and visual inputs, as well as generating text and speech.",
+  "task_type": "audio2audio"
+}

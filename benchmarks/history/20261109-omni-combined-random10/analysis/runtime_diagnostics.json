@@ -1,0 +1,46 @@
+[
+  {
+    "row": 10,
+    "id": "dc_induction_conv0081_649_39",
+    "variant": "new",
+    "warmup": false,
+    "runner_reported_success": true,
+    "valid_for_comparison": false,
+    "diagnostics": [
+      {
+        "source_line": 82,
+        "message": "Broad cast error, dim1 = 1500, dim2 = 2251"
+      },
+      {
+        "source_line": 83,
+        "message": "Compute Shape Error for /Add_2_output_0"
+      },
+      {
+        "source_line": 85,
+        "message": "Media encoder returned no features"
+      }
+    ]
+  },
+  {
+    "row": 10,
+    "id": "dc_induction_conv0081_649_39",
+    "variant": "old",
+    "warmup": false,
+    "runner_reported_success": true,
+    "valid_for_comparison": false,
+    "diagnostics": [
+      {
+        "source_line": 88,
+        "message": "Broad cast error, dim1 = 1500, dim2 = 2251"
+      },
+      {
+        "source_line": 89,
+        "message": "Compute Shape Error for /Add_2_output_0"
+      },
+      {
+        "source_line": 91,
+        "message": "Media encoder returned no features"
+      }
+    ]
+  }
+]

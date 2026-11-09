@@ -1,0 +1,139 @@
+{
+  "repository": "taobao-mnn/Qwen2.5-Omni-3B-MNN",
+  "revision": "00dc2e9131a4bb325b43a47f4210dd6450116687",
+  "files": [
+    {
+      "name": "README.md",
+      "bytes": 1140,
+      "sha256": "3aa4eaf6bb3451e8bf8fd53ca016e423f15b194fdb544c502bf0fdf3ebd1e082",
+      "matches_expected": true
+    },
+    {
+      "name": "audio.mnn",
+      "bytes": 440544,
+      "sha256": "efd04e6a57ff4f788903ae78ff742e573d50136b205d0881111785f038c2a72c",
+      "matches_expected": true
+    },
+    {
+      "name": "audio.mnn.weight",
+      "bytes": 368027842,
+      "sha256": "26d20c23e5ed3c68eacc2bd8b6e64137a38c26d6b6005385f4bc9bcdfff0bdc0",
+      "matches_expected": true
+    },
+    {
+      "name": "bigvgan.mnn",
+      "bytes": 534624,
+      "sha256": "f47227fdd290c752749b773cc777bc4838edcb02ced3d26231a0401edab1e48d",
+      "matches_expected": true
+    },
+    {
+      "name": "bigvgan.mnn.weight",
+      "bytes": 116571020,
+      "sha256": "9434b8ec498fc79f0b97b66b945f6655f60eb44685450e76b7bb7cbb8ec897fd",
+      "matches_expected": true
+    },
+    {
+      "name": "config.json",
+      "bytes": 586,
+      "sha256": "b026728c73e6d96784cb41ab49ddad3cca52c2784e6ca339c6df307e84496b4e",
+      "matches_expected": true
+    },
+    {
+      "name": "dit.mnn",
+      "bytes": 1017496,
+      "sha256": "537d6dec307e23ae51e3445e26790677c55415d7dc9b215e8ea076fada511646",
+      "matches_expected": true
+    },
+    {
+      "name": "dit.mnn.weight",
+      "bytes": 348178426,
+      "sha256": "6e73cb6dc912ee456146450228e58fe472ba3ef7eb39c540fb74a44f6378c6a7",
+      "matches_expected": true
+    },
+    {
+      "name": "embeddings_bf16.bin",
+      "bytes": 622329856,
+      "sha256": "775356f7eb2711aced9700e45303d33ec2bb3fa89cd344e5db6bd019aeaad6a0",
+      "matches_expected": true
+    },
+    {
+      "name": "llm.mnn",
+      "bytes": 573936,
+      "sha256": "2438962aa23bde3fceae4ea97df1d8250865c2de5eb4d46f133578e79a73da30",
+      "matches_expected": true
+    },
+    {
+      "name": "llm.mnn.json",
+      "bytes": 2407046,
+      "sha256": "8b5de0cda16ff48674a48184389f51d8db27c631f77a80f8c4146e08b1078443",
+      "matches_expected": true
+    },
+    {
+      "name": "llm.mnn.weight",
+      "bytes": 1737291202,
+      "sha256": "388f6a1e1618b4a32b7cfd9a3789bf5207e5acd6f8b920c6083930ec192fed90",
+      "matches_expected": true
+    },
+    {
+      "name": "llm_config.json",
+      "bytes": 2188,
+      "sha256": "d2906baff9493e228835c901838569d9b5b593062a4f085ba01cd799b3cb67d5",
+      "matches_expected": true
+    },
+    {
+      "name": "predit.mnn",
+      "bytes": 14584,
+      "sha256": "d88dcf0fcc97e715ca19afdab9c7844006418c2b7f0e55ddad3c9dd18f1c3018",
+      "matches_expected": true
+    },
+    {
+      "name": "predit.mnn.weight",
+      "bytes": 17645830,
+      "sha256": "ed3f62117c3081cc5f35db87dc663692af4ff72b4d46f253d8c4a2ca2ee8c510",
+      "matches_expected": true
+    },
+    {
+      "name": "spk_dict.mnn",
+      "bytes": 3384,
+      "sha256": "25871b4e525d3c29bdf30a919948cc2560076090d2ca4c5843a63026b2e704d5",
+      "matches_expected": true
+    },
+    {
+      "name": "talker.mnn",
+      "bytes": 492976,
+      "sha256": "4e704825de28c498ecf51e63650bfb69ce0089f673714b47e61ff144511d9123",
+      "matches_expected": true
+    },
+    {
+      "name": "talker.mnn.weight",
+      "bytes": 391832572,
+      "sha256": "bc286cc8fdb40c561699778df5b7b97eb9d7cdb201f8ea3d97b17cf06bb9051c",
+      "matches_expected": true
+    },
+    {
+      "name": "talker_embeddings_bf16.bin",
+      "bytes": 34603008,
+      "sha256": "66cf69353db66cbf66cb00fa6af55834161dd8bdd4098c68671fc3fefa88761f",
+      "matches_expected": true
+    },
+    {
+      "name": "tokenizer.txt",
+      "bytes": 3193458,
+      "sha256": "62697a0ab88c413bd256c8e811e2c7bba9e00696e64ba6dc904fe9844e5c9377",
+      "matches_expected": true
+    },
+    {
+      "name": "visual.mnn",
+      "bytes": 655928,
+      "sha256": "9a531ed3b5ebdf066a330eda8bb5495ed27a03c53065c817459330438837f8e5",
+      "matches_expected": true
+    },
+    {
+      "name": "visual.mnn.weight",
+      "bytes": 369748896,
+      "sha256": "b0dbd09d01db868adb46796d50ea629aec18a6f59cebf0191ed28c1d0ad260a2",
+      "matches_expected": true
+    }
+  ],
+  "all_match": true
+}

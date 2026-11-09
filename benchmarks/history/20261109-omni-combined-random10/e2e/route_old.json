@@ -1,0 +1,8 @@
+{
+  "predit_sync": true,
+  "rknn_enabled": false,
+  "rknn_prefix": "-",
+  "route_note": "original MNN encoder runtime selected by unchanged config",
+  "tile": 0,
+  "variant": "old"
+}

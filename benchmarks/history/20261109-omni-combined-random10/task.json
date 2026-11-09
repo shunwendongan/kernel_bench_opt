@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "record_type": "historical_task_publication",
+  "task_id": "omni-combined-audio-route-e2e",
+  "title": "Compare combined RKNN audio route and BigVGAN tile4 against original MNN route",
+  "branch": "Qwen2.5-Omni-3B_VCB-Bench",
+  "model": "Qwen2.5-Omni-3B",
+  "dataset": "VCB-Bench",
+  "goal": "L3 end-to-end elapsed time with explicit output equivalence checks",
+  "candidate_id": "rknn-prefix-bigvgan-tile4",
+  "run_ids": [
+    "20261109-112115-omni-combined-e2e-random10"
+  ],
+  "state": "experiment_completed",
+  "decision": "output_equivalence_rejected",
+  "candidate_file": "experiments/rknn-prefix-bigvgan-tile4/candidate.json",
+  "run_file": "benchmarks/history/20261109-omni-combined-random10/run.json",
+  "asset_manifest": "assets/runs/20261109-112115-omni-combined-e2e-random10.json",
+  "device_released": true,
+  "note": "Historical native execution; publication performs no device actions."
+}

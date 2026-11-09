@@ -1,0 +1,28 @@
+{
+  "benchmark_meta": {
+    "audio_type": "Speech",
+    "dataset_name": "accent_cmp",
+    "dataset_series": "vcb_bench",
+    "interactive": "Audio-QA",
+    "lang": "zh",
+    "task": "Open-Ended"
+  },
+  "chat_messages": [
+    {
+      "content": "<audio>{BUNDLE}/audio/008_00_accent_dongbei_cmp_gongqing_000110.wav</audio>",
+      "role": "user"
+    }
+  ],
+  "index": "accent_dongbei_cmp_gongqing_000110",
+  "max_new_tokens": 1024,
+  "original_row_number": 8,
+  "prepared_audios": [
+    "audio/008_00_accent_dongbei_cmp_gongqing_000110.wav"
+  ],
+  "prepared_duration_s": 3.63,
+  "source_jsonl": "data/downloaded_datasets/vcb_bench/real_scenario/speaker_variations/accent_cmp/accent_cmp.jsonl",
+  "source_line_number": 53,
+  "subset": "accent_cmp",
+  "system_prompt": "You are a helpful assistant.",
+  "task_type": "audio2text"
+}

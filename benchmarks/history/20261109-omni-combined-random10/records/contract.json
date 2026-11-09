@@ -1,0 +1,51 @@
+{
+  "run_id": "20261109-112115-omni-combined-e2e-random10",
+  "started_date": "2026-11-09",
+  "selection_seed": 20261109,
+  "sample_count": 10,
+  "source_population_records": 11362,
+  "sampling": "unfiltered uniform sample without replacement from all categories; retain draw order",
+  "task_types": {
+    "audio2text": 8,
+    "audio2audio": 2
+  },
+  "formal_pairs_per_sample": 1,
+  "warmup": {
+    "per_variant": 1,
+    "sample": "first selected audio2audio, row3",
+    "excluded_from_formal_results": true
+  },
+  "baseline": {
+    "audio_encoder": "unchanged original MNN audio.mnn on configured OpenCL runtime",
+    "bigvgan_convtranspose": "deconv_2d tile0"
+  },
+  "candidate": {
+    "audio_prefix": "existing RKNN Conv1-GELU-Conv2-GELU (not an independent new Conv2 kernel)",
+    "audio_tail": "existing CPU path",
+    "bigvgan_convtranspose": "tile4 with existing shape guards; baseline fallback otherwise"
+  },
+  "shared": {
+    "model_repository": "taobao-mnn/Qwen2.5-Omni-3B-MNN",
+    "model_revision": "00dc2e9131a4bb325b43a47f4210dd6450116687",
+    "cpu_threads": 4,
+    "thinker_max_tokens": 1024,
+    "talker_max_tokens": 1024,
+    "dit_steps": 5,
+    "dit_solver": 1,
+    "dit_compute": "FP32",
+    "rng_seed": 20261109,
+    "predit_sync": true,
+    "profiling": false,
+    "capture": false,
+    "source_library_sha256": "c0b406c44b1b970644fe55fd51d22b99ee4cf08f79e162eb1017d3e9756d2dee"
+  },
+  "timing": "host monotonic response start through text return or complete speech; model loading and warmup excluded",
+  "fairness_notes": [
+    "Same model files and deployed effective weight source; RKNN FP16 backend and CPU-tail route can differ numerically from original MNN OpenCL encoder.",
+    "Output mismatches retained and reported; unmatched generated work is not a pure kernel speedup.",
+    "No stable p95 or statistical significance claim from one pair per sample.",
+    "Existing model and data files reused; colleague processes not changed.",
+    "Two model instances resident, serial requests; no single-instance memory or throughput claim.",
+    "Per-shape first-use compilation/encoding costs are retained; only one full speech warmup per variant."
+  ]
+}

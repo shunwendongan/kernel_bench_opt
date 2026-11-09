@@ -2,3 +2,6 @@
 *.patch -whitespace
 # Preserve third-party license texts verbatim, including upstream line endings.
 licenses/** -text -whitespace
+# Preserve historical CSV line endings and literal runtime diagnostics.
+benchmarks/history/20261109-omni-combined-random10/analysis/per_sample.csv -text whitespace=cr-at-eol
+benchmarks/history/20261109-omni-combined-random10/records/process.txt -whitespace

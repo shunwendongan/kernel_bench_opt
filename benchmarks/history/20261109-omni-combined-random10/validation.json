@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "validation_kind": "offline_publication_reanalysis",
+  "hardware_execution": false,
+  "waveform_mode": "recorded_evidence_not_rehashed",
+  "portable_analyzer_sha256": "52f49a56cca00450c57753f6a929bc362d2589e092d20c16bc539226a6a961da",
+  "bound_source_files": {
+    "e2e/results.jsonl": "27ec7ca2aaef60dc367882b5a51d0461408dee3c00ee1ed4ef452ecedd56b2aa",
+    "records/process.txt": "344d174d590df20273c1e1406785758a165302d63fb7dd5742849ddad576309c",
+    "inputs/bundle/manifest.jsonl": "93a23a4eeced6ca4e310682583b65ce1af74dc130cd3f41910bcb51fed264f6d"
+  },
+  "reanalysis_matches_published_latencies_and_valid_totals": true,
+  "expected_samples": 10,
+  "formal_requests": 20,
+  "warmup_requests": 2,
+  "valid_pairs": 9,
+  "strict_equal_pairs": 1,
+  "runtime_invalid_rows": [
+    10
+  ],
+  "record_integrity_passed": true,
+  "candidate_output_equivalence_passed": false,
+  "runtime_audit_passed": false,
+  "audit_errors": [],
+  "note": "Successful reanalysis preserves the failed experiment; no absent waveform bytes rehashed, no model/device test."
+}

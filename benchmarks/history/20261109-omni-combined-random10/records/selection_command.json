@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "python3",
+    "work/kernel_bench_opt/tools/data/prepare_random50.py",
+    "--source-root",
+    "${ASSET_ROOT}",
+    "--output",
+    "${RUN_ROOT}/inputs/selection",
+    "--seed",
+    "20261109",
+    "--count",
+    "10"
+  ],
+  "exit_code": 0,
+  "stderr": ""
+}

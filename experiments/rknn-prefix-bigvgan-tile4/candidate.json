@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "task_id": "omni-combined-audio-route-e2e",
+  "candidate_id": "rknn-prefix-bigvgan-tile4",
+  "parent_candidate_id": "mnn-opencl-audio-encoder-deconv-tile0",
+  "reused_candidate_ids": [
+    "bigvgan-convtranspose-tile4"
+  ],
+  "status": "output_equivalence_rejected",
+  "comparison_kind": "system_route_ab",
+  "source_base_commit": "6871066b7727cf55519f239bae90cb2b89f9d424",
+  "engine": {
+    "name": "MNN",
+    "version": "3.6.2",
+    "revision": "7e3c6fb5225d3ccf22807ee641332669df34650d",
+    "rknn_runtime": "2.3.2"
+  },
+  "baseline": {
+    "audio_encoder": "original complete MNN audio.mnn on unchanged OpenCL runtime",
+    "bigvgan_convtranspose": "tile0"
+  },
+  "candidate": {
+    "audio_prefix": "existing RKNN Conv1 → GELU → Conv2 → GELU",
+    "audio_tail": "existing CPU encoder tail",
+    "bigvgan_convtranspose": "existing tile4 candidate with original shape guards",
+    "tile4_supported_T": [
+      52,
+      120,
+      136
+    ],
+    "unsupported_shape": "baseline fallback"
+  },
+  "precision_contract": {
+    "same_model_snapshot": true,
+    "same_deployed_effective_weight_source": true,
+    "audio_execution_identical": false,
+    "audio_prefix": "RKNN FP16",
+    "audio_tail": "CPU route differs from baseline OpenCL",
+    "dit_compute": "FP32",
+    "note": "No independent optimized Conv2+GELU kernel is asserted. Same model files do not guarantee identical embeddings or generated outputs."
+  },
+  "integration": {
+    "runner": "src/apps/omni_batch_ab.cpp",
+    "analyzer": "tools/analysis/analyze_combined.py",
+    "old_route": {
+      "OMNI_RKNN_AUDIO": "unset",
+      "OMNI_BIGVGAN_DECONV_TILE": "0"
+    },
+    "new_route": {
+      "OMNI_RKNN_AUDIO": "external RKNN prefix file",
+      "OMNI_BIGVGAN_DECONV_TILE": "4"
+    },
+    "shared": {
+      "OMNI_PREDIT_SYNC": "1",
+      "OMNI_TEST_SEED": "20261109"
+    }
+  },
+  "source_files": [
+    {
+      "path": "src/apps/omni_batch_ab.cpp",
+      "sha256": "84d75273ab1e25cad8b2786dbdd400003c3d0a483c9670e0f7f112f9d6435fa0"
+    },
+    {
+      "path": "src/mnn/omni_rknn_prefix.hpp",
+      "sha256": "79859f273f139dfcd96bfa4aaeace180ec215e1be4223806bc28a138bb736035"
+    },
+    {
+      "path": "src/mnn/DeconvBufExecution.candidate.cpp",
+      "sha256": "49ec18b80cf6abf136c9f92ebf759c66f792f482af7f820a1d069a7c50d4d1ed"
+    },
+    {
+      "path": "kernels/bigvgan_deconv_s5_tiled.cl",
+      "sha256": "8f52e6f5a900b9047bf0b0062dac4b79229db8ae1371199550e0b00632e1dcf8"
+    },
+    {
+      "path": "experiments/predit-sync.patch",
+      "sha256": "d695a11369f62d79023a86191e2300b045daa86ff8f5173f28d7ce1464b2ff37"
+    }
+  ],
+  "asset_identities": {
+    "model_repository": "taobao-mnn/Qwen2.5-Omni-3B-MNN",
+    "model_revision": "00dc2e9131a4bb325b43a47f4210dd6450116687",
+    "rknn_prefix_sha256": "babb232111b8bdef1817c109336568634d701a7bc16f0c324eca77d6a7c9244a",
+    "sync_static_library_sha256": "c0b406c44b1b970644fe55fd51d22b99ee4cf08f79e162eb1017d3e9756d2dee"
+  },
+  "result": {
+    "run_id": "20261109-112115-omni-combined-e2e-random10",
+    "attempted_pairs": 10,
+    "valid_audio_feature_pairs": 9,
+    "strict_equal_output_pairs": 1,
+    "valid_different_output_pairs": 8,
+    "invalid_sample_rows": [
+      10
+    ],
+    "full_combination_unchanged_output_acceptance": false,
+    "valid_pair_elapsed_reduction_pct": 8.246031819708154,
+    "interpretation": "descriptive system-route elapsed time only; not a lossless kernel optimization speedup"
+  },
+  "design": "experiments/rknn-prefix-bigvgan-tile4/design.md",
+  "evidence": "benchmarks/history/20261109-omni-combined-random10/README.md",
+  "report": "reports/20261109-omni-combined-random10/README.md",
+  "limitations": [
+    "Historical native RK3588 run, not a Docker measurement or second-board validation.",
+    "One formal A/B pair per sample; no significance or stable p95 claim.",
+    "Output equivalence failed; generated workloads differ.",
+    "No independent attribution of audio-route and ConvTranspose effects.",
+    "No answer-quality, semantic or listening evaluation.",
+    "Sample 10 failed audio encoding on both routes despite runner-reported success."
+  ]
+}

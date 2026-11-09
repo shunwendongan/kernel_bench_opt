@@ -1,0 +1,9 @@
+{
+  "utc": "2026-11-09T03:22:06.349343+00:00",
+  "analysis_exit": 0,
+  "stderr": "",
+  "initial_automatic_analysis_stdout": "{\n  \"run_state\": \"completed\",\n  \"expected_samples\": 10,\n  \"formal_records_found\": 20,\n  \"retrieved_complete_input_pairs\": true,\n  \"audit_passed\": true,\n  \"audit_errors\": []\n}\n",
+  "final_review": "Runtime log audit identified encoder failure for sample10 in both variants; final authoritative decisions are in final_acceptance.json",
+  "final_record_integrity_passed": true,
+  "final_comparison_acceptance_passed": false
+}

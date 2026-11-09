@@ -165,6 +165,10 @@ Task（目标、模型/数据协议）
 
 [候选与设计](experiments/bigvgan-convtranspose-tile4/design.md) · [逐次 benchmark](benchmarks/history/20261106-bigvgan-convtranspose/README.md) · [热点片段](reports/20261106-bigvgan-convtranspose/README.md) · [历史 profile / 映射 / VCB 结果](reports/historical/README.md)
 
+后续还保存了 [随机 10 条组合路径 A/B](reports/20261109-omni-combined-random10/README.md)：将既有 RKNN 音频前缀与 tile4 同时启用，与原 MNN/OpenCL 音频编码器和旧 ConvTranspose 比较。**9 对有效、其中 1 对严格同输出，8 对输出变化，第 10 对编码失败；组合的输出保持验收未通过。** 有效 9 对累计耗时降低 8.25%，仅为系统路径描述。这类负例同样进入 Task → Candidate → Run 证据链，供下一轮检查音频边界与数值路径。
+
+[全部历史运行索引](benchmarks/history/README.md) · [组合候选与决策](experiments/rknn-prefix-bigvgan-tile4/design.md) · [逐请求证据与离线复算](benchmarks/history/20261109-omni-combined-random10/README.md) · [外置资产清单](assets/runs/20261109-112115-omni-combined-e2e-random10.json)
+
 ## 从这里开始
 
 ```bash
@@ -180,7 +184,7 @@ cd kernel_bench_opt
 | 准备端侧容器和本地资产挂载 | [容器指南](docs/CONTAINERS.md) · [Dockerfile](docker/Dockerfile.rk3588) · [启动器](docker/run_rk3588.py) |
 | 使用已有候选或做新候选 | [候选身份](experiments/bigvgan-convtranspose-tile4/candidate.json) · [设计模板](experiments/templates/design.template.md) |
 | 采集、分析、理解来源关系 | [Mac / Windows 工具包与 Skill](appendices/performance-analysis-toolkit/README.md) · [来源合同](docs/OPERATOR.md) |
-| 查看分层结果或复用记录格式 | [三级复现入口](docs/REPRODUCE.md) · [历史 benchmark](benchmarks/history/20261106-bigvgan-convtranspose/README.md) · [run 模板](experiments/templates/run.template.json) |
+| 查看分层结果或复用记录格式 | [三级复现入口](docs/REPRODUCE.md) · [历史 benchmark 索引](benchmarks/history/README.md) · [run 模板](experiments/templates/run.template.json) |
 | 核对依赖与实际完成状态 | [依赖](docs/DEPENDENCIES.md) · [项目状态](docs/STATUS.md) · [原生构建](docs/BUILD.md) |
 
 <details>

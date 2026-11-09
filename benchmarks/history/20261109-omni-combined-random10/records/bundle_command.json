@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "python3",
+    "work/kernel_bench_opt/tools/data/prepare_bundle.py",
+    "--selection",
+    "${RUN_ROOT}/inputs/selection/selection.jsonl",
+    "--selection-sha256",
+    "23698758183a7f0b50e9ce47e09f308b2ba7f8cb99efabf03c5fd03e722bf614",
+    "--source-root",
+    "${ASSET_ROOT}",
+    "--vcb-source",
+    "${RUN_ROOT}/inputs/protocol-source",
+    "--output",
+    "${RUN_ROOT}/inputs/bundle",
+    "--ffmpeg",
+    "/Applications/Open Design.app/Contents/Resources/app/node_modules/@ffmpeg-installer/darwin-arm64/ffmpeg"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"verified_records\": 10,\n  \"verified_prepared_audio_files\": 26,\n  \"selection_unchanged_sha256\": \"23698758183a7f0b50e9ce47e09f308b2ba7f8cb99efabf03c5fd03e722bf614\",\n  \"manifest_sha256\": \"93a23a4eeced6ca4e310682583b65ce1af74dc130cd3f41910bcb51fed264f6d\",\n  \"references_sha256\": \"c327c37620a243811abac0184c934e2c67a88802c4dbeeab0b801751e1fbc891\",\n  \"ffmpeg_version\": \"ffmpeg version 4.4 Copyright (c) 2000-2021 the FFmpeg developers\",\n  \"sample_rate\": 16000,\n  \"channels\": 1,\n  \"sample_format\": \"PCM16\",\n  \"no_trim_or_augmentation\": true,\n  \"audio_analysis_count\": 1,\n  \"input_audio_duration_s\": 172.35399999999998,\n  \"max_abs_duration_delta_s\": 6.802721088661201e-06,\n  \"all_user_transcripts_excluded\": true,\n  \"all_target_answers_excluded\": true,\n  \"references_must_not_be_model_inputs\": true\n}\n",
+  "stderr": ""
+}

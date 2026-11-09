@@ -1,0 +1,317 @@
+[
+  {
+    "path": "data/downloaded_datasets/vcb_bench/discourse_comprehension/discourse_comprehension.jsonl",
+    "sha256": "6ec4bd519b484c4527f46380681d5c6ca8aaf80556a92b74bfb77593400d5083",
+    "records": 331
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/general_knowledge/general_knowledge.jsonl",
+    "sha256": "ca933a6a9af9d2218b425d14e21d5b03acb5879d05ebda12f2700b4b32340d01",
+    "records": 1041
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/mathematical_logic/basic_math/basic_math.jsonl",
+    "sha256": "a74204162e950b5c0111724267de6a095f004af6d17b4244d3d3a891a6bdb95e",
+    "records": 146
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/mathematical_logic/logical_reasoning/logical_reasoning.jsonl",
+    "sha256": "7c07553837d5f925c79b0937f1609effe06312906c792ff298753ad992948e6e",
+    "records": 347
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/mathematical_logic/math/math.jsonl",
+    "sha256": "056d54bdda8e79245b46ad74bc3041d179a1592ba4c884b30f7840b08ab550c4",
+    "records": 170
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/multi_turn_dialog/backtracking/backtracking.jsonl",
+    "sha256": "fcdbc483da0fe7235cacb3cd0e2d3bffab18a83f6d7f5ebb9ac075cd4b931ee3",
+    "records": 367
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/multi_turn_dialog/progression/progression.jsonl",
+    "sha256": "776cb33b3166b0596dfd839bee7cb3c0102685c03b6902efd9cd1191bc219e5e",
+    "records": 315
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/multi_turn_dialog/transition/transition.jsonl",
+    "sha256": "a9464f30d916a584dee4d6f04e0796f0ac9f46864fbd5aa18d4cfe03e08eab9a",
+    "records": 319
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/pretrain_evaluation/story_continue/story_continue.jsonl",
+    "sha256": "a60ad3af4aae8434bbff90a4d4ac92b6396a3a9d481d237623bcbfe00a9e2ec2",
+    "records": 382
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/content_variations/casual_talk/casual_talk.jsonl",
+    "sha256": "8cf4057267840cc26d3ae56fd3b029a2f0e0c21f5bbebcc77325a21074af3684",
+    "records": 203
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/content_variations/casual_talk_cmp/casual_talk_cmp.jsonl",
+    "sha256": "a069aedb1429ed566339ee884020ba71714650f51cc9ebebee5aecbd087fcb29",
+    "records": 203
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/content_variations/code_switching/code_switching.jsonl",
+    "sha256": "9441cbcec4c377a46412dadfd26bb587618f0c3a03e5e3402b482ae069a860f3",
+    "records": 92
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/content_variations/code_switching_cmp/code_switching_cmp.jsonl",
+    "sha256": "fd2aa50dbb0980834c7a56bd9d4e043addee28a2914d39cd36c4b5f6fff24a64",
+    "records": 92
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/content_variations/fillers/fillers.jsonl",
+    "sha256": "da81b4b33b70355e0f6f9f25b3d83c110063062f31769e010de9de9b16fcb19a",
+    "records": 100
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/content_variations/fillers_cmp/fillers_cmp.jsonl",
+    "sha256": "b4af39d313fa0305c82d31aa671efe5f2d1e168d9556ae07c0493c49a4a7ceb9",
+    "records": 100
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/content_variations/grammatical_error/grammatical_error.jsonl",
+    "sha256": "0cd88c00cc3ea5d1664e07d2f92ee2ac3db2f737200191fba16517bd0d24ce3c",
+    "records": 69
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/content_variations/grammatical_error_cmp/grammatical_error_cmp.jsonl",
+    "sha256": "fc0849b801c815083487144934d0588978bde4ff9457d81c7066efd3dc6d4a96",
+    "records": 69
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/content_variations/mispronunciation/mispronunciation.jsonl",
+    "sha256": "b684d0a69badd1c2e2f0880606098fc4ee0319012f53a971925828c8bc3b28dd",
+    "records": 89
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/content_variations/mispronunciation_cmp/mispronunciation_cmp.jsonl",
+    "sha256": "65d67e81c8d8ac448124c6813ebe1f326782e90819644b30be09300010640b9e",
+    "records": 89
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/content_variations/repetition/repetition.jsonl",
+    "sha256": "42d7f02f5fea27a019fc7668e5d9a025d762c8e7b0aed3d3230b49e70f91307e",
+    "records": 87
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/content_variations/repetition_cmp/repetition_cmp.jsonl",
+    "sha256": "b2fc17f62ff49089061bef5b0cbf3509ca1fa263479c64c56007e63a0b5a9970",
+    "records": 87
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/content_variations/topic_shift/topic_shift.jsonl",
+    "sha256": "61203be7795317db84a72a649cfa302380ec615a836da58db6e914ad1e422831",
+    "records": 91
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/content_variations/topic_shift_cmp/topic_shift_cmp.jsonl",
+    "sha256": "c6ab6ee4717e35e79a111c3b3496e632a88b0c58bb887765e1776ba059f54424",
+    "records": 91
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/environmental_variations/non_vocal_noise/non_vocal_noise.jsonl",
+    "sha256": "fbf2a0a8820aebcc7d708d4eacb8a06e4133fc4647bcafbcfd7a402c57cbf862",
+    "records": 150
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/environmental_variations/non_vocal_noise_cmp/non_vocal_noise_cmp.jsonl",
+    "sha256": "0e8de709a5d6e418f9346da8a0594710c9964df0272eb1dc3b4805adae23e5af",
+    "records": 150
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/environmental_variations/unstable_signal/unstable_signal.jsonl",
+    "sha256": "c62d3482e21206a2ab2d04d2950c952d7aa6a71b20e616dd2992a4b3cd74b147",
+    "records": 80
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/environmental_variations/unstable_signal_cmp/unstable_signal_cmp.jsonl",
+    "sha256": "d6ca780f950ee2f31e031acea159482114f81bf25d10551025b53abfa073c55c",
+    "records": 80
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/environmental_variations/vocal_noise/vocal_noise.jsonl",
+    "sha256": "74da25f930bba7f848fd905ca3507dfe50e4f1145f4bb45d77b5a42d6fbbab67",
+    "records": 292
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/environmental_variations/vocal_noise_cmp/vocal_noise_cmp.jsonl",
+    "sha256": "da2d61e3434393a7ef766b2f84d192af7af30d8bb5c0f2752aabf5b9855dcf5d",
+    "records": 292
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/speaker_variations/accent/accent.jsonl",
+    "sha256": "788579f3e20e6b3544642d4908727f75b203ea3ca379b98a6cf47731196ad9f4",
+    "records": 108
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/speaker_variations/accent_cmp/accent_cmp.jsonl",
+    "sha256": "0e4608d49f7d673976e5a65ebc56d0bb8944a78484994ad3cf160010359d45e6",
+    "records": 108
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/speaker_variations/age/age.jsonl",
+    "sha256": "65d8981ff7da7187c4ab78cce655e70c1ee5631ba758bd2352eac741be258840",
+    "records": 95
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/speaker_variations/age_cmp/age_cmp.jsonl",
+    "sha256": "95529c7ecaf9056bef4e7ed353ed3c502c248981ae1439191b356def8ace1a18",
+    "records": 95
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/speaker_variations/speed/speed.jsonl",
+    "sha256": "caeb9c2f869cd6d8a674260d99e8b9ba9ef76225b5ed8ca6f845d55cb701d5dd",
+    "records": 46
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/speaker_variations/speed_cmp/speed_cmp.jsonl",
+    "sha256": "86941a017a31099441d9eef989186af49b54fb67b100d4198b43c2b3c65cd2d2",
+    "records": 46
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/speaker_variations/volume/volume.jsonl",
+    "sha256": "e3280f408c3c7aad52cffb0338ac4ec8ac1faec476bfebc7c52f0265e5db4f2f",
+    "records": 100
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/real_scenario/speaker_variations/volume_cmp/volume_cmp.jsonl",
+    "sha256": "c5119b96cbe0739983d267f63d8709a3d1f9de2fdaa55eecc7b5e876ea9ba6a9",
+    "records": 100
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/speech_instruction_follow/chinese/emotional_control/emotional_control.jsonl",
+    "sha256": "e16cb7fc2dee8ade1c979adb5503979316e8d8194ee672451da9881a19c4ac5d",
+    "records": 192
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/speech_instruction_follow/chinese/language_control/language_control.jsonl",
+    "sha256": "07f670fd669c825c311c78b85ea188d1a67fa56d8b7f8768e66ca85624c43f21",
+    "records": 200
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/speech_instruction_follow/chinese/non_verbal_vocalization/non_verbal_vocalization.jsonl",
+    "sha256": "9be8f3240da19131618b3900103848cf60b8360e8f46f81260f4544334a57556",
+    "records": 106
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/speech_instruction_follow/chinese/pacing_control/pacing_control.jsonl",
+    "sha256": "24057bba1e8b9131cbfd68ac0bb721a0aabdfa12a4be734847d5dfb470e2541e",
+    "records": 200
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/speech_instruction_follow/chinese/style_control/style_control.jsonl",
+    "sha256": "308e4a50a26046ec36416414a9d7a9ac5821f20367474d1f6e9290cd13776461",
+    "records": 122
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/speech_instruction_follow/chinese/volume_control/volume_control.jsonl",
+    "sha256": "89ef7c577c72b2857263c833e72b2a0ba1fb9802d069b13243b2475cc5ca9f76",
+    "records": 200
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/speech_instruction_follow/english/emotional_control_en/emotional_control_en.jsonl",
+    "sha256": "168154f8a523c0e3602a797db78a115c98929436f3108411b916b53e2dea93b1",
+    "records": 173
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/speech_instruction_follow/english/language_control_en/language_control_en.jsonl",
+    "sha256": "d24024b13f2e0670c44a2a6eac61d04c5c2ff2177c93a86fee1a317135263b8a",
+    "records": 200
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/speech_instruction_follow/english/non_verbal_vocalization_en/non_verbal_vocalization_en.jsonl",
+    "sha256": "05b680b9e70d3565be203ac66416da8786e031b2e32dd2c4f92cc9ca62877b93",
+    "records": 125
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/speech_instruction_follow/english/pacing_control_en/pacing_control_en.jsonl",
+    "sha256": "bc78021c5fef7f215df573e85981e65682af24f873a9e9d2bb2b5b2147bff8a0",
+    "records": 200
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/speech_instruction_follow/english/style_control_en/style_control_en.jsonl",
+    "sha256": "0874c6e304b6788a68be16df1bd3913fc4d90b2796f221346209ee9d589f2501",
+    "records": 103
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/speech_instruction_follow/english/volume_control_en/volume_control_en.jsonl",
+    "sha256": "c8bd3fcf23f70546bdeef1f93f3b8132b2b3eab1bf609d246279cc979bb3672c",
+    "records": 200
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/text_instruction_follow/chinese/continuation/continuation.jsonl",
+    "sha256": "eb53f8ae6432feadef89499530c30fbb9ee80a5c69f04d3a6b171e1943a340dd",
+    "records": 200
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/text_instruction_follow/chinese/creation/creation.jsonl",
+    "sha256": "b82546d872417717a9b023c9ba2dba35953b06374e55149cef8a2c02283ace94",
+    "records": 200
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/text_instruction_follow/chinese/empathy/empathy.jsonl",
+    "sha256": "d7394e907ef1ac73014f2024278856168ede63b70fea4ac8a9f9c1f965b6fd37",
+    "records": 200
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/text_instruction_follow/chinese/recommendation/recommendation.jsonl",
+    "sha256": "bebe944a96a1ce94954935b69a1e6b90409f91e354be65bb058979121e4dea9e",
+    "records": 200
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/text_instruction_follow/chinese/rewriting/rewriting.jsonl",
+    "sha256": "454e2a8c8ce59f9a9fc60ae0861e68097a0b5a581097d084416838c9c2d7af39",
+    "records": 165
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/text_instruction_follow/chinese/safety/safety.jsonl",
+    "sha256": "dc79d8f6320cecfea04bf7d8b91201809c1205d49ccdea48b311dca7b8ebd639",
+    "records": 200
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/text_instruction_follow/chinese/simulation/simulation.jsonl",
+    "sha256": "0dc5ecbf7ba1775345b62cc3d9d08b7c3264ccf60b56781df261b9084ee7143f",
+    "records": 200
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/text_instruction_follow/english/continuation_en/continuation_en.jsonl",
+    "sha256": "db306f058ec21c5f2485349b6a22d3471915785afb466ff7a659fe12b7bf1862",
+    "records": 200
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/text_instruction_follow/english/creation_en/creation_en.jsonl",
+    "sha256": "c83213a1d23f92bbdf5d563f7b7f34f606433dd84238aa62fdcc60309ecdd8e3",
+    "records": 200
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/text_instruction_follow/english/empathy_en/empathy_en.jsonl",
+    "sha256": "85eec7f40bd1bad31e3f04412ce8ab188d5689ec4b630dd3ac66a39629b3e40d",
+    "records": 200
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/text_instruction_follow/english/recommendation_en/recommendation_en.jsonl",
+    "sha256": "61dd121614bd33e693f6a10d156713f3cf2b14832b70c3409296077747ee8d30",
+    "records": 200
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/text_instruction_follow/english/rewriting_en/rewriting_en.jsonl",
+    "sha256": "2bb2ea8f587614d5c8ff95892f947de184b5adcab5b562d78cb37a0902b5fb37",
+    "records": 154
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/text_instruction_follow/english/safety_en/safety_en.jsonl",
+    "sha256": "8544d067b2c116e1c359a1a184fcd6de903efa399169b637433fc8da03f482cf",
+    "records": 200
+  },
+  {
+    "path": "data/downloaded_datasets/vcb_bench/text_instruction_follow/english/simulation_en/simulation_en.jsonl",
+    "sha256": "3f191833f7e2e0bad7602fe7a1f00ed800df46f7cd057a485ca8f643cfd4214d",
+    "records": 200
+  }
+]

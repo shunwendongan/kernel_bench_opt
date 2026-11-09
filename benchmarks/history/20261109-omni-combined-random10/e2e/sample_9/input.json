@@ -1,0 +1,38 @@
+{
+  "benchmark_meta": {
+    "audio_type": "Speech",
+    "dataset_name": "transition",
+    "dataset_series": "vcb_bench",
+    "interactive": "Audio-QA",
+    "lang": "zh",
+    "task": "Multi-Turn"
+  },
+  "chat_messages": [
+    {
+      "content": "<audio>{BUNDLE}/audio/009_00_zhuanzhe0263-1.wav</audio>",
+      "role": "user"
+    },
+    {
+      "content": "可以试试情境扮演游戏，或者一起做志愿者活动。<audio>{BUNDLE}/audio/009_01_zhuanzhe0263-1.wav</audio>",
+      "role": "assistant"
+    },
+    {
+      "content": "<audio>{BUNDLE}/audio/009_02_zhuanzhe0263-1.wav</audio>",
+      "role": "user"
+    }
+  ],
+  "index": "zhuanzhe0263-1",
+  "max_new_tokens": 1024,
+  "original_row_number": 9,
+  "prepared_audios": [
+    "audio/009_00_zhuanzhe0263-1.wav",
+    "audio/009_01_zhuanzhe0263-1.wav",
+    "audio/009_02_zhuanzhe0263-1.wav"
+  ],
+  "prepared_duration_s": 11.39,
+  "source_jsonl": "data/downloaded_datasets/vcb_bench/multi_turn_dialog/transition/transition.jsonl",
+  "source_line_number": 271,
+  "subset": "transition",
+  "system_prompt": "You are a helpful assistant.",
+  "task_type": "audio2text"
+}

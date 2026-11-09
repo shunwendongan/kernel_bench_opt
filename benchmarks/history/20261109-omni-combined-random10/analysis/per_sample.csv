@@ -1,0 +1,11 @@
+sample_ordinal,row,id,task_type,subset,pair,old_s,new_s,saved_s,old_over_new,reduction_pct,old_success,new_success,old_text_tokens,new_text_tokens,old_speech_tokens,new_speech_tokens,old_wave_samples,new_wave_samples,text_tokens_equal,speech_tokens_equal,wave_bitwise_equal,matched_generated_workload,strict_correctness_pass,missing_variants
+1,1,zhuanzhe0124-3,audio2text,transition,0,92.198542805,46.513638675,45.68490413,1.9821829775393291,49.55057069244968,True,True,23,26,0,0,0,0,False,,,False,False,
+2,2,gk_law_02982,audio2text,general_knowledge,0,14.698678489,6.055010139,8.64366835,2.4275233486937684,58.80575152704124,True,True,9,9,0,0,0,0,True,,,True,True,
+3,3,en_teshuyinxiao_000060,audio2audio,non_verbal_vocalization_en,0,385.067963419,361.362972309,23.704991110000037,1.0655988380838588,6.156053829958886,True,True,79,49,1003,1024,479520,489600,False,False,False,False,False,
+4,4,topic_shift_neirong_000074,audio2text,topic_shift,0,156.827382074,45.673002983,111.15437909100001,3.433699818958103,70.87689510658993,True,True,1024,461,0,0,0,0,False,,,False,False,
+5,5,en_xuxie_000273,audio2text,continuation_en,0,56.565679848,173.496246147,-116.93056629899999,0.3260340272726881,-206.71645176582157,True,True,41,1024,0,0,0,0,False,,,False,False,
+6,6,huisu0141-4,audio2text,backtracking,0,115.534794402,62.385618956,53.149175446,1.8519459506122016,46.002743780431175,True,True,12,15,0,0,0,0,False,,,False,False,
+7,7,yuyan_000986,audio2audio,language_control,0,392.101559718,363.500263092,28.601296625999964,1.0786830149246993,7.294359310013987,True,True,84,84,1024,1024,489600,489600,False,False,False,False,False,
+8,8,accent_dongbei_cmp_gongqing_000110,audio2text,accent_cmp,0,13.05296395,8.815654288,4.237309662000001,1.4806574218510236,32.462432886746775,True,True,43,50,0,0,0,0,False,,,False,False,
+9,9,zhuanzhe0263-1,audio2text,transition,0,37.057558708,91.146666431,-54.089107723,0.40657064223027156,-145.95971674551572,True,True,72,1024,0,0,0,0,False,,,False,False,
+10,10,dc_induction_conv0081_649_39,audio2text,discourse_comprehension,0,11.387017762,11.744596118,-0.3575783560000012,0.9695537971329666,-3.1402283150316013,False,False,94,94,0,0,0,0,True,,,False,False,

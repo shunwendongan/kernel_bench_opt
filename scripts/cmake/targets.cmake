@@ -24,7 +24,7 @@ if(NOT EXISTS "${KERNEL_BENCH_OPENCL_LIBRARY}")
 endif()
 find_package(Threads REQUIRED)
 
-foreach(app IN ITEMS bigvgan_replay vcb_eval omni_ab)
+foreach(app IN ITEMS bigvgan_replay vcb_eval omni_ab omni_batch_ab)
     add_executable(${app} "${KERNEL_BENCH_ROOT}/src/apps/${app}.cpp")
     target_include_directories(${app} PRIVATE
         "${CMAKE_SOURCE_DIR}/include"

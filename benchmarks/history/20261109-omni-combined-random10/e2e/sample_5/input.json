@@ -1,0 +1,28 @@
+{
+  "benchmark_meta": {
+    "audio_type": "Speech",
+    "dataset_name": "continuation_en",
+    "dataset_series": "vcb_bench",
+    "interactive": "Audio-QA",
+    "lang": "en",
+    "task": "Open-Ended"
+  },
+  "chat_messages": [
+    {
+      "content": "<audio>{BUNDLE}/audio/005_00_en_xuxie_000273.wav</audio>",
+      "role": "user"
+    }
+  ],
+  "index": "en_xuxie_000273",
+  "max_new_tokens": 1024,
+  "original_row_number": 5,
+  "prepared_audios": [
+    "audio/005_00_en_xuxie_000273.wav"
+  ],
+  "prepared_duration_s": 14.91,
+  "source_jsonl": "data/downloaded_datasets/vcb_bench/text_instruction_follow/english/continuation_en/continuation_en.jsonl",
+  "source_line_number": 136,
+  "subset": "continuation_en",
+  "system_prompt": "You are a helpful assistant.",
+  "task_type": "audio2text"
+}

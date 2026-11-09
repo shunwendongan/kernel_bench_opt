@@ -1,0 +1,94 @@
+CPU Group: [ 0  1  2  3 ], 408000 - 1800000
+CPU Group: [ 6  7 ], 408000 - 2304000
+CPU Group: [ 4  5 ], 408000 - 2304000
+The device supports: i8sdot:1, fp16:1, i8mm: 0, sve2: 0, sme2: 0, perfCores: 0
+arm_release_ver: g24p0-00eac0, rk_so_ver: 10
+Can't open file:${BOARD_RUN}/e2e/cache_old/mnn_cachefile.bin
+Load Cache file error.
+OMNI_CODE2WAV processor_backend=3 async_worker=0 dit_fp32=1
+Can't open file:${BOARD_RUN}/e2e/cache_new/mnn_cachefile.bin
+Load Cache file error.
+OMNI_RKNN_INIT api=2.3.2 (429f97ae6b@2025-04-09T09:09:27) driver=0.9.8 graph=conv1_gelu_conv2_gelu input=NHWC output=NCHW
+OMNI_AUDIO_ROUTE RKNN=conv1_gelu_conv2_gelu MNN=remaining_encoder backend=cpu
+OMNI_CODE2WAV processor_backend=3 async_worker=0 dit_fp32=1
+AB_REQUEST_START variant=old pair=-1 warmup=1
+AB_REQUEST_DONE variant=old pair=-1 warmup=1 request_s=410.58940264 speech_tokens=1003 success=1
+AB_REQUEST_START variant=new pair=-1 warmup=1
+OMNI_RKNN_REQUEST frames=701 output_frames=351 calls=2 total_us=54203.6 prepare_us=402.7 inputs_set_us=16100.3 run_us=28433.3 outputs_get_us=8203.7 copy_release_us=1042.9
+AB_REQUEST_DONE variant=new pair=-1 warmup=1 request_s=361.05580215 speech_tokens=1024 success=1
+AB_REQUEST_START variant=old pair=0 warmup=0
+AB_REQUEST_DONE variant=old pair=0 warmup=0 request_s=92.198542805 speech_tokens=0 success=1
+AB_REQUEST_START variant=new pair=0 warmup=0
+OMNI_RKNN_REQUEST frames=348 output_frames=174 calls=1 total_us=38394.4 prepare_us=134.2 inputs_set_us=16538.9 run_us=17000.3 outputs_get_us=4393.2 copy_release_us=295.8
+OMNI_RKNN_REQUEST frames=713 output_frames=357 calls=2 total_us=29170.8 prepare_us=725.7 inputs_set_us=1230.3 run_us=24879.9 outputs_get_us=1543.8 copy_release_us=769.4
+OMNI_RKNN_REQUEST frames=305 output_frames=153 calls=1 total_us=15478.1 prepare_us=232.8 inputs_set_us=763.9 run_us=13126.3 outputs_get_us=980.3 copy_release_us=343.6
+OMNI_RKNN_REQUEST frames=479 output_frames=240 calls=1 total_us=28060.3 prepare_us=339.8 inputs_set_us=652.2 run_us=23254.0 outputs_get_us=2872.1 copy_release_us=870.1
+OMNI_RKNN_REQUEST frames=327 output_frames=164 calls=1 total_us=18363.9 prepare_us=158.1 inputs_set_us=609.0 run_us=16320.4 outputs_get_us=1045.4 copy_release_us=213.2
+OMNI_RKNN_REQUEST frames=429 output_frames=215 calls=1 total_us=14957.1 prepare_us=161.6 inputs_set_us=610.8 run_us=12921.2 outputs_get_us=971.0 copy_release_us=266.9
+OMNI_RKNN_REQUEST frames=211 output_frames=106 calls=1 total_us=14875.8 prepare_us=94.5 inputs_set_us=633.5 run_us=12812.5 outputs_get_us=971.6 copy_release_us=340.7
+AB_REQUEST_DONE variant=new pair=0 warmup=0 request_s=46.513638675 speech_tokens=0 success=1
+AB_REQUEST_START variant=new pair=0 warmup=0
+OMNI_RKNN_REQUEST frames=460 output_frames=230 calls=1 total_us=17292.1 prepare_us=108.8 inputs_set_us=603.5 run_us=11690.1 outputs_get_us=4375.7 copy_release_us=498.5
+AB_REQUEST_DONE variant=new pair=0 warmup=0 request_s=6.055010139 speech_tokens=0 success=1
+AB_REQUEST_START variant=old pair=0 warmup=0
+AB_REQUEST_DONE variant=old pair=0 warmup=0 request_s=14.698678489 speech_tokens=0 success=1
+AB_REQUEST_START variant=old pair=0 warmup=0
+AB_REQUEST_DONE variant=old pair=0 warmup=0 request_s=385.067963419 speech_tokens=1003 success=1
+AB_REQUEST_START variant=new pair=0 warmup=0
+OMNI_RKNN_REQUEST frames=701 output_frames=351 calls=2 total_us=44268.8 prepare_us=333.1 inputs_set_us=1769.1 run_us=35134.2 outputs_get_us=5767.1 copy_release_us=1242.0
+AB_REQUEST_DONE variant=new pair=0 warmup=0 request_s=361.362972309 speech_tokens=1024 success=1
+AB_REQUEST_START variant=new pair=0 warmup=0
+OMNI_RKNN_REQUEST frames=908 output_frames=454 calls=2 total_us=49093.5 prepare_us=551.4 inputs_set_us=2990.6 run_us=37912.4 outputs_get_us=5778.9 copy_release_us=1810.9
+AB_REQUEST_DONE variant=new pair=0 warmup=0 request_s=45.673002983 speech_tokens=0 success=1
+AB_REQUEST_START variant=old pair=0 warmup=0
+AB_REQUEST_DONE variant=old pair=0 warmup=0 request_s=156.827382074 speech_tokens=0 success=1
+AB_REQUEST_START variant=old pair=0 warmup=0
+AB_REQUEST_DONE variant=old pair=0 warmup=0 request_s=56.565679848 speech_tokens=0 success=1
+AB_REQUEST_START variant=new pair=0 warmup=0
+OMNI_RKNN_REQUEST frames=1491 output_frames=746 calls=3 total_us=82487.4 prepare_us=2764.6 inputs_set_us=3767.0 run_us=67282.5 outputs_get_us=5527.4 copy_release_us=3079.5
+AB_REQUEST_DONE variant=new pair=0 warmup=0 request_s=173.496246147 speech_tokens=0 success=1
+AB_REQUEST_START variant=new pair=0 warmup=0
+OMNI_RKNN_REQUEST frames=329 output_frames=165 calls=1 total_us=27506.4 prepare_us=414.9 inputs_set_us=734.6 run_us=24284.2 outputs_get_us=1489.1 copy_release_us=531.8
+OMNI_RKNN_REQUEST frames=654 output_frames=327 calls=2 total_us=41212.0 prepare_us=488.1 inputs_set_us=4296.4 run_us=27852.7 outputs_get_us=7529.8 copy_release_us=1007.5
+OMNI_RKNN_REQUEST frames=285 output_frames=143 calls=1 total_us=15108.1 prepare_us=96.6 inputs_set_us=604.4 run_us=13096.0 outputs_get_us=985.8 copy_release_us=296.7
+OMNI_RKNN_REQUEST frames=624 output_frames=312 calls=2 total_us=35805.6 prepare_us=239.1 inputs_set_us=2792.1 run_us=26113.2 outputs_get_us=5884.0 copy_release_us=748.9
+OMNI_RKNN_REQUEST frames=311 output_frames=156 calls=1 total_us=37208.7 prepare_us=273.2 inputs_set_us=712.0 run_us=32708.8 outputs_get_us=2870.4 copy_release_us=591.4
+OMNI_RKNN_REQUEST frames=622 output_frames=311 calls=2 total_us=35941.3 prepare_us=537.7 inputs_set_us=3014.4 run_us=26891.7 outputs_get_us=4305.4 copy_release_us=1151.5
+OMNI_RKNN_REQUEST frames=264 output_frames=132 calls=1 total_us=19428.4 prepare_us=98.4 inputs_set_us=623.3 run_us=17475.2 outputs_get_us=954.4 copy_release_us=243.9
+OMNI_RKNN_REQUEST frames=562 output_frames=281 calls=2 total_us=37182.0 prepare_us=465.1 inputs_set_us=3024.2 run_us=28236.9 outputs_get_us=4406.1 copy_release_us=1017.7
+OMNI_RKNN_REQUEST frames=436 output_frames=218 calls=1 total_us=14652.7 prepare_us=279.0 inputs_set_us=625.4 run_us=12583.0 outputs_get_us=920.2 copy_release_us=218.6
+AB_REQUEST_DONE variant=new pair=0 warmup=0 request_s=62.385618956 speech_tokens=0 success=1
+AB_REQUEST_START variant=old pair=0 warmup=0
+AB_REQUEST_DONE variant=old pair=0 warmup=0 request_s=115.534794402 speech_tokens=0 success=1
+AB_REQUEST_START variant=old pair=0 warmup=0
+AB_REQUEST_DONE variant=old pair=0 warmup=0 request_s=392.101559718 speech_tokens=1024 success=1
+AB_REQUEST_START variant=new pair=0 warmup=0
+OMNI_RKNN_REQUEST frames=773 output_frames=387 calls=2 total_us=32475.3 prepare_us=610.9 inputs_set_us=2803.5 run_us=23910.4 outputs_get_us=4337.9 copy_release_us=772.6
+AB_REQUEST_DONE variant=new pair=0 warmup=0 request_s=363.500263092 speech_tokens=1024 success=1
+AB_REQUEST_START variant=new pair=0 warmup=0
+OMNI_RKNN_REQUEST frames=363 output_frames=182 calls=1 total_us=16515.4 prepare_us=121.3 inputs_set_us=602.0 run_us=12442.0 outputs_get_us=2926.5 copy_release_us=401.6
+AB_REQUEST_DONE variant=new pair=0 warmup=0 request_s=8.815654288 speech_tokens=0 success=1
+AB_REQUEST_START variant=old pair=0 warmup=0
+AB_REQUEST_DONE variant=old pair=0 warmup=0 request_s=13.05296395 speech_tokens=0 success=1
+AB_REQUEST_START variant=old pair=0 warmup=0
+AB_REQUEST_DONE variant=old pair=0 warmup=0 request_s=37.057558708 speech_tokens=0 success=1
+AB_REQUEST_START variant=new pair=0 warmup=0
+OMNI_RKNN_REQUEST frames=400 output_frames=200 calls=1 total_us=16012.8 prepare_us=84.4 inputs_set_us=591.7 run_us=12013.6 outputs_get_us=2890.9 copy_release_us=418.5
+OMNI_RKNN_REQUEST frames=455 output_frames=228 calls=1 total_us=23643.1 prepare_us=417.0 inputs_set_us=636.0 run_us=19165.1 outputs_get_us=2896.1 copy_release_us=498.5
+OMNI_RKNN_REQUEST frames=284 output_frames=142 calls=1 total_us=25077.5 prepare_us=101.9 inputs_set_us=627.8 run_us=19347.9 outputs_get_us=4427.5 copy_release_us=535.8
+AB_REQUEST_DONE variant=new pair=0 warmup=0 request_s=91.146666431 speech_tokens=0 success=1
+AB_REQUEST_START variant=new pair=0 warmup=0
+OMNI_RKNN_REQUEST frames=4501 output_frames=2251 calls=9 total_us=197394.4 prepare_us=5772.5 inputs_set_us=17400.4 run_us=137594.4 outputs_get_us=30043.9 copy_release_us=6522.3
+Broad cast error, dim1 = 1500, dim2 = 2251
+Compute Shape Error for /Add_2_output_0
+code=3 in onForward, 837 
+Media encoder returned no features
+AB_REQUEST_DONE variant=new pair=0 warmup=0 request_s=11.744596118 speech_tokens=0 success=1
+AB_REQUEST_START variant=old pair=0 warmup=0
+Broad cast error, dim1 = 1500, dim2 = 2251
+Compute Shape Error for /Add_2_output_0
+code=3 in onForward, 837 
+Media encoder returned no features
+AB_REQUEST_DONE variant=old pair=0 warmup=0 request_s=11.387017762 speech_tokens=0 success=1
+Update cache to ${BOARD_RUN}/e2e/cache_old/mnn_cachefile.bin, size = 950744
+Update cache to ${BOARD_RUN}/e2e/cache_new/mnn_cachefile.bin, size = 320016
