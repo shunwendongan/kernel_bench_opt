@@ -120,7 +120,7 @@ python3 -m unittest discover -s tests -q
 | `src/mnn/omni_rknn_prefix.v2.hpp` | `src/mnn/overlays/rknn-audio-prefix-v2/omni_rknn_prefix.hpp` |
 | `experiments/predit-sync.patch` | `experiments/predit-sync/predit-sync.patch` |
 
-机器可读版本在 [`experiments/path_moves.json`](../experiments/path_moves.json)，`check_repo.py` 用它解析冻结证据里的旧链接。
+机器可读版本在工作负载分支的 `experiments/path_moves.json`，`check_repo.py` 用它解析冻结证据里的旧链接。
 
 ## 8. 给 Agent 的最短说明
 

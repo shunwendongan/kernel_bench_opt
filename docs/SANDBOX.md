@@ -153,7 +153,7 @@ python3 scripts/sandbox.py --root .sandbox index-rebuild
 
 ## 8. 单文件图文 README
 
-GitHub 的 `README.md` 继续引用仓库里的 SVG，打开页面时直接显示。需要一个文件包含完整正文和全部图片时，使用根目录 [README.html](../README.html)，下载后直接在浏览器打开。
+GitHub 的 `README.md` 继续引用仓库里的 SVG，打开页面时直接显示。需要一个文件包含完整正文和全部图片时，使用工作负载分支根目录的 `README.html`，下载后直接在浏览器打开。
 
 更新 Markdown 或图后，在有 Pandoc 的文档主机运行：
 
