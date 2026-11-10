@@ -1,0 +1,123 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "candidate.json (schema_version 2)",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "record_type",
+    "candidate_id",
+    "candidate_kind",
+    "parent_candidate_id",
+    "status",
+    "hypothesis",
+    "source_files",
+    "design"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "enum": [
+        2
+      ]
+    },
+    "record_type": {
+      "type": "string",
+      "enum": [
+        "candidate"
+      ]
+    },
+    "candidate_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "candidate_kind": {
+      "type": "string",
+      "enum": [
+        "kernel",
+        "subgraph",
+        "adapter",
+        "route",
+        "system"
+      ]
+    },
+    "parent_candidate_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "proposed",
+        "source_delivered",
+        "L1_passed",
+        "L2_passed",
+        "L3_passed",
+        "L3_passed_single_sample",
+        "rejected_numeric",
+        "rejected_perf",
+        "superseded",
+        "abandoned"
+      ]
+    },
+    "status_detail": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "hypothesis": {
+      "type": "string"
+    },
+    "source_base_commit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "sha256"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "moved_from": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "design": {
+      "type": "string"
+    },
+    "principle": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "runs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "record_type": "workload_branch",
+  "branch": "main",
+  "branch_kind": "main",
+  "conventions": "docs/CONVENTIONS.md",
+  "shared_tooling_branch": "main",
+  "workload_branches": [
+    {"branch": "Qwen2.5-Omni-3B_VCB-Bench", "model": "Qwen2.5-Omni-3B", "dataset": "VCB-Bench", "layout": "docs/CONVENTIONS.md section 2"},
+    {"branch": "yolov8n-COCO", "model": "YOLOv8n", "dataset": "COCO", "layout": "legacy; maintained separately, not migrated"}
+  ]
+}

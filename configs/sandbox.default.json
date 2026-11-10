@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "workspace_root": ".sandbox",
+  "archive": {
+    "max_file_bytes": 8388608,
+    "max_total_bytes": 33554432,
+    "allowed_suffixes": [
+      ".json", ".jsonl", ".csv", ".tsv", ".txt", ".md",
+      ".svg", ".png", ".jpg", ".jpeg", ".webp",
+      ".patch", ".diff", ".cl", ".c", ".cpp", ".h", ".hpp",
+      ".py", ".sh", ".yaml", ".yml", ".toml"
+    ]
+  }
+}

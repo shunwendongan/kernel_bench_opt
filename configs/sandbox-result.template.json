@@ -1,0 +1,20 @@
+{
+  "record_type": "template_not_measurement",
+  "evidence_kind": "not_run",
+  "correctness": {
+    "passed": null,
+    "method": null,
+    "evidence_file": null
+  },
+  "performance": {
+    "timing_domain": null,
+    "unit": null,
+    "baseline_median": null,
+    "candidate_median": null,
+    "repeats": null,
+    "raw_file": null
+  },
+  "decision": "pending",
+  "limitations": [],
+  "split_group": null
+}

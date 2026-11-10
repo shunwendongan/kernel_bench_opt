@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "workload.json",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "record_type",
+    "branch",
+    "branch_kind"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "integer"
+    },
+    "record_type": {
+      "type": "string",
+      "enum": [
+        "workload_branch"
+      ]
+    },
+    "branch": {
+      "type": "string"
+    },
+    "branch_kind": {
+      "type": "string",
+      "enum": [
+        "main",
+        "workload"
+      ]
+    },
+    "model": {
+      "type": "object"
+    },
+    "dataset": {
+      "type": "object"
+    },
+    "engines": {
+      "type": "array"
+    },
+    "devices": {
+      "type": "array"
+    },
+    "candidate_index": {
+      "type": "string"
+    },
+    "run_index": {
+      "type": "string"
+    },
+    "conventions": {
+      "type": "string"
+    },
+    "shared_tooling_branch": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "benchmarks/history/<run-id>/run.json",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "record_type",
+    "run_id",
+    "candidate_id",
+    "code",
+    "environment",
+    "assets",
+    "measurement",
+    "result",
+    "analysis",
+    "data_reuse"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "integer"
+    },
+    "record_type": {
+      "type": "string",
+      "enum": [
+        "planned_run",
+        "run_record",
+        "e2e_run_record",
+        "template_not_measurement"
+      ]
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "task_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "candidate_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "parent_candidate_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "code": {
+      "type": "object"
+    },
+    "environment": {
+      "type": "object"
+    },
+    "assets": {
+      "type": "object"
+    },
+    "measurement": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "result": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "planned",
+            "completed",
+            "failed",
+            "cancelled",
+            "not_run"
+          ]
+        }
+      }
+    },
+    "analysis": {
+      "type": "object"
+    },
+    "data_reuse": {
+      "type": "object"
+    }
+  }
+}

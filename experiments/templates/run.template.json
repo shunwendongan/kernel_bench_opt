@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "record_type": "template_not_measurement",
+  "task_id": null,
+  "run_id": "REPLACE_WITH_UNIQUE_RUN_ID",
+  "candidate_id": null,
+  "parent_candidate_id": null,
+  "hypothesis_id": null,
+  "code": {
+    "git_commit": null,
+    "patch_sha256": null,
+    "source_dirty": null
+  },
+  "environment": {
+    "device_id": null,
+    "soc": null,
+    "os": null,
+    "kernel": null,
+    "runtime": null,
+    "driver": null,
+    "container_image_id": null,
+    "container_packages_sha256": null,
+    "frequency_temperature_load_file": null
+  },
+  "assets": {
+    "model_sha256_manifest": null,
+    "dataset_sha256_manifest": null,
+    "sample_ids": [],
+    "capture_sha256_manifest": null,
+    "split_group": null
+  },
+  "measurement": {
+    "level": null,
+    "phase": null,
+    "timing_domain": null,
+    "unit": null,
+    "profiling_enabled": null,
+    "warmup": null,
+    "repeats": null,
+    "seed": null,
+    "command_file": null,
+    "raw_file": null,
+    "correctness_file": null,
+    "summary_file": null
+  },
+  "result": {
+    "status": "not_run",
+    "correctness_passed": null,
+    "old_median": null,
+    "candidate_median": null,
+    "ratio_of_medians": null,
+    "failure_reason": null
+  },
+  "analysis": {
+    "profile_run_id": null,
+    "mapping_file": null,
+    "mapping_status": null,
+    "source_location": null,
+    "design_file": null,
+    "decision": null
+  },
+  "data_reuse": {
+    "source_kind": null,
+    "review_status": "unreviewed",
+    "training_split": null,
+    "license_provenance": null,
+    "known_limitations": []
+  }
+}
