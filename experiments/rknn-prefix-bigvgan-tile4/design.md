@@ -2,6 +2,8 @@
 
 这份候选把既有 RKNN 音频前缀与已有 BigVGAN ConvTranspose tile4 同时接回推理系统，比较完整请求的表现。**本轮组合未通过输出保持验收**；9 对音频特征有效的请求总耗时降低 8.25%，只能描述两条系统路径的耗时差异。
 
+优化原理：[principles/02-rknn-audio-prefix-conv-gelu.md](../../principles/02-rknn-audio-prefix-conv-gelu.md)。
+
 | 身份 | 内容 |
 |---|---|
 | Task | `omni-combined-audio-route-e2e` |

@@ -2,6 +2,8 @@
 
 补齐资产时核对到本地另存的后续结果：在PreDiT输出交给FP32 DiT前增加显式等待的独立构建，已完成同一真实样本的3个正式A/B对及2次暖机。原仓库默认异步版本的失败记录仍然保留，两者不能混为同一构建。
 
+原理说明：[principles/05-predit-sync.md](../principles/05-predit-sync.md)。
+
 同步候选由 `OMNI_PREDIT_SYNC` 控制，唯一语义变更见 [predit-sync.patch](../experiments/predit-sync.patch)。开关按环境变量是否存在判断，禁用应 `unset OMNI_PREDIT_SYNC`，设为`0`仍会启用。
 
 ## 已保存的结果

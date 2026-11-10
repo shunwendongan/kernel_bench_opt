@@ -8,7 +8,7 @@
   - 每个输出的 mad 序列与 MNN `deconv_2d` 相同。
 - **rknn-audio-prefix-v2**：预分配 IO，可选多核和多 tile 并发，首条请求位级自检并自动回退。
 
-交付前只做了非目标设备检查：tap 次序穷举证明（316 万个输出位置）、MNN 7e3c6fb 集成语法检查、Apple M4 FP32 位级冒烟。**尚无 RK3588 FP16 性能或正确性结果。** 部署和测试步骤见 [V2_DEPLOY.md](V2_DEPLOY.md)。
+交付前只做了非目标设备检查：tap 次序穷举证明（316 万个输出位置）、MNN 7e3c6fb 集成语法检查、Apple M4 FP32 位级冒烟。**尚无 RK3588 FP16 性能或正确性结果。** 部署和测试步骤见 [V2_DEPLOY.md](V2_DEPLOY.md)。各候选的优化原理见 [principles/](../principles/README.md)(2026-11-10 新增，覆盖 tile4、RKNN 前缀子图、PreDiT 同步和本轮两个 v2 候选)。
 
 ## 以下为 2026-11-09 状态
 

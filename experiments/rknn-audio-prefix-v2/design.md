@@ -2,6 +2,8 @@
 
 候选身份：[candidate.json](candidate.json)。源码：[omni_rknn_prefix.v2.hpp](../../src/mnn/omni_rknn_prefix.v2.hpp)。它覆盖部署树中的 `omni_rknn_prefix.hpp`，类名和接口不变，`omni.cpp` 不需要改动。
 
+优化原理：[principles/04-rknn-audio-prefix-v2.md](../../principles/04-rknn-audio-prefix-v2.md)。
+
 ## 观察
 
 历史 random10 运行记录了每条请求的 `OMNI_RKNN_REQUEST`。前缀总耗时为 15–54 ms：

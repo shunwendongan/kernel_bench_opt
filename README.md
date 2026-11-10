@@ -16,7 +16,7 @@ GitHub 保存代码与精选知识，本地主机保存大资产并承担分析�
 
 > **目前可以使用什么？** 已有候选实现、采集与分析脚本、分级评测入口、历史证据和容器配方。下面展示的是完整目标 SOP；本地 Task / Candidate / Run 初始化、资产清单、精选归档和索引脚本已补齐，当前仅代码交付、未运行验收；设备排队、持续回传、Agent 自动循环与自动回库仍需接通。容器配方尚未在新板构建验收。
 
-> **2026-11-10 新增候选集 v2**（源码已交付，待板端验收）：通用 BigVGAN ConvTranspose kernel，覆盖全部 `/ups.*`、任意 T，与原 kernel 位级一致；另有 RKNN 音频前缀适配器 v2。见 [V2_DEPLOY.md](docs/V2_DEPLOY.md)。
+> **2026-11-10 新增候选集 v2**（源码已交付，待板端验收）：通用 BigVGAN ConvTranspose kernel，覆盖全部 `/ups.*`、任意 T，与原 kernel 位级一致；另有 RKNN 音频前缀适配器 v2。见 [V2_DEPLOY.md](docs/V2_DEPLOY.md)。每个候选算子 / kernel / 子图的**优化原理**统一收录在 [principles/](principles/README.md)。
 
 ## 一张图看懂整套协作
 

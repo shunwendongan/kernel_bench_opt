@@ -2,6 +2,8 @@
 
 候选身份：[candidate.json](candidate.json)。源码：[OpenCL kernel](../../kernels/v2/bigvgan_deconv1d_v2.cl)、[MNN执行器](../../src/mnn/DeconvBufExecution.v2.cpp)、[对拍/调优工具](../../kernels/v2/bench_deconv_v2.cpp)、[板端脚本](../../scripts/run_v2_board.sh)。父候选：[tile4](../bigvgan-convtranspose-tile4/design.md)。
 
+优化原理：[principles/03-bigvgan-deconv1d-v2.md](../../principles/03-bigvgan-deconv1d-v2.md)。
+
 ## 从 tile4 出发的观察
 
 tile4 每个 work item 计算同一相位的 4 个时间位置，并共享权重。它仍有三处限制：

@@ -2,6 +2,8 @@
 
 候选身份：[candidate.json](candidate.json)。源码：[OpenCL kernel](../../kernels/bigvgan_deconv_s5_tiled.cl)、[MNN执行器](../../src/mnn/DeconvBufExecution.candidate.cpp)。历史结果：[多级证据包](../../benchmarks/history/20261106-bigvgan-convtranspose/README.md)。
 
+优化原理：[principles/01-bigvgan-convtranspose-tile4.md](../../principles/01-bigvgan-convtranspose-tile4.md)。
+
 ## 观察与假设
 
 BigVGAN首个上采样ConvTranspose的结构为Ci1536、Co768、K11、stride5、pad3。运行时热点与后续参考ONNX结构候选相符，但未取得部署MNN的历史原始ONNX转换输入。来源状态仍保留为参考结构候选，详见 [OPERATOR.md](../../docs/OPERATOR.md)。
