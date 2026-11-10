@@ -5,7 +5,7 @@
 - 候选源码按候选 ID 重组：`kernels/<candidate-id>/`、`src/mnn/overlays/<candidate-id>/`、`experiments/<candidate-id>/`；内容与 SHA-256 不变，旧路径映射见 [CONVENTIONS.md 第 7 节](CONVENTIONS.md)。`scripts/patches/manifest.json` 升为 schema 2，`prepare_mnn.py --candidate-set tile4|v2` 可切换候选集。
 - 新增 [`docs/CONVENTIONS.md`](CONVENTIONS.md)、根目录 `AGENTS.md`、`workload.json`、`schemas/`、`experiments/index.json`（候选登记）、`benchmarks/history/index.json` schema 2（含 v2 候选的 planned 运行记录）、`tools/verify/check_repo.py`；GitHub Actions 工作流 `check.yml` 放在 `main` 分支，随 `git merge main` 进入各工作负载分支（当前推送 token 缺少 `workflow` 权限，待补）。
 - 新增仓库内热点排名脚本 [`tools/analysis/rank_hotspots.py`](../tools/analysis/rank_hotspots.py)，不再依赖外部工具包即可从 `OMNI_PROFILE_PATH` 的 JSONL 复算算子排名。
-- `README.html` 对应的是重组前的 README，需在有 Pandoc 的主机上用 `scripts/export_readme.py` 重新导出；`check_repo.py` 会提示过期。
+- `README.html` 已于 2026-11-10 用 Pandoc 3.13 重新导出（`scripts/export_readme.py`），与当前 README.md 哈希一致；以后改 README.md 后同样重新导出，`check_repo.py` 会检查两者是否匹配。
 - 共享工具将移到 `main` 分支，工作负载分支通过 `git merge main` 同步。
 
 ## 新增：候选集 v2（源码交付，待板端验收）
