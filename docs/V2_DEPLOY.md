@@ -13,11 +13,11 @@
 
 | 仓库文件 | MNN 树中的位置 |
 |---|---|
-| `src/mnn/DeconvBufExecution.v2.cpp` | `source/backend/opencl/execution/buffer/DeconvBufExecution.cpp` |
-| `src/mnn/DeconvBufExecution.v2.hpp` | `source/backend/opencl/execution/buffer/DeconvBufExecution.v2.hpp` |
-| `kernels/v2/bigvgan_deconv1d_v2_source.hpp` | `source/backend/opencl/execution/buffer/bigvgan_deconv1d_v2_source.hpp` |
-| `kernels/bigvgan_deconv_source.hpp` | 同目录（tile4，保留用于 A/B） |
-| `src/mnn/omni_rknn_prefix.v2.hpp` | `transformers/llm/engine/src/omni_rknn_prefix.hpp` |
+| `src/mnn/overlays/bigvgan-deconv1d-v2/DeconvBufExecution.cpp` | `source/backend/opencl/execution/buffer/DeconvBufExecution.cpp` |
+| `src/mnn/overlays/bigvgan-deconv1d-v2/DeconvBufExecution.v2.hpp` | `source/backend/opencl/execution/buffer/DeconvBufExecution.v2.hpp` |
+| `kernels/bigvgan-deconv1d-v2/bigvgan_deconv1d_v2_source.hpp` | `source/backend/opencl/execution/buffer/bigvgan_deconv1d_v2_source.hpp` |
+| `kernels/bigvgan-convtranspose-tile4/bigvgan_deconv_source.hpp` | 同目录（tile4，保留用于 A/B） |
+| `src/mnn/overlays/rknn-audio-prefix-v2/omni_rknn_prefix.hpp` | `transformers/llm/engine/src/omni_rknn_prefix.hpp` |
 
 已用旧候选准备过的 MNN 树可以直接升级，脚本接受上一版 overlay 的哈希。构建时还会生成 `bench_deconv_v2`。
 
@@ -41,7 +41,7 @@ scripts/run_v2_board.sh env           # 打印完整请求 A/B 新侧的环境�
 
 ## C. 其他引擎（直接调用 kernel）
 
-`kernels/v2/bigvgan_deconv1d_v2.cl` 是独立文件。
+`kernels/bigvgan-deconv1d-v2/bigvgan_deconv1d_v2.cl` 是独立文件。
 
 - **编译宏**：`-DFLOAT=half -DFLOAT4=half4 -DMNN_SUPPORT_FP16`（FP32 时用 `float`），以及 `-DDC_K -DDC_S -DDC_PAD -DDC_CI4 -DDC_CO4 -DDC_TT -DDC_OCB`，可选 `-DRELU/-DRELU6`。
 - **参数**：`(int gws0, int gws1, int gws2, input, weights, bias, output, int T)`。

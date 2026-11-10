@@ -4,7 +4,7 @@
 
 原理说明：[principles/05-predit-sync.md](../principles/05-predit-sync.md)。
 
-同步候选由 `OMNI_PREDIT_SYNC` 控制，唯一语义变更见 [predit-sync.patch](../experiments/predit-sync.patch)。开关按环境变量是否存在判断，禁用应 `unset OMNI_PREDIT_SYNC`，设为`0`仍会启用。
+同步候选由 `OMNI_PREDIT_SYNC` 控制，唯一语义变更见 [predit-sync.patch](../experiments/predit-sync/predit-sync.patch)。开关按环境变量是否存在判断，禁用应 `unset OMNI_PREDIT_SYNC`，设为`0`仍会启用。
 
 ## 已保存的结果
 
@@ -23,8 +23,8 @@
 默认源码不自动改动。需要这一候选时，在独立工作副本应用补丁，然后按 [原生构建](BUILD.md) 使用新的独立MNN checkout；容器方式可按 [容器指南](CONTAINERS.md) 显式选择sync变体：
 
 ```bash
-git apply --check experiments/predit-sync.patch
-git apply experiments/predit-sync.patch
+git apply --check experiments/predit-sync/predit-sync.patch
+git apply experiments/predit-sync/predit-sync.patch
 # 按docs/BUILD.md运行 scripts/build_rk3588.py，使用全新独立MNN checkout。
 export OMNI_PREDIT_SYNC=1
 export OMNI_TEST_SEED=20261105

@@ -1,6 +1,6 @@
 # BigVGAN ConvTranspose tile4：设计与经验
 
-候选身份：[candidate.json](candidate.json)。源码：[OpenCL kernel](../../kernels/bigvgan_deconv_s5_tiled.cl)、[MNN执行器](../../src/mnn/DeconvBufExecution.candidate.cpp)。历史结果：[多级证据包](../../benchmarks/history/20261106-bigvgan-convtranspose/README.md)。
+候选身份：[candidate.json](candidate.json)。源码：[OpenCL kernel](../../kernels/bigvgan-convtranspose-tile4/bigvgan_deconv_s5_tiled.cl)、[MNN执行器](../../src/mnn/overlays/bigvgan-convtranspose-tile4/DeconvBufExecution.cpp)。历史结果：[多级证据包](../../benchmarks/history/20261106-bigvgan-convtranspose/README.md)。
 
 优化原理：[principles/01-bigvgan-convtranspose-tile4.md](../../principles/01-bigvgan-convtranspose-tile4.md)。
 

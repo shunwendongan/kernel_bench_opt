@@ -1,7 +1,7 @@
 # 04 · rknn-audio-prefix-v2:宿主侧开销与 NPU 核利用率
 
 - 候选:[candidate.json](../experiments/rknn-audio-prefix-v2/candidate.json) · 过程:[design.md](../experiments/rknn-audio-prefix-v2/design.md)
-- 源码:[omni_rknn_prefix.v2.hpp](../src/mnn/omni_rknn_prefix.v2.hpp)(覆盖原 `omni_rknn_prefix.hpp`,类名和接口不变,`omni.cpp` 无改动)
+- 源码:[overlays/rknn-audio-prefix-v2/omni_rknn_prefix.hpp](../src/mnn/overlays/rknn-audio-prefix-v2/omni_rknn_prefix.hpp)(覆盖原 `omni_rknn_prefix.hpp`,类名和接口不变,`omni.cpp` 无改动)
 - 父候选:[02 · rknn-audio-prefix-conv-gelu](02-rknn-audio-prefix-conv-gelu.md)
 
 ## 1. 位置

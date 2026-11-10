@@ -24,7 +24,7 @@ for path in /work/source /work/build; do
 done
 cp -a /opt/kernel-bench /work/source
 if [[ "$variant" == sync ]]; then
-  (cd /work/source && git apply --check experiments/predit-sync.patch && git apply experiments/predit-sync.patch)
+  (cd /work/source && git apply --check experiments/predit-sync/predit-sync.patch && git apply experiments/predit-sync/predit-sync.patch)
 fi
 mnn_commit=7e3c6fb5225d3ccf22807ee641332669df34650d
 if [[ ! -d /work/MNN ]]; then

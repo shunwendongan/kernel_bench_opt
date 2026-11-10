@@ -38,7 +38,7 @@ foreach(app IN ITEMS bigvgan_replay vcb_eval omni_ab omni_batch_ab)
     target_link_libraries(${app} MNN Threads::Threads ${CMAKE_DL_LIBS})
 endforeach()
 
-add_executable(bench_deconv "${KERNEL_BENCH_ROOT}/kernels/bench_deconv.cpp")
+add_executable(bench_deconv "${KERNEL_BENCH_ROOT}/kernels/bigvgan-convtranspose-tile4/bench_deconv.cpp")
 target_include_directories(bench_deconv PRIVATE "${CMAKE_SOURCE_DIR}/3rd_party/OpenCLHeaders")
 target_compile_options(bench_deconv PRIVATE -fexceptions -frtti)
 set_target_properties(bench_deconv PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUIRED ON
@@ -46,7 +46,7 @@ set_target_properties(bench_deconv PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUI
 target_link_libraries(bench_deconv "${KERNEL_BENCH_OPENCL_LIBRARY}" Threads::Threads)
 
 # Generic 1-D ConvTranspose v2: bit-pattern gate + variant/LWS autotune on the board.
-add_executable(bench_deconv_v2 "${KERNEL_BENCH_ROOT}/kernels/v2/bench_deconv_v2.cpp")
+add_executable(bench_deconv_v2 "${KERNEL_BENCH_ROOT}/kernels/bigvgan-deconv1d-v2/bench_deconv_v2.cpp")
 target_include_directories(bench_deconv_v2 PRIVATE "${CMAKE_SOURCE_DIR}/3rd_party/OpenCLHeaders")
 target_compile_options(bench_deconv_v2 PRIVATE -fexceptions -frtti)
 set_target_properties(bench_deconv_v2 PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUIRED ON

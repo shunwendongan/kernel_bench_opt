@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "record_type": "workload_branch",
+  "branch": "Qwen2.5-Omni-3B_VCB-Bench",
+  "branch_kind": "workload",
+  "model": {
+    "name": "Qwen2.5-Omni-3B",
+    "deployment": "taobao-mnn/Qwen2.5-Omni-3B-MNN",
+    "revision": "00dc2e9131a4bb325b43a47f4210dd6450116687"
+  },
+  "dataset": {
+    "name": "VCB-Bench",
+    "repository": "https://github.com/Tencent/VCB-Bench",
+    "revision": "542990571e5b6e3fbce4a318492aec5607aaee3c"
+  },
+  "engines": [
+    {"name": "MNN", "revision": "7e3c6fb5225d3ccf22807ee641332669df34650d", "overlay_manifest": "scripts/patches/manifest.json"},
+    {"name": "RKNN", "runtime": "2.3.2"}
+  ],
+  "devices": ["RK3588 / Mali-G610 / 3x NPU"],
+  "candidate_index": "experiments/index.json",
+  "run_index": "benchmarks/history/index.json",
+  "conventions": "docs/CONVENTIONS.md",
+  "shared_tooling_branch": "main"
+}

@@ -20,7 +20,7 @@ COPY src /opt/kernel-bench/src
 COPY scripts /opt/kernel-bench/scripts
 COPY configs /opt/kernel-bench/configs
 COPY tools /opt/kernel-bench/tools
-COPY experiments/predit-sync.patch /opt/kernel-bench/experiments/predit-sync.patch
+COPY experiments/predit-sync/predit-sync.patch /opt/kernel-bench/experiments/predit-sync/predit-sync.patch
 COPY dependencies /opt/kernel-bench/dependencies
 COPY LICENSE /opt/kernel-bench/LICENSE
 COPY docker/build_inside.sh /opt/kernel-bench/docker/build_inside.sh

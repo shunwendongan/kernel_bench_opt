@@ -1,0 +1,32 @@
+{
+  "schema_version": 2,
+  "record_type": "candidate",
+  "candidate_id": "predit-sync",
+  "candidate_kind": "system",
+  "parent_candidate_id": "mnn-3.6.2-omni-async-token2wav",
+  "status": "L3_passed_single_sample",
+  "status_detail": "Independent synchronous build: 3 formal pairs on one real sample, 8/8 waveforms bit-identical; root cause of the asynchronous waveform difference not fully proven",
+  "hypothesis": "PreDiT (OpenCL FP16) outputs are consumed by the FP32 DiT before the GPU writes are visible; an explicit wait on the PreDiT outputs removes the waveform difference between tile0 and tile4 builds",
+  "source_base_commit": "780e019787308d280771be1c947b5e2658566b19",
+  "engine": {"name": "MNN", "revision": "7e3c6fb5225d3ccf22807ee641332669df34650d", "backend": "OpenCL + CPU FP32 DiT"},
+  "target": {"module": "token2wav PreDiT -> DiT hand-off", "symbol": "Omni::talkerToWav (src/mnn/omni.cpp)"},
+  "change": "Wait on every PreDiT output tensor (MAP_TENSOR_READ) when OMNI_PREDIT_SYNC is present in the environment, before passing them to the FP32 DiT",
+  "integration": {
+    "source": "experiments/predit-sync/predit-sync.patch",
+    "apply": "git apply experiments/predit-sync/predit-sync.patch (against the repository's src/mnn/omni.cpp overlay)",
+    "enable": "OMNI_PREDIT_SYNC present (any value); disable by unsetting",
+    "default": "asynchronous (patch not applied)"
+  },
+  "source_files": [
+    {"path": "experiments/predit-sync/predit-sync.patch", "sha256": "d695a11369f62d79023a86191e2300b045daa86ff8f5173f28d7ce1464b2ff37", "moved_from": "experiments/predit-sync.patch"}
+  ],
+  "design": "experiments/predit-sync/design.md",
+  "principle": "principles/05-predit-sync.md",
+  "evidence": "docs/SYNC_VARIANT.md",
+  "runs": [],
+  "limitations": [
+    "One sample, three formal pairs, one board",
+    "Removing the observed difference is not a proof of root cause",
+    "Adds a host synchronization point at the PreDiT -> DiT hand-off"
+  ]
+}

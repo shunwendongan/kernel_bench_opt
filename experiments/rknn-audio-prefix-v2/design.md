@@ -1,6 +1,6 @@
 # RKNN 音频前缀适配器 v2：设计与交付
 
-候选身份：[candidate.json](candidate.json)。源码：[omni_rknn_prefix.v2.hpp](../../src/mnn/omni_rknn_prefix.v2.hpp)。它覆盖部署树中的 `omni_rknn_prefix.hpp`，类名和接口不变，`omni.cpp` 不需要改动。
+候选身份：[candidate.json](candidate.json)。源码：[overlays/rknn-audio-prefix-v2/omni_rknn_prefix.hpp](../../src/mnn/overlays/rknn-audio-prefix-v2/omni_rknn_prefix.hpp)。它覆盖部署树中的 `omni_rknn_prefix.hpp`，类名和接口不变，`omni.cpp` 不需要改动。
 
 优化原理：[principles/04-rknn-audio-prefix-v2.md](../../principles/04-rknn-audio-prefix-v2.md)。
 

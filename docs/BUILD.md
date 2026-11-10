@@ -10,8 +10,8 @@ git clone --branch Qwen2.5-Omni-3B_VCB-Bench \
 cd kernel_bench_opt
 
 # 若要复现完整A/B通过的同步候选，在构建前选择它。
-git apply --check experiments/predit-sync.patch
-git apply experiments/predit-sync.patch
+git apply --check experiments/predit-sync/predit-sync.patch
+git apply experiments/predit-sync/predit-sync.patch
 
 mkdir -p vendor
 git clone https://github.com/alibaba/MNN.git vendor/MNN

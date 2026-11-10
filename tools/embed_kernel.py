@@ -5,9 +5,9 @@ from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
 KERNELS = [
-    ('kernels/bigvgan_deconv_s5_tiled.cl', 'kernels/bigvgan_deconv_source.hpp',
+    ('kernels/bigvgan-convtranspose-tile4/bigvgan_deconv_s5_tiled.cl', 'kernels/bigvgan-convtranspose-tile4/bigvgan_deconv_source.hpp',
      'kBigvganDeconvSource', 'BIGVGANCL'),
-    ('kernels/v2/bigvgan_deconv1d_v2.cl', 'kernels/v2/bigvgan_deconv1d_v2_source.hpp',
+    ('kernels/bigvgan-deconv1d-v2/bigvgan_deconv1d_v2.cl', 'kernels/bigvgan-deconv1d-v2/bigvgan_deconv1d_v2_source.hpp',
      'kBigvganDeconv1dV2Source', 'DECONV1DV2CL'),
 ]
 parser = argparse.ArgumentParser(description=__doc__)

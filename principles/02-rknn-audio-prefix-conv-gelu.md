@@ -2,7 +2,7 @@
 
 - 候选:[rknn-prefix-bigvgan-tile4/candidate.json](../experiments/rknn-prefix-bigvgan-tile4/candidate.json)(组合路径) · 过程:[design.md](../experiments/rknn-prefix-bigvgan-tile4/design.md)
 - 子图导出:[prepare_conv_frontend.py](../tools/npu/prepare_conv_frontend.py)、[prepare_mnn_prefix.py](../tools/npu/prepare_mnn_prefix.py)、[convert_rknn.py](../tools/npu/convert_rknn.py)
-- 宿主适配器:[omni_rknn_prefix.hpp](../src/mnn/omni_rknn_prefix.hpp) · 路由:[omni.cpp](../src/mnn/omni.cpp)(`OMNI_RKNN_AUDIO`)
+- 宿主适配器:[omni_rknn_prefix.hpp](../src/mnn/overlays/rknn-audio-prefix-conv-gelu/omni_rknn_prefix.hpp) · 路由:[omni.cpp](../src/mnn/omni.cpp)(`OMNI_RKNN_AUDIO`)
 - 子图合同:[conv2_gelu.contract.json](../reports/historical/evidence/subgraphs/conv2_gelu.contract.json)
 
 ## 1. 子图与位置

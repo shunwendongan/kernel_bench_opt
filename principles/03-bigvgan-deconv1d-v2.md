@@ -1,7 +1,7 @@
 # 03 · bigvgan-deconv1d-v2:只改数据搬运,不改一步算术
 
 - 候选:[candidate.json](../experiments/bigvgan-deconv1d-v2/candidate.json) · 过程:[design.md](../experiments/bigvgan-deconv1d-v2/design.md) · 部署:[V2_DEPLOY.md](../docs/V2_DEPLOY.md)
-- 源码:[bigvgan_deconv1d_v2.cl](../kernels/v2/bigvgan_deconv1d_v2.cl) · 集成:[DeconvBufExecution.v2.cpp](../src/mnn/DeconvBufExecution.v2.cpp) · 对拍/调参:[bench_deconv_v2.cpp](../kernels/v2/bench_deconv_v2.cpp)
+- 源码:[bigvgan_deconv1d_v2.cl](../kernels/bigvgan-deconv1d-v2/bigvgan_deconv1d_v2.cl) · 集成:[overlays/bigvgan-deconv1d-v2/DeconvBufExecution.cpp](../src/mnn/overlays/bigvgan-deconv1d-v2/DeconvBufExecution.cpp) · 对拍/调参:[bench_deconv_v2.cpp](../kernels/bigvgan-deconv1d-v2/bench_deconv_v2.cpp)
 - 父候选:[01 · tile4](01-bigvgan-convtranspose-tile4.md);基线仍是 MNN `deconv_2d`
 
 ## 1. 算子与位置

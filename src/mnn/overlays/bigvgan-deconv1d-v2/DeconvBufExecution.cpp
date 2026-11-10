@@ -252,7 +252,7 @@ const bool specialized = (tile == 4)
     && mOpenCLBackend->getPrecision() == 0;
 
     // Generic 1-D ConvTranspose v2: same packed weights/bias/layout and the same
-    // per-output mad order as deconv_2d (see kernels/v2/bigvgan_deconv1d_v2.cl),
+    // per-output mad order as deconv_2d (see kernels/bigvgan-deconv1d-v2/bigvgan_deconv1d_v2.cl),
     // so it is valid for every precision mode and every temporal length.
     const int temporalOut = outputShape[1] * outputShape[2];
     const bool oneDimH = kx == 1 && strideWidth == 1 && paddingWidth == 0 && inputShape[2] == 1 && outputShape[2] == 1;

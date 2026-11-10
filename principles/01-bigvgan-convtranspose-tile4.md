@@ -1,7 +1,7 @@
 # 01 · bigvgan-convtranspose-tile4:同相位时间分块复用权重
 
 - 候选:[candidate.json](../experiments/bigvgan-convtranspose-tile4/candidate.json) · 过程:[design.md](../experiments/bigvgan-convtranspose-tile4/design.md)
-- 源码:[bigvgan_deconv_s5_tiled.cl](../kernels/bigvgan_deconv_s5_tiled.cl) · 集成:[DeconvBufExecution.candidate.cpp](../src/mnn/DeconvBufExecution.candidate.cpp)
+- 源码:[bigvgan_deconv_s5_tiled.cl](../kernels/bigvgan-convtranspose-tile4/bigvgan_deconv_s5_tiled.cl) · 集成:[overlays/bigvgan-convtranspose-tile4/DeconvBufExecution.cpp](../src/mnn/overlays/bigvgan-convtranspose-tile4/DeconvBufExecution.cpp)
 - 基线:MNN 7e3c6fb OpenCL Buffer `deconv_2d`(USE_BUFFER, BIAS)
 
 ## 1. 算子与位置

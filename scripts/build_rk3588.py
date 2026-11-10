@@ -21,6 +21,7 @@ def main():
     parser.add_argument("--jobs", type=int, default=4)
     parser.add_argument("--prepare-only", action="store_true", help="Apply source changes without configuring or compiling")
     parser.add_argument("--dry-run", action="store_true", help="Check source identities and print commands without writing")
+    parser.add_argument("--candidate-set", help="Overlay set from scripts/patches/manifest.json (default: manifest default)")
     args = parser.parse_args()
     source, build = args.mnn_source.resolve(), args.build_dir.resolve()
     if args.jobs < 1:
@@ -36,7 +37,7 @@ def main():
             parser.error("Provide --rknn-include and --rknn-lib, or explicitly select --without-rknn")
         if not args.dry_run and (platform.system() != "Linux" or platform.machine() not in ("aarch64", "arm64")):
             parser.error("Run the build on the destination Linux/aarch64 RK3588; use --prepare-only on other hosts")
-    commit = prepare(source, args.dry_run)
+    commit = prepare(source, args.dry_run, args.candidate_set)
     if args.prepare_only:
         return
     configure = ["cmake", "-S", str(source), "-B", str(build),
@@ -72,6 +73,7 @@ def main():
         "mnn_commit": commit, "platform": platform.platform(),
         "configure": configure, "build": compile_cmd,
         "source_sha256_manifest": "scripts/patches/manifest.json",
+        "candidate_set": args.candidate_set or "manifest default",
         "inference_executed": False}, indent=2) + "\n")
     for name, command in (("configure", configure), ("compile", compile_cmd)):
         with (records / (name + ".log")).open("w") as log:

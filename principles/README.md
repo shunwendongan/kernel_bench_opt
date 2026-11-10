@@ -12,7 +12,7 @@
 | 02 | [rknn-audio-prefix-conv-gelu](02-rknn-audio-prefix-conv-gelu.md) | NPU 子图 | 音频编码器前端 Conv1→GELU→Conv2→GELU 以固定 256 帧 tile + 2 帧 halo + 有效性掩码搬到 RK3588 NPU,其余编码器留在 CPU | 系统路径 A/B 9 对耗时 −8.25%,但严格同输出只有 1/10,未通过输出保持验收 | [design](../experiments/rknn-prefix-bigvgan-tile4/design.md) · [证据](../benchmarks/history/20261109-omni-combined-random10/README.md) |
 | 03 | [bigvgan-deconv1d-v2](03-bigvgan-deconv1d-v2.md) | OpenCL kernel | 通用 1-D 转置卷积:时间×输出通道寄存器分块、每个 ic block 只读一次输入窗口、work group 沿时间维展开以复用权重;乘加次序与原 kernel 相同 | 源码交付,待板端验收 | [design](../experiments/bigvgan-deconv1d-v2/design.md) · [部署](../docs/V2_DEPLOY.md) |
 | 04 | [rknn-audio-prefix-v2](04-rknn-audio-prefix-v2.md) | NPU 宿主适配器 | 预分配 IO、多 tile 在 3 个 NPU 核并发、可选 FP16 输入,首条请求与 v1 位级自检 | 源码交付,待板端验收 | [design](../experiments/rknn-audio-prefix-v2/design.md) |
-| 05 | [predit-sync](05-predit-sync.md) | 系统级(非算子) | PreDiT 输出交给 FP32 DiT 前显式等待 GPU 完成,消除跨命令队列的可见性竞争 | 同一样本 8 次波形一致;根因未完全确认 | [SYNC_VARIANT](../docs/SYNC_VARIANT.md) · [patch](../experiments/predit-sync.patch) |
+| 05 | [predit-sync](05-predit-sync.md) | 系统级(非算子) | PreDiT 输出交给 FP32 DiT 前显式等待 GPU 完成,消除跨命令队列的可见性竞争 | 同一样本 8 次波形一致;根因未完全确认 | [SYNC_VARIANT](../docs/SYNC_VARIANT.md) · [patch](../experiments/predit-sync/predit-sync.patch) |
 
 ## 每份文档的结构
 

@@ -61,19 +61,19 @@
       "sha256": "84d75273ab1e25cad8b2786dbdd400003c3d0a483c9670e0f7f112f9d6435fa0"
     },
     {
-      "path": "src/mnn/omni_rknn_prefix.hpp",
+      "path": "src/mnn/overlays/rknn-audio-prefix-conv-gelu/omni_rknn_prefix.hpp",
       "sha256": "79859f273f139dfcd96bfa4aaeace180ec215e1be4223806bc28a138bb736035"
     },
     {
-      "path": "src/mnn/DeconvBufExecution.candidate.cpp",
+      "path": "src/mnn/overlays/bigvgan-convtranspose-tile4/DeconvBufExecution.cpp",
       "sha256": "49ec18b80cf6abf136c9f92ebf759c66f792f482af7f820a1d069a7c50d4d1ed"
     },
     {
-      "path": "kernels/bigvgan_deconv_s5_tiled.cl",
+      "path": "kernels/bigvgan-convtranspose-tile4/bigvgan_deconv_s5_tiled.cl",
       "sha256": "8f52e6f5a900b9047bf0b0062dac4b79229db8ae1371199550e0b00632e1dcf8"
     },
     {
-      "path": "experiments/predit-sync.patch",
+      "path": "experiments/predit-sync/predit-sync.patch",
       "sha256": "d695a11369f62d79023a86191e2300b045daa86ff8f5173f28d7ce1464b2ff37"
     }
   ],

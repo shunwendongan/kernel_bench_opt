@@ -12,7 +12,8 @@
 !tools/
 !tools/**
 !experiments/
-!experiments/predit-sync.patch
+!experiments/predit-sync/
+!experiments/predit-sync/predit-sync.patch
 !dependencies/
 !dependencies/**
 !LICENSE

@@ -1,6 +1,6 @@
 # 05 · predit-sync:跨命令队列的输出可见性
 
-- 变更:[predit-sync.patch](../experiments/predit-sync.patch)(`src/mnn/omni.cpp` 中 8 行) · 说明:[SYNC_VARIANT.md](../docs/SYNC_VARIANT.md)
+- 变更:[predit-sync.patch](../experiments/predit-sync/predit-sync.patch)(`src/mnn/omni.cpp` 中 8 行) · 说明:[SYNC_VARIANT.md](../docs/SYNC_VARIANT.md)
 - 类型:系统级候选,不是算子优化;放在这里是因为它决定了 tile4 完整请求 A/B 能否成立。
 
 ## 1. 位置

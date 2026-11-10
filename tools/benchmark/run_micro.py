@@ -34,7 +34,7 @@ def main():
                '--weights', str(a.captures.resolve() / 'packed_weight.bin'),
                '--bias', str(a.captures.resolve() / 'packed_bias.bin'),
                '--T', str(t), '--axis', 'h', '--baseline', str(baseline),
-               '--candidate', str(REPO / 'kernels/bigvgan_deconv_s5_tiled.cl'),
+               '--candidate', str(REPO / 'kernels/bigvgan-convtranspose-tile4/bigvgan_deconv_s5_tiled.cl'),
                '--out', str(output), '--tile', str(tile), '--old-lws', old_lws,
                '--new-lws', '8,4,1', '--warmup', '3', '--reps', str(repeats),
                '--profile', str(profile), '--reference', str(a.captures.resolve() / f'output_T{t}.f32')]

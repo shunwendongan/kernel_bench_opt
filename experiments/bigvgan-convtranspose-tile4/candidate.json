@@ -27,32 +27,32 @@
   },
   "change": "Reuse one loaded weight vector across four time positions with the same stride phase; preserve per-output reduction order",
   "integration": {
-    "source": "src/mnn/DeconvBufExecution.candidate.cpp",
+    "source": "src/mnn/overlays/bigvgan-convtranspose-tile4/DeconvBufExecution.cpp",
     "symbol": "DeconvBufExecution::onEncode",
     "enable": "OMNI_BIGVGAN_DECONV_TILE=4",
     "default": "baseline",
     "unsupported_shape": "baseline fallback",
-    "e2e_variant": "Apply experiments/predit-sync.patch and set OMNI_PREDIT_SYNC=1 for both sides"
+    "e2e_variant": "Apply experiments/predit-sync/predit-sync.patch and set OMNI_PREDIT_SYNC=1 for both sides"
   },
   "source_files": [
     {
-      "path": "kernels/bigvgan_deconv_s5_tiled.cl",
+      "path": "kernels/bigvgan-convtranspose-tile4/bigvgan_deconv_s5_tiled.cl",
       "sha256": "8f52e6f5a900b9047bf0b0062dac4b79229db8ae1371199550e0b00632e1dcf8"
     },
     {
-      "path": "kernels/bigvgan_deconv_source.hpp",
+      "path": "kernels/bigvgan-convtranspose-tile4/bigvgan_deconv_source.hpp",
       "sha256": "29b0595684ac5a827f29c84d4b26e697f24dcc04b4a3290f199071a4b97d4e6f"
     },
     {
-      "path": "kernels/bench_deconv.cpp",
+      "path": "kernels/bigvgan-convtranspose-tile4/bench_deconv.cpp",
       "sha256": "5e19d1947c62868e3c9bb81392dee9db883156974a37c7ef58a2d9a9e3d121b3"
     },
     {
-      "path": "src/mnn/DeconvBufExecution.candidate.cpp",
+      "path": "src/mnn/overlays/bigvgan-convtranspose-tile4/DeconvBufExecution.cpp",
       "sha256": "49ec18b80cf6abf136c9f92ebf759c66f792f482af7f820a1d069a7c50d4d1ed"
     },
     {
-      "path": "experiments/predit-sync.patch",
+      "path": "experiments/predit-sync/predit-sync.patch",
       "sha256": "d695a11369f62d79023a86191e2300b045daa86ff8f5173f28d7ce1464b2ff37"
     }
   ],

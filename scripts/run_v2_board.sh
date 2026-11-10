@@ -40,8 +40,8 @@ SHAPES=(
 bench() {  # out_dir extra-args...
   local out=$1; shift
   mkdir -p "$(dirname "$out")"
-  "$BENCH" --baseline "$BASE_CL" --v2 kernels/v2/bigvgan_deconv1d_v2.cl \
-    --tile4 kernels/bigvgan_deconv_s5_tiled.cl --precision fp16 --axis h \
+  "$BENCH" --baseline "$BASE_CL" --v2 kernels/bigvgan-deconv1d-v2/bigvgan_deconv1d_v2.cl \
+    --tile4 kernels/bigvgan-convtranspose-tile4/bigvgan_deconv_s5_tiled.cl --precision fp16 --axis h \
     --variants "$VARIANTS" --lws "$LWS" --reps "$REPS" --warmup "$WARMUP" --profile 0 \
     --out "$out" "$@"
 }

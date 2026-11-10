@@ -10,8 +10,8 @@
 
 | 文件/补丁 | 修改 |
 |---|---|
-| `src/mnn/DeconvBufExecution.candidate.cpp` | 当前部署权重/dispatch 捕获，guarded tile4 分派和原 kernel 回退 |
-| `src/mnn/DeconvBufExecution.task.hpp` | 每 execution 的候选 KernelWrap 缓存 |
+| `src/mnn/overlays/bigvgan-convtranspose-tile4/DeconvBufExecution.cpp` | 当前部署权重/dispatch 捕获，guarded tile4 分派和原 kernel 回退 |
+| `src/mnn/overlays/bigvgan-convtranspose-tile4/DeconvBufExecution.task.hpp` | 每 execution 的候选 KernelWrap 缓存 |
 | `src/mnn/omni.cpp` | CPU/NPU/GPU 分工、DiT 高精度、可选 profile/capture、固定噪声种子 |
 | `src/mnn/sampler.repeat.cpp` | 可选种子与逐请求采样器重置 |
 | `scripts/patches/01-llm.hpp.patch`、`02-omni.hpp.patch` | Talker context 接口和音频前缀成员 |

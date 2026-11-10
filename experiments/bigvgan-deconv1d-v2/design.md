@@ -1,6 +1,6 @@
 # BigVGAN ConvTranspose v2：设计与交付
 
-候选身份：[candidate.json](candidate.json)。源码：[OpenCL kernel](../../kernels/v2/bigvgan_deconv1d_v2.cl)、[MNN执行器](../../src/mnn/DeconvBufExecution.v2.cpp)、[对拍/调优工具](../../kernels/v2/bench_deconv_v2.cpp)、[板端脚本](../../scripts/run_v2_board.sh)。父候选：[tile4](../bigvgan-convtranspose-tile4/design.md)。
+候选身份：[candidate.json](candidate.json)。源码：[OpenCL kernel](../../kernels/bigvgan-deconv1d-v2/bigvgan_deconv1d_v2.cl)、[MNN执行器](../../src/mnn/overlays/bigvgan-deconv1d-v2/DeconvBufExecution.cpp)、[对拍/调优工具](../../kernels/bigvgan-deconv1d-v2/bench_deconv_v2.cpp)、[板端脚本](../../scripts/run_v2_board.sh)。父候选：[tile4](../bigvgan-convtranspose-tile4/design.md)。
 
 优化原理：[principles/03-bigvgan-deconv1d-v2.md](../../principles/03-bigvgan-deconv1d-v2.md)。
 

@@ -1,0 +1,67 @@
+{
+  "schema_version": 2,
+  "record_type": "candidate",
+  "candidate_id": "rknn-audio-prefix-conv-gelu",
+  "candidate_kind": "subgraph",
+  "parent_candidate_id": "mnn-opencl-audio-encoder",
+  "status": "rejected_numeric",
+  "status_detail": "Evaluated only inside the combined route rknn-prefix-bigvgan-tile4: system-route elapsed -8.25% on 9 valid pairs, strict output equality 1/10; no isolated L1/L2 record of its own",
+  "hypothesis": "Running the audio encoder conv front-end (Conv1 -> GELU -> Conv2 -> GELU) as a fixed-shape FP16 RKNN graph on the RK3588 NPU, with the remaining encoder on CPU, lowers request latency",
+  "source_base_commit": "780e019787308d280771be1c947b5e2658566b19",
+  "engine": {
+    "name": "MNN",
+    "revision": "7e3c6fb5225d3ccf22807ee641332669df34650d",
+    "rknn_runtime": "2.3.2"
+  },
+  "target": {
+    "subgraph": "thinker audio_tower conv1(128->1280,K3,S1,P1)+GELU, conv2(1280->1280,K3,S2,P1)+GELU",
+    "boundary": "mel input -> /Mul_3_output_0 (before permute and positional embedding)",
+    "tiling": "516-frame halo window -> 256 output frames, true_valid mask"
+  },
+  "change": "NPU subgraph from MNN-decoded weights with tanh GELU, compiled FP16 by RKNN 2.3.2; host adapter tiles the mel and splices outputs; encoder tail moved to CPU",
+  "integration": {
+    "source": "src/mnn/overlays/rknn-audio-prefix-conv-gelu/omni_rknn_prefix.hpp",
+    "route": "src/mnn/omni.cpp (OMNI_RKNN_AUDIO=<prefix.rknn>)",
+    "export": [
+      "tools/npu/prepare_conv_frontend.py",
+      "tools/npu/prepare_mnn_prefix.py",
+      "tools/npu/convert_rknn.py"
+    ],
+    "enable": "OMNI_RKNN_AUDIO set to the .rknn path",
+    "default": "original complete MNN audio encoder on OpenCL"
+  },
+  "source_files": [
+    {
+      "path": "src/mnn/overlays/rknn-audio-prefix-conv-gelu/omni_rknn_prefix.hpp",
+      "sha256": "79859f273f139dfcd96bfa4aaeace180ec215e1be4223806bc28a138bb736035",
+      "moved_from": "src/mnn/omni_rknn_prefix.hpp"
+    },
+    {
+      "path": "tools/npu/prepare_conv_frontend.py",
+      "sha256": "031830fbfb2a60f69bd463389b91e2ce4b984d817d4b077c9c73ad2ad020e374"
+    },
+    {
+      "path": "tools/npu/prepare_mnn_prefix.py",
+      "sha256": "16289191277c85b3fb042c81ec2674cb3cfdcc3dc6b272e8ffe3d6ee769a393d"
+    },
+    {
+      "path": "tools/npu/convert_rknn.py",
+      "sha256": "cf4650e310f2998d8fd841a49f6ddbda44f8441398b42cb88594d2df1b17a527"
+    }
+  ],
+  "asset_identities": {
+    "rknn_prefix_sha256": "babb232111b8bdef1817c109336568634d701a7bc16f0c324eca77d6a7c9244a",
+    "source_onnx_sha256": "e6c2adeabe4dbe5722981577f13fea3a94b5f79358502c1ca5e8f32561dc937c"
+  },
+  "design": "experiments/rknn-audio-prefix-conv-gelu/design.md",
+  "principle": "principles/02-rknn-audio-prefix-conv-gelu.md",
+  "evidence": "benchmarks/history/20261109-omni-combined-random10/README.md",
+  "runs": [
+    "20261109-112115-omni-combined-e2e-random10"
+  ],
+  "limitations": [
+    "Numerical path differs from the OpenCL encoder by construction (FP16 NPU accumulation, CPU tail); bitwise equivalence is not achievable",
+    "No ablation separating this subgraph from bigvgan-convtranspose-tile4",
+    "Record created 2026-11-10 to give the pre-existing adapter its own candidate identity; the measurements predate this record"
+  ]
+}
