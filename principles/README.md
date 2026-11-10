@@ -14,6 +14,8 @@
 | 04 | [rknn-audio-prefix-v2](04-rknn-audio-prefix-v2.md) | NPU 宿主适配器 | 预分配 IO、多 tile 在 3 个 NPU 核并发、可选 FP16 输入,首条请求与 v1 位级自检 | 源码交付,待板端验收 | [design](../experiments/rknn-audio-prefix-v2/design.md) |
 | 05 | [predit-sync](05-predit-sync.md) | 系统级(非算子) | PreDiT 输出交给 FP32 DiT 前显式等待 GPU 完成,消除跨命令队列的可见性竞争 | 同一样本 8 次波形一致;根因未完全确认 | [SYNC_VARIANT](../docs/SYNC_VARIANT.md) · [patch](../experiments/predit-sync/predit-sync.patch) |
 
+候选的机器可读登记表是 [`experiments/index.json`](../experiments/index.json)；状态枚举与命名规则见 [docs/CONVENTIONS.md](../docs/CONVENTIONS.md)。
+
 ## 每份文档的结构
 
 1. **算子与位置**:结构、shape、在热点表中的位置。

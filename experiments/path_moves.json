@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "record_type": "path_moves",
+  "notes": "Files moved with git mv on 2026-11-10 (commit d610959); content and SHA-256 unchanged. Frozen evidence that cites an old path is resolved through this table instead of being edited.",
+  "moves": [
+    {"from": "kernels/bigvgan_deconv_s5_tiled.cl", "to": "kernels/bigvgan-convtranspose-tile4/bigvgan_deconv_s5_tiled.cl"},
+    {"from": "kernels/bigvgan_deconv_source.hpp", "to": "kernels/bigvgan-convtranspose-tile4/bigvgan_deconv_source.hpp"},
+    {"from": "kernels/bench_deconv.cpp", "to": "kernels/bigvgan-convtranspose-tile4/bench_deconv.cpp"},
+    {"from": "kernels/v2/bigvgan_deconv1d_v2.cl", "to": "kernels/bigvgan-deconv1d-v2/bigvgan_deconv1d_v2.cl"},
+    {"from": "kernels/v2/bigvgan_deconv1d_v2_source.hpp", "to": "kernels/bigvgan-deconv1d-v2/bigvgan_deconv1d_v2_source.hpp"},
+    {"from": "kernels/v2/bench_deconv_v2.cpp", "to": "kernels/bigvgan-deconv1d-v2/bench_deconv_v2.cpp"},
+    {"from": "src/mnn/DeconvBufExecution.candidate.cpp", "to": "src/mnn/overlays/bigvgan-convtranspose-tile4/DeconvBufExecution.cpp"},
+    {"from": "src/mnn/DeconvBufExecution.task.hpp", "to": "src/mnn/overlays/bigvgan-convtranspose-tile4/DeconvBufExecution.task.hpp"},
+    {"from": "src/mnn/DeconvBufExecution.v2.cpp", "to": "src/mnn/overlays/bigvgan-deconv1d-v2/DeconvBufExecution.cpp"},
+    {"from": "src/mnn/DeconvBufExecution.v2.hpp", "to": "src/mnn/overlays/bigvgan-deconv1d-v2/DeconvBufExecution.v2.hpp"},
+    {"from": "src/mnn/omni_rknn_prefix.hpp", "to": "src/mnn/overlays/rknn-audio-prefix-conv-gelu/omni_rknn_prefix.hpp"},
+    {"from": "src/mnn/omni_rknn_prefix.v2.hpp", "to": "src/mnn/overlays/rknn-audio-prefix-v2/omni_rknn_prefix.hpp"},
+    {"from": "experiments/predit-sync.patch", "to": "experiments/predit-sync/predit-sync.patch"}
+  ]
+}

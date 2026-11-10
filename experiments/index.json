@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "record_type": "candidate_index",
+  "branch": "Qwen2.5-Omni-3B_VCB-Bench",
+  "notes": "One entry per experiments/<candidate-id>/candidate.json. Status values follow docs/CONVENTIONS.md section 4. Kept in sync by tools/verify/check_repo.py.",
+  "candidates": [
+    {
+      "candidate_id": "bigvgan-convtranspose-tile4",
+      "candidate_kind": "kernel",
+      "parent_candidate_id": "mnn-3.6.2-deconv_2d",
+      "status": "L3_passed_single_sample",
+      "candidate_json": "experiments/bigvgan-convtranspose-tile4/candidate.json",
+      "design": "experiments/bigvgan-convtranspose-tile4/design.md",
+      "principle": "principles/01-bigvgan-convtranspose-tile4.md",
+      "sources": ["kernels/bigvgan-convtranspose-tile4/", "src/mnn/overlays/bigvgan-convtranspose-tile4/"],
+      "overlay_sets": ["tile4"],
+      "runs": ["20261106-bigvgan-convtranspose"]
+    },
+    {
+      "candidate_id": "rknn-audio-prefix-conv-gelu",
+      "candidate_kind": "subgraph",
+      "parent_candidate_id": "mnn-opencl-audio-encoder",
+      "status": "rejected_numeric",
+      "candidate_json": "experiments/rknn-audio-prefix-conv-gelu/candidate.json",
+      "design": "experiments/rknn-audio-prefix-conv-gelu/design.md",
+      "principle": "principles/02-rknn-audio-prefix-conv-gelu.md",
+      "sources": ["src/mnn/overlays/rknn-audio-prefix-conv-gelu/", "tools/npu/"],
+      "overlay_sets": ["tile4"],
+      "runs": ["20261109-112115-omni-combined-e2e-random10"]
+    },
+    {
+      "candidate_id": "predit-sync",
+      "candidate_kind": "system",
+      "parent_candidate_id": "mnn-3.6.2-omni-async-token2wav",
+      "status": "L3_passed_single_sample",
+      "candidate_json": "experiments/predit-sync/candidate.json",
+      "design": "experiments/predit-sync/design.md",
+      "principle": "principles/05-predit-sync.md",
+      "sources": ["experiments/predit-sync/predit-sync.patch"],
+      "overlay_sets": [],
+      "runs": []
+    },
+    {
+      "candidate_id": "rknn-prefix-bigvgan-tile4",
+      "candidate_kind": "route",
+      "parent_candidate_id": "mnn-opencl-audio-encoder-deconv-tile0",
+      "status": "rejected_numeric",
+      "candidate_json": "experiments/rknn-prefix-bigvgan-tile4/candidate.json",
+      "design": "experiments/rknn-prefix-bigvgan-tile4/design.md",
+      "principle": "principles/02-rknn-audio-prefix-conv-gelu.md",
+      "sources": ["src/apps/omni_batch_ab.cpp"],
+      "overlay_sets": ["tile4"],
+      "runs": ["20261109-112115-omni-combined-e2e-random10"]
+    },
+    {
+      "candidate_id": "bigvgan-deconv1d-v2",
+      "candidate_kind": "kernel",
+      "parent_candidate_id": "bigvgan-convtranspose-tile4",
+      "status": "source_delivered",
+      "candidate_json": "experiments/bigvgan-deconv1d-v2/candidate.json",
+      "design": "experiments/bigvgan-deconv1d-v2/design.md",
+      "principle": "principles/03-bigvgan-deconv1d-v2.md",
+      "sources": ["kernels/bigvgan-deconv1d-v2/", "src/mnn/overlays/bigvgan-deconv1d-v2/"],
+      "overlay_sets": ["v2"],
+      "runs": ["20261110-150000-bigvgan-deconv1d-v2-l1", "20261110-150000-bigvgan-deconv1d-v2-l2"]
+    },
+    {
+      "candidate_id": "rknn-audio-prefix-v2",
+      "candidate_kind": "adapter",
+      "parent_candidate_id": "rknn-audio-prefix-conv-gelu",
+      "status": "source_delivered",
+      "candidate_json": "experiments/rknn-audio-prefix-v2/candidate.json",
+      "design": "experiments/rknn-audio-prefix-v2/design.md",
+      "principle": "principles/04-rknn-audio-prefix-v2.md",
+      "sources": ["src/mnn/overlays/rknn-audio-prefix-v2/"],
+      "overlay_sets": ["v2"],
+      "runs": ["20261110-150000-rknn-audio-prefix-v2-l3"]
+    }
+  ]
+}

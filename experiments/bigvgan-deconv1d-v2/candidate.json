@@ -1,8 +1,12 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
+  "record_type": "candidate",
   "candidate_id": "bigvgan-deconv1d-v2",
+  "candidate_kind": "kernel",
   "parent_candidate_id": "bigvgan-convtranspose-tile4",
-  "status": "source_delivered_board_validation_pending",
+  "status": "source_delivered",
+  "status_detail": "previous status string: source_delivered_board_validation_pending",
+  "hypothesis": "Register blocking over time and output channels, one input window per ic block and time-spanning work groups cut weight/input traffic below tile4 for every BigVGAN upsampler and any T, with the deconv_2d mad order preserved",
   "source_base_commit": "1ee7973f0a65378d9e234bc0972534a1f80e04bd",
   "engine": {
     "name": "MNN",
@@ -89,5 +93,10 @@
     "No RK3588/Mali-G610 FP16 run yet; performance and best TT/OCB/LWS must come from scripts/run_v2_board.sh l1",
     "FP16 bit equality is argued by identical mad order and checked on the board (L1/L2), not on the dev GPU",
     "Not yet measured end to end"
+  ],
+  "principle": "principles/03-bigvgan-deconv1d-v2.md",
+  "runs": [
+    "20261110-150000-bigvgan-deconv1d-v2-l1",
+    "20261110-150000-bigvgan-deconv1d-v2-l2"
   ]
 }

@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "benchmarks/history/index.json (schema_version 2)",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "record_type",
+    "entries"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "enum": [
+        2
+      ]
+    },
+    "record_type": {
+      "type": "string",
+      "enum": [
+        "run_index"
+      ]
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "run_id",
+          "candidate_id",
+          "level",
+          "status",
+          "path",
+          "legacy_id"
+        ],
+        "properties": {
+          "run_id": {
+            "type": "string"
+          },
+          "candidate_id": {
+            "type": "string"
+          },
+          "task_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "level": {
+            "type": "string",
+            "enum": [
+              "l1",
+              "l2",
+              "l3",
+              "profile",
+              "mixed"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "planned",
+              "completed",
+              "failed",
+              "cancelled"
+            ]
+          },
+          "status_detail": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "path": {
+            "type": "string"
+          },
+          "run_record": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "report": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "assets": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "legacy_id": {
+            "type": "boolean"
+          },
+          "directory": {
+            "type": "string",
+            "description": "Only for legacy_id entries whose directory name differs from run_id"
+          }
+        }
+      }
+    }
+  }
+}

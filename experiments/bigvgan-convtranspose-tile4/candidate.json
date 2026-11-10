@@ -1,8 +1,12 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
+  "record_type": "candidate",
   "candidate_id": "bigvgan-convtranspose-tile4",
+  "candidate_kind": "kernel",
   "parent_candidate_id": "mnn-3.6.2-deconv_2d",
-  "status": "historically_validated_scoped_candidate",
+  "status": "L3_passed_single_sample",
+  "status_detail": "previous status string: historically_validated_scoped_candidate",
+  "hypothesis": "Sharing one weight load across four same-phase time positions lowers /ups.0.0 ConvTranspose time while keeping the deconv_2d mad order and bit-identical output",
   "source_base_commit": "780e019787308d280771be1c947b5e2658566b19",
   "engine": {
     "name": "MNN",
@@ -59,6 +63,16 @@
   "results": "benchmarks/history/20261106-bigvgan-convtranspose/summary.json",
   "design": "experiments/bigvgan-convtranspose-tile4/design.md",
   "provenance_limitations": [
+    "Historical native RK3588 measurements, not container measurements",
+    "Reference ONNX is not the historical MNN conversion source",
+    "E2E is one sample with three formal A/B pairs; default asynchronous variant failed",
+    "Second-board and container validation not run"
+  ],
+  "principle": "principles/01-bigvgan-convtranspose-tile4.md",
+  "runs": [
+    "20261106-bigvgan-convtranspose"
+  ],
+  "limitations": [
     "Historical native RK3588 measurements, not container measurements",
     "Reference ONNX is not the historical MNN conversion source",
     "E2E is one sample with three formal A/B pairs; default asynchronous variant failed",

@@ -9,7 +9,7 @@
 
 ## A. 本仓库固定的 MNN 7e3c6fb（推荐）
 
-按 [BUILD.md](BUILD.md) 正常构建即可。`scripts/prepare_mnn.py` 现在会覆盖以下文件：
+按 [BUILD.md](BUILD.md) 正常构建即可。`scripts/prepare_mnn.py` 默认选择候选集 `v2`（`--candidate-set tile4` 回到历史候选集），会覆盖以下文件：
 
 | 仓库文件 | MNN 树中的位置 |
 |---|---|

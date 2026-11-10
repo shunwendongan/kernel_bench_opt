@@ -32,7 +32,7 @@ export OMNI_PREDIT_SYNC=1
 export OMNI_TEST_SEED=20261105
 ```
 
-构建脚本修改专属的MNN checkout，拒绝覆盖未知改动。`runtime-lib/libOpenCL.so` 只是在构建目录创建的别名。构建产物位于 `build/rk3588/bin/`，编译成功仍需完成 [多级复现](REPRODUCE.md) 的正确性与性能验证。
+构建脚本修改专属的MNN checkout，拒绝覆盖未知改动。默认应用 `scripts/patches/manifest.json` 的 `default_overlay_set`（当前为 `v2`）；构建历史 tile4 候选集加 `--candidate-set tile4`，`python3 scripts/prepare_mnn.py --mnn-source vendor/MNN --list-sets` 列出可用集合，已用另一候选集准备过的 MNN 树可以直接切换。`runtime-lib/libOpenCL.so` 只是在构建目录创建的别名。构建产物位于 `build/rk3588/bin/`，编译成功仍需完成 [多级复现](REPRODUCE.md) 的正确性与性能验证。
 
 跳过同步补丁则是原默认异步版本，该版本的历史完整A/B波形门失败。同步版本的证据和适用范围见 [SYNC_VARIANT.md](SYNC_VARIANT.md)。`OMNI_PREDIT_SYNC=0` 仍启用，禁用应删除环境变量。
 

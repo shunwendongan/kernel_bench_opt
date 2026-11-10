@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "record_type": "planned_run",
+  "task_id": "bigvgan-deconv1d-v2",
+  "run_id": "20261110-150000-bigvgan-deconv1d-v2-l1",
+  "candidate_id": "bigvgan-deconv1d-v2",
+  "parent_candidate_id": "bigvgan-convtranspose-tile4",
+  "hypothesis_id": "bigvgan-deconv1d-v2-h1",
+  "code": {
+    "git_commit": "d610959",
+    "patch_sha256": null,
+    "source_dirty": false
+  },
+  "environment": {
+    "device_id": "rk3588-board-b (to be recorded)",
+    "soc": "RK3588",
+    "os": null,
+    "kernel": null,
+    "runtime": null,
+    "driver": null,
+    "container_image_id": null,
+    "container_packages_sha256": null,
+    "frequency_temperature_load_file": null
+  },
+  "assets": {
+    "model_sha256_manifest": null,
+    "dataset_sha256_manifest": null,
+    "sample_ids": [],
+    "capture_sha256_manifest": null,
+    "split_group": null
+  },
+  "measurement": {
+    "level": "L1",
+    "phase": "planned",
+    "timing_domain": null,
+    "unit": null,
+    "profiling_enabled": null,
+    "warmup": null,
+    "repeats": null,
+    "seed": null,
+    "command_file": "scripts/run_v2_board.sh l1 / l1-capture",
+    "raw_file": "runs/v2-l1-<stamp>/*.jsonl",
+    "correctness_file": null,
+    "summary_file": null
+  },
+  "result": {
+    "status": "planned",
+    "correctness_passed": null,
+    "old_median": null,
+    "candidate_median": null,
+    "ratio_of_medians": null,
+    "failure_reason": null
+  },
+  "analysis": {
+    "profile_run_id": null,
+    "mapping_file": null,
+    "mapping_status": null,
+    "source_location": null,
+    "design_file": "experiments/bigvgan-deconv1d-v2/design.md",
+    "decision": "pending"
+  },
+  "data_reuse": {
+    "source_kind": "planned_board_run",
+    "review_status": "unreviewed",
+    "training_split": null,
+    "license_provenance": null,
+    "known_limitations": [
+      "Planned record created when source was delivered; nothing measured yet"
+    ]
+  }
+}

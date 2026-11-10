@@ -5,3 +5,8 @@ licenses/** -text -whitespace
 # Preserve historical CSV line endings and literal runtime diagnostics.
 benchmarks/history/20261109-omni-combined-random10/analysis/per_sample.csv -text whitespace=cr-at-eol
 benchmarks/history/20261109-omni-combined-random10/records/process.txt -whitespace
+# Per-branch files: keep the current branch's version when merging main
+# (requires once per clone: git config merge.ours.driver true).
+README.md merge=ours
+README.html merge=ours
+workload.json merge=ours

@@ -1,12 +1,16 @@
 {
-  "schema_version": 1,
-  "task_id": "omni-combined-audio-route-e2e",
+  "schema_version": 2,
+  "record_type": "candidate",
   "candidate_id": "rknn-prefix-bigvgan-tile4",
+  "candidate_kind": "route",
   "parent_candidate_id": "mnn-opencl-audio-encoder-deconv-tile0",
+  "status": "rejected_numeric",
+  "status_detail": "previous status string: output_equivalence_rejected",
+  "hypothesis": "Enabling the existing RKNN audio prefix and BigVGAN tile4 together lowers full-request latency with unchanged outputs",
+  "task_id": "omni-combined-audio-route-e2e",
   "reused_candidate_ids": [
     "bigvgan-convtranspose-tile4"
   ],
-  "status": "output_equivalence_rejected",
   "comparison_kind": "system_route_ab",
   "source_base_commit": "6871066b7727cf55519f239bae90cb2b89f9d424",
   "engine": {
@@ -106,5 +110,9 @@
     "No independent attribution of audio-route and ConvTranspose effects.",
     "No answer-quality, semantic or listening evaluation.",
     "Sample 10 failed audio encoding on both routes despite runner-reported success."
+  ],
+  "principle": "principles/02-rknn-audio-prefix-conv-gelu.md",
+  "runs": [
+    "20261109-112115-omni-combined-e2e-random10"
   ]
 }

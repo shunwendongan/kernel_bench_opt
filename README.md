@@ -17,6 +17,8 @@ GitHub 保存代码与精选知识，本地主机保存大资产并承担分析�
 > **目前可以使用什么？** 已有候选实现、采集与分析脚本、分级评测入口、历史证据和容器配方。下面展示的是完整目标 SOP；本地 Task / Candidate / Run 初始化、资产清单、精选归档和索引脚本已补齐，当前仅代码交付、未运行验收；设备排队、持续回传、Agent 自动循环与自动回库仍需接通。容器配方尚未在新板构建验收。
 
 > **2026-11-10 新增候选集 v2**（源码已交付，待板端验收）：通用 BigVGAN ConvTranspose kernel，覆盖全部 `/ups.*`、任意 T，与原 kernel 位级一致；另有 RKNN 音频前缀适配器 v2。见 [V2_DEPLOY.md](docs/V2_DEPLOY.md)。每个候选算子 / kernel / 子图的**优化原理**统一收录在 [principles/](principles/README.md)。
+>
+> **分支与文件管理约定（2026-11-10 起）**：`main` 只放共享工具 + SOP + CI；每个 `<Model>_<Dataset>` 分支放该工作负载的候选源码、引擎改动、实验与报告。候选按 `kernels/<candidate-id>/`、`src/<engine>/overlays/<candidate-id>/`、`experiments/<candidate-id>/` 组织，候选与运行分别登记在 `experiments/index.json`、`benchmarks/history/index.json`。命名、状态枚举、体积与冻结证据规则见 [docs/CONVENTIONS.md](docs/CONVENTIONS.md)，提交前运行 `python3 tools/verify/check_repo.py`。
 
 ## 一张图看懂整套协作
 
