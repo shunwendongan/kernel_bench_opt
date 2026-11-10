@@ -68,7 +68,15 @@ python3 tools/profiling/normalize_rknn_perf.py \
   /path/to/received/rknn/tile_0.txt --out /path/to/new-rknn-profile.json
 ```
 
-MNN适配按executor/stage分组，输出文件列表见 `import_manifest.json`。在现有Mac工具包中选择其中一个实际 `*.profile.json`：
+不依赖外部工具包的热点排名可以直接在仓库内完成（输出 `rankings.csv`、`by_type.csv`、`modules.csv`、`top.md`，列与历史 `mnn_operator_rankings.csv` 相同）：
+
+```bash
+python3 tools/analysis/rank_hotspots.py /path/to/received/mnn.jsonl --out /path/to/hotspots
+# 或复算一份已有排名表：
+python3 tools/analysis/rank_hotspots.py --from-rankings-csv reports/historical/evidence/mnn_operator_rankings.csv --out /path/to/hotspots
+```
+
+MNN适配按executor/stage分组，输出文件列表见 `import_manifest.json`。需要来源映射、ONNX候选与更深入分析时，在现有Mac工具包中选择其中一个实际 `*.profile.json`：
 
 ```bash
 TOOLKIT_ROOT="$HOME/Desktop/RK3588_Mac_Analysis_Toolkit"
@@ -91,10 +99,12 @@ MNN callback包含宿主同步开销，RKNN报告的是编译单元，参考ONNX
 
 每轮从 [run.template.json](../experiments/templates/run.template.json) 和 [design.template.md](../experiments/templates/design.template.md) 创建独立记录，填写已知字段，缺失保留null。模板自身标为 `template_not_measurement`，不可纳入实测样本。
 
-推荐结构：
+目录布局、候选/运行命名、状态枚举和每轮必须提交的文件以 [CONVENTIONS.md](CONVENTIONS.md) 为准；候选登记在 `experiments/index.json`，运行登记在 `benchmarks/history/index.json`。推荐结构：
 
 ```text
-experiments/<candidate-id>/candidate.json, design.md
+experiments/index.json, <candidate-id>/candidate.json, design.md
+principles/NN-<candidate-id>.md
+kernels/<candidate-id>/, src/<engine>/overlays/<candidate-id>/
 benchmarks/history/<run-id>/
   manifest.json, summary.json, validation.json
   bench/               小型逐次微基准、消融
