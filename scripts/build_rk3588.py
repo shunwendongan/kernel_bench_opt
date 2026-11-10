@@ -52,7 +52,7 @@ def main():
         configure += [f"-DKERNEL_BENCH_RKNN_INCLUDE={args.rknn_include.resolve()}",
                       f"-DKERNEL_BENCH_RKNN_LIBRARY={args.rknn_lib.resolve()}"]
     compile_cmd = ["cmake", "--build", str(build), "--target", "bigvgan_replay", "vcb_eval",
-                   "omni_ab", "omni_batch_ab", "bench_deconv", "--parallel", str(args.jobs)]
+                   "omni_ab", "omni_batch_ab", "bench_deconv", "bench_deconv_v2", "--parallel", str(args.jobs)]
     for command in (configure, compile_cmd):
         print(shlex.join(command), flush=True)
     if args.dry_run:

@@ -48,24 +48,36 @@
       "before_sha256": null
     },
     {
-      "source": "src/mnn/omni_rknn_prefix.hpp",
+      "source": "src/mnn/omni_rknn_prefix.v2.hpp",
       "path": "transformers/llm/engine/src/omni_rknn_prefix.hpp",
-      "before_sha256": null
+      "before_sha256": null,
+      "accepted_previous_sha256": [
+        "79859f273f139dfcd96bfa4aaeace180ec215e1be4223806bc28a138bb736035"
+      ]
     },
     {
-      "source": "src/mnn/DeconvBufExecution.candidate.cpp",
+      "source": "src/mnn/DeconvBufExecution.v2.cpp",
       "path": "source/backend/opencl/execution/buffer/DeconvBufExecution.cpp",
-      "before_sha256": "e24139fefcbc7def3a705894565a99e377c2e44beab33bf0093a938515511ce9"
+      "before_sha256": "e24139fefcbc7def3a705894565a99e377c2e44beab33bf0093a938515511ce9",
+      "accepted_previous_sha256": [
+        "49ec18b80cf6abf136c9f92ebf759c66f792f482af7f820a1d069a7c50d4d1ed"
+      ]
     },
     {
-      "source": "src/mnn/DeconvBufExecution.task.hpp",
-      "path": "source/backend/opencl/execution/buffer/DeconvBufExecution.task.hpp",
+      "source": "src/mnn/DeconvBufExecution.v2.hpp",
+      "path": "source/backend/opencl/execution/buffer/DeconvBufExecution.v2.hpp",
       "before_sha256": null
     },
     {
       "source": "kernels/bigvgan_deconv_source.hpp",
       "path": "source/backend/opencl/execution/buffer/bigvgan_deconv_source.hpp",
       "before_sha256": null
+    },
+    {
+      "source": "kernels/v2/bigvgan_deconv1d_v2_source.hpp",
+      "path": "source/backend/opencl/execution/buffer/bigvgan_deconv1d_v2_source.hpp",
+      "before_sha256": null
     }
-  ]
+  ],
+  "candidate_set": "bigvgan-deconv1d-v2 + rknn-audio-prefix-v2 (v1 sources kept in src/mnn for history)"
 }

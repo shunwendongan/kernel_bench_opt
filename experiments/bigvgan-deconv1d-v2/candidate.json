@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "candidate_id": "bigvgan-deconv1d-v2",
+  "parent_candidate_id": "bigvgan-convtranspose-tile4",
+  "status": "source_delivered_board_validation_pending",
+  "source_base_commit": "1ee7973f0a65378d9e234bc0972534a1f80e04bd",
+  "engine": {
+    "name": "MNN",
+    "revision": "7e3c6fb5225d3ccf22807ee641332669df34650d",
+    "backend": "OpenCL buffer"
+  },
+  "target": {
+    "nodes": "/ups.0.0 .. /ups.5.0 ConvTranspose (BigVGAN upsamplers); any eligible 1-D Deconvolution with OMNI_BIGVGAN_DECONV_V2_NODES=all",
+    "shapes": [
+      {"node": "/ups.0.0", "ci": 1536, "co": 768, "K": 11, "S": 5, "P": 3},
+      {"node": "/ups.1.0", "ci": 768, "co": 384, "K": 7, "S": 3, "P": 2},
+      {"node": "/ups.2.0 .. /ups.5.0", "ci": "384/192/96/48", "co": "192/96/48/24", "K": 4, "S": 2, "P": 1}
+    ],
+    "supported_T": "any (no whitelist); requires batch 1, groups 1, dilation 1, no output padding, K - 2P == S",
+    "precision": "unchanged: FLOAT/FLOAT4 from the MNN runtime; identical per-output mad order to deconv_2d"
+  },
+  "change": "Phase-decomposed generic 1-D ConvTranspose; register tile of TT time positions x OCB output-channel blocks; one input window per ic block shared by all taps and OCB blocks; time-spanning default local size {4,8,1}",
+  "integration": {
+    "source": "src/mnn/DeconvBufExecution.v2.cpp",
+    "symbol": "DeconvBufExecution::onEncode",
+    "enable": "OMNI_BIGVGAN_DECONV_V2=1 (with OMNI_BIGVGAN_DECONV_TILE unset or 0)",
+    "scope": "OMNI_BIGVGAN_DECONV_V2_NODES=ups|all|<comma-separated names>",
+    "tuning": "OMNI_DECONV_V2_TT, OMNI_DECONV_V2_OCB, OMNI_DECONV_V2_LWS (x,y,z|tune), OMNI_DECONV_V2_K<k>=TT:OCB[:x,y,z]",
+    "default": "baseline deconv_2d; tile4 path retained unchanged"
+  },
+  "source_files": [
+    {"path": "kernels/v2/bigvgan_deconv1d_v2.cl", "sha256": "bfb9fcc1789cecaef63ff5a2b7da693cd100534f8d152deb0ae3486afdbfe7f8"},
+    {"path": "kernels/v2/bigvgan_deconv1d_v2_source.hpp", "sha256": "fb28a1a32c2795c7ca484717967c92b9f496505059a67c6a7248251830595c2d"},
+    {"path": "kernels/v2/bench_deconv_v2.cpp", "sha256": "a775972a15508088d600d48c47862b5db61a446c9de745893086c75595e8190e"},
+    {"path": "src/mnn/DeconvBufExecution.v2.cpp", "sha256": "cebf45a2eb6dada313cf4523b272413300231ecc41a1e9ffe0e5cf2ebe1f1d66"},
+    {"path": "src/mnn/DeconvBufExecution.v2.hpp", "sha256": "cfe87fc10677b931f68508e0453c1298e5e7853519002218f76587d5e3aaed69"},
+    {"path": "tools/verify/prove_tap_order.py", "sha256": "a1370a62e333f896061e92edf979e9c67075c33910d6e859833732f0d7f6695f"},
+    {"path": "scripts/run_v2_board.sh", "sha256": "4be1554951c6037ff92ae0a3925c82b6ae9f6ee9a7541963e7796e80ab09b67d"}
+  ],
+  "pre_board_checks": {
+    "tap_order_proof": "tools/verify/prove_tap_order.py: 3,160,500 outputs (3 kernel configs x 7 TT x T=1..300) identical (k, ix, load/zero) sequences to MNN deconv_2d",
+    "mnn_syntax": "Overlay compiled with -fsyntax-only inside MNN 7e3c6fb after scripts/prepare_mnn.py (PREPARE_OK)",
+    "dev_gpu_fp32_smoke": "Apple M4 OpenCL 1.2, FP32 only (no cl_khr_fp16): all v2 variants and tile4 bit-equal to deconv_2d for ups.0 T136/T37/T52, ups.1 T680/T37, ups.2 T2040; not a target-device measurement"
+  },
+  "design": "experiments/bigvgan-deconv1d-v2/design.md",
+  "limitations": [
+    "No RK3588/Mali-G610 FP16 run yet; performance and best TT/OCB/LWS must come from scripts/run_v2_board.sh l1",
+    "FP16 bit equality is argued by identical mad order and checked on the board (L1/L2), not on the dev GPU",
+    "Not yet measured end to end"
+  ]
+}

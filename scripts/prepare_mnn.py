@@ -43,7 +43,8 @@ def prepare(source, dry_run=False):
         expected, actual = digest(origin), digest(target)
         if actual == expected:
             continue
-        if actual != item["before_sha256"]:
+        # A tree prepared with an earlier candidate of this repository may be upgraded.
+        if actual != item["before_sha256"] and actual not in item.get("accepted_previous_sha256", []):
             raise RuntimeError(f"Unexpected source content: {target}; use a dedicated pinned checkout")
         changes.append(("copy", item["path"], origin, expected))
     for action, relative, origin, expected in changes:

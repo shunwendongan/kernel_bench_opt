@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "candidate_id": "rknn-audio-prefix-v2",
+  "parent_candidate_id": "rknn-prefix-bigvgan-tile4 (v1 adapter src/mnn/omni_rknn_prefix.hpp)",
+  "status": "source_delivered_board_validation_pending",
+  "source_base_commit": "1ee7973f0a65378d9e234bc0972534a1f80e04bd",
+  "engine": {"name": "MNN", "revision": "7e3c6fb5225d3ccf22807ee641332669df34650d", "rknn_runtime": "2.3.2"},
+  "target": "Audio encoder prefix Conv1 -> GELU -> Conv2(1280->1280, K3, S2) -> GELU on the RK3588 NPU; same .rknn graph and tiling contract as v1",
+  "change": "Persistent pre-allocated IO buffers; optional NPU core mask; optional concurrent tiles via rknn_dup_context bound to cores 0/1/2; optional single-pass FP16 input feed; first-request bitwise self-check against v1 settings with automatic fallback",
+  "integration": {
+    "source": "src/mnn/omni_rknn_prefix.v2.hpp (overlaid as transformers/llm/engine/src/omni_rknn_prefix.hpp; omni.cpp unchanged)",
+    "enable": "OMNI_RKNN_AUDIO as before; v2 options OMNI_RKNN_PARALLEL_TILES, OMNI_RKNN_CORE_MASK, OMNI_RKNN_INPUT_FP16, OMNI_RKNN_SELFCHECK",
+    "default": "all v2 options unset -> v1 runtime behaviour (plus buffer reuse)"
+  },
+  "source_files": [
+    {"path": "src/mnn/omni_rknn_prefix.v2.hpp", "sha256": "8ae33bd5ebcaf82cc86c49104b0cace63836bf255f2d179094faf6f9a9239e6f"}
+  ],
+  "pre_board_checks": {
+    "syntax": "omni.cpp with the v2 adapter compiled with -fsyntax-only against MNN 7e3c6fb and rknn_api.h v2.3.2 (MNN_OMNI_RKNN_PREFIX)"
+  },
+  "design": "experiments/rknn-audio-prefix-v2/design.md",
+  "limitations": [
+    "Does not address the output-equivalence failure of the RKNN route versus the MNN OpenCL encoder (FP16 numerics differ by construction)",
+    "No board run yet"
+  ]
+}
