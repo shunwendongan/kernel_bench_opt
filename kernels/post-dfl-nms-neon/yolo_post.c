@@ -1,4 +1,9 @@
 /* post-dfl-nms-neon implementation. See yolo_post.h for the contract. */
+/* glibc hides clock_gettime/CLOCK_MONOTONIC under strict -std=c11 without this. */
+#if !defined(_POSIX_C_SOURCE) || _POSIX_C_SOURCE < 200809L
+#undef _POSIX_C_SOURCE
+#define _POSIX_C_SOURCE 200809L
+#endif
 #include "yolo_post.h"
 #include "../common/fp16.h"
 

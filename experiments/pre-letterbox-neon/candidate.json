@@ -28,7 +28,7 @@
     },
     {
       "path": "kernels/pre-letterbox-neon/bench_letterbox.c",
-      "sha256": "de655a3cdf823d4609c46f64a730a1c1c2fb28d3dd42c2cf3815769e1a45e4d8"
+      "sha256": "f43b64aeba76fab6d4bfd2fa282fe3be5151d589aab8788f3180da6f200c8b51"
     },
     {
       "path": "kernels/pre-letterbox-neon/letterbox.c",

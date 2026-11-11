@@ -28,11 +28,11 @@
     },
     {
       "path": "kernels/post-dfl-nms-neon/bench_post.c",
-      "sha256": "e18eeae7a3c11805234d9f3289e86af69ac0e10953f238a46e8a7b7390ff2905"
+      "sha256": "d3771446ee6113036eed2ecc5803d1a70d1c409c5e6e518cdad5267a82d2a624"
     },
     {
       "path": "kernels/post-dfl-nms-neon/yolo_post.c",
-      "sha256": "685bbe47420f2921d2b6bc1fd3e00937fe74f9bb39a53ab20aa3f8326889b6f5"
+      "sha256": "cad62bb82a50f6bbb293d260eab1535a0cbb0132555a0e947a93a1b3eec6ca80"
     },
     {
       "path": "kernels/post-dfl-nms-neon/yolo_post.h",
