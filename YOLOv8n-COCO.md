@@ -8,6 +8,19 @@
 - [展示说明与构建方法](benchmarks/presentation/README.md)：说明图边来源、延迟口径与复建方法。
 - [基准总览与测试命令](benchmarks/README.md)：定位两轮实验、测试依赖与证据范围。
 
+## 候选算子与优化原理（2026-11-11 新增）
+
+| 入口 | 内容 |
+| --- | --- |
+| [优化原理文档](principles/README.md) | 7 个候选的原理、不变量与证据边界：head-logits6、io-zerocopy-fp16、post-dfl-nms-neon、pre-letterbox-neon、c2f-split-free、stem-space-to-depth、npu-core-mask-sweep |
+| [热点深度分析](reports/2026-11-11-yolov8n-hotspot-analysis/README.md) | 基于首轮与最终模型 PERF_DETAIL 的时间去向、运行库转换开销、CPU Sigmoid 热点、多核分配观察 |
+| [候选登记与设计记录](experiments/index.json) | `experiments/<id>/candidate.json`（源码哈希）、`design.md`（观察→假设→评测→结果） |
+| [候选源码](kernels/README.md) | `kernels/`（NEON 前后处理）、`src/apps/`（零拷贝桥接 v2）、`tools/npu`（ONNX 图改写与 RKNN 转换）、`tools/verify`（板端 L2/L3） |
+| [计划中的板端运行](benchmarks/history/index.json) | 7 条 planned 记录；完成后补 summary/validation/manifest |
+| [状态表](docs/STATUS.md) · [小组汇报（原理）](汇报材料/2026-11-11_YOLOv8n_RK3588_算子优化原理汇报.md) | 当前全部为“源码交付、待板端验收” |
+
+板端复跑：`scripts/run_yolo_board.sh build|l1|l2|l3`（见脚本头部说明）。图改写变体先在装有 rknn-toolkit2 2.3.2 的 Linux 主机上用 `tools/npu/rewrite_yolov8n_graph.py` 与 `tools/npu/convert_variant.py` 生成 .rknn。原有 `benchmarks/` 基准目录保持不变。
+
 ## 当前结论
 
 | 实验 | 状态 | 说明 |

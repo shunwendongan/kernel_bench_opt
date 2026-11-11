@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "record_type": "planned_run",
+  "task_id": null,
+  "run_id": "20261111-120000-head-logits6-l2",
+  "candidate_id": "head-logits6",
+  "candidates": [
+    "head-logits6"
+  ],
+  "parent_candidate_id": "yolov8n-fp16-cpu-sigmoid-1b213f80",
+  "hypothesis_id": null,
+  "code": {
+    "git_commit": null,
+    "source_base_commit": "c8ac23a29d372ecce00701e6afe7f980abad1bfe",
+    "patch_sha256": null,
+    "source_dirty": null,
+    "command": "scripts/run_yolo_board.sh l2 models/variants/yolov8n_logits6.rknn ${OUT}"
+  },
+  "environment": {
+    "device_id": null,
+    "soc": "RK3588",
+    "os": null,
+    "kernel": null,
+    "runtime": "RKNN 2.3.2 expected",
+    "driver": "0.9.8 expected",
+    "container_image_id": null,
+    "container_packages_sha256": null,
+    "frequency_temperature_load_file": null,
+    "frequency_locked": false
+  },
+  "assets": {
+    "model_sha256_manifest": null,
+    "dataset_sha256_manifest": "benchmarks/yolov8n_home/dataset/samples.json (frozen 40 inputs)",
+    "sample_ids": [],
+    "capture_sha256_manifest": null,
+    "split_group": "yolov8n_home_development40",
+    "inputs": "40 frozen inputs, logits6 .rknn, frozen ONNX for gates"
+  },
+  "measurement": {
+    "level": "l2",
+    "phase": null,
+    "timing_domain": "host perf_counter_ns + C++ steady_clock API spans + RKNN PERF_RUN/PERF_DETAIL",
+    "unit": "ms (perf_run in us)",
+    "profiling_enabled": null,
+    "warmup": 3,
+    "repeats": 3,
+    "seed": 42,
+    "command_file": null,
+    "raw_file": null,
+    "correctness_file": null,
+    "summary_file": null,
+    "metrics": [
+      "run_ms vs final model",
+      "compare_canonical gates",
+      "detection matching",
+      "PERF_DETAIL Sigmoid rows absent"
+    ]
+  },
+  "result": {
+    "status": "planned",
+    "correctness_passed": null,
+    "old_median": null,
+    "candidate_median": null,
+    "ratio_of_medians": null,
+    "failure_reason": null,
+    "notes": "registered 2026-11-11; not executed"
+  },
+  "analysis": {
+    "profile_run_id": null,
+    "mapping_file": null,
+    "mapping_status": null,
+    "source_location": null,
+    "design_file": "experiments/head-logits6/design.md",
+    "decision": null
+  },
+  "data_reuse": {
+    "source_kind": "planned",
+    "review_status": "unreviewed",
+    "training_split": null,
+    "license_provenance": "COCO val2017 CC BY 4.0 annotations; images per COCO licence metadata",
+    "known_limitations": [
+      "frequency not locked",
+      "development images only"
+    ]
+  }
+}

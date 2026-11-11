@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "record_type": "candidate",
+  "candidate_id": "io-zerocopy-fp16",
+  "candidate_kind": "adapter",
+  "parent_candidate_id": "rknn-bridge-v1-inputs-set-outputs-get",
+  "status": "source_delivered",
+  "status_detail": "delivered 2026-11-11 from the hotspot analysis of the first-round and final-model evidence; no RK3588 run yet",
+  "hypothesis": "Binding input/output DMA memory once with rknn_set_io_mem, writing the fp16 input in the native format and reading fp16 outputs in place removes the 13.2 ms inputs_set, 12.0 ms outputs_get and 1.7 ms copy of the first-round bridge without changing rknn_run or the exported float32 outputs.",
+  "source_base_commit": "c8ac23a29d372ecce00701e6afe7f980abad1bfe",
+  "target": {
+    "model": "YOLOv8n Rockchip export, FP16, 640x640, batch 1",
+    "device": "RK3588 (3x NPU, Cortex-A76/A55)",
+    "runtime": "RKNN 2.3.2 / driver 0.9.8",
+    "baseline_evidence": [
+      "benchmarks/yolov8n_home/summary.json",
+      "benchmarks/yolov8n_general/evidence/model/final_cpu_placement.perf.txt"
+    ]
+  },
+  "source_files": [
+    {
+      "path": "kernels/common/fp16.h",
+      "sha256": "a4ea751ebe67f3a9e4903aa585561323c20b2f493ebab1458a4c3cc0466c6864"
+    },
+    {
+      "path": "kernels/common/tensor_view.h",
+      "sha256": "267291fba73de5c884f296e4f9ad68ffbecd9487caa9b96835b5a858325f4b17"
+    },
+    {
+      "path": "kernels/post-dfl-nms-neon/bench_post.c",
+      "sha256": "e18eeae7a3c11805234d9f3289e86af69ac0e10953f238a46e8a7b7390ff2905"
+    },
+    {
+      "path": "kernels/post-dfl-nms-neon/yolo_post.c",
+      "sha256": "685bbe47420f2921d2b6bc1fd3e00937fe74f9bb39a53ab20aa3f8326889b6f5"
+    },
+    {
+      "path": "kernels/post-dfl-nms-neon/yolo_post.h",
+      "sha256": "3771271298b65409f125abb82e6ae8809fd13cc9c5ac83a0354d65dd57e84638"
+    },
+    {
+      "path": "kernels/pre-letterbox-neon/bench_letterbox.c",
+      "sha256": "de655a3cdf823d4609c46f64a730a1c1c2fb28d3dd42c2cf3815769e1a45e4d8"
+    },
+    {
+      "path": "kernels/pre-letterbox-neon/letterbox.c",
+      "sha256": "d330620d6b1a47e65f1b2b7e58485b3e0830edf36c0a32816115906478fe6feb"
+    },
+    {
+      "path": "kernels/pre-letterbox-neon/letterbox.h",
+      "sha256": "a224e31cafdff94a9f8ba16947eafa3be3071edadf792c67c762d3450116b781"
+    },
+    {
+      "path": "src/apps/build_bridge_v2.sh",
+      "sha256": "a6d74858010e10abd047e7b20cf3d291e254a49feb03dd5c839ae64edc075b7f"
+    },
+    {
+      "path": "src/apps/rknn_bridge_v2.cpp",
+      "sha256": "969eb42d2907666c31ef752fec8897b238015715d0aef6aae0eef2cacf2d4084"
+    },
+    {
+      "path": "src/apps/rknn_bridge_v2.py",
+      "sha256": "4714426e6e5b831e531be30c9a0903de15b56b1bc5cb34902d276c14e3f56a27"
+    }
+  ],
+  "dev_evidence": [],
+  "design": "experiments/io-zerocopy-fp16/design.md",
+  "principle": "principles/02-io-zerocopy-fp16.md",
+  "runs": [
+    "20261111-120000-io-zerocopy-fp16-l2",
+    "20261111-120000-yolov8n-v2-combined-l3"
+  ],
+  "limitations": [
+    "compiled only with -fsyntax-only against the vendored rknn_api.h; not yet linked on the board",
+    "pass-through native input format and folded normalization are inferred from runtime metadata and must be confirmed bit-exactly in L2"
+  ]
+}

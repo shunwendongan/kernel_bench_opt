@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "record_type": "workload_branch",
+  "branch": "yolov8n-COCO",
+  "branch_kind": "workload",
+  "model": {
+    "name": "YOLOv8n",
+    "deployment": "Rockchip rknn_model_zoo detection export (9 outputs)",
+    "onnx_sha256": "0c8716701f471067932b797eeb67c8e5db47c693c2557c881d7679ec12e21bc5",
+    "rknn_sha256": {
+      "first_round_npu_sigmoid": "56808e7b2d85de3cc59e953711d158f15b36bb4b33f12a05d8bd27e0a70d5813",
+      "final_cpu_sigmoid": "1b213f80a92b42a9d0709e4fabf77a7e04521cd52a6461be704d627bb9bba3e5"
+    }
+  },
+  "dataset": {
+    "name": "COCO",
+    "split": "val2017",
+    "development_images": 40,
+    "acceptance_images": 4960,
+    "performance_images": 80
+  },
+  "engines": [
+    {
+      "name": "RKNN",
+      "runtime": "2.3.2",
+      "driver": "0.9.8"
+    }
+  ],
+  "devices": [
+    "RK3588 / 3x NPU / Cortex-A76+A55"
+  ],
+  "candidate_index": "experiments/index.json",
+  "run_index": "benchmarks/history/index.json",
+  "conventions": "main branch docs/CONVENTIONS.md (legacy benchmark layout under benchmarks/ kept as is)",
+  "shared_tooling_branch": "main",
+  "legacy_layout": [
+    "benchmarks/yolov8n_home",
+    "benchmarks/yolov8n_general",
+    "benchmarks/presentation",
+    "benchmarks/fixtures",
+    "汇报材料"
+  ]
+}

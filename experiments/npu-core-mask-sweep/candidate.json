@@ -1,0 +1,39 @@
+{
+  "schema_version": 2,
+  "record_type": "candidate",
+  "candidate_id": "npu-core-mask-sweep",
+  "candidate_kind": "system",
+  "parent_candidate_id": "rknn-bridge-v1-core-mask-7",
+  "status": "proposed",
+  "status_detail": "delivered 2026-11-11 from the hotspot analysis of the first-round and final-model evidence; no RK3588 run yet",
+  "hypothesis": "With core_mask=7 the PERF_DETAIL WorkLoad column shows every ConvExSwish on one core; rknn_run with core_mask=1 differs from 7 only by the Add/Concat/Conv/ConvClip nodes, so three cores do not shorten single-frame latency for this model.",
+  "source_base_commit": "c8ac23a29d372ecce00701e6afe7f980abad1bfe",
+  "target": {
+    "model": "YOLOv8n Rockchip export, FP16, 640x640, batch 1",
+    "device": "RK3588 (3x NPU, Cortex-A76/A55)",
+    "runtime": "RKNN 2.3.2 / driver 0.9.8",
+    "baseline_evidence": [
+      "benchmarks/yolov8n_home/summary.json",
+      "benchmarks/yolov8n_general/evidence/model/final_cpu_placement.perf.txt"
+    ]
+  },
+  "source_files": [
+    {
+      "path": "src/apps/rknn_bridge_v2.cpp",
+      "sha256": "969eb42d2907666c31ef752fec8897b238015715d0aef6aae0eef2cacf2d4084"
+    },
+    {
+      "path": "tools/verify/l2_compare_bridges.py",
+      "sha256": "b88bfc14040f98867182cba097e9bb84ae9388895e95b82b77bcbd11ffcf9f82"
+    }
+  ],
+  "dev_evidence": [],
+  "design": "experiments/npu-core-mask-sweep/design.md",
+  "principle": "principles/07-npu-core-mask-sweep.md",
+  "runs": [
+    "20261111-120000-npu-core-mask-sweep-l2"
+  ],
+  "limitations": [
+    "observation only; no board measurement"
+  ]
+}

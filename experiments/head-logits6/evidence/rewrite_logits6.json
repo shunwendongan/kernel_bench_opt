@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "record_type": "graph_rewrite",
+  "source_sha256": "0c8716701f471067932b797eeb67c8e5db47c693c2557c881d7679ec12e21bc5",
+  "source_path": "models/yolov8n.onnx",
+  "transforms": [
+    "logits6"
+  ],
+  "heads": [
+    {
+      "scale": 80,
+      "regression": "318",
+      "logits": "cls_logits_80x80",
+      "removed_nodes": [
+        "/model.22/Sigmoid",
+        "/model.22/ReduceSum",
+        "/model.22/Clip",
+        "/model.22/Constant",
+        "/model.22/Constant_1"
+      ],
+      "old_probability_output": "onnx::ReduceSum_326",
+      "old_clip_sum_output": "331"
+    },
+    {
+      "scale": 40,
+      "regression": "338",
+      "logits": "cls_logits_40x40",
+      "removed_nodes": [
+        "/model.22/Sigmoid_1",
+        "/model.22/ReduceSum_1",
+        "/model.22/Clip_1",
+        "/model.22/Constant_2",
+        "/model.22/Constant_3"
+      ],
+      "old_probability_output": "onnx::ReduceSum_346",
+      "old_clip_sum_output": "350"
+    },
+    {
+      "scale": 20,
+      "regression": "357",
+      "logits": "cls_logits_20x20",
+      "removed_nodes": [
+        "/model.22/Sigmoid_2",
+        "/model.22/ReduceSum_2",
+        "/model.22/Clip_2",
+        "/model.22/Constant_4",
+        "/model.22/Constant_5"
+      ],
+      "old_probability_output": "onnx::ReduceSum_365",
+      "old_clip_sum_output": "369"
+    }
+  ],
+  "splits": [],
+  "stem": null,
+  "node_count_before": 228,
+  "node_count_after": 213,
+  "outputs": [
+    {
+      "name": "318",
+      "shape": [
+        1,
+        64,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "cls_logits_80x80",
+      "shape": [
+        1,
+        80,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "338",
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "name": "cls_logits_40x40",
+      "shape": [
+        1,
+        80,
+        40,
+        40
+      ]
+    },
+    {
+      "name": "357",
+      "shape": [
+        1,
+        64,
+        20,
+        20
+      ]
+    },
+    {
+      "name": "cls_logits_20x20",
+      "shape": [
+        1,
+        80,
+        20,
+        20
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "name": "images",
+      "shape": [
+        1,
+        3,
+        640,
+        640
+      ]
+    }
+  ],
+  "output_path": "models/variants/yolov8n_logits6.onnx",
+  "output_sha256": "caeffee27168ebd33273c8a649ff16975e38b4117e67ef9b06397e0c5bf82a91"
+}

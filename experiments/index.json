@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "record_type": "candidate_index",
+  "branch": "yolov8n-COCO",
+  "notes": "One entry per experiments/<candidate-id>/candidate.json. Status values follow main/docs/CONVENTIONS.md section 4. Regenerate with tools/make_records.py.",
+  "candidates": [
+    {
+      "candidate_id": "head-logits6",
+      "candidate_kind": "subgraph",
+      "parent_candidate_id": "yolov8n-fp16-cpu-sigmoid-1b213f80",
+      "status": "source_delivered",
+      "candidate_json": "experiments/head-logits6/candidate.json",
+      "design": "experiments/head-logits6/design.md",
+      "principle": "principles/01-head-logits6.md",
+      "sources": [
+        "kernels/common/",
+        "kernels/post-dfl-nms-neon/",
+        "tools/npu/",
+        "tools/verify/"
+      ],
+      "overlay_sets": [],
+      "runs": [
+        "20261111-120000-head-logits6-l2",
+        "20261111-120000-yolov8n-v2-combined-l3"
+      ]
+    },
+    {
+      "candidate_id": "io-zerocopy-fp16",
+      "candidate_kind": "adapter",
+      "parent_candidate_id": "rknn-bridge-v1-inputs-set-outputs-get",
+      "status": "source_delivered",
+      "candidate_json": "experiments/io-zerocopy-fp16/candidate.json",
+      "design": "experiments/io-zerocopy-fp16/design.md",
+      "principle": "principles/02-io-zerocopy-fp16.md",
+      "sources": [
+        "kernels/common/",
+        "kernels/post-dfl-nms-neon/",
+        "kernels/pre-letterbox-neon/",
+        "src/apps/"
+      ],
+      "overlay_sets": [],
+      "runs": [
+        "20261111-120000-io-zerocopy-fp16-l2",
+        "20261111-120000-yolov8n-v2-combined-l3"
+      ]
+    },
+    {
+      "candidate_id": "post-dfl-nms-neon",
+      "candidate_kind": "kernel",
+      "parent_candidate_id": "yolo-common-postprocess-numpy",
+      "status": "source_delivered",
+      "candidate_json": "experiments/post-dfl-nms-neon/candidate.json",
+      "design": "experiments/post-dfl-nms-neon/design.md",
+      "principle": "principles/03-post-dfl-nms-neon.md",
+      "sources": [
+        "kernels/common/",
+        "kernels/post-dfl-nms-neon/",
+        "scripts/",
+        "tools/"
+      ],
+      "overlay_sets": [],
+      "runs": [
+        "20261111-120000-host-kernels-l1",
+        "20261111-120000-yolov8n-v2-combined-l3"
+      ]
+    },
+    {
+      "candidate_id": "pre-letterbox-neon",
+      "candidate_kind": "kernel",
+      "parent_candidate_id": "yolo-common-letterbox-opencv",
+      "status": "source_delivered",
+      "candidate_json": "experiments/pre-letterbox-neon/candidate.json",
+      "design": "experiments/pre-letterbox-neon/design.md",
+      "principle": "principles/04-pre-letterbox-neon.md",
+      "sources": [
+        "kernels/common/",
+        "kernels/pre-letterbox-neon/",
+        "scripts/",
+        "tools/"
+      ],
+      "overlay_sets": [],
+      "runs": [
+        "20261111-120000-host-kernels-l1",
+        "20261111-120000-yolov8n-v2-combined-l3"
+      ]
+    },
+    {
+      "candidate_id": "c2f-split-free",
+      "candidate_kind": "subgraph",
+      "parent_candidate_id": "yolov8n-fp16-cpu-sigmoid-1b213f80",
+      "status": "source_delivered",
+      "candidate_json": "experiments/c2f-split-free/candidate.json",
+      "design": "experiments/c2f-split-free/design.md",
+      "principle": "principles/05-c2f-split-free.md",
+      "sources": [
+        "tools/npu/",
+        "tools/verify/"
+      ],
+      "overlay_sets": [],
+      "runs": [
+        "20261111-120000-c2f-split-free-l2"
+      ]
+    },
+    {
+      "candidate_id": "stem-space-to-depth",
+      "candidate_kind": "subgraph",
+      "parent_candidate_id": "yolov8n-fp16-cpu-sigmoid-1b213f80",
+      "status": "source_delivered",
+      "candidate_json": "experiments/stem-space-to-depth/candidate.json",
+      "design": "experiments/stem-space-to-depth/design.md",
+      "principle": "principles/06-stem-space-to-depth.md",
+      "sources": [
+        "tools/npu/",
+        "tools/verify/"
+      ],
+      "overlay_sets": [],
+      "runs": [
+        "20261111-120000-stem-space-to-depth-l2"
+      ]
+    },
+    {
+      "candidate_id": "npu-core-mask-sweep",
+      "candidate_kind": "system",
+      "parent_candidate_id": "rknn-bridge-v1-core-mask-7",
+      "status": "proposed",
+      "candidate_json": "experiments/npu-core-mask-sweep/candidate.json",
+      "design": "experiments/npu-core-mask-sweep/design.md",
+      "principle": "principles/07-npu-core-mask-sweep.md",
+      "sources": [
+        "src/apps/",
+        "tools/verify/"
+      ],
+      "overlay_sets": [],
+      "runs": [
+        "20261111-120000-npu-core-mask-sweep-l2"
+      ]
+    }
+  ]
+}

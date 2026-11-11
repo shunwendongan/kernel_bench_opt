@@ -29,3 +29,24 @@ jobs:
         run: python -m pytest benchmarks/yolov8n_general/tests -q
       - name: 离线汇报与图关系检查
         run: python -m pytest benchmarks/presentation/tests -q
+  host-kernel-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: benchmarks/requirements.txt
+      - name: 安装固定测试依赖
+        run: python -m pip install -r benchmarks/requirements.txt
+      - name: 构建宿主 kernel（x86 走可移植路径）与微基准
+        run: |
+          bash scripts/build_host_kernels.sh --bench
+          ./build/bench_post 20 0.02 0.25
+          ./build/bench_letterbox 10
+      - name: 桥接 v2 语法检查（无 RKNN 运行库）
+        run: bash src/apps/build_bridge_v2.sh --syntax-only
+      - name: 候选 kernel 与图改写测试
+        run: python -m pytest tests -q

@@ -1,0 +1,186 @@
+{
+  "per_output": {
+    "0": {
+      "role": "regression",
+      "shape": [
+        1,
+        64,
+        80,
+        80
+      ],
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "bit_identical_images": 6
+    },
+    "1": {
+      "role": "probability",
+      "shape": [
+        1,
+        80,
+        80,
+        80
+      ],
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "bit_identical_images": 6
+    },
+    "2": {
+      "role": "clip_sum",
+      "shape": [
+        1,
+        1,
+        80,
+        80
+      ],
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "bit_identical_images": 6
+    },
+    "3": {
+      "role": "regression",
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ],
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "bit_identical_images": 6
+    },
+    "4": {
+      "role": "probability",
+      "shape": [
+        1,
+        80,
+        40,
+        40
+      ],
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "bit_identical_images": 6
+    },
+    "5": {
+      "role": "clip_sum",
+      "shape": [
+        1,
+        1,
+        40,
+        40
+      ],
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "bit_identical_images": 6
+    },
+    "6": {
+      "role": "regression",
+      "shape": [
+        1,
+        64,
+        20,
+        20
+      ],
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "bit_identical_images": 6
+    },
+    "7": {
+      "role": "probability",
+      "shape": [
+        1,
+        80,
+        20,
+        20
+      ],
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "bit_identical_images": 6
+    },
+    "8": {
+      "role": "clip_sum",
+      "shape": [
+        1,
+        1,
+        20,
+        20
+      ],
+      "max_abs": 0.0,
+      "relative_l2": 0.0,
+      "bit_identical_images": 6
+    }
+  },
+  "worst": {
+    "max_abs": 0.0,
+    "relative_l2": 0.0
+  },
+  "detections": [
+    {
+      "image": "synthetic_0_500x375",
+      "reference_detections": 0,
+      "variant_detections": 0,
+      "same_count": true,
+      "same_classes": true,
+      "max_box_abs_px": 0.0,
+      "max_score_abs": 0.0
+    },
+    {
+      "image": "synthetic_1_640x480",
+      "reference_detections": 0,
+      "variant_detections": 0,
+      "same_count": true,
+      "same_classes": true,
+      "max_box_abs_px": 0.0,
+      "max_score_abs": 0.0
+    },
+    {
+      "image": "synthetic_2_427x640",
+      "reference_detections": 1,
+      "variant_detections": 1,
+      "same_count": true,
+      "same_classes": true,
+      "max_box_abs_px": 0.0,
+      "max_score_abs": 0.0
+    },
+    {
+      "image": "synthetic_3_1024x768",
+      "reference_detections": 0,
+      "variant_detections": 0,
+      "same_count": true,
+      "same_classes": true,
+      "max_box_abs_px": 0.0,
+      "max_score_abs": 0.0
+    },
+    {
+      "image": "synthetic_4_333x500",
+      "reference_detections": 0,
+      "variant_detections": 0,
+      "same_count": true,
+      "same_classes": true,
+      "max_box_abs_px": 0.0,
+      "max_score_abs": 0.0
+    },
+    {
+      "image": "synthetic_5_640x640",
+      "reference_detections": 2,
+      "variant_detections": 2,
+      "same_count": true,
+      "same_classes": true,
+      "max_box_abs_px": 0.0,
+      "max_score_abs": 0.0
+    }
+  ],
+  "images": 6,
+  "host_space_to_depth_input": false,
+  "timing_ms_mean": {
+    "reference_ms": 98.569861,
+    "variant_ms": 94.00077066666665
+  },
+  "variant_output_count": 9,
+  "schema_version": 1,
+  "record_type": "onnx_variant_comparison",
+  "reference_sha256": "0c8716701f471067932b797eeb67c8e5db47c693c2557c881d7679ec12e21bc5",
+  "variant_sha256": "4e28179b5a81c435d6a0523465d95459228312e59e054278934079d4fd54f62e",
+  "gate_max_abs": 0.0001,
+  "passed": true,
+  "scope": "float32 ONNX Runtime CPU equivalence only; not an RK3588 measurement"
+}

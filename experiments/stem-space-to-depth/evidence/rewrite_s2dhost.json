@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "record_type": "graph_rewrite",
+  "source_sha256": "0c8716701f471067932b797eeb67c8e5db47c693c2557c881d7679ec12e21bc5",
+  "source_path": "models/yolov8n.onnx",
+  "transforms": [
+    "s2d-stem-host"
+  ],
+  "heads": [],
+  "splits": [],
+  "stem": {
+    "mode": "host",
+    "input": "images_s2d",
+    "input_shape": [
+      1,
+      12,
+      320,
+      320
+    ],
+    "channel_order": "(row_phase*2 + col_phase)*3 + rgb_channel",
+    "conv_kernel": [
+      2,
+      2
+    ],
+    "conv_pads": [
+      1,
+      1,
+      0,
+      0
+    ]
+  },
+  "node_count_before": 228,
+  "node_count_after": 228,
+  "outputs": [
+    {
+      "name": "318",
+      "shape": [
+        1,
+        64,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "onnx::ReduceSum_326",
+      "shape": [
+        1,
+        80,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "331",
+      "shape": [
+        1,
+        1,
+        80,
+        80
+      ]
+    },
+    {
+      "name": "338",
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ]
+    },
+    {
+      "name": "onnx::ReduceSum_346",
+      "shape": [
+        1,
+        80,
+        40,
+        40
+      ]
+    },
+    {
+      "name": "350",
+      "shape": [
+        1,
+        1,
+        40,
+        40
+      ]
+    },
+    {
+      "name": "357",
+      "shape": [
+        1,
+        64,
+        20,
+        20
+      ]
+    },
+    {
+      "name": "onnx::ReduceSum_365",
+      "shape": [
+        1,
+        80,
+        20,
+        20
+      ]
+    },
+    {
+      "name": "369",
+      "shape": [
+        1,
+        1,
+        20,
+        20
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "name": "images_s2d",
+      "shape": [
+        1,
+        12,
+        320,
+        320
+      ]
+    }
+  ],
+  "output_path": "models/variants/yolov8n_s2dhost.onnx",
+  "output_sha256": "df499a79139298024a219264c69384ba6e3815338dc032a93eb6ec72f54c6d9a"
+}

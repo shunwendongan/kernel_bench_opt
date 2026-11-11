@@ -1,0 +1,54 @@
+{
+  "schema_version": 2,
+  "record_type": "candidate",
+  "candidate_id": "stem-space-to-depth",
+  "candidate_kind": "subgraph",
+  "parent_candidate_id": "yolov8n-fp16-cpu-sigmoid-1b213f80",
+  "status": "source_delivered",
+  "status_detail": "delivered 2026-11-11 from the hotspot analysis of the first-round and final-model evidence; no RK3588 run yet",
+  "hypothesis": "Rewriting the 3-channel 3x3/s2 stem as a 12-channel 2x2/s1 convolution on the space-to-depth tensor (graph node or host packing) lowers the 4.1 ms, 0.7 % MAC-usage model.0 node by improving channel alignment and access pattern.",
+  "source_base_commit": "c8ac23a29d372ecce00701e6afe7f980abad1bfe",
+  "target": {
+    "model": "YOLOv8n Rockchip export, FP16, 640x640, batch 1",
+    "device": "RK3588 (3x NPU, Cortex-A76/A55)",
+    "runtime": "RKNN 2.3.2 / driver 0.9.8",
+    "baseline_evidence": [
+      "benchmarks/yolov8n_home/summary.json",
+      "benchmarks/yolov8n_general/evidence/model/final_cpu_placement.perf.txt"
+    ]
+  },
+  "source_files": [
+    {
+      "path": "tools/npu/convert_variant.py",
+      "sha256": "1455e4ff16ec76dfb72ead5801fd9051cc8a18eba0d9149ee02325d335afca62"
+    },
+    {
+      "path": "tools/npu/rewrite_yolov8n_graph.py",
+      "sha256": "906421a399a534b16632e2b3c88ae44ea78d98b85a5b361eade213879f67e308"
+    },
+    {
+      "path": "tools/verify/compare_onnx_variants.py",
+      "sha256": "6422e9fd779839211a85a694b00bc1e898e8193506bd0acaa16c96abd01505ce"
+    }
+  ],
+  "dev_evidence": [
+    {
+      "path": "experiments/stem-space-to-depth/evidence/compare_s2dgraph.json",
+      "sha256": "64bf2b4b851f1fd1c6e142e717049e83fb91120603a2bddb7fe2e130b427d6da"
+    },
+    {
+      "path": "experiments/stem-space-to-depth/evidence/compare_s2dhost.json",
+      "sha256": "12b4f3fb339b1cf6774d55552648361513797221347671d1117209296738d9c4"
+    }
+  ],
+  "design": "experiments/stem-space-to-depth/design.md",
+  "principle": "principles/06-stem-space-to-depth.md",
+  "runs": [
+    "20261111-120000-stem-space-to-depth-l2"
+  ],
+  "limitations": [
+    "RKNN support/efficiency of SpaceToDepth and 2x2 kernels unknown",
+    "host variant changes the input contract; NEON s2d packing not implemented yet",
+    "float32 max abs 4.0e-5 from reordered accumulation"
+  ]
+}

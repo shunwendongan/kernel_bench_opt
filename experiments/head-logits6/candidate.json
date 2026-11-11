@@ -1,0 +1,75 @@
+{
+  "schema_version": 2,
+  "record_type": "candidate",
+  "candidate_id": "head-logits6",
+  "candidate_kind": "subgraph",
+  "parent_candidate_id": "yolov8n-fp16-cpu-sigmoid-1b213f80",
+  "status": "source_delivered",
+  "status_detail": "delivered 2026-11-11 from the hotspot analysis of the first-round and final-model evidence; no RK3588 run yet",
+  "hypothesis": "Removing the three Sigmoid/ReduceSum/Clip tails and exporting class logits deletes the 24.5 ms CPU Sigmoid inside rknn_run; the host applies float32 sigmoid only to the per-anchor maximum logit, and canonical9 reconstructed with float32 sigmoid still passes the frozen numeric gates.",
+  "source_base_commit": "c8ac23a29d372ecce00701e6afe7f980abad1bfe",
+  "target": {
+    "model": "YOLOv8n Rockchip export, FP16, 640x640, batch 1",
+    "device": "RK3588 (3x NPU, Cortex-A76/A55)",
+    "runtime": "RKNN 2.3.2 / driver 0.9.8",
+    "baseline_evidence": [
+      "benchmarks/yolov8n_home/summary.json",
+      "benchmarks/yolov8n_general/evidence/model/final_cpu_placement.perf.txt"
+    ]
+  },
+  "source_files": [
+    {
+      "path": "kernels/common/fp16.h",
+      "sha256": "a4ea751ebe67f3a9e4903aa585561323c20b2f493ebab1458a4c3cc0466c6864"
+    },
+    {
+      "path": "kernels/common/tensor_view.h",
+      "sha256": "267291fba73de5c884f296e4f9ad68ffbecd9487caa9b96835b5a858325f4b17"
+    },
+    {
+      "path": "kernels/post-dfl-nms-neon/bench_post.c",
+      "sha256": "e18eeae7a3c11805234d9f3289e86af69ac0e10953f238a46e8a7b7390ff2905"
+    },
+    {
+      "path": "kernels/post-dfl-nms-neon/yolo_post.c",
+      "sha256": "685bbe47420f2921d2b6bc1fd3e00937fe74f9bb39a53ab20aa3f8326889b6f5"
+    },
+    {
+      "path": "kernels/post-dfl-nms-neon/yolo_post.h",
+      "sha256": "3771271298b65409f125abb82e6ae8809fd13cc9c5ac83a0354d65dd57e84638"
+    },
+    {
+      "path": "tools/npu/convert_variant.py",
+      "sha256": "1455e4ff16ec76dfb72ead5801fd9051cc8a18eba0d9149ee02325d335afca62"
+    },
+    {
+      "path": "tools/npu/rewrite_yolov8n_graph.py",
+      "sha256": "906421a399a534b16632e2b3c88ae44ea78d98b85a5b361eade213879f67e308"
+    },
+    {
+      "path": "tools/verify/compare_onnx_variants.py",
+      "sha256": "6422e9fd779839211a85a694b00bc1e898e8193506bd0acaa16c96abd01505ce"
+    }
+  ],
+  "dev_evidence": [
+    {
+      "path": "experiments/head-logits6/evidence/compare_logits6.json",
+      "sha256": "5ea9401bd2feba2d4bb4cd52313123999147eb8bdf86467148d9467fc6bdd164"
+    },
+    {
+      "path": "experiments/head-logits6/evidence/compare_logits6_splitfree.json",
+      "sha256": "ebb8fe2367084f7b0284abcf7cfa928a9b907aca60215868a9a152927a52019a"
+    }
+  ],
+  "design": "experiments/head-logits6/design.md",
+  "principle": "principles/01-head-logits6.md",
+  "runs": [
+    "20261111-120000-head-logits6-l2",
+    "20261111-120000-yolov8n-v2-combined-l3"
+  ],
+  "limitations": [
+    "RKNN conversion not yet executed (needs rknn-toolkit2 2.3.2 on Linux x86)",
+    "native output layout of the 6-output model unknown until queried on the board",
+    "no RK3588 timing yet"
+  ]
+}

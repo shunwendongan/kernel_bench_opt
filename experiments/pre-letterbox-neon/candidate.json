@@ -1,0 +1,61 @@
+{
+  "schema_version": 2,
+  "record_type": "candidate",
+  "candidate_id": "pre-letterbox-neon",
+  "candidate_kind": "kernel",
+  "parent_candidate_id": "yolo-common-letterbox-opencv",
+  "status": "source_delivered",
+  "status_detail": "delivered 2026-11-11 from the hotspot analysis of the first-round and final-model evidence; no RK3588 run yet",
+  "hypothesis": "A fixed-point letterbox that reproduces OpenCV INTER_LINEAR byte for byte, fused with 114 padding, BGR->RGB and fp16 NHWC packing into the input DMA buffer, keeps the frozen input hashes while removing the OpenCV passes and the runtime uint8->fp16 conversion.",
+  "source_base_commit": "c8ac23a29d372ecce00701e6afe7f980abad1bfe",
+  "target": {
+    "model": "YOLOv8n Rockchip export, FP16, 640x640, batch 1",
+    "device": "RK3588 (3x NPU, Cortex-A76/A55)",
+    "runtime": "RKNN 2.3.2 / driver 0.9.8",
+    "baseline_evidence": [
+      "benchmarks/yolov8n_home/summary.json",
+      "benchmarks/yolov8n_general/evidence/model/final_cpu_placement.perf.txt"
+    ]
+  },
+  "source_files": [
+    {
+      "path": "kernels/common/fp16.h",
+      "sha256": "a4ea751ebe67f3a9e4903aa585561323c20b2f493ebab1458a4c3cc0466c6864"
+    },
+    {
+      "path": "kernels/common/tensor_view.h",
+      "sha256": "267291fba73de5c884f296e4f9ad68ffbecd9487caa9b96835b5a858325f4b17"
+    },
+    {
+      "path": "kernels/pre-letterbox-neon/bench_letterbox.c",
+      "sha256": "de655a3cdf823d4609c46f64a730a1c1c2fb28d3dd42c2cf3815769e1a45e4d8"
+    },
+    {
+      "path": "kernels/pre-letterbox-neon/letterbox.c",
+      "sha256": "d330620d6b1a47e65f1b2b7e58485b3e0830edf36c0a32816115906478fe6feb"
+    },
+    {
+      "path": "kernels/pre-letterbox-neon/letterbox.h",
+      "sha256": "a224e31cafdff94a9f8ba16947eafa3be3071edadf792c67c762d3450116b781"
+    },
+    {
+      "path": "scripts/build_host_kernels.sh",
+      "sha256": "df5f679477c1c904e331a271b666c46daffd16f74a84d3002ac1194af4501d2b"
+    },
+    {
+      "path": "tools/yolo_kernels.py",
+      "sha256": "0e85343aad48861a18d44ddcfbffd49a33984b176128843378783831f9687949"
+    }
+  ],
+  "dev_evidence": [],
+  "design": "experiments/pre-letterbox-neon/design.md",
+  "principle": "principles/04-pre-letterbox-neon.md",
+  "runs": [
+    "20261111-120000-host-kernels-l1",
+    "20261111-120000-yolov8n-v2-combined-l3"
+  ],
+  "limitations": [
+    "byte equality verified against opencv-python 4.11 arm64 on the dev machine; board OpenCV build to be confirmed via frozen input hashes",
+    "horizontal pass is scalar int32 code"
+  ]
+}

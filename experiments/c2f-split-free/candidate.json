@@ -1,0 +1,49 @@
+{
+  "schema_version": 2,
+  "record_type": "candidate",
+  "candidate_id": "c2f-split-free",
+  "candidate_kind": "subgraph",
+  "parent_candidate_id": "yolov8n-fp16-cpu-sigmoid-1b213f80",
+  "status": "source_delivered",
+  "status_detail": "delivered 2026-11-11 from the hotspot analysis of the first-round and final-model evidence; no RK3588 run yet",
+  "hypothesis": "Replacing every C2f cv1->Split with two half-width 1x1 convolutions (sliced weights) removes the eight Split copy nodes (2.86 ms node time) with bit-identical outputs; the extra read of the cv1 input costs less than the Split read+write.",
+  "source_base_commit": "c8ac23a29d372ecce00701e6afe7f980abad1bfe",
+  "target": {
+    "model": "YOLOv8n Rockchip export, FP16, 640x640, batch 1",
+    "device": "RK3588 (3x NPU, Cortex-A76/A55)",
+    "runtime": "RKNN 2.3.2 / driver 0.9.8",
+    "baseline_evidence": [
+      "benchmarks/yolov8n_home/summary.json",
+      "benchmarks/yolov8n_general/evidence/model/final_cpu_placement.perf.txt"
+    ]
+  },
+  "source_files": [
+    {
+      "path": "tools/npu/convert_variant.py",
+      "sha256": "1455e4ff16ec76dfb72ead5801fd9051cc8a18eba0d9149ee02325d335afca62"
+    },
+    {
+      "path": "tools/npu/rewrite_yolov8n_graph.py",
+      "sha256": "906421a399a534b16632e2b3c88ae44ea78d98b85a5b361eade213879f67e308"
+    },
+    {
+      "path": "tools/verify/compare_onnx_variants.py",
+      "sha256": "6422e9fd779839211a85a694b00bc1e898e8193506bd0acaa16c96abd01505ce"
+    }
+  ],
+  "dev_evidence": [
+    {
+      "path": "experiments/c2f-split-free/evidence/compare_splitfree.json",
+      "sha256": "315bc91bc3f62a1d35d4b42427ac67ac779d1e66ce2b4ce47a4b25c5ee0e816c"
+    }
+  ],
+  "design": "experiments/c2f-split-free/design.md",
+  "principle": "principles/05-c2f-split-free.md",
+  "runs": [
+    "20261111-120000-c2f-split-free-l2"
+  ],
+  "limitations": [
+    "RKNN conversion not yet executed",
+    "net gain depends on the compiler scheduling of the two half convolutions"
+  ]
+}

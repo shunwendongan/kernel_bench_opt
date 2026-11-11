@@ -32,3 +32,9 @@ benchmarks/**/evidence/
 benchmarks/**/*.npz
 benchmarks/**/*.so
 benchmarks/**/*.tar.gz
+
+# 候选算子的本地构建产物与模型变体（2026-11-11）
+build/
+models/
+*.dylib
+tests/__pycache__/

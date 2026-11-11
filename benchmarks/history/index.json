@@ -1,0 +1,99 @@
+{
+  "schema_version": 2,
+  "record_type": "run_index",
+  "branch": "yolov8n-COCO",
+  "notes": "Planned board runs for the 2026-11-11 candidates; completed runs add summary.json/validation.json/manifest.json next to run.json.",
+  "entries": [
+    {
+      "run_id": "20261111-120000-host-kernels-l1",
+      "candidate_id": "post-dfl-nms-neon",
+      "task_id": null,
+      "level": "l1",
+      "status": "planned",
+      "status_detail": "registered 2026-11-11; not executed",
+      "path": "benchmarks/history/20261111-120000-host-kernels-l1",
+      "run_record": "benchmarks/history/20261111-120000-host-kernels-l1/run.json",
+      "report": null,
+      "assets": null,
+      "legacy_id": false
+    },
+    {
+      "run_id": "20261111-120000-io-zerocopy-fp16-l2",
+      "candidate_id": "io-zerocopy-fp16",
+      "task_id": null,
+      "level": "l2",
+      "status": "planned",
+      "status_detail": "registered 2026-11-11; not executed",
+      "path": "benchmarks/history/20261111-120000-io-zerocopy-fp16-l2",
+      "run_record": "benchmarks/history/20261111-120000-io-zerocopy-fp16-l2/run.json",
+      "report": null,
+      "assets": null,
+      "legacy_id": false
+    },
+    {
+      "run_id": "20261111-120000-head-logits6-l2",
+      "candidate_id": "head-logits6",
+      "task_id": null,
+      "level": "l2",
+      "status": "planned",
+      "status_detail": "registered 2026-11-11; not executed",
+      "path": "benchmarks/history/20261111-120000-head-logits6-l2",
+      "run_record": "benchmarks/history/20261111-120000-head-logits6-l2/run.json",
+      "report": null,
+      "assets": null,
+      "legacy_id": false
+    },
+    {
+      "run_id": "20261111-120000-c2f-split-free-l2",
+      "candidate_id": "c2f-split-free",
+      "task_id": null,
+      "level": "l2",
+      "status": "planned",
+      "status_detail": "registered 2026-11-11; not executed",
+      "path": "benchmarks/history/20261111-120000-c2f-split-free-l2",
+      "run_record": "benchmarks/history/20261111-120000-c2f-split-free-l2/run.json",
+      "report": null,
+      "assets": null,
+      "legacy_id": false
+    },
+    {
+      "run_id": "20261111-120000-stem-space-to-depth-l2",
+      "candidate_id": "stem-space-to-depth",
+      "task_id": null,
+      "level": "l2",
+      "status": "planned",
+      "status_detail": "registered 2026-11-11; not executed",
+      "path": "benchmarks/history/20261111-120000-stem-space-to-depth-l2",
+      "run_record": "benchmarks/history/20261111-120000-stem-space-to-depth-l2/run.json",
+      "report": null,
+      "assets": null,
+      "legacy_id": false
+    },
+    {
+      "run_id": "20261111-120000-npu-core-mask-sweep-l2",
+      "candidate_id": "npu-core-mask-sweep",
+      "task_id": null,
+      "level": "l2",
+      "status": "planned",
+      "status_detail": "registered 2026-11-11; not executed",
+      "path": "benchmarks/history/20261111-120000-npu-core-mask-sweep-l2",
+      "run_record": "benchmarks/history/20261111-120000-npu-core-mask-sweep-l2/run.json",
+      "report": null,
+      "assets": null,
+      "legacy_id": false
+    },
+    {
+      "run_id": "20261111-120000-yolov8n-v2-combined-l3",
+      "candidate_id": "head-logits6",
+      "task_id": null,
+      "level": "l3",
+      "status": "planned",
+      "status_detail": "registered 2026-11-11; not executed",
+      "path": "benchmarks/history/20261111-120000-yolov8n-v2-combined-l3",
+      "run_record": "benchmarks/history/20261111-120000-yolov8n-v2-combined-l3/run.json",
+      "report": null,
+      "assets": null,
+      "legacy_id": false
+    }
+  ]
+}

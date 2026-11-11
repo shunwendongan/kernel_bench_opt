@@ -1,0 +1,61 @@
+{
+  "schema_version": 2,
+  "record_type": "candidate",
+  "candidate_id": "post-dfl-nms-neon",
+  "candidate_kind": "kernel",
+  "parent_candidate_id": "yolo-common-postprocess-numpy",
+  "status": "source_delivered",
+  "status_detail": "delivered 2026-11-11 from the hotspot analysis of the first-round and final-model evidence; no RK3588 run yet",
+  "hypothesis": "One NEON pass over the fp16 output buffers (max/argmax with exact score-sum prefilter, DFL with numpy reduction order, class-wise NMS with numpy ordering rules) reproduces yolo_common.postprocess within 2e-3 px and replaces 9.9 ms of numpy with about 1 ms on Cortex-A76.",
+  "source_base_commit": "c8ac23a29d372ecce00701e6afe7f980abad1bfe",
+  "target": {
+    "model": "YOLOv8n Rockchip export, FP16, 640x640, batch 1",
+    "device": "RK3588 (3x NPU, Cortex-A76/A55)",
+    "runtime": "RKNN 2.3.2 / driver 0.9.8",
+    "baseline_evidence": [
+      "benchmarks/yolov8n_home/summary.json",
+      "benchmarks/yolov8n_general/evidence/model/final_cpu_placement.perf.txt"
+    ]
+  },
+  "source_files": [
+    {
+      "path": "kernels/common/fp16.h",
+      "sha256": "a4ea751ebe67f3a9e4903aa585561323c20b2f493ebab1458a4c3cc0466c6864"
+    },
+    {
+      "path": "kernels/common/tensor_view.h",
+      "sha256": "267291fba73de5c884f296e4f9ad68ffbecd9487caa9b96835b5a858325f4b17"
+    },
+    {
+      "path": "kernels/post-dfl-nms-neon/bench_post.c",
+      "sha256": "e18eeae7a3c11805234d9f3289e86af69ac0e10953f238a46e8a7b7390ff2905"
+    },
+    {
+      "path": "kernels/post-dfl-nms-neon/yolo_post.c",
+      "sha256": "685bbe47420f2921d2b6bc1fd3e00937fe74f9bb39a53ab20aa3f8326889b6f5"
+    },
+    {
+      "path": "kernels/post-dfl-nms-neon/yolo_post.h",
+      "sha256": "3771271298b65409f125abb82e6ae8809fd13cc9c5ac83a0354d65dd57e84638"
+    },
+    {
+      "path": "scripts/build_host_kernels.sh",
+      "sha256": "df5f679477c1c904e331a271b666c46daffd16f74a84d3002ac1194af4501d2b"
+    },
+    {
+      "path": "tools/yolo_kernels.py",
+      "sha256": "0e85343aad48861a18d44ddcfbffd49a33984b176128843378783831f9687949"
+    }
+  ],
+  "dev_evidence": [],
+  "design": "experiments/post-dfl-nms-neon/design.md",
+  "principle": "principles/03-post-dfl-nms-neon.md",
+  "runs": [
+    "20261111-120000-host-kernels-l1",
+    "20261111-120000-yolov8n-v2-combined-l3"
+  ],
+  "limitations": [
+    "Apple M4 timings only indicate direction",
+    "NC1HWC2 fast path assumes C2 == 8 (fp16); other block sizes fall back to the portable path"
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "per_output": {
+    "0": {
+      "role": "regression",
+      "shape": [
+        1,
+        64,
+        80,
+        80
+      ],
+      "max_abs": 2.09808349609375e-05,
+      "relative_l2": 6.326899463550564e-07,
+      "bit_identical_images": 0
+    },
+    "1": {
+      "role": "probability",
+      "shape": [
+        1,
+        80,
+        80,
+        80
+      ],
+      "max_abs": 3.5762786865234375e-07,
+      "relative_l2": 0.12843353936323568,
+      "bit_identical_images": 0
+    },
+    "2": {
+      "role": "clip_sum",
+      "shape": [
+        1,
+        1,
+        80,
+        80
+      ],
+      "max_abs": 1.9371509552001953e-06,
+      "relative_l2": 0.03153336970116211,
+      "bit_identical_images": 0
+    },
+    "3": {
+      "role": "regression",
+      "shape": [
+        1,
+        64,
+        40,
+        40
+      ],
+      "max_abs": 4.029273986816406e-05,
+      "relative_l2": 5.265889847143203e-07,
+      "bit_identical_images": 0
+    },
+    "4": {
+      "role": "probability",
+      "shape": [
+        1,
+        80,
+        40,
+        40
+      ],
+      "max_abs": 3.5762786865234375e-07,
+      "relative_l2": 0.023588690566193313,
+      "bit_identical_images": 0
+    },
+    "5": {
+      "role": "clip_sum",
+      "shape": [
+        1,
+        1,
+        40,
+        40
+      ],
+      "max_abs": 1.6093254089355469e-06,
+      "relative_l2": 0.005768284330448102,
+      "bit_identical_images": 0
+    },
+    "6": {
+      "role": "regression",
+      "shape": [
+        1,
+        64,
+        20,
+        20
+      ],
+      "max_abs": 3.337860107421875e-05,
+      "relative_l2": 4.76967979793579e-07,
+      "bit_identical_images": 0
+    },
+    "7": {
+      "role": "probability",
+      "shape": [
+        1,
+        80,
+        20,
+        20
+      ],
+      "max_abs": 9.5367431640625e-07,
+      "relative_l2": 0.00046858144499619894,
+      "bit_identical_images": 0
+    },
+    "8": {
+      "role": "clip_sum",
+      "shape": [
+        1,
+        1,
+        20,
+        20
+      ],
+      "max_abs": 1.430511474609375e-06,
+      "relative_l2": 0.00013259036597180942,
+      "bit_identical_images": 0
+    }
+  },
+  "worst": {
+    "max_abs": 4.029273986816406e-05,
+    "relative_l2": 0.12843353936323568
+  },
+  "detections": [
+    {
+      "image": "synthetic_0_500x375",
+      "reference_detections": 0,
+      "variant_detections": 0,
+      "same_count": true,
+      "same_classes": true,
+      "max_box_abs_px": 0.0,
+      "max_score_abs": 0.0
+    },
+    {
+      "image": "synthetic_1_640x480",
+      "reference_detections": 0,
+      "variant_detections": 0,
+      "same_count": true,
+      "same_classes": true,
+      "max_box_abs_px": 0.0,
+      "max_score_abs": 0.0
+    },
+    {
+      "image": "synthetic_2_427x640",
+      "reference_detections": 1,
+      "variant_detections": 1,
+      "same_count": true,
+      "same_classes": true,
+      "max_box_abs_px": 3.0517578125e-05,
+      "max_score_abs": 2.384185791015625e-07
+    },
+    {
+      "image": "synthetic_3_1024x768",
+      "reference_detections": 0,
+      "variant_detections": 0,
+      "same_count": true,
+      "same_classes": true,
+      "max_box_abs_px": 0.0,
+      "max_score_abs": 0.0
+    },
+    {
+      "image": "synthetic_4_333x500",
+      "reference_detections": 0,
+      "variant_detections": 0,
+      "same_count": true,
+      "same_classes": true,
+      "max_box_abs_px": 0.0,
+      "max_score_abs": 0.0
+    },
+    {
+      "image": "synthetic_5_640x640",
+      "reference_detections": 2,
+      "variant_detections": 2,
+      "same_count": true,
+      "same_classes": true,
+      "max_box_abs_px": 6.103515625e-05,
+      "max_score_abs": 0.0
+    }
+  ],
+  "images": 6,
+  "host_space_to_depth_input": false,
+  "timing_ms_mean": {
+    "reference_ms": 101.6477568333333,
+    "variant_ms": 93.90122216666663
+  },
+  "variant_output_count": 9,
+  "schema_version": 1,
+  "record_type": "onnx_variant_comparison",
+  "reference_sha256": "0c8716701f471067932b797eeb67c8e5db47c693c2557c881d7679ec12e21bc5",
+  "variant_sha256": "07af05d9dc4b5ad48af1771ae341e0e45ef85c13001e0e5c38aa62377320b78a",
+  "gate_max_abs": 0.0001,
+  "passed": true,
+  "scope": "float32 ONNX Runtime CPU equivalence only; not an RK3588 measurement"
+}
